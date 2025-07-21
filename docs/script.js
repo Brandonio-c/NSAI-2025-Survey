@@ -157,21 +157,46 @@ function createSankeyDiagram(data) {
   const afterDedup = searchData.after_dedup_rayyan;
   const included = screening.included_within_scope;
   const excluded = screening.excluded_out_of_scope.total_count || screening.excluded_out_of_scope;
+  const duplicatesRemoved = totalHits - afterDedup;
 
-  // Create Sankey data
-  const sankeyData = {
-    nodes: [
-      { id: 0, name: `Total Hits (${totalHits.toLocaleString()})` },
-      { id: 1, name: `After Dedup (${afterDedup.toLocaleString()})` },
-      { id: 2, name: `In-Scope (${included})` },
-      { id: 3, name: `Out-of-Scope (${excluded})` }
-    ],
-    links: [
-      { source: 0, target: 1, value: afterDedup },
-      { source: 1, target: 2, value: included },
-      { source: 1, target: 3, value: excluded }
-    ]
-  };
+  // Get exclusion breakdown
+  const exclusionBreakdown = screening.excluded_out_of_scope.breakdown.individual_criteria_counts;
+  const topExclusionReasons = Object.entries(exclusionBreakdown)
+    .sort((a, b) => b[1].count - a[1].count)
+    .slice(0, 5); // Top 5 reasons
+
+  // Create Sankey data with proper flow
+  const nodes = [
+    { id: 0, name: `Total Hits (${totalHits.toLocaleString()})` },
+    { id: 1, name: `Duplicates Removed (${duplicatesRemoved.toLocaleString()})` },
+    { id: 2, name: `After Dedup (${afterDedup.toLocaleString()})` },
+    { id: 3, name: `In-Scope (${included})` }
+  ];
+
+  const links = [
+    { source: 0, target: 1, value: duplicatesRemoved },
+    { source: 0, target: 2, value: afterDedup },
+    { source: 2, target: 3, value: included }
+  ];
+
+  // Add top exclusion reasons as separate nodes
+  let nodeId = 4;
+  topExclusionReasons.forEach(([reason, info]) => {
+    nodes.push({ id: nodeId, name: `${reason} (${info.count})` });
+    links.push({ source: 2, target: nodeId, value: info.count });
+    nodeId++;
+  });
+
+  // Add remaining excluded papers as "Other reasons"
+  const accountedFor = topExclusionReasons.reduce((sum, [_, info]) => sum + info.count, 0);
+  const remainingExcluded = excluded - accountedFor;
+  if (remainingExcluded > 0) {
+    nodes.push({ id: nodeId, name: `Other reasons (${remainingExcluded})` });
+    links.push({ source: 2, target: nodeId, value: remainingExcluded });
+  }
+
+  // Create the final Sankey data object
+  const sankeyData = { nodes, links };
 
   // Set up the SVG
   const container = document.getElementById('sankey-container');
@@ -199,7 +224,7 @@ function createSankeyDiagram(data) {
     .extent([[1, 1], [width - margin.left - margin.right - 1, height - margin.top - margin.bottom - 5]]);
 
   // Apply the layout
-  const { nodes, links } = sankey({
+  const { nodes: layoutNodes, links: layoutLinks } = sankey({
     nodes: sankeyData.nodes.map(d => Object.assign({}, d)),
     links: sankeyData.links.map(d => Object.assign({}, d))
   });
@@ -207,7 +232,7 @@ function createSankeyDiagram(data) {
   // Add the links
   svg.append('g')
     .selectAll('path')
-    .data(links)
+    .data(layoutLinks)
     .join('path')
     .attr('class', 'link')
     .attr('d', d3.sankeyLinkHorizontal())
@@ -224,7 +249,7 @@ function createSankeyDiagram(data) {
   // Add the nodes
   const node = svg.append('g')
     .selectAll('g')
-    .data(nodes)
+    .data(layoutNodes)
     .join('g')
     .attr('class', 'node');
 
@@ -248,7 +273,7 @@ function createSankeyDiagram(data) {
   // Add value labels on the links
   svg.append('g')
     .selectAll('text')
-    .data(links)
+    .data(layoutLinks)
     .join('text')
     .attr('x', d => (d.source.x1 + d.target.x0) / 2)
     .attr('y', d => (d.y0 + d.y1) / 2)
@@ -294,7 +319,7 @@ function populatePaperLists(included, excluded) {
   `;
   excSection.appendChild(excSearchDiv);
 
-  // Create categorized excluded papers
+  // Create dropdown boxes for each exclusion reason
   const categorizedExcluded = categorizeExcludedPapers(excluded);
   const excList = document.createElement('div');
   excList.id = 'excluded-papers-list';
@@ -305,15 +330,50 @@ function populatePaperLists(included, excluded) {
     const categoryDiv = document.createElement('div');
     categoryDiv.className = 'mb-3';
     
-    const header = document.createElement('h6');
-    header.innerHTML = `${reason} <span class="badge bg-secondary">${papers.length}</span>`;
-    categoryDiv.appendChild(header);
+    // Create dropdown header
+    const dropdownHeader = document.createElement('div');
+    dropdownHeader.className = 'dropdown-header d-flex justify-content-between align-items-center p-2 bg-light border rounded-top';
+    dropdownHeader.style.cursor = 'pointer';
+    dropdownHeader.innerHTML = `
+      <h6 class="mb-0">${reason} <span class="badge bg-secondary">${papers.length}</span></h6>
+      <i class="fas fa-chevron-down dropdown-icon"></i>
+    `;
+    
+    // Create dropdown content
+    const dropdownContent = document.createElement('div');
+    dropdownContent.className = 'dropdown-content border border-top-0 rounded-bottom';
+    dropdownContent.style.display = 'none';
+    dropdownContent.style.maxHeight = '400px';
+    dropdownContent.style.overflowY = 'auto';
     
     const papersList = document.createElement('ul');
-    papersList.className = 'paper-list';
-    papers.forEach(paper => papersList.appendChild(createPaperListItem(paper)));
-    categoryDiv.appendChild(papersList);
+    papersList.className = 'paper-list mb-0';
+    papersList.style.listStyle = 'none';
+    papersList.style.padding = '0';
+    papers.forEach(paper => {
+      const li = createPaperListItem(paper);
+      li.style.padding = '8px 12px';
+      li.style.borderBottom = '1px solid #eee';
+      papersList.appendChild(li);
+    });
+    dropdownContent.appendChild(papersList);
     
+    // Add click functionality for dropdown toggle
+    dropdownHeader.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const icon = this.querySelector('.dropdown-icon');
+      
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        icon.className = 'fas fa-chevron-up dropdown-icon';
+      } else {
+        content.style.display = 'none';
+        icon.className = 'fas fa-chevron-down dropdown-icon';
+      }
+    });
+    
+    categoryDiv.appendChild(dropdownHeader);
+    categoryDiv.appendChild(dropdownContent);
     excList.appendChild(categoryDiv);
   });
   
@@ -406,10 +466,11 @@ function setupSearch(searchId, listId, allPapers) {
         item.style.display = text.includes(searchTerm) ? 'block' : 'none';
       });
     } else {
-      // Search for excluded papers (categorized)
+      // Search for excluded papers (dropdown structure)
       const categoryDivs = listElement.querySelectorAll('.mb-3');
       categoryDivs.forEach(categoryDiv => {
-        const papersList = categoryDiv.querySelector('ul');
+        const dropdownContent = categoryDiv.querySelector('.dropdown-content');
+        const papersList = dropdownContent.querySelector('ul');
         const listItems = papersList.querySelectorAll('li');
         let hasVisibleItems = false;
         

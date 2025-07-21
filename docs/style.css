@@ -78,4 +78,25 @@ ul.paper-list li:last-child {
 
 .link:hover {
   stroke-opacity: 0.7;
+}
+
+/* Dropdown styling for excluded papers */
+.dropdown-header {
+  transition: background-color 0.2s;
+}
+
+.dropdown-header:hover {
+  background-color: #e9ecef !important;
+}
+
+.dropdown-content {
+  background-color: white;
+}
+
+.dropdown-icon {
+  transition: transform 0.2s;
+}
+
+.dropdown-header:hover .dropdown-icon {
+  transform: scale(1.1);
 } 
