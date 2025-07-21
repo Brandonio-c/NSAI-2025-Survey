@@ -18,8 +18,8 @@
         "description": "The paper explicitly discusses the integration of neural and symbolic components, or the use of symbolic representations in neural networks."
     },
     {
-        "name": "Reproduceable",
-        "description": "Source code AND data required for reproduction is openly accessible (e.g., GitHub, Hugging Face) or provided on request, with scripts, weights, and documentation sufficient for reproduction."
+        "name": "Reported results are Reproduceable",
+        "description": "Source code AND data required for reproduction is openly accessible (e.g., GitHub, Hugging Face) or provided on request, with scripts, weights, and documentation sufficient for reproduction. Results obtained from running the codebase on the reported dataset match the reported results."
     },
     {
         "name": "Empirical Evaluation",
@@ -35,7 +35,7 @@
     {"name": "Literature Review Article",     "code": "review"},
     {"name": "Not a Research Article",        "code": "not-research"},
     {"name": "Not Peer‑Reviewed",             "code": "not-PR"},
-    {"name": "Not Reproduceable (no public codebase AND/OR data)",             "code": "not-reproduceable"},
+    {"name": "No Publicly Available Codebase and/or Data required for Reproduction of results","code": "no-codebase"},
     {"name": "No Quantitative Evaluation",    "code": "no-eval"},
     {"name": "Outside Neuro‑Symbolic Scope",  "code": "off-topic"},
     {"name": "Duplicate / Superseded",        "code": "duplicate"},
