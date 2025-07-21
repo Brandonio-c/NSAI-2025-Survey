@@ -137,11 +137,37 @@ function populateOverview(data) {
   const counts = [];
 
   const breakdown = screening.excluded_out_of_scope.breakdown.individual_criteria_counts;
+  
+  // Consolidate categories according to the mapping
+  const consolidatedData = {};
+  
   Object.entries(breakdown).forEach(([reason, info]) => {
+    let consolidatedReason;
+    
+    // Map to consolidated categories
+    if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
+      consolidatedReason = 'review';
+    } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
+      consolidatedReason = 'No codebase/implementation';
+    } else {
+      consolidatedReason = reason;
+    }
+    
+    if (!consolidatedData[consolidatedReason]) {
+      consolidatedData[consolidatedReason] = { count: 0, percentage: 0 };
+    }
+    consolidatedData[consolidatedReason].count += info.count;
+    consolidatedData[consolidatedReason].percentage += info.percentage;
+  });
+  
+  // Sort by count (descending)
+  const sortedEntries = Object.entries(consolidatedData).sort((a, b) => b[1].count - a[1].count);
+  
+  sortedEntries.forEach(([reason, info]) => {
     labels.push(reason);
     counts.push(info.count);
     const row = document.createElement('tr');
-    row.innerHTML = `<td>${reason}</td><td>${info.count}</td><td>${info.percentage}%</td>`;
+    row.innerHTML = `<td>${reason}</td><td>${info.count}</td><td>${info.percentage.toFixed(1)}%</td>`;
     tbody.appendChild(row);
   });
   section.appendChild(table);
@@ -174,9 +200,29 @@ function createSankeyDiagram(data) {
   const excluded = screening.excluded_out_of_scope.total_count || screening.excluded_out_of_scope;
   const duplicatesRemoved = totalHits - afterDedup;
 
-  // Get exclusion breakdown
+  // Get exclusion breakdown and consolidate categories
   const exclusionBreakdown = screening.excluded_out_of_scope.breakdown.individual_criteria_counts;
-  const topExclusionReasons = Object.entries(exclusionBreakdown)
+  
+  // Consolidate categories for Sankey diagram
+  const consolidatedBreakdown = {};
+  Object.entries(exclusionBreakdown).forEach(([reason, info]) => {
+    let consolidatedReason;
+    
+    if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
+      consolidatedReason = 'review';
+    } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
+      consolidatedReason = 'No codebase/implementation';
+    } else {
+      consolidatedReason = reason;
+    }
+    
+    if (!consolidatedBreakdown[consolidatedReason]) {
+      consolidatedBreakdown[consolidatedReason] = { count: 0 };
+    }
+    consolidatedBreakdown[consolidatedReason].count += info.count;
+  });
+  
+  const topExclusionReasons = Object.entries(consolidatedBreakdown)
     .sort((a, b) => b[1].count - a[1].count)
     .slice(0, 5); // Top 5 reasons
 
@@ -448,19 +494,19 @@ function getReadableExclusionReason(criterion) {
   const reasonMap = {
     '__EXR__off-topic': 'Off-topic/Not neuro-symbolic',
     '__EXR__no-codebase': 'No codebase/implementation',
-    '__EXR__survey': 'Survey/review paper',
-    '__EXR__background article': 'Background article',
+    '__EXR__survey': 'review',
+    '__EXR__background article': 'review',
     '__EXR__not-research': 'Not research paper',
     '__EXR__no-eval': 'No evaluation',
     '__EXR__duplicate': 'Duplicate',
-    '__EXR__review': 'Review paper',
+    '__EXR__review': 'review',
     '__EXR__no-fulltext': 'No fulltext',
     '__EXR__not-in-english': 'Not in English',
     '__EXR__foreign language': 'Foreign language',
-    '__EXR__c': 'Other/Unclear',
-    '__EXR__wrong outcome': 'Wrong outcome',
-    '__EXR__engl': 'English issue',
-    '__EXR__v': 'Version issue'
+    '__EXR__c': 'No codebase/implementation',
+    '__EXR__wrong outcome': 'No codebase/implementation',
+    '__EXR__engl': 'No codebase/implementation',
+    '__EXR__v': 'No codebase/implementation'
   };
   
   return reasonMap[criterion] || criterion;
