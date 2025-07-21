@@ -1,0 +1,41 @@
+================================================================================
+EXCLUSION CRITERIA ANALYSIS SUMMARY
+================================================================================
+
+Total excluded articles: 1851
+Articles with explicit exclusion criteria: 1709
+Articles without explicit criteria: 142
+
+INDIVIDUAL EXCLUSION CRITERIA:
+--------------------------------------------------
+No codebase/implementation: 845 articles (45.7%)
+Off-topic/Not neuro-symbolic: 458 articles (24.7%)
+Background article: 144 articles (7.8%)
+Not research paper: 120 articles (6.5%)
+No evaluation: 109 articles (5.9%)
+__EXR__no-fulltext: 97 articles (5.2%)
+Survey/review paper: 80 articles (4.3%)
+Review paper: 75 articles (4.1%)
+Duplicate: 16 articles (0.9%)
+__EXR__not-in-english: 9 articles (0.5%)
+__EXR__foreign language: 6 articles (0.3%)
+Other/Unclear: 1 articles (0.1%)
+__EXR__wrong outcome: 1 articles (0.1%)
+__EXR__engl: 1 articles (0.1%)
+__EXR__v: 1 articles (0.1%)
+
+Articles with single criterion: 1493
+Articles with multiple criteria: 216
+
+MOST COMMON CRITERIA COMBINATIONS:
+--------------------------------------------------
+No codebase/implementation, No evaluation: 48 articles (2.6%)
+Background article, No codebase/implementation: 31 articles (1.7%)
+No codebase/implementation, Off-topic/Not neuro-symbolic: 22 articles (1.2%)
+No codebase/implementation, __EXR__no-fulltext: 13 articles (0.7%)
+No evaluation, Not research paper: 9 articles (0.5%)
+Off-topic/Not neuro-symbolic, Review paper: 9 articles (0.5%)
+Background article, Not research paper: 7 articles (0.4%)
+__EXR__no-fulltext, Not research paper: 5 articles (0.3%)
+Background article, No codebase/implementation, No evaluation: 4 articles (0.2%)
+No codebase/implementation, No evaluation, __EXR__no-fulltext: 4 articles (0.2%)

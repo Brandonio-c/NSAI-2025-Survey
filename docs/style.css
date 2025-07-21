@@ -1,0 +1,32 @@
+body {
+  background-color: #f8f9fa;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+.accordion-button::after {
+  margin-left: auto;
+}
+
+ul.paper-list {
+  max-height: 400px;
+  overflow-y: auto;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.paper-list li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+ul.paper-list li:last-child {
+  border-bottom: none;
+}
+
+.badge-criteria {
+  font-size: 0.8rem;
+  margin-right: 4px;
+} 

@@ -1,0 +1,22 @@
+{
+    "search_and_deduplication": {
+        "total_results_retrieved": 5387,
+        "after_dedup_covidence": 2844,
+        "after_dedup_zotero": 2538,
+        "after_dedup_sr_accelerator": 2506,
+        "after_dedup_rayyan": 2356
+    },
+    "rayyan_import": {
+        "imported_references": 2506,
+        "duplicates_removed": 150,
+        "post_dedup_records": 2356
+    },
+    "rayyan_screening": {
+        "excluded_out_of_scope": 1851,
+        "included_within_scope": 505
+    },
+    "overall_flow_summary": {
+        "final_included_percentage_of_initial_hits": 505,
+        "comment": "505 studies (≈9.4 % of the original 5,387 hits) met all inclusion criteria and remained after full screening."
+    }
+}
