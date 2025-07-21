@@ -1,0 +1,44 @@
+{
+    "inclusion_criteria": [
+    {
+        "name": "Neuro‑Symbolic Integration",
+        "description": "Study proposes, evaluates, or applies a hybrid system that explicitly combines neural/connectionist components with symbolic reasoning or structured knowledge representations. We are conducting a systematic literature review of neuro‑symbolic artificial intelligence (NSAI) methods. Starting from 5,387 database hits, we deduplicated, screened, and ultimately retained 505 research articles that satisfy our inclusion criteria (e.g., explicit neural‑symbolic integration, quantitative evaluation, publicly available code). Each included study will undergo a hands‑on reproducibility check: a team of University of Maryland graduate students will retrieve the cited codebase, build or install it, and verify that it runs as described. This added step ensures that every article in our final corpus is not only conceptually relevant but also practically reproducible, strengthening the reliability of any meta‑analysis or benchmarking we conduct on the NSAI landscape.",
+        "research_question": "Which Neuro-Symbolic AI systems with publicly available code have been published up to mid-2025, and, when their code is independently re-implemented, how closely does their reproduced performance align with the results originally reported by the authors?",
+        "objective-statement": "This work presents a PRISMA-guided systematic literature review of Neuro-Symbolic AI research published from all time to mid-2025. We refine existing taxonomies, filter for peer-reviewed contributions with publicly available code, and quantify evolving trends across our five focal areas. By cataloging novel methods and exposing persistent gaps (particularly in transparency, robustness, and meta-cognitive capabilities) we aim to chart a clear roadmap for the next generation of Neuro-Symbolic systems. Importantly, we aim to verify all the systems / works presented within this survey to provide a list of high quality systems with viable implementations. ",
+        "examples": [
+        "differentiable logic programs",
+        "neural‑theorem provers",
+        "neuro‑symbolic knowledge‑graph models",
+        "hybrid planners",
+        "meta‑cognitive controllers"
+        ]
+    },
+    {
+        "name": "Public Code Availability",
+        "description": "Source code is openly accessible (e.g., GitHub, Hugging Face) or provided on request, with scripts, weights, and documentation sufficient for reproduction."
+    },
+    {
+        "name": "Empirical Evaluation",
+        "description": "Paper reports quantitative results on benchmarks, real‑world datasets, or synthetic tasks and compares against baselines or ablations."
+    },
+    {
+        "name": "Relevance to Computer‑Science Research",
+        "description": "Work contributes technical insights on algorithms, architectures, scalability, or reproducibility (not purely philosophical or cognitive)."
+    }
+    ],
+    "exclusion_criteria": [
+    {"name": "Not in English",                "code": "not-in-english"},
+    {"name": "Literature Review Article",     "code": "review"},
+    {"name": "Not a Research Article",        "code": "not-research"},
+    {"name": "Not Peer‑Reviewed",             "code": "not-PR"},
+    {"name": "No Publicly Available Codebase","code": "no-codebase"},
+    {"name": "No Quantitative Evaluation",    "code": "no-eval"},
+    {"name": "Outside Neuro‑Symbolic Scope",  "code": "off-topic"},
+    {"name": "Duplicate / Superseded",        "code": "duplicate"},
+    {"name": "No Full‑Text Access",           "code": "no-fulltext"}
+    ],
+    "application_notes": [
+    "Apply exclusion criteria in the order listed and record only the FIRST matching reason.",
+    "If eligibility is unclear after full text, label the record as \"Maybe\" for further review."
+    ]
+}
