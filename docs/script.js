@@ -233,7 +233,7 @@ function createSankeyDiagram(data) {
   
   // Sort by count (descending) - same as exclusion reason table
   const sortedEntries = Object.entries(consolidatedBreakdown).sort((a, b) => b[1].count - a[1].count);
-  const topExclusionReasons = sortedEntries.slice(0, 5); // Top 5 reasons
+  const topExclusionReasons = sortedEntries.slice(0, 8); // Top 8 reasons to include no-fulltext, duplicate, not-in-english
 
   // Create Sankey data with proper flow
   const nodes = [
