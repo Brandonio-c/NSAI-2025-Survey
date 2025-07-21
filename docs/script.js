@@ -204,10 +204,10 @@ function createSankeyDiagram(data) {
   const excluded = screening.excluded_out_of_scope.total_count || screening.excluded_out_of_scope;
   const duplicatesRemoved = totalHits - afterDedup;
 
-  // Get exclusion breakdown and consolidate categories
+  // Get exclusion breakdown and consolidate categories using the exact same logic as the exclusion reason table
   const exclusionBreakdown = screening.excluded_out_of_scope.breakdown.individual_criteria_counts;
   
-  // Consolidate categories for Sankey diagram
+  // Consolidate categories for Sankey diagram (same logic as exclusion reason table)
   const consolidatedBreakdown = {};
   Object.entries(exclusionBreakdown).forEach(([reason, info]) => {
     let consolidatedReason;
@@ -225,14 +225,15 @@ function createSankeyDiagram(data) {
     }
     
     if (!consolidatedBreakdown[consolidatedReason]) {
-      consolidatedBreakdown[consolidatedReason] = { count: 0 };
+      consolidatedBreakdown[consolidatedReason] = { count: 0, percentage: 0 };
     }
     consolidatedBreakdown[consolidatedReason].count += info.count;
+    consolidatedBreakdown[consolidatedReason].percentage += info.percentage;
   });
   
-  const topExclusionReasons = Object.entries(consolidatedBreakdown)
-    .sort((a, b) => b[1].count - a[1].count)
-    .slice(0, 5); // Top 5 reasons
+  // Sort by count (descending) - same as exclusion reason table
+  const sortedEntries = Object.entries(consolidatedBreakdown).sort((a, b) => b[1].count - a[1].count);
+  const topExclusionReasons = sortedEntries.slice(0, 5); // Top 5 reasons
 
   // Create Sankey data with proper flow
   const nodes = [
@@ -388,8 +389,8 @@ function populatePaperLists(included, excluded, overviewData) {
   `;
   excSection.appendChild(excSearchDiv);
 
-  // Create dropdown boxes for each exclusion reason using screening overview data
-  const categorizedExcluded = categorizeExcludedPapersFromOverview(overviewData, excluded);
+  // Create dropdown boxes for each exclusion reason using the same consolidated data as the table
+  const categorizedExcluded = categorizeExcludedPapersFromConsolidatedData(overviewData, excluded);
   const excList = document.createElement('div');
   excList.id = 'excluded-papers-list';
   excList.style.maxHeight = '600px';
@@ -487,9 +488,7 @@ function categorizeExcludedPapers(excluded) {
 }
 
 function categorizeExcludedPapersFromOverview(overviewData, excluded) {
-  const categories = {};
-  
-  // Get the breakdown from screening overview data
+  // Get the breakdown from screening overview data and use the same consolidation logic
   const breakdown = overviewData.rayyan_screening.excluded_out_of_scope.breakdown.individual_criteria_counts;
   
   // Consolidate categories according to the same mapping used in populateOverview
@@ -518,6 +517,7 @@ function categorizeExcludedPapersFromOverview(overviewData, excluded) {
   });
   
   // Now assign papers to categories based on their criteria
+  const categories = {};
   excluded.forEach(paper => {
     const criteria = extractExclusionCriteria(paper);
     if (criteria.length > 0) {
@@ -549,6 +549,71 @@ function categorizeExcludedPapersFromOverview(overviewData, excluded) {
       const bCount = consolidatedData[b[0]] ? consolidatedData[b[0]].count : 0;
       return bCount - aCount;
     })
+  );
+}
+
+function categorizeExcludedPapersFromConsolidatedData(overviewData, excluded) {
+  // Use the exact same consolidation logic as the exclusion reason table
+  const breakdown = overviewData.rayyan_screening.excluded_out_of_scope.breakdown.individual_criteria_counts;
+  
+  // Consolidate categories according to the same mapping used in populateOverview
+  const consolidatedData = {};
+  
+  Object.entries(breakdown).forEach(([reason, info]) => {
+    let consolidatedReason;
+    
+    // Map to consolidated categories (same logic as in populateOverview)
+    if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
+      consolidatedReason = 'review / background article / survey (no novel method presented)';
+    } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
+      consolidatedReason = 'No codebase/implementation';
+    } else if (reason === '__EXR__no-fulltext') {
+      consolidatedReason = 'no-fulltext';
+    } else if (reason === '__EXR__not-in-english' || reason === '__EXR__foreign language') {
+      consolidatedReason = 'not-in-english';
+    } else {
+      consolidatedReason = reason;
+    }
+    
+    if (!consolidatedData[consolidatedReason]) {
+      consolidatedData[consolidatedReason] = { count: 0, percentage: 0 };
+    }
+    consolidatedData[consolidatedReason].count += info.count;
+    consolidatedData[consolidatedReason].percentage += info.percentage;
+  });
+  
+  // Sort by count (descending) - same as exclusion reason table
+  const sortedEntries = Object.entries(consolidatedData).sort((a, b) => b[1].count - a[1].count);
+  
+  // Now assign papers to categories based on their criteria
+  const categories = {};
+  excluded.forEach(paper => {
+    const criteria = extractExclusionCriteria(paper);
+    if (criteria.length > 0) {
+      // Count paper in all applicable categories
+      criteria.forEach(criterion => {
+        const readableReason = getReadableExclusionReason(criterion);
+        
+        if (!categories[readableReason]) {
+          categories[readableReason] = [];
+        }
+        // Only add the paper if it's not already in this category
+        if (!categories[readableReason].some(p => p.article_id === paper.article_id)) {
+          categories[readableReason].push(paper);
+        }
+      });
+    } else {
+      // Papers without explicit criteria
+      if (!categories['No explicit criteria']) {
+        categories['No explicit criteria'] = [];
+      }
+      categories['No explicit criteria'].push(paper);
+    }
+  });
+  
+  // Return categories sorted by the same order as the exclusion reason table
+  return Object.fromEntries(
+    sortedEntries.map(([reason, info]) => [reason, categories[reason] || []])
   );
 }
 
