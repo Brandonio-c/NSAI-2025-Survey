@@ -36,7 +36,7 @@ async function init() {
 
     populateCriteria(criteriaData);
     populateOverview(overviewData);
-    populatePaperLists(includeData, excludeData);
+    populatePaperLists(includeData, excludeData, overviewData);
   } catch (err) {
     console.error(err);
     alert('Error loading data. See console for details.');
@@ -353,7 +353,7 @@ function createSankeyDiagram(data) {
     .text(d => d.value.toLocaleString());
 }
 
-function populatePaperLists(included, excluded) {
+function populatePaperLists(included, excluded, overviewData) {
   const incSection = document.getElementById('includedSection');
   const excSection = document.getElementById('excludedSection');
   incSection.innerHTML = '';
@@ -388,8 +388,8 @@ function populatePaperLists(included, excluded) {
   `;
   excSection.appendChild(excSearchDiv);
 
-  // Create dropdown boxes for each exclusion reason
-  const categorizedExcluded = categorizeExcludedPapers(excluded);
+  // Create dropdown boxes for each exclusion reason using screening overview data
+  const categorizedExcluded = categorizeExcludedPapersFromOverview(overviewData, excluded);
   const excList = document.createElement('div');
   excList.id = 'excluded-papers-list';
   excList.style.maxHeight = '600px';
@@ -483,6 +483,72 @@ function categorizeExcludedPapers(excluded) {
   // Sort categories by count (descending)
   return Object.fromEntries(
     Object.entries(categories).sort((a, b) => b[1].length - a[1].length)
+  );
+}
+
+function categorizeExcludedPapersFromOverview(overviewData, excluded) {
+  const categories = {};
+  
+  // Get the breakdown from screening overview data
+  const breakdown = overviewData.rayyan_screening.excluded_out_of_scope.breakdown.individual_criteria_counts;
+  
+  // Consolidate categories according to the same mapping used in populateOverview
+  const consolidatedData = {};
+  
+  Object.entries(breakdown).forEach(([reason, info]) => {
+    let consolidatedReason;
+    
+    // Map to consolidated categories (same logic as in populateOverview)
+    if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
+      consolidatedReason = 'review / background article / survey (no novel method presented)';
+    } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
+      consolidatedReason = 'No codebase/implementation';
+    } else if (reason === '__EXR__no-fulltext') {
+      consolidatedReason = 'no-fulltext';
+    } else if (reason === '__EXR__not-in-english' || reason === '__EXR__foreign language') {
+      consolidatedReason = 'not-in-english';
+    } else {
+      consolidatedReason = reason;
+    }
+    
+    if (!consolidatedData[consolidatedReason]) {
+      consolidatedData[consolidatedReason] = { count: 0, papers: [] };
+    }
+    consolidatedData[consolidatedReason].count += info.count;
+  });
+  
+  // Now assign papers to categories based on their criteria
+  excluded.forEach(paper => {
+    const criteria = extractExclusionCriteria(paper);
+    if (criteria.length > 0) {
+      // Count paper in all applicable categories
+      criteria.forEach(criterion => {
+        const readableReason = getReadableExclusionReason(criterion);
+        
+        if (!categories[readableReason]) {
+          categories[readableReason] = [];
+        }
+        // Only add the paper if it's not already in this category
+        if (!categories[readableReason].some(p => p.article_id === paper.article_id)) {
+          categories[readableReason].push(paper);
+        }
+      });
+    } else {
+      // Papers without explicit criteria
+      if (!categories['No explicit criteria']) {
+        categories['No explicit criteria'] = [];
+      }
+      categories['No explicit criteria'].push(paper);
+    }
+  });
+  
+  // Sort categories by count from screening overview (descending)
+  return Object.fromEntries(
+    Object.entries(categories).sort((a, b) => {
+      const aCount = consolidatedData[a[0]] ? consolidatedData[a[0]].count : 0;
+      const bCount = consolidatedData[b[0]] ? consolidatedData[b[0]].count : 0;
+      return bCount - aCount;
+    })
   );
 }
 
