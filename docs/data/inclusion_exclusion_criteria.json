@@ -14,6 +14,10 @@
         ]
     },
     {
+        "name": "Neuro‑Symbolic Integration ",
+        "description": "The paper explicitly discusses the integration of neural and symbolic components, or the use of symbolic representations in neural networks."
+    },
+    {
         "name": "Public Code Availability",
         "description": "Source code is openly accessible (e.g., GitHub, Hugging Face) or provided on request, with scripts, weights, and documentation sufficient for reproduction."
     },

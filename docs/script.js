@@ -52,14 +52,29 @@ function populateCriteria(data) {
   rq.innerHTML = `<strong>Research question:</strong> ${data.inclusion_criteria[0]['research_question']}`;
   section.appendChild(rq);
 
+  // Objective statement (if available)
+  if (data.inclusion_criteria[0]['objective-statement']) {
+    const obj = document.createElement('p');
+    obj.className = 'mt-3';
+    obj.innerHTML = `<strong>Objective:</strong> ${data.inclusion_criteria[0]['objective-statement']}`;
+    section.appendChild(obj);
+  }
+
   // Inclusion criteria
   const incHeader = document.createElement('h5');
+  incHeader.className = 'mt-4';
   incHeader.textContent = 'Inclusion Criteria';
   section.appendChild(incHeader);
   const incList = document.createElement('ul');
+  
   data.inclusion_criteria.forEach(c => {
     const li = document.createElement('li');
-    li.textContent = `${c.name}: ${c.description}`;
+    // For the first criterion, use a shorter description
+    if (c.name === 'Neuro‑Symbolic Integration') {
+      li.textContent = `${c.name}: Study proposes, evaluates, or applies a hybrid system that explicitly combines neural/connectionist components with symbolic reasoning or structured knowledge representations.`;
+    } else {
+      li.textContent = `${c.name}: ${c.description}`;
+    }
     incList.appendChild(li);
   });
   section.appendChild(incList);
