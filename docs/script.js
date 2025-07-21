@@ -3,7 +3,19 @@ function createPaperListItem(article) {
   const li = document.createElement('li');
   const title = article.title || '(Untitled)';
   const link = article.url ? `<a href="${article.url}" target="_blank" rel="noopener">${title}</a>` : title;
-  li.innerHTML = `${link} <span class="text-muted small">(${article.year || 'n.d.'})</span>`;
+  const author = article.author || '';
+  const year = article.year || 'n.d.';
+  
+  li.innerHTML = `
+    <div>
+      <strong>${link}</strong>
+      <br>
+      <small class="text-muted">
+        ${author ? `Authors: ${author} • ` : ''}Year: ${year}
+        ${article.article_id ? `• ID: ${article.article_id}` : ''}
+      </small>
+    </div>
+  `;
   return li;
 }
 
@@ -78,6 +90,19 @@ function populateOverview(data) {
   summary.innerHTML = `<strong>Total included:</strong> ${includedCount} &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Total excluded:</strong> ${excludedCount}`;
   section.appendChild(summary);
 
+  // Add Sankey diagram
+  const sankeyDiv = document.createElement('div');
+  sankeyDiv.className = 'mt-4 mb-4';
+  sankeyDiv.innerHTML = '<h5>Screening Flow Diagram</h5>';
+  const sankeyContainer = document.createElement('div');
+  sankeyContainer.id = 'sankey-container';
+  sankeyContainer.style.height = '400px';
+  sankeyDiv.appendChild(sankeyContainer);
+  section.appendChild(sankeyDiv);
+
+  // Create Sankey diagram
+  createSankeyDiagram(data);
+
   // Pie chart canvas
   const canvas = document.createElement('canvas');
   canvas.id = 'exclusionPie';
@@ -124,21 +149,282 @@ function populateOverview(data) {
   });
 }
 
+function createSankeyDiagram(data) {
+  const searchData = data.search_and_deduplication;
+  const screening = data.rayyan_screening;
+  
+  const totalHits = searchData.total_results_retrieved;
+  const afterDedup = searchData.after_dedup_rayyan;
+  const included = screening.included_within_scope;
+  const excluded = screening.excluded_out_of_scope.total_count || screening.excluded_out_of_scope;
+
+  // Create Sankey data
+  const sankeyData = {
+    nodes: [
+      { id: 0, name: `Total Hits (${totalHits.toLocaleString()})` },
+      { id: 1, name: `After Dedup (${afterDedup.toLocaleString()})` },
+      { id: 2, name: `In-Scope (${included})` },
+      { id: 3, name: `Out-of-Scope (${excluded})` }
+    ],
+    links: [
+      { source: 0, target: 1, value: afterDedup },
+      { source: 1, target: 2, value: included },
+      { source: 1, target: 3, value: excluded }
+    ]
+  };
+
+  // Set up the SVG
+  const container = document.getElementById('sankey-container');
+  const width = container.offsetWidth || 800;
+  const height = 400;
+  const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+
+  // Clear any existing SVG
+  d3.select('#sankey-container').selectAll('*').remove();
+
+  const svg = d3.select('#sankey-container')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height)
+    .append('g')
+    .attr('transform', `translate(${margin.left},${margin.top})`);
+
+  // Color scale
+  const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+  // Create the Sankey layout
+  const sankey = d3.sankey()
+    .nodeWidth(15)
+    .nodePadding(10)
+    .extent([[1, 1], [width - margin.left - margin.right - 1, height - margin.top - margin.bottom - 5]]);
+
+  // Apply the layout
+  const { nodes, links } = sankey({
+    nodes: sankeyData.nodes.map(d => Object.assign({}, d)),
+    links: sankeyData.links.map(d => Object.assign({}, d))
+  });
+
+  // Add the links
+  svg.append('g')
+    .selectAll('path')
+    .data(links)
+    .join('path')
+    .attr('class', 'link')
+    .attr('d', d3.sankeyLinkHorizontal())
+    .attr('stroke', d => color(d.source.id))
+    .attr('stroke-width', d => Math.max(1, d.width))
+    .style('stroke-opacity', 0.5)
+    .on('mouseover', function(event, d) {
+      d3.select(this).style('stroke-opacity', 0.8);
+    })
+    .on('mouseout', function(event, d) {
+      d3.select(this).style('stroke-opacity', 0.5);
+    });
+
+  // Add the nodes
+  const node = svg.append('g')
+    .selectAll('g')
+    .data(nodes)
+    .join('g')
+    .attr('class', 'node');
+
+  node.append('rect')
+    .attr('x', d => d.x0)
+    .attr('y', d => d.y0)
+    .attr('height', d => d.y1 - d.y0)
+    .attr('width', d => d.x1 - d.x0)
+    .attr('fill', d => color(d.id))
+    .attr('stroke', '#000');
+
+  // Add the node labels
+  node.append('text')
+    .attr('x', d => d.x0 < (width - margin.left - margin.right) / 2 ? d.x1 + 6 : d.x0 - 6)
+    .attr('y', d => (d.y1 + d.y0) / 2)
+    .attr('dy', '0.35em')
+    .attr('text-anchor', d => d.x0 < (width - margin.left - margin.right) / 2 ? 'start' : 'end')
+    .style('font-size', '12px')
+    .text(d => d.name);
+
+  // Add value labels on the links
+  svg.append('g')
+    .selectAll('text')
+    .data(links)
+    .join('text')
+    .attr('x', d => (d.source.x1 + d.target.x0) / 2)
+    .attr('y', d => (d.y0 + d.y1) / 2)
+    .attr('dy', '0.35em')
+    .attr('text-anchor', 'middle')
+    .style('font-size', '12px')
+    .style('font-weight', 'bold')
+    .text(d => d.value.toLocaleString());
+}
+
 function populatePaperLists(included, excluded) {
   const incSection = document.getElementById('includedSection');
   const excSection = document.getElementById('excludedSection');
   incSection.innerHTML = '';
   excSection.innerHTML = '';
 
+  // Add search functionality for included papers
+  const incSearchDiv = document.createElement('div');
+  incSearchDiv.className = 'mb-3';
+  incSearchDiv.innerHTML = `
+    <div class="input-group">
+      <span class="input-group-text">🔍</span>
+      <input type="text" class="form-control" id="included-search" placeholder="Search included papers by title or author...">
+    </div>
+  `;
+  incSection.appendChild(incSearchDiv);
+
   const incList = document.createElement('ul');
   incList.className = 'paper-list';
+  incList.id = 'included-papers-list';
+  incList.style.maxHeight = '600px';
   included.forEach(a => incList.appendChild(createPaperListItem(a)));
   incSection.appendChild(incList);
 
-  const excList = document.createElement('ul');
-  excList.className = 'paper-list';
-  excluded.forEach(a => excList.appendChild(createPaperListItem(a)));
+  // Add search functionality for excluded papers
+  const excSearchDiv = document.createElement('div');
+  excSearchDiv.className = 'mb-3';
+  excSearchDiv.innerHTML = `
+    <div class="input-group">
+      <span class="input-group-text">🔍</span>
+      <input type="text" class="form-control" id="excluded-search" placeholder="Search excluded papers by title or author...">
+    </div>
+  `;
+  excSection.appendChild(excSearchDiv);
+
+  // Create categorized excluded papers
+  const categorizedExcluded = categorizeExcludedPapers(excluded);
+  const excList = document.createElement('div');
+  excList.id = 'excluded-papers-list';
+  excList.style.maxHeight = '600px';
+  excList.style.overflowY = 'auto';
+  
+  Object.entries(categorizedExcluded).forEach(([reason, papers]) => {
+    const categoryDiv = document.createElement('div');
+    categoryDiv.className = 'mb-3';
+    
+    const header = document.createElement('h6');
+    header.innerHTML = `${reason} <span class="badge bg-secondary">${papers.length}</span>`;
+    categoryDiv.appendChild(header);
+    
+    const papersList = document.createElement('ul');
+    papersList.className = 'paper-list';
+    papers.forEach(paper => papersList.appendChild(createPaperListItem(paper)));
+    categoryDiv.appendChild(papersList);
+    
+    excList.appendChild(categoryDiv);
+  });
+  
   excSection.appendChild(excList);
+
+  // Add search functionality
+  setupSearch('included-search', 'included-papers-list', included);
+  setupSearch('excluded-search', 'excluded-papers-list', excluded);
+}
+
+function categorizeExcludedPapers(excluded) {
+  const categories = {};
+  
+  excluded.forEach(paper => {
+    const criteria = extractExclusionCriteria(paper);
+    if (criteria.length > 0) {
+      const primaryReason = criteria[0]; // Use the first criterion as primary
+      const readableReason = getReadableExclusionReason(primaryReason);
+      
+      if (!categories[readableReason]) {
+        categories[readableReason] = [];
+      }
+      categories[readableReason].push(paper);
+    } else {
+      // Papers without explicit criteria
+      if (!categories['No explicit criteria']) {
+        categories['No explicit criteria'] = [];
+      }
+      categories['No explicit criteria'].push(paper);
+    }
+  });
+  
+  // Sort categories by count (descending)
+  return Object.fromEntries(
+    Object.entries(categories).sort((a, b) => b[1].length - a[1].length)
+  );
+}
+
+function extractExclusionCriteria(article) {
+  const criteria = [];
+  
+  if (article.customizations) {
+    article.customizations.forEach(customization => {
+      const key = customization.key;
+      const value = customization.value;
+      
+      if (key.startsWith('"__EXR__') && value === '1') {
+        criteria.push(key.replace(/"/g, ''));
+      }
+    });
+  }
+  
+  return criteria;
+}
+
+function getReadableExclusionReason(criterion) {
+  const reasonMap = {
+    '__EXR__off-topic': 'Off-topic/Not neuro-symbolic',
+    '__EXR__no-codebase': 'No codebase/implementation',
+    '__EXR__survey': 'Survey/review paper',
+    '__EXR__background article': 'Background article',
+    '__EXR__not-research': 'Not research paper',
+    '__EXR__no-eval': 'No evaluation',
+    '__EXR__duplicate': 'Duplicate',
+    '__EXR__review': 'Review paper',
+    '__EXR__no-fulltext': 'No fulltext',
+    '__EXR__not-in-english': 'Not in English',
+    '__EXR__foreign language': 'Foreign language',
+    '__EXR__c': 'Other/Unclear',
+    '__EXR__wrong outcome': 'Wrong outcome',
+    '__EXR__engl': 'English issue',
+    '__EXR__v': 'Version issue'
+  };
+  
+  return reasonMap[criterion] || criterion;
+}
+
+function setupSearch(searchId, listId, allPapers) {
+  const searchInput = document.getElementById(searchId);
+  const listElement = document.getElementById(listId);
+  
+  searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    
+    if (listId === 'included-papers-list') {
+      // Simple search for included papers
+      const listItems = listElement.querySelectorAll('li');
+      listItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+      });
+    } else {
+      // Search for excluded papers (categorized)
+      const categoryDivs = listElement.querySelectorAll('.mb-3');
+      categoryDivs.forEach(categoryDiv => {
+        const papersList = categoryDiv.querySelector('ul');
+        const listItems = papersList.querySelectorAll('li');
+        let hasVisibleItems = false;
+        
+        listItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          const isVisible = text.includes(searchTerm);
+          item.style.display = isVisible ? 'block' : 'none';
+          if (isVisible) hasVisibleItems = true;
+        });
+        
+        // Show/hide entire category based on whether it has visible items
+        categoryDiv.style.display = hasVisibleItems ? 'block' : 'none';
+      });
+    }
+  });
 }
 
 // kick off

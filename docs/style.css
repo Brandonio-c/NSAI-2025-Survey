@@ -11,22 +11,71 @@ h1 {
 }
 
 ul.paper-list {
-  max-height: 400px;
+  max-height: 600px;
   overflow-y: auto;
   list-style-type: none;
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 ul.paper-list li {
-  padding: 4px 0;
+  padding: 8px 0;
   border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+ul.paper-list li:hover {
+  background-color: #f8f9fa;
 }
 
 ul.paper-list li:last-child {
   border-bottom: none;
 }
 
+.accordion-body {
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.search-highlight {
+  background-color: #fff3cd;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
 .badge-criteria {
   font-size: 0.8rem;
   margin-right: 4px;
+}
+
+/* Sankey diagram styling */
+#sankey-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  margin: 10px 0;
+}
+
+#sankey-container svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.node rect {
+  fill-opacity: 0.8;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke-opacity: 0.4;
+}
+
+.link:hover {
+  stroke-opacity: 0.7;
 } 
