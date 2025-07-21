@@ -459,13 +459,18 @@ function categorizeExcludedPapers(excluded) {
   excluded.forEach(paper => {
     const criteria = extractExclusionCriteria(paper);
     if (criteria.length > 0) {
-      const primaryReason = criteria[0]; // Use the first criterion as primary
-      const readableReason = getReadableExclusionReason(primaryReason);
-      
-      if (!categories[readableReason]) {
-        categories[readableReason] = [];
-      }
-      categories[readableReason].push(paper);
+      // Count paper in all applicable categories (not just the first one)
+      criteria.forEach(criterion => {
+        const readableReason = getReadableExclusionReason(criterion);
+        
+        if (!categories[readableReason]) {
+          categories[readableReason] = [];
+        }
+        // Only add the paper if it's not already in this category
+        if (!categories[readableReason].some(p => p.article_id === paper.article_id)) {
+          categories[readableReason].push(paper);
+        }
+      });
     } else {
       // Papers without explicit criteria
       if (!categories['No explicit criteria']) {
