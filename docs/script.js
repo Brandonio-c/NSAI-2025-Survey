@@ -396,7 +396,7 @@ function populatePaperLists(included, excluded, overviewData) {
   excList.style.maxHeight = '600px';
   excList.style.overflowY = 'auto';
   
-  Object.entries(categorizedExcluded).forEach(([reason, papers]) => {
+  Object.entries(categorizedExcluded).forEach(([reason, data]) => {
     const categoryDiv = document.createElement('div');
     categoryDiv.className = 'mb-3';
     
@@ -405,7 +405,7 @@ function populatePaperLists(included, excluded, overviewData) {
     dropdownHeader.className = 'dropdown-header d-flex justify-content-between align-items-center p-2 bg-light border rounded-top';
     dropdownHeader.style.cursor = 'pointer';
     dropdownHeader.innerHTML = `
-      <h6 class="mb-0">${reason} <span class="badge bg-secondary">${papers.length}</span></h6>
+      <h6 class="mb-0">${reason} <span class="badge bg-secondary">${data.count}</span></h6>
       <i class="fas fa-chevron-down dropdown-icon"></i>
     `;
     
@@ -420,7 +420,7 @@ function populatePaperLists(included, excluded, overviewData) {
     papersList.className = 'paper-list mb-0';
     papersList.style.listStyle = 'none';
     papersList.style.padding = '0';
-    papers.forEach(paper => {
+    data.papers.forEach(paper => {
       const li = createPaperListItem(paper);
       li.style.padding = '8px 12px';
       li.style.borderBottom = '1px solid #eee';
@@ -585,35 +585,27 @@ function categorizeExcludedPapersFromConsolidatedData(overviewData, excluded) {
   // Sort by count (descending) - same as exclusion reason table
   const sortedEntries = Object.entries(consolidatedData).sort((a, b) => b[1].count - a[1].count);
   
-  // Now assign papers to categories based on their criteria
-  const categories = {};
+  // Map each paper to its consolidated categories
+  const paperBuckets = {};
   excluded.forEach(paper => {
     const criteria = extractExclusionCriteria(paper);
     if (criteria.length > 0) {
-      // Count paper in all applicable categories
       criteria.forEach(criterion => {
         const readableReason = getReadableExclusionReason(criterion);
-        
-        if (!categories[readableReason]) {
-          categories[readableReason] = [];
-        }
-        // Only add the paper if it's not already in this category
-        if (!categories[readableReason].some(p => p.article_id === paper.article_id)) {
-          categories[readableReason].push(paper);
+        if (!paperBuckets[readableReason]) paperBuckets[readableReason] = [];
+        if (!paperBuckets[readableReason].some(p => p.article_id === paper.article_id)) {
+          paperBuckets[readableReason].push(paper);
         }
       });
     } else {
-      // Papers without explicit criteria
-      if (!categories['No explicit criteria']) {
-        categories['No explicit criteria'] = [];
-      }
-      categories['No explicit criteria'].push(paper);
+      if (!paperBuckets['No explicit criteria']) paperBuckets['No explicit criteria'] = [];
+      paperBuckets['No explicit criteria'].push(paper);
     }
   });
   
-  // Return categories sorted by the same order as the exclusion reason table
+  // Build final mapping with count from consolidated data and papers list
   return Object.fromEntries(
-    sortedEntries.map(([reason, info]) => [reason, categories[reason] || []])
+    sortedEntries.map(([reason, info]) => [reason, { count: info.count, papers: paperBuckets[reason] || [] }])
   );
 }
 
