@@ -39,7 +39,8 @@
     {"name": "No Quantitative Evaluation",    "code": "no-eval"},
     {"name": "Outside Neuro‑Symbolic Scope",  "code": "off-topic"},
     {"name": "Duplicate / Superseded",        "code": "duplicate"},
-    {"name": "No Full‑Text Access",           "code": "no-fulltext"}
+    {"name": "No Full‑Text Access",           "code": "no-fulltext"},
+    {"name": "Results are not Reproduceable",        "code": "not-reproduceable"}
     ],
     "application_notes": [
     "Apply exclusion criteria in the order listed and record only the FIRST matching reason.",
