@@ -146,9 +146,13 @@ function populateOverview(data) {
     
     // Map to consolidated categories
     if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
-      consolidatedReason = 'review';
+      consolidatedReason = 'review / background article / survey (no novel method presented)';
     } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
       consolidatedReason = 'No codebase/implementation';
+    } else if (reason === '__EXR__no-fulltext') {
+      consolidatedReason = 'no-fulltext';
+    } else if (reason === '__EXR__not-in-english' || reason === '__EXR__foreign language') {
+      consolidatedReason = 'not-in-english';
     } else {
       consolidatedReason = reason;
     }
@@ -209,9 +213,13 @@ function createSankeyDiagram(data) {
     let consolidatedReason;
     
     if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
-      consolidatedReason = 'review';
+      consolidatedReason = 'review / background article / survey (no novel method presented)';
     } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
       consolidatedReason = 'No codebase/implementation';
+    } else if (reason === '__EXR__no-fulltext') {
+      consolidatedReason = 'no-fulltext';
+    } else if (reason === '__EXR__not-in-english' || reason === '__EXR__foreign language') {
+      consolidatedReason = 'not-in-english';
     } else {
       consolidatedReason = reason;
     }
@@ -494,15 +502,15 @@ function getReadableExclusionReason(criterion) {
   const reasonMap = {
     '__EXR__off-topic': 'Off-topic/Not neuro-symbolic',
     '__EXR__no-codebase': 'No codebase/implementation',
-    '__EXR__survey': 'review',
-    '__EXR__background article': 'review',
+    '__EXR__survey': 'review / background article / survey (no novel method presented)',
+    '__EXR__background article': 'review / background article / survey (no novel method presented)',
     '__EXR__not-research': 'Not research paper',
     '__EXR__no-eval': 'No evaluation',
     '__EXR__duplicate': 'Duplicate',
-    '__EXR__review': 'review',
-    '__EXR__no-fulltext': 'No fulltext',
-    '__EXR__not-in-english': 'Not in English',
-    '__EXR__foreign language': 'Foreign language',
+    '__EXR__review': 'review / background article / survey (no novel method presented)',
+    '__EXR__no-fulltext': 'no-fulltext',
+    '__EXR__not-in-english': 'not-in-english',
+    '__EXR__foreign language': 'not-in-english',
     '__EXR__c': 'No codebase/implementation',
     '__EXR__wrong outcome': 'No codebase/implementation',
     '__EXR__engl': 'No codebase/implementation',
