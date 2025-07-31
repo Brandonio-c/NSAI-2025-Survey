@@ -174,6 +174,105 @@
     ]
   },
   {
+    "article_id": "rayyan-242083805",
+    "title": "NESTER: An Adaptive Neurosymbolic Method for Causal Effect Estimation",
+    "year": "2022",
+    "author": "Reddy, Abbavaram Gowtham and Vineeth, N. Balasubramanian",
+    "url": "",
+    "abstract": "Causal effect estimation from observational data is a central problem in causal inference. Methods based on potential outcomes framework solve this problem by exploiting inductive biases and heuristics from causal inference. Each of these methods addresses a specific aspect of causal effect estimation, such as controlling propensity score, enforcing randomization, etc., by designing neural network (NN) architectures and regularizers. In this paper, we propose an adaptive method called Neurosymbolic Causal Effect Estimator (NESTER), a generalized method for causal effect estimation. NESTER integrates the ideas used in existing methods based on multi-head NNs for causal effect estimation into one framework. We design a Domain Specific Language (DSL) tailored for causal effect estimation based on causal inductive biases used in literature. We conduct a theoretical analysis to investigate NESTER's efficacy in estimating causal effects. Our comprehensive empirical results show that NESTER performs better than state-of-the-art methods on benchmark datasets.",
+    "note": "RAYYAN-INCLUSION: {\"brandon\"=>\"Included\", \"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"GitHub: [https://github.com/gautam0707/NESTER]\", \"The github link was obtained upon email request. The original paper mentions that the code has been released in the supplemental material but none was found. \"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-04T18:24:48.583Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-06-04T18:27:43.269Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13249212",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-04T18:27:49.598Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13249212",
+        "value": "deleted"
+      },
+      {
+        "created_at": "2025-06-04T18:28:33.123Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13249227",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-04T18:29:38.295Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13249258",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-21T08:20:10.904Z",
+        "user_id": 546715,
+        "user_email": "brandcol@umd.edu",
+        "key": "included",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:03:32.883Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "article_id": "rayyan-242083810",
+    "title": "Neuro-symbolic visual dialog",
+    "year": "2022",
+    "author": "Abdessaied, A. and Bâce, M. and Bulling, A.",
+    "url": "",
+    "abstract": "We propose Neuro-Symbolic Visual Dialog (NSVD) -the first method to combine deep learning and symbolic program execution for multi-round visually-grounded reasoning. NSVD …",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"Email request for source code access sent.\", \"Github: [https://github.com/adnenabdessaied/NSVD]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-04T19:16:22.044Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13250199",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-04T19:16:25.402Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:05:16.628Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605362",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:05:23.884Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
     "article_id": "rayyan-242083811",
     "title": "DeepInfusion: A dynamic infusion based-neuro-symbolic AI model for segmentation of intracranial aneurysms",
     "year": "2023",
@@ -920,6 +1019,38 @@
     ]
   },
   {
+    "article_id": "rayyan-242083883",
+    "title": "Noise to the Rescue: Escaping Local Minima in Neurosymbolic Local Search",
+    "year": "2025",
+    "author": "Daniele, Alessandro and Emile van, Krieken",
+    "url": "",
+    "abstract": "Deep learning has achieved remarkable success across various domains, largely thanks to the efficiency of backpropagation (BP). However, BP's reliance on differentiability poses challenges in neurosymbolic learning, where discrete computation is combined with neural models. We show that applying BP to Godel logic, which represents conjunction and disjunction as min and max, is equivalent to a local search algorithm for SAT solving, enabling the optimisation of discrete Boolean formulas without sacrificing differentiability. However, deterministic local search algorithms get stuck in local optima. Therefore, we propose the Godel Trick, which adds noise to the model's logits to escape local optima. We evaluate the Godel Trick on SATLIB, and demonstrate its ability to solve a broad range of SAT problems. Additionally, we apply it to neurosymbolic models and achieve state-of-the-art performance on Visual Sudoku, all while avoiding expensive probabilistic reasoning. These results highlight the Godel Trick's potential as a robust, scalable approach for integrating symbolic reasoning with neural architectures.",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"Github: [https://github.com/DanieleAlessandro/Godel-Trick.git]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-11T17:05:07.374Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:10:55.738Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605531",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:10:57.617Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
     "article_id": "rayyan-242083885",
     "title": "Knowledge Enhanced Neural Networks for relational domains",
     "year": "2022",
@@ -1308,6 +1439,84 @@
       },
       {
         "created_at": "2025-06-12T19:52:36.938Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "article_id": "rayyan-242083967",
+    "title": "A Neuro-Symbolic Approach for Fault Diagnosis in Smart Power Grids",
+    "year": "2022",
+    "author": "Aravanis, T. and Kabouris, I.",
+    "url": "",
+    "abstract": "… Against this background, we present, in this work, a novel neurosymbolic approach for the diagnosis (ie, detection and classification) of the common faults encountered in modern power …",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"email sent to the author requesting code access\", \"Github: [https://github.com/faravanis/PCI_2022]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-12T20:02:53.098Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13462857",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-12T20:02:55.212Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:12:46.612Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605566",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:12:48.284Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "article_id": "rayyan-242083969",
+    "title": "Identifying Logical Patterns in Text for Reasoning",
+    "year": "2024",
+    "author": "Armary, Pauline and Cheikh-Brahim, El-Vaigh and Antoine, Spicher and Labbani, Narsis Ouassila and Christophe, Nicolle",
+    "url": "",
+    "abstract": "Translating unstructured text into logical format is a key challenge for building ontologies automatically and addressing deductive inference. Most of the approaches have tackled the identification of concepts and relations in text, but few of them have addressed the most complex axioms like class expression subsumption. This work proposes DeLIR, a neurosymbolic approach to identify complex logical patterns in text by combining a grammatical translation of dependency parsing trees and a fine-tuned Large language Model (LLM). DeLIR combines the strength of the parsing accuracy provided by a grammatical approach and pattern flexibility provided by a fine-tuned LLM. We evaluated our approach on FOLIO dataset for both translation capacity and inference capability. Our grammatical approach has a perfect parsing accuracy and combining the grammatical approach with LLMs improves the LLMS translation capacity: tinyLlama, T5-small-text2logic, Llama-7B and Mistral-7B. We also evaluate the inference capacity of the different LLMs. Mistral-7B, while being smaller than the state-of-the-art approach using GPT-4, presents similar results to predict the correct inference labels.",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"email sent to author asking for code access\", \"Github: [https://gitlab.com/anabasis-public/delir]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-12T20:11:28.178Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13463053",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-12T20:11:29.883Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:14:34.879Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605604",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:14:36.510Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "included",
@@ -2177,6 +2386,45 @@
     ]
   },
   {
+    "article_id": "rayyan-242084095",
+    "title": "Jointly Learning Truth-Conditional Denotations and Groundings using Parallel Attention",
+    "year": "2021",
+    "author": "Bergen, Leon and Bahdanau, Dzmitry and O'Donnell, Timothy J.",
+    "url": "",
+    "abstract": "We present a model that jointly learns the denotations of words together with their groundings using a truth-conditional semantics. Our model builds on the neurosymbolic approach of Mao et al. (2019), learning to ground objects in the CLEVR dataset (Johnson et al., 2017) using a novel parallel attention mechanism. The model achieves state of the art performance on visual question answering, learning to detect and ground objects with question performance as the only training signal. We also show that the model is able to learn flexible non-canonical groundings just by adjusting answers to questions in the training set.",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"email sent\", \"Github: [https://github.com/bergen/learning-groundings]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-16T18:25:09.193Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13543573",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-16T18:25:10.660Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:21:06.020Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605742",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:21:07.274Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
     "article_id": "rayyan-242084107",
     "title": "Let Me Help You! Neuro-Symbolic Short-Context Action Anticipation",
     "year": "2024",
@@ -3000,6 +3248,45 @@
     ]
   },
   {
+    "article_id": "rayyan-242084306",
+    "title": "Symbolic Deep Learning for Structural System Identification",
+    "year": "2022",
+    "author": "Chen, Zhao and Yang, Liu and Hao, Sun",
+    "url": "",
+    "abstract": "Closed-form model expression is commonly required for parametric data assimilation (e.g., model updating, damage quantification, and so on). However, episternic bias due to fixing the model class is a challenging issue for structural identification. Furthermore, it is sometimes hard to derive explicit expressions for structural mechanisms such as damping and nonlinear restoring forces. Although existing model class selection methods are beneficial to reduce the model uncertainty, the primary issue lies in their limitation to a small number of predefined model choices. We propose a symbolic deep learning framework that alleviates the constraint of fixed model classes and lets the data more flexibly determine the model type and discover the symbolic invariance of the structural system. A design principle for symbolic neural networks has been developed to leverage domain knowledge and translate data to flexibly symbolic equations of motion with a good predictive capacity for new data. A two-stage model selection strategy is proposed to conduct adaptive pruning on network and equation levels by balancing the model sparsity and the goodness of fit. The proposed method's expressive strengths and weaknesses have been analyzed in several numerical case studies, including systems with nonlinear damping, restoring force, and chaotic behavior. Results from an experimental case study revealed the potential of the proposed method for flexibly interpreting hidden mechanisms for real-world applications. Finally, we discuss necessary improvements to transfer this computational method for practical applications. (C) 2022 American Society of Civil Engineers.",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"email sent\", \"Github: [https://github.com/ZhaoChenCivilSciML/Symbolic-Neural-Net-for-Structural-Identification]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-18T20:44:53.964Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13611066",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-18T20:44:55.443Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:24:14.393Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605820",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:24:16.091Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
     "article_id": "rayyan-242084308",
     "title": "ComPhy: Compositional Physical Reasoning of Objects and Events from Videos",
     "year": "2022",
@@ -3070,6 +3357,59 @@
       },
       {
         "created_at": "2025-06-18T20:49:30.690Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "article_id": "rayyan-242084310",
+    "title": "Image Translation as Diffusion Visual Programmers",
+    "year": "2024",
+    "author": "Han, Cheng and James, C. Liang and Wang, Qifan and Rabbani, Majid and Dianat, Sohail and Rao, Raghuveer and Wu, Ying Nian and Liu, Dongfang",
+    "url": "",
+    "abstract": "We introduce the novel Diffusion Visual Programmer (DVP), a neuro-symbolic image translation framework. Our proposed DVP seamlessly embeds a condition-flexible diffusion model within the GPT architecture, orchestrating a coherent sequence of visual programs (i.e., computer vision models) for various pro-symbolic steps, which span RoI identification, style transfer, and position manipulation, facilitating transparent and controllable image translation processes. Extensive experiments demonstrate DVP's remarkable performance, surpassing concurrent arts. This success can be attributed to several key features of DVP: First, DVP achieves condition-flexible translation via instance normalization, enabling the model to eliminate sensitivity caused by the manual guidance and optimally focus on textual descriptions for high-quality content generation. Second, the framework enhances in-context reasoning by deciphering intricate high-dimensional concepts in feature spaces into more accessible low-dimensional symbols (e.g., [Prompt], [RoI object]), allowing for localized, context-free editing while maintaining overall coherence. Last but not least, DVP improves systemic controllability and explainability by offering explicit symbolic representations at each programming stage, empowering users to intuitively interpret and modify results. Our research marks a substantial step towards harmonizing artificial image translation processes with cognitive intelligence, promising broader applications.",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\", \"Vladimir\"=>\"Included\"} | USER-NOTES: {\"Vladimir\"=>[\"Github: [https://github.com/DVPmain/DVP/blob/main/image_editing.ipynb]\"], \"Ishan\"=>[\"email sent.\", \"Github: [https://github.com/DVPmain/DVP]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-18T20:51:59.179Z",
+        "user_id": 999356,
+        "user_email": "martiros@umd.edu",
+        "key": "note-13611209",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-18T20:52:00.671Z",
+        "user_id": 999356,
+        "user_email": "martiros@umd.edu",
+        "key": "included",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-18T20:55:25.908Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13611269",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-18T20:55:27.866Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:25:27.545Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605853",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:25:29.901Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "included",
@@ -3528,6 +3868,45 @@
     ]
   },
   {
+    "article_id": "rayyan-242084373",
+    "title": "Hierarchical Planning for Complex Tasks with Knowledge Graph-RAG and Symbolic Verification",
+    "year": "2025",
+    "author": "Cornelio, Cristina and Petruzzellis, Flavio and Pietro, Lio",
+    "url": "",
+    "abstract": "Large Language Models (LLMs) have shown promise as robotic planners but often struggle with long-horizon and complex tasks, especially in specialized environments requiring external knowledge. While hierarchical planning and Retrieval-Augmented Generation (RAG) address some of these challenges, they remain insufficient on their own and a deeper integration is required for achieving more reliable systems. To this end, we propose a neuro-symbolic approach that enhances LLMs-based planners with Knowledge Graph-based RAG for hierarchical plan generation. This method decomposes complex tasks into manageable subtasks, further expanded into executable atomic action sequences. To ensure formal correctness and proper decomposition, we integrate a Symbolic Validator, which also functions as a failure detector by aligning expected and observed world states. Our evaluation against baseline methods demonstrates the consistent significant advantages of integrating hierarchical planning, symbolic verification, and RAG across tasks of varying complexity and different LLMs. Additionally, our experimental setup and novel metrics not only validate our approach for complex planning but also serve as a tool for assessing LLMs' reasoning and compositional capabilities.",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"email sent to cristina\", \"Github: [https://github.com/corneliocristina/HVR]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-19T18:00:40.529Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13634984",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-19T18:00:42.925Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:27:03.085Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605903",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:27:04.596Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
     "article_id": "rayyan-242084378",
     "title": "Neuro-symbolic learning of answer set programs from raw data",
     "year": "2022",
@@ -3545,6 +3924,52 @@
       },
       {
         "created_at": "2025-06-19T18:09:32.340Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "article_id": "rayyan-242084386",
+    "title": "Neuro-symbolic interpretable AI for automatic COVID-19 patient-stratification based on standardised lung ultrasound data",
+    "year": "2022",
+    "author": "Custode, L. L. and Mento, F. and Afrakhteh, S. and Tursi, F.",
+    "url": "https://pubs.aip.org/asa/poma/article-abstract/46/1/020002/2842422",
+    "abstract": "… In this work, we present a novel neuro-symbolic approach able to provide video-level predictions by aggregating results from frame-level analysis made by deep-networks. Specifically, …",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"email sent to leonardo\", \"email address bounced. so sent the same email to giovanni\", \"Gitlab: [https://gitlab.com/leocus/neurosymbolic-covid19-scoring]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-19T19:05:35.747Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13636664",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-19T19:05:37.333Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-06-19T19:15:14.675Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13636893",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:48:35.800Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14606322",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:48:36.993Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "included",
@@ -4553,6 +4978,52 @@
     ]
   },
   {
+    "article_id": "rayyan-242084591",
+    "title": "Shadow of the (Hierarchical) Tree: Reconciling Symbolic and Predictive Components of the Neural Code for Syntax",
+    "year": "2024",
+    "author": "Elliot, Murphy",
+    "url": "",
+    "abstract": "Natural language syntax can serve as a major test for how to integrate two infamously distinct frameworks: symbolic representations and connectionist neural networks. Building on a recent neurocomputational architecture for syntax (ROSE), I discuss the prospects of reconciling the neural code for hierarchical 'vertical' syntax with linear and predictive 'horizontal' processes via a hybrid neurosymbolic model. I argue that the former can be accounted for via the higher levels of ROSE in terms of vertical phrase structure representations, while the latter can explain horizontal forms of linguistic information via the tuning of the lower levels to statistical and perceptual inferences. One prediction of this is that artificial language models will contribute to the cognitive neuroscience of horizontal morphosyntax, but much less so to hierarchically compositional structures. I claim that this perspective helps resolve many current tensions in the literature. Options for integrating these two neural codes are discussed, with particular emphasis on how predictive coding mechanisms can serve as interfaces between symbolic oscillatory phase codes and population codes for the statistics of linearized aspects of syntax. Lastly, I provide a neurosymbolic mathematical model for how to inject symbolic representations into a neural regime encoding lexico-semantic statistical features.",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"email sent to Elliot.\", \"email response: This paper is now being published as follows:  Murphy, E. ROSE: A universal neural grammar. Cognitive Neuroscience https://doi.org/10.1080/17588928.2025.2523875.  This pre-print you mentioned is now transformed into the above paper. This is a Discussion article, with no source code per se. But there is a GitHub page with some simulation scripts that you might use: https://github.com/ElliotMurphy91/ROSE\", \"Github: [https://github.com/ElliotMurphy91/ROSE]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-24T23:32:35.856Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13779751",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-24T23:32:37.515Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:32:52.324Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14606017",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:33:07.374Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14606024",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:36:36.109Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
     "article_id": "rayyan-242084593",
     "title": "Neuro-Symbolic Continual Learning: Knowledge, Reasoning Shortcuts and Concept Rehearsal",
     "year": "2023",
@@ -4727,6 +5198,45 @@
       },
       {
         "created_at": "2025-06-25T14:52:38.451Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "article_id": "rayyan-242084607",
+    "title": "NSP: A Neuro-Symbolic Natural Language Navigational Planner",
+    "year": "2024",
+    "author": "English, W. and Simon, D. and Jha, S. K.",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10903323/?casa_token=nAKWfRiht04AAAAA:x7M80OAGlqfaTO3O5hE-XwFQASOTDCSPGwoxeg97u8W_gszGQU1YgtLiY2Xps9tUhrLJ1_C6fD8CyA",
+    "abstract": "… , we propose a neuro-symbolic frame… neuro-symbolic approach using a benchmark suite with 1500 path-planning problems. The experimental evaluation shows that our neuro-symbolic …",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"email sent to William. \", \"Github: [https://github.com/Dubascudes/NSP]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-25T14:56:33.745Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13797759",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-25T14:56:35.463Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:39:22.165Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14606157",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:39:24.097Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "included",
@@ -5230,6 +5740,45 @@
       },
       {
         "created_at": "2025-06-26T15:07:07.491Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      }
+    ]
+  },
+  {
+    "article_id": "rayyan-242084669",
+    "title": "Integrating Textual Queries with AI-Based Object Detection: A Compositional Prompt-Guided Approach",
+    "year": "2025",
+    "author": "Ferreira, S. and Martins, A. and Costa, D. G. and Silva, I.",
+    "url": "",
+    "abstract": "While object detection and recognition have been extensively adopted by many applications in decision-making, new algorithms and methodologies have emerged to enhance the automatic identification of target objects. In particular, the rise of deep learning and language models has opened many possibilities in this area, although challenges in contextual query analysis and human interactions persist. This article presents a novel neuro-symbolic object detection framework that aligns object proposals with textual prompts using a deep learning module while enabling logical reasoning through a symbolic module. By integrating deep learning with symbolic reasoning, object detection and scene understanding are considerably enhanced, enabling complex, query-driven interactions. Using a synthetic 3D image dataset, the results demonstrate that this framework effectively generalizes to complex queries, combining simple attribute-based descriptions without explicit training on compound prompts. We present the numerical results and comprehensive discussions, highlighting the potential of our approach for emerging smart applications.",
+    "note": "RAYYAN-INCLUSION: {\"Ishan\"=>\"Included\"} | USER-NOTES: {\"Ishan\"=>[\"Email sent to Silvan. \", \"Github: [https://github.com/silvaan/prompt-guided-detection]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-26T15:23:40.484Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13826703",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-26T15:23:42.206Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-07-25T11:44:24.700Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14606251",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:44:26.466Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "included",
@@ -14180,6 +14729,108 @@
     ]
   },
   {
+    "article_id": "rayyan-242083957",
+    "title": "A Neuro-Symbolic Approach to Monitoring Salt Content in Food",
+    "year": "2024",
+    "author": "Tayal, Anuja and Eugenio, Barbara Di and Salunke, Devika and Andrew, D. Boyd and Dickens, Carolyn A. and Abril, Eulalia P. and Garcia-Bedoya, Olga and Allen-Meares, Paula G.",
+    "url": "",
+    "abstract": "We propose a dialogue system that enables heart failure patients to inquire about salt content in foods and help them monitor and reduce salt intake. Addressing the lack of specific datasets for food-based salt content inquiries, we develop a template-based conversational dataset. The dataset is structured to ask clarification questions to identify food items and their salt content. Our findings indicate that while fine-tuning transformer-based models on the dataset yields limited performance, the integration of Neuro-Symbolic Rules significantly enhances the system's performance. Our experiments show that by integrating neuro-symbolic rules, our system achieves an improvement in joint goal accuracy of over 20% across different data sizes compared to naively fine-tuning transformer-based models.",
+    "note": "RAYYAN-INCLUSION: {\"Haowei\"=>\"Excluded\", \"Ishan\"=>\"Included\"} | RAYYAN-EXCLUSION-REASONS: off-topic | USER-NOTES: {\"Ishan\"=>[\"email sent requesting access to the code.\", \"Github: [https://github.com/anujatayal/NS-Monitoring-Salt-Content-in-Food]\", \"Author said the code will be updated in the linked repo\", \"Here is the updated link\", \"Github: [https://github.com/anujatayal/NS-Monitoring-Salt-Content]\"]",
+    "customizations": [
+      {
+        "created_at": "2025-06-12T14:49:55.962Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-13455654",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-12T14:49:58.190Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "0"
+      },
+      {
+        "created_at": "2025-06-12T17:11:19.631Z",
+        "user_id": 999353,
+        "user_email": "hwdeng@umd.edu",
+        "key": "\"__EXR__no-eval\"",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-12T17:11:19.642Z",
+        "user_id": 999353,
+        "user_email": "hwdeng@umd.edu",
+        "key": "included",
+        "value": "-1"
+      },
+      {
+        "created_at": "2025-06-12T17:11:28.501Z",
+        "user_id": 999353,
+        "user_email": "hwdeng@umd.edu",
+        "key": "\"__EXR__off-topic\"",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-06-12T17:11:28.511Z",
+        "user_id": 999353,
+        "user_email": "hwdeng@umd.edu",
+        "key": "included",
+        "value": "-1"
+      },
+      {
+        "created_at": "2025-06-12T17:11:28.525Z",
+        "user_id": 999353,
+        "user_email": "hwdeng@umd.edu",
+        "key": "\"__EXR__no-eval\"",
+        "value": "deleted"
+      },
+      {
+        "created_at": "2025-07-25T11:09:13.565Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605486",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:09:31.128Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605493",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-25T11:09:47.825Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14605486",
+        "value": "edited"
+      },
+      {
+        "created_at": "2025-07-25T11:09:54.814Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "included",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-28T19:30:18.273Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14674861",
+        "value": "1"
+      },
+      {
+        "created_at": "2025-07-28T19:30:38.994Z",
+        "user_id": 999354,
+        "user_email": "itamraka@umd.edu",
+        "key": "note-14674868",
+        "value": "1"
+      }
+    ]
+  },
+  {
     "article_id": "rayyan-242083960",
     "title": "Empirical investigation of neural symbolic reasoning strategies",
     "year": "2023",
@@ -14193,49 +14844,49 @@
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "note-13455875",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-12T14:57:09.828Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "included",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-12T17:12:22.965Z",
         "user_id": 999353,
         "user_email": "hwdeng@umd.edu",
         "key": "\"__EXR__no-codebase\"",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-12T17:12:22.978Z",
         "user_id": 999353,
         "user_email": "hwdeng@umd.edu",
         "key": "included",
-        "value": -1
+        "value": "-1"
       },
       {
         "created_at": "2025-07-15T17:15:52.818Z",
         "user_id": 546715,
         "user_email": "brandcol@umd.edu",
         "key": "included",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-07-21T08:25:17.778Z",
         "user_id": 546715,
         "user_email": "brandcol@umd.edu",
         "key": "included",
-        "value": -1
+        "value": "-1"
       },
       {
         "created_at": "2025-07-21T08:25:20.960Z",
         "user_id": 546715,
         "user_email": "brandcol@umd.edu",
         "key": "included",
-        "value": 1
+        "value": "1"
       }
     ]
   },
@@ -14253,28 +14904,28 @@
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "note-13543181",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-16T18:05:34.761Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "included",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-16T23:29:06.827Z",
         "user_id": 999353,
         "user_email": "hwdeng@umd.edu",
         "key": "\"__EXR__no-codebase\"",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-16T23:29:06.840Z",
         "user_id": 999353,
         "user_email": "hwdeng@umd.edu",
         "key": "included",
-        "value": -1
+        "value": "-1"
       }
     ]
   },
@@ -14292,49 +14943,49 @@
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "note-13610421",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-18T20:16:59.365Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "included",
-        "value": 0
+        "value": "0"
       },
       {
         "created_at": "2025-06-18T20:18:44.322Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "note-13610467",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-18T20:18:45.905Z",
         "user_id": 999354,
         "user_email": "itamraka@umd.edu",
         "key": "included",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-18T23:05:35.487Z",
         "user_id": 999353,
         "user_email": "hwdeng@umd.edu",
         "key": "\"__EXR__survey\"",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-18T23:05:35.501Z",
         "user_id": 999353,
         "user_email": "hwdeng@umd.edu",
         "key": "included",
-        "value": -1
+        "value": "-1"
       },
       {
         "created_at": "2025-07-15T17:16:34.001Z",
         "user_id": 546715,
         "user_email": "brandcol@umd.edu",
         "key": "included",
-        "value": 1
+        "value": "1"
       }
     ]
   },
@@ -14352,35 +15003,35 @@
         "user_id": 999353,
         "user_email": "hwdeng@umd.edu",
         "key": "\"__EXR__no-codebase\"",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-20T19:55:42.288Z",
         "user_id": 999353,
         "user_email": "hwdeng@umd.edu",
         "key": "included",
-        "value": -1
+        "value": "-1"
       },
       {
         "created_at": "2025-06-20T20:07:11.716Z",
         "user_id": 999356,
         "user_email": "martiros@umd.edu",
         "key": "note-13667957",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-06-20T20:07:13.335Z",
         "user_id": 999356,
         "user_email": "martiros@umd.edu",
         "key": "included",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-07-15T17:16:45.236Z",
         "user_id": 546715,
         "user_email": "brandcol@umd.edu",
         "key": "included",
-        "value": 1
+        "value": "1"
       }
     ]
   },
@@ -14398,28 +15049,28 @@
         "user_id": 546715,
         "user_email": "brandcol@umd.edu",
         "key": "note-14011684",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-07-03T21:42:05.622Z",
         "user_id": 546715,
         "user_email": "brandcol@umd.edu",
         "key": "included",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-07-03T21:45:48.957Z",
         "user_id": 999352,
         "user_email": "bhuvan9@umd.edu",
         "key": "\"__EXR__no-codebase\"",
-        "value": 1
+        "value": "1"
       },
       {
         "created_at": "2025-07-03T21:45:48.967Z",
         "user_id": 999352,
         "user_email": "bhuvan9@umd.edu",
         "key": "included",
-        "value": -1
+        "value": "-1"
       }
     ]
   }

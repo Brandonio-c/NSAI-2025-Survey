@@ -1,6 +1,13 @@
 created_at,user_id,user_email,article_id,key,value
+2025-06-12T14:49:55.962Z,999354,itamraka@umd.edu,242083957,note-13455654,1
+2025-06-12T14:49:58.190Z,999354,itamraka@umd.edu,242083957,included,0
 2025-06-12T14:57:08.000Z,999354,itamraka@umd.edu,242083960,note-13455875,1
 2025-06-12T14:57:09.828Z,999354,itamraka@umd.edu,242083960,included,1
+2025-06-12T17:11:19.631Z,999353,hwdeng@umd.edu,242083957,"""__EXR__no-eval""",1
+2025-06-12T17:11:19.642Z,999353,hwdeng@umd.edu,242083957,included,-1
+2025-06-12T17:11:28.501Z,999353,hwdeng@umd.edu,242083957,"""__EXR__off-topic""",1
+2025-06-12T17:11:28.511Z,999353,hwdeng@umd.edu,242083957,included,-1
+2025-06-12T17:11:28.525Z,999353,hwdeng@umd.edu,242083957,"""__EXR__no-eval""",deleted
 2025-06-12T17:12:22.965Z,999353,hwdeng@umd.edu,242083960,"""__EXR__no-codebase""",1
 2025-06-12T17:12:22.978Z,999353,hwdeng@umd.edu,242083960,included,-1
 2025-06-16T18:05:32.540Z,999354,itamraka@umd.edu,242084086,note-13543181,1
@@ -26,3 +33,9 @@ created_at,user_id,user_email,article_id,key,value
 2025-07-15T17:16:45.236Z,546715,brandcol@umd.edu,242084466,included,1
 2025-07-21T08:25:17.778Z,546715,brandcol@umd.edu,242083960,included,-1
 2025-07-21T08:25:20.960Z,546715,brandcol@umd.edu,242083960,included,1
+2025-07-25T11:09:13.565Z,999354,itamraka@umd.edu,242083957,note-14605486,1
+2025-07-25T11:09:31.128Z,999354,itamraka@umd.edu,242083957,note-14605493,1
+2025-07-25T11:09:47.825Z,999354,itamraka@umd.edu,242083957,note-14605486,edited
+2025-07-25T11:09:54.814Z,999354,itamraka@umd.edu,242083957,included,1
+2025-07-28T19:30:18.273Z,999354,itamraka@umd.edu,242083957,note-14674861,1
+2025-07-28T19:30:38.994Z,999354,itamraka@umd.edu,242083957,note-14674868,1

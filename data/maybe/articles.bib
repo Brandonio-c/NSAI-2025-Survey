@@ -7,22 +7,6 @@
   note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["Email sent to author requesting access to the source code. ", "Simret said that the code will be released soon but the NeSy component is based on previous works whose code has been released"]}}
 }
 
-@article{rayyan-242083805,
-  title={NESTER: An Adaptive Neurosymbolic Method for Causal Effect Estimation},
-  year={2022},
-  author={Reddy, Abbavaram Gowtham and Vineeth, N. Balasubramanian},
-  abstract={Causal effect estimation from observational data is a central problem in causal inference. Methods based on potential outcomes framework solve this problem by exploiting inductive biases and heuristics from causal inference. Each of these methods addresses a specific aspect of causal effect estimation, such as controlling propensity score, enforcing randomization, etc., by designing neural network (NN) architectures and regularizers. In this paper, we propose an adaptive method called Neurosymbolic Causal Effect Estimator (NESTER), a generalized method for causal effect estimation. NESTER integrates the ideas used in existing methods based on multi-head NNs for causal effect estimation into one framework. We design a Domain Specific Language (DSL) tailored for causal effect estimation based on causal inductive biases used in literature. We conduct a theoretical analysis to investigate NESTER's efficacy in estimating causal effects. Our comprehensive empirical results show that NESTER performs better than state-of-the-art methods on benchmark datasets.},
-  note={RAYYAN-INCLUSION: {"brandon"=>"Included", "Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["GitHub: [https://github.com/gautam0707/NESTER]", "The github link was obtained upon email request. The original paper mentions that the code has been released in the supplemental material but none was found. "]}}
-}
-
-@article{rayyan-242083810,
-  title={Neuro-symbolic visual dialog},
-  year={2022},
-  author={Abdessaied, A. and Bâce, M. and Bulling, A.},
-  abstract={We propose Neuro-Symbolic Visual Dialog (NSVD) -the first method to combine deep learning and symbolic program execution for multi-round visually-grounded reasoning. NSVD …},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["Email request for source code access sent."]}}
-}
-
 @article{rayyan-242083843,
   title={Generative AI Can Be Creative Too},
   year={2024},
@@ -99,14 +83,6 @@
   note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["Email sent requesting access for codebase"]}}
 }
 
-@article{rayyan-242083883,
-  title={Noise to the Rescue: Escaping Local Minima in Neurosymbolic Local Search},
-  year={2025},
-  author={Daniele, Alessandro and Emile van, Krieken},
-  abstract={Deep learning has achieved remarkable success across various domains, largely thanks to the efficiency of backpropagation (BP). However, BP's reliance on differentiability poses challenges in neurosymbolic learning, where discrete computation is combined with neural models. We show that applying BP to Godel logic, which represents conjunction and disjunction as min and max, is equivalent to a local search algorithm for SAT solving, enabling the optimisation of discrete Boolean formulas without sacrificing differentiability. However, deterministic local search algorithms get stuck in local optima. Therefore, we propose the Godel Trick, which adds noise to the model's logits to escape local optima. We evaluate the Godel Trick on SATLIB, and demonstrate its ability to solve a broad range of SAT problems. Additionally, we apply it to neurosymbolic models and achieve state-of-the-art performance on Visual Sudoku, all while avoiding expensive probabilistic reasoning. These results highlight the Godel Trick's potential as a robust, scalable approach for integrating symbolic reasoning with neural architectures.},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"}}
-}
-
 @article{rayyan-242083887,
   title={Simple and Effective Transfer Learning for Neuro-Symbolic Integration},
   year={2024},
@@ -140,14 +116,6 @@
   note={RAYYAN-INCLUSION: {"Haowei"=>"Excluded", "Ishan"=>"Maybe"} | RAYYAN-EXCLUSION-REASONS: no-codebase | USER-NOTES: {"Ishan"=>["the paper improves on the previous paper on a \"COMET\" model which could be found [https://github.com/atcbosselut/comet-commonsense] but the code for COMET-DynaGen could not be found. Email has been sent to the author requesting access to the code. "]}}
 }
 
-@article{rayyan-242083957,
-  title={A Neuro-Symbolic Approach to Monitoring Salt Content in Food},
-  year={2024},
-  author={Tayal, Anuja and Eugenio, Barbara Di and Salunke, Devika and Andrew, D. Boyd and Dickens, Carolyn A. and Abril, Eulalia P. and Garcia-Bedoya, Olga and Allen-Meares, Paula G.},
-  abstract={We propose a dialogue system that enables heart failure patients to inquire about salt content in foods and help them monitor and reduce salt intake. Addressing the lack of specific datasets for food-based salt content inquiries, we develop a template-based conversational dataset. The dataset is structured to ask clarification questions to identify food items and their salt content. Our findings indicate that while fine-tuning transformer-based models on the dataset yields limited performance, the integration of Neuro-Symbolic Rules significantly enhances the system's performance. Our experiments show that by integrating neuro-symbolic rules, our system achieves an improvement in joint goal accuracy of over 20% across different data sizes compared to naively fine-tuning transformer-based models.},
-  note={RAYYAN-INCLUSION: {"Haowei"=>"Excluded", "Ishan"=>"Maybe"} | RAYYAN-EXCLUSION-REASONS: off-topic | USER-NOTES: {"Ishan"=>["email sent requesting access to the code."]}}
-}
-
 @article{rayyan-242083961,
   title={A neuro-symbolic approach for non-intrusive load monitoring},
   year={2023},
@@ -171,23 +139,6 @@
   author={Arakelyan, Erik and Minervini, Pasquale and Verga, Pat and Lewis, Patrick and Augenstein, Isabelle},
   abstract={Modern Question Answering (QA) and Reasoning approaches based on Large Language Models (LLMs) commonly use prompting techniques, such as Chain-of-Thought (CoT), assuming the resulting generation will have a more granular exploration and reasoning over the question space and scope. However, such methods struggle with generating outputs that are faithful to the intermediate chain of reasoning produced by the model. On the other end of the spectrum, neuro-symbolic methods such as Faithful CoT (F-CoT) propose to combine LLMs with external symbolic solvers. While such approaches boast a high degree of faithfulness, they usually require a model trained for code generation and struggle with tasks that are ambiguous or hard to formalise strictly. We introduce \(\textbf{F}\)aithful \(\textbf{L}\)ogic-\(\textbf{A}\)ided \(\textbf{R}\)easoning and \(\textbf{E}\)xploration (\(\textbf{FLARE}\)), a novel interpretable approach for traversing the problem space using task decompositions. We use the LLM to plan a solution, soft-formalise the query into facts and predicates using a logic programming code and simulate that code execution using an exhaustive multi-hop search over the defined space. Our method allows us to compute the faithfulness of the reasoning process w.r.t. the generated code and analyse the steps of the multi-hop search without relying on external solvers. Our methods achieve SOTA results on \(\mathbf{7}\) out of \(\mathbf{9}\) diverse reasoning benchmarks. We also show that model faithfulness positively correlates with overall performance and further demonstrate that \(\textbf{FLARE}\) allows pinpointing the decisive factors sufficient for and leading to the correct answer with optimal reasoning during the multi-hop search.},
   note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to author requesting code access"]}}
-}
-
-@article{rayyan-242083967,
-  title={A Neuro-Symbolic Approach for Fault Diagnosis in Smart Power Grids},
-  year={2022},
-  author={Aravanis, T. and Kabouris, I.},
-  abstract={… Against this background, we present, in this work, a novel neurosymbolic approach for the diagnosis (ie, detection and classification) of the common faults encountered in modern power …},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to the author requesting code access"]}}
-}
-
-@article{rayyan-242083969,
-  title={Identifying Logical Patterns in Text for Reasoning},
-  year={2024},
-  author={Armary, Pauline and Cheikh-Brahim, El-Vaigh and Antoine, Spicher and Labbani, Narsis Ouassila and Christophe, Nicolle},
-  publisher={IEEE COMPUTER SOC},
-  abstract={Translating unstructured text into logical format is a key challenge for building ontologies automatically and addressing deductive inference. Most of the approaches have tackled the identification of concepts and relations in text, but few of them have addressed the most complex axioms like class expression subsumption. This work proposes DeLIR, a neurosymbolic approach to identify complex logical patterns in text by combining a grammatical translation of dependency parsing trees and a fine-tuned Large language Model (LLM). DeLIR combines the strength of the parsing accuracy provided by a grammatical approach and pattern flexibility provided by a fine-tuned LLM. We evaluated our approach on FOLIO dataset for both translation capacity and inference capability. Our grammatical approach has a perfect parsing accuracy and combining the grammatical approach with LLMs improves the LLMS translation capacity: tinyLlama, T5-small-text2logic, Llama-7B and Mistral-7B. We also evaluate the inference capacity of the different LLMs. Mistral-7B, while being smaller than the state-of-the-art approach using GPT-4, presents similar results to predict the correct inference labels.},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to author asking for code access"]}}
 }
 
 @article{rayyan-242083970,
@@ -313,14 +264,6 @@
   note={RAYYAN-INCLUSION: {"Haowei"=>"Excluded", "Ishan"=>"Maybe"} | RAYYAN-EXCLUSION-REASONS: no-codebase | USER-NOTES: {"Ishan"=>["email sent"]}}
 }
 
-@article{rayyan-242084095,
-  title={Jointly Learning Truth-Conditional Denotations and Groundings using Parallel Attention},
-  year={2021},
-  author={Bergen, Leon and Bahdanau, Dzmitry and O'Donnell, Timothy J.},
-  abstract={We present a model that jointly learns the denotations of words together with their groundings using a truth-conditional semantics. Our model builds on the neurosymbolic approach of Mao et al. (2019), learning to ground objects in the CLEVR dataset (Johnson et al., 2017) using a novel parallel attention mechanism. The model achieves state of the art performance on visual question answering, learning to detect and ground objects with question performance as the only training signal. We also show that the model is able to learn flexible non-canonical groundings just by adjusting answers to questions in the training set.},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent"]}}
-}
-
 @article{rayyan-242084106,
   title={Combining Abstract Argumentation and Machine Learning for Efficiently Analyzing Low-Level Process Event Streams},
   year={2025},
@@ -367,7 +310,7 @@
   year={2024},
   author={Inigo, Blanca and Shen, Yiqing and Benjamin, D. Killeen and Song, Michelle and Krieger, Axel and Bradley, Christopher and Unberath, Mathias},
   abstract={Vertebral compression fractures (VCFs) are a common and potentially serious consequence of osteoporosis. Yet, they often remain undiagnosed. Opportunistic screening, which involves automated analysis of medical imaging data acquired primarily for other purposes, is a cost-effective method to identify undiagnosed VCFs. In high-stakes scenarios like opportunistic medical diagnosis, model interpretability is a key factor for the adoption of AI recommendations. Rule-based methods are inherently explainable and closely align with clinical guidelines, but they are not immediately applicable to high-dimensional data such as CT scans. To address this gap, we introduce a neurosymbolic approach for VCF detection in CT volumes. The proposed model combines deep learning (DL) for vertebral segmentation with a shape-based algorithm (SBA) that analyzes vertebral height distributions in salient anatomical regions. This allows for the definition of a rule set over the height distributions to detect VCFs. Evaluation of VerSe19 dataset shows that our method achieves an accuracy of 96% and a sensitivity of 91% in VCF detection. In comparison, a black box model, DenseNet, achieved an accuracy of 95% and sensitivity of 91% in the same dataset. Our results demonstrate that our intrinsically explainable approach can match or surpass the performance of black box deep neural networks while providing additional insights into why a prediction was made. This transparency can enhance clinician's trust thus, supporting more informed decision-making in VCF diagnosis and treatment planning.},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent"]}}
+  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent", "Github: [https://github.com/binigoromillo/vertebra_feature_extractor]"]}}
 }
 
 @article{rayyan-242084148,
@@ -413,24 +356,6 @@
   note={RAYYAN-INCLUSION: {"Haowei"=>"Excluded", "Ishan"=>"Maybe"} | RAYYAN-EXCLUSION-REASONS: no-codebase | USER-NOTES: {"Ishan"=>["email sent"]}}
 }
 
-@article{rayyan-242084306,
-  title={Symbolic Deep Learning for Structural System Identification},
-  year={2022},
-  volume={148},
-  number={9},
-  author={Chen, Zhao and Yang, Liu and Hao, Sun},
-  abstract={Closed-form model expression is commonly required for parametric data assimilation (e.g., model updating, damage quantification, and so on). However, episternic bias due to fixing the model class is a challenging issue for structural identification. Furthermore, it is sometimes hard to derive explicit expressions for structural mechanisms such as damping and nonlinear restoring forces. Although existing model class selection methods are beneficial to reduce the model uncertainty, the primary issue lies in their limitation to a small number of predefined model choices. We propose a symbolic deep learning framework that alleviates the constraint of fixed model classes and lets the data more flexibly determine the model type and discover the symbolic invariance of the structural system. A design principle for symbolic neural networks has been developed to leverage domain knowledge and translate data to flexibly symbolic equations of motion with a good predictive capacity for new data. A two-stage model selection strategy is proposed to conduct adaptive pruning on network and equation levels by balancing the model sparsity and the goodness of fit. The proposed method's expressive strengths and weaknesses have been analyzed in several numerical case studies, including systems with nonlinear damping, restoring force, and chaotic behavior. Results from an experimental case study revealed the potential of the proposed method for flexibly interpreting hidden mechanisms for real-world applications. Finally, we discuss necessary improvements to transfer this computational method for practical applications. (C) 2022 American Society of Civil Engineers.},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent"]}}
-}
-
-@article{rayyan-242084310,
-  title={Image Translation as Diffusion Visual Programmers},
-  year={2024},
-  author={Han, Cheng and James, C. Liang and Wang, Qifan and Rabbani, Majid and Dianat, Sohail and Rao, Raghuveer and Wu, Ying Nian and Liu, Dongfang},
-  abstract={We introduce the novel Diffusion Visual Programmer (DVP), a neuro-symbolic image translation framework. Our proposed DVP seamlessly embeds a condition-flexible diffusion model within the GPT architecture, orchestrating a coherent sequence of visual programs (i.e., computer vision models) for various pro-symbolic steps, which span RoI identification, style transfer, and position manipulation, facilitating transparent and controllable image translation processes. Extensive experiments demonstrate DVP's remarkable performance, surpassing concurrent arts. This success can be attributed to several key features of DVP: First, DVP achieves condition-flexible translation via instance normalization, enabling the model to eliminate sensitivity caused by the manual guidance and optimally focus on textual descriptions for high-quality content generation. Second, the framework enhances in-context reasoning by deciphering intricate high-dimensional concepts in feature spaces into more accessible low-dimensional symbols (e.g., [Prompt], [RoI object]), allowing for localized, context-free editing while maintaining overall coherence. Last but not least, DVP improves systemic controllability and explainability by offering explicit symbolic representations at each programming stage, empowering users to intuitively interpret and modify results. Our research marks a substantial step towards harmonizing artificial image translation processes with cognitive intelligence, promising broader applications.},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe", "Vladimir"=>"Included"} | USER-NOTES: {"Vladimir"=>["Github: [https://github.com/DVPmain/DVP/blob/main/image_editing.ipynb]"], "Ishan"=>["email sent."]}}
-}
-
 @article{rayyan-242084336,
   title={Neuro-Symbolic Causal Reasoning Meets Signaling Game for Emergent Semantic Communications},
   year={2022},
@@ -472,14 +397,6 @@
   note={RAYYAN-INCLUSION: {"Vladimir"=>"Maybe"} | USER-NOTES: {"Vladimir"=>["There's a supplementary materials page here: [https://recover-ontothor.github.io/], but no code."]}}
 }
 
-@article{rayyan-242084373,
-  title={Hierarchical Planning for Complex Tasks with Knowledge Graph-RAG and Symbolic Verification},
-  year={2025},
-  author={Cornelio, Cristina and Petruzzellis, Flavio and Pietro, Lio},
-  abstract={Large Language Models (LLMs) have shown promise as robotic planners but often struggle with long-horizon and complex tasks, especially in specialized environments requiring external knowledge. While hierarchical planning and Retrieval-Augmented Generation (RAG) address some of these challenges, they remain insufficient on their own and a deeper integration is required for achieving more reliable systems. To this end, we propose a neuro-symbolic approach that enhances LLMs-based planners with Knowledge Graph-based RAG for hierarchical plan generation. This method decomposes complex tasks into manageable subtasks, further expanded into executable atomic action sequences. To ensure formal correctness and proper decomposition, we integrate a Symbolic Validator, which also functions as a failure detector by aligning expected and observed world states. Our evaluation against baseline methods demonstrates the consistent significant advantages of integrating hierarchical planning, symbolic verification, and RAG across tasks of varying complexity and different LLMs. Additionally, our experimental setup and novel metrics not only validate our approach for complex planning but also serve as a tool for assessing LLMs' reasoning and compositional capabilities.},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to cristina"]}}
-}
-
 @article{rayyan-242084380,
   title={The role of foundation models in neuro-symbolic learning and reasoning},
   year={2024},
@@ -512,15 +429,6 @@
   url={https://ieeexplore.ieee.org/abstract/document/9681901/},
   abstract={With the Internet of Multimedia Things (IoMT) becoming a reality, new approaches are needed to process real-time multimodal event streams. Existing approaches to event processing …},
   note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to edward"]}}
-}
-
-@article{rayyan-242084386,
-  title={Neuro-symbolic interpretable AI for automatic COVID-19 patient-stratification based on standardised lung ultrasound data},
-  year={2022},
-  author={Custode, L. L. and Mento, F. and Afrakhteh, S. and Tursi, F.},
-  url={https://pubs.aip.org/asa/poma/article-abstract/46/1/020002/2842422},
-  abstract={… In this work, we present a novel neuro-symbolic approach able to provide video-level predictions by aggregating results from frame-level analysis made by deep-networks. Specifically, …},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to leonardo", "email address bounced. so sent the same email to giovanni"]}}
 }
 
 @article{rayyan-242084387,
@@ -653,29 +561,12 @@
   note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to Elira. "]}}
 }
 
-@article{rayyan-242084591,
-  title={Shadow of the (Hierarchical) Tree: Reconciling Symbolic and Predictive Components of the Neural Code for Syntax},
-  year={2024},
-  author={Elliot, Murphy},
-  abstract={Natural language syntax can serve as a major test for how to integrate two infamously distinct frameworks: symbolic representations and connectionist neural networks. Building on a recent neurocomputational architecture for syntax (ROSE), I discuss the prospects of reconciling the neural code for hierarchical 'vertical' syntax with linear and predictive 'horizontal' processes via a hybrid neurosymbolic model. I argue that the former can be accounted for via the higher levels of ROSE in terms of vertical phrase structure representations, while the latter can explain horizontal forms of linguistic information via the tuning of the lower levels to statistical and perceptual inferences. One prediction of this is that artificial language models will contribute to the cognitive neuroscience of horizontal morphosyntax, but much less so to hierarchically compositional structures. I claim that this perspective helps resolve many current tensions in the literature. Options for integrating these two neural codes are discussed, with particular emphasis on how predictive coding mechanisms can serve as interfaces between symbolic oscillatory phase codes and population codes for the statistics of linearized aspects of syntax. Lastly, I provide a neurosymbolic mathematical model for how to inject symbolic representations into a neural regime encoding lexico-semantic statistical features.},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to Elliot."]}}
-}
-
 @article{rayyan-242084592,
   title={Dynamic Path Planning for Autonomous Vehicles: A Neuro-Symbolic Approach},
   year={2024},
   volume={3},
   author={Elrasas, Omar and Ehab, Nourhan and Mansy, Yasmin and Mougy, Amr El},
   note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["could not find author email. "]}}
-}
-
-@article{rayyan-242084607,
-  title={NSP: A Neuro-Symbolic Natural Language Navigational Planner},
-  year={2024},
-  author={English, W. and Simon, D. and Jha, S. K.},
-  url={https://ieeexplore.ieee.org/abstract/document/10903323/?casa_token=nAKWfRiht04AAAAA:x7M80OAGlqfaTO3O5hE-XwFQASOTDCSPGwoxeg97u8W_gszGQU1YgtLiY2Xps9tUhrLJ1_C6fD8CyA},
-  abstract={… , we propose a neuro-symbolic frame… neuro-symbolic approach using a benchmark suite with 1500 path-planning problems. The experimental evaluation shows that our neuro-symbolic …},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to William. "]}}
 }
 
 @article{rayyan-242084608,
@@ -751,16 +642,6 @@
   publisher={SPRINGER INTERNATIONAL PUBLISHING AG},
   abstract={Deep learning methods for time series have already reached excellent performances in both prediction and classification tasks, including anomaly detection. However, the complexity inherent in Cyber Physical Systems (CPS) creates a challenge when it comes to explainability methods. To overcome this inherent lack of interpretability, we propose ECATS, a concept-based neuro-symbolic architecture where concepts are represented as Signal Temporal Logic (STL) formulae. Leveraging kernel-based methods for STL, concept embeddings are learnt in an unsupervised manner through a cross-attention mechanism. The network makes class predictions through these concept embeddings, allowing for a meaningful explanation to be naturally extracted for each input. Our preliminary experiments with simple CPS-based datasets show that our model is able to achieve great classification performance while ensuring local interpretability.},
   note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["email sent to Irene. "]}}
-}
-
-@article{rayyan-242084669,
-  title={Integrating Textual Queries with AI-Based Object Detection: A Compositional Prompt-Guided Approach},
-  year={2025},
-  volume={25},
-  number={7},
-  author={Ferreira, S. and Martins, A. and Costa, D. G. and Silva, I.},
-  abstract={While object detection and recognition have been extensively adopted by many applications in decision-making, new algorithms and methodologies have emerged to enhance the automatic identification of target objects. In particular, the rise of deep learning and language models has opened many possibilities in this area, although challenges in contextual query analysis and human interactions persist. This article presents a novel neuro-symbolic object detection framework that aligns object proposals with textual prompts using a deep learning module while enabling logical reasoning through a symbolic module. By integrating deep learning with symbolic reasoning, object detection and scene understanding are considerably enhanced, enabling complex, query-driven interactions. Using a synthetic 3D image dataset, the results demonstrate that this framework effectively generalizes to complex queries, combining simple attribute-based descriptions without explicit training on compound prompts. We present the numerical results and comprehensive discussions, highlighting the potential of our approach for emerging smart applications.},
-  note={RAYYAN-INCLUSION: {"Ishan"=>"Maybe"} | USER-NOTES: {"Ishan"=>["Email sent to Silvan. "]}}
 }
 
 @article{rayyan-242084672,
