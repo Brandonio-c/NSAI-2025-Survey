@@ -1,0 +1,46 @@
+paper_id,title,cluster,x,y
+7,Knowledge Graph Completing with Dual Confrontation Learning Model based on Variational Information Bottleneck Method,0,12.515505,2.323276
+22,LLM Internal States Reveal Hallucination Risk Faced With a Query,2,9.351782,3.4481409
+33,BertNet: Harvesting Knowledge Graphs with Arbitrary Relations from Pretrained Language Models,0,12.209727,2.2459853
+47,Knowledge Neurons in Pretrained Transformers,4,9.841585,4.7179914
+56,Journey to the Center of the Knowledge Neurons: Discoveries of Language-Independent Knowledge Neurons and Degenerate Knowledge Neurons,4,10.151188,5.1937647
+57,Locating and Extracting Relational Concepts in Large Language Models,1,12.118643,3.8115323
+61,InternalInspector I² Robust Confidence Estimation in LLMs through Internal States,2,9.432244,2.8776243
+72,On Contrasting YAGO with GPT-J An Experiment for Person-Related Attributes,0,12.038275,1.8579339
+74,LLMMaps – A Visual Metaphor for Stratified Evaluation of Large Language Models,5,10.463332,2.292516
+75,DEPN: Detecting and Editing Privacy Neurons in Pretrained Language Models,2,9.667299,4.1843963
+77,Measuring the Knowledge Acquisition-Utilization Gap in Pre-trained Language Models,5,11.153388,2.518854
+81,Are Large Language Models More Honest in Their Probabilistic or Verbalized Confidence?,5,9.950875,2.7581809
+84,PMET Precise Model Editing in a Transformer,4,10.389935,4.326644
+87,Self-Knowledge Guided Retrieval Augmentation for Large Language Models,5,10.12137,2.3623428
+88,Large language models converge toward human-like concept organization,0,11.762554,3.4201937
+97,Exploring In-Context Learning Capabilities of Foundation Models for Generating Knowledge Graphs from Text,0,11.594427,1.6806608
+101,Cracking Factual Knowledge A Comprehensive Analysis of Degenerate Knowledge Neurons in Large Language Models,4,10.399036,4.95805
+108,Whispers that Shake Foundations: Analyzing and Mitigating False Premise Hallucinations in Large Language Models,2,9.040426,3.258387
+109,CN-AutoMIC Distilling Chinese Commonsense Knowledge from Pretrained Language Models,3,13.249286,2.1280982
+111,LINEARITY OF RELATION DECODING IN TRANSFORMER LANGUAGE MODELS,1,11.575767,3.9801786
+115,(COMET-) ATOMIC 2020: On Symbolic and Neural Commonsense Knowledge Graphs,3,13.475261,2.3809686
+116,Dissecting Recall of Factual Associations in Auto-Regressive Language Models,1,10.883544,4.3892617
+117,Combining prompt learning with contextual semantics for inductive relation prediction,0,12.416461,2.6240063
+118,Probing Pretrained Language Models for Lexical Semantics,0,12.104537,3.2966585
+122,Interpreting Language Models Through Knowledge Graph Extraction,0,11.775381,2.5592778
+126,Improving Relation Extraction by Knowledge Representation Learning,3,12.86066,2.7874792
+139,Interpretability of BERT Latent Space through Knowledge Graphs,0,12.426917,3.2005436
+151,DeCoRe: Decoding by Contrasting Retrieval Heads to Mitigate Hallucinations,2,8.879948,3.0433934
+152,Data-Efficient Concept Extraction from Pre-trained Language Models for Commonsense Explanation Generation,3,13.766328,2.4121337
+154,Monitoring Latent World States in Language Models with Propositional Probes,1,11.344187,4.0714226
+160,From Unstructured Data to Knowledge Graphs An Application for Compliance Checking Problem,0,11.694697,2.1085458
+163,Crawling The Internal Knowledge-Base of Language Models,0,11.728878,2.8993194
+164,Inspecting and Editing Knowledge Representations in Language Models,1,10.893814,3.800597
+165,LLMs Know More Than They Show On the Intrinsic Representation of LLM Hallucinations,2,9.654125,3.1795297
+174,Knowledge Localization Mission Not Accomplished? Enter Query Localization!,4,10.207814,4.6182256
+177,LlamaCare: A Large Medical Language Model for Enhancing Healthcare Knowledge Sharing,5,10.753646,1.7152005
+190, Pre-training Text-to-Text Transformers for Concept-Centric Common Sense,3,13.62626,1.9522337
+191,Beneath the Surface of Consistency Exploring Cross-lingual Knowledge Representation Sharing in LLMs,0,11.242219,3.1953082
+192,Identifying Query-Relevant Neurons in Large Language Models for Long-Form Texts,4,10.820606,5.061595
+193,Benchmarking Knowledge Boundary for Large Language Models: A Different Perspective on Model Evaluation,5,10.423001,2.628316
+194,DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models,2,9.930437,3.565667
+196,Teaching Large Language Models to Express Knowledge Boundary from Their Own Signals,5,10.3103,3.1622448
+197,Towards Automated Circuit Discovery for Mechanistic Interpretability,1,11.435721,4.876249
+198,Challenges with unsupervised LLM knowledge discovery,5,10.998901,2.7712352
+199,Codebook Features: Sparse and Discrete Interpretability for Neural Networks,1,11.258908,4.767911
