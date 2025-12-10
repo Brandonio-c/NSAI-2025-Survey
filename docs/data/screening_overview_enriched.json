@@ -4,7 +4,7 @@
     "after_dedup_covidence": 2844,
     "after_dedup_zotero": 2538,
     "after_dedup_sr_accelerator": 2506,
-    "after_dedup_rayyan": 2356
+    "after_dedup_rayyan": 2369
   },
   "rayyan_import": {
     "imported_references": 2506,
@@ -12769,7 +12769,7 @@
         }
       }
     },
-    "included_within_scope": 505
+    "included_within_scope": 518
   },
   "overall_flow_summary": {
     "final_included_percentage_of_initial_hits": 505,

@@ -50,6 +50,8 @@ ul.paper-list li:last-child {
 
 /* Sankey diagram styling */
 #sankey-container {
+  width: 100%;
+  overflow-x: auto;
   border: 1px solid #ddd;
   border-radius: 4px;
   background: white;

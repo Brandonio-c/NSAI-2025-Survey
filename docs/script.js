@@ -27,16 +27,19 @@ async function loadJSON(path) {
 
 async function init() {
   try {
-    const [criteriaData, overviewData, includeData, excludeData] = await Promise.all([
+    const [criteriaData, overviewData, includeData, excludeData, finalIncludeData, finalExcludeData] = await Promise.all([
       loadJSON('data/inclusion_exclusion_criteria.json'),
       loadJSON('data/screening_overview_enriched.json'),
       loadJSON('data/include.json'),
-      loadJSON('data/exclude.json')
+      loadJSON('data/exclude.json'),
+      loadJSON('data/final_include.json'),
+      loadJSON('data/final_exclude.json')
     ]);
 
     populateCriteria(criteriaData);
     populateOverview(overviewData);
     populatePaperLists(includeData, excludeData, overviewData);
+    populateFinalPaperLists(finalIncludeData, finalExcludeData);
   } catch (err) {
     console.error(err);
     alert('Error loading data. See console for details.');
@@ -98,8 +101,8 @@ function populateOverview(data) {
   section.innerHTML = '';
 
   const screening = data.rayyan_screening;
-  const includedCount = screening.included_within_scope;
-  const excludedCount = screening.excluded_out_of_scope.total_count || screening.excluded_out_of_scope;
+  const includedCount = 84; // Final included count after data extraction
+  const excludedCount = 2285; // Final excluded count (1851 out-of-scope + 434 excluded from in-scope)
 
   const summary = document.createElement('p');
   summary.innerHTML = `<strong>Total included:</strong> ${includedCount} &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Total excluded:</strong> ${excludedCount}`;
@@ -108,21 +111,60 @@ function populateOverview(data) {
   // Add Sankey diagram
   const sankeyDiv = document.createElement('div');
   sankeyDiv.className = 'mt-4 mb-4';
-  sankeyDiv.innerHTML = '<h5>Screening Flow Diagram</h5>';
+  
+  // Create header with export buttons
+  const headerDiv = document.createElement('div');
+  headerDiv.style.display = 'flex';
+  headerDiv.style.justifyContent = 'space-between';
+  headerDiv.style.alignItems = 'center';
+  headerDiv.style.marginBottom = '10px';
+  
+  const title = document.createElement('h5');
+  title.style.margin = '0';
+  title.textContent = 'Screening Flow Diagram';
+  headerDiv.appendChild(title);
+  
+  const buttonGroup = document.createElement('div');
+  buttonGroup.style.display = 'flex';
+  buttonGroup.style.gap = '10px';
+  
+  const exportPngBtn = document.createElement('button');
+  exportPngBtn.className = 'btn btn-sm btn-outline-primary';
+  exportPngBtn.textContent = 'Export PNG';
+  exportPngBtn.onclick = () => exportSankeyAsPNG();
+  
+  const exportPdfBtn = document.createElement('button');
+  exportPdfBtn.className = 'btn btn-sm btn-outline-danger';
+  exportPdfBtn.textContent = 'Export PDF';
+  exportPdfBtn.onclick = () => exportSankeyAsPDF();
+  
+  buttonGroup.appendChild(exportPngBtn);
+  buttonGroup.appendChild(exportPdfBtn);
+  headerDiv.appendChild(buttonGroup);
+  
+  sankeyDiv.appendChild(headerDiv);
+  
   const sankeyContainer = document.createElement('div');
   sankeyContainer.id = 'sankey-container';
   sankeyContainer.style.height = '400px';
+  sankeyContainer.style.width = '100%';
+  sankeyContainer.style.overflowX = 'auto'; // Allow horizontal scrolling if needed
   sankeyDiv.appendChild(sankeyContainer);
   section.appendChild(sankeyDiv);
 
   // Create Sankey diagram
   createSankeyDiagram(data);
 
-  // Pie chart canvas
-  const canvas = document.createElement('canvas');
-  canvas.id = 'exclusionPie';
-  canvas.height = 300;
-  section.appendChild(canvas);
+  // Pie Chart 1: Title and Abstract Screening Exclusion Reasons
+  const pieChart1Title = document.createElement('h5');
+  pieChart1Title.className = 'mt-4 mb-3';
+  pieChart1Title.textContent = 'Pie Chart 1: Title and Abstract Screening Exclusion Reasons';
+  section.appendChild(pieChart1Title);
+
+  const canvas1 = document.createElement('canvas');
+  canvas1.id = 'exclusionPie';
+  canvas1.height = 300;
+  section.appendChild(canvas1);
 
   // Breakdown table
   const table = document.createElement('table');
@@ -146,7 +188,7 @@ function populateOverview(data) {
     
     // Map to consolidated categories
     if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
-      consolidatedReason = 'review / background article / survey (no novel method presented)';
+      consolidatedReason = 'review/background article';
     } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
       consolidatedReason = 'No codebase/implementation';
     } else if (reason === '__EXR__no-fulltext') {
@@ -176,8 +218,8 @@ function populateOverview(data) {
   });
   section.appendChild(table);
 
-  // Render pie chart
-  new Chart(canvas, {
+  // Render pie chart 1
+  new Chart(canvas1, {
     type: 'pie',
     data: {
       labels,
@@ -188,10 +230,96 @@ function populateOverview(data) {
     },
     options: {
       plugins: {
-        legend: { position: 'bottom' }
+        legend: { position: 'bottom' },
+        title: {
+          display: false // Title is handled by h5 element above
+        }
       }
     }
   });
+
+  // Pie Chart 2: Reproduction/Data Extraction Exclusion Reasons
+  const pieChart2Title = document.createElement('h5');
+  pieChart2Title.className = 'mt-5 mb-3';
+  pieChart2Title.textContent = 'Pie Chart 2: Reproduction/Data Extraction Exclusion Reasons';
+  section.appendChild(pieChart2Title);
+
+  const canvas2 = document.createElement('canvas');
+  canvas2.id = 'reproductionPie';
+  canvas2.height = 300;
+  section.appendChild(canvas2);
+
+  // Data from funnel breakdown (same as used in Sankey diagram)
+  const funnelBreakdown = [
+    { name: 'Fully Reproduced', count: 46 },
+    { name: 'Partially Reproduced (above threshold)', count: 38 },
+    { name: 'Partially Reproduced (below threshold)', count: 14 },
+    { name: 'Has All Artifacts but Failed', count: 8 },
+    { name: 'Missing Code', count: 51 },
+    { name: 'Not Attempted - No Fulltext', count: 6 },
+    { name: 'Not Attempted - Off Topic', count: 33 },
+    { name: 'Not Attempted - Not a Research Article', count: 3 },
+    { name: 'Not Attempted - Background Article', count: 8 },
+    { name: 'Missing Some Artifacts (not code, e.g. data, model, etc.)', count: 311 }
+  ];
+
+  const reproLabels = [];
+  const reproCounts = [];
+  const reproColors = [
+    '#2ecc71', // Green for Fully Reproduced
+    '#e74c3c', // Red for Partially (above threshold)
+    '#9b59b6', // Purple for Partially (below threshold)
+    '#8b4513', // Brown for Has All Artifacts but Failed
+    '#e91e63', // Pink for Missing Code
+    '#95a5a6', // Gray for Not Attempted - No Fulltext
+    '#f39c12', // Yellow/Orange for Not Attempted - Off Topic
+    '#3498db', // Blue for Not Attempted - Not a Research Article
+    '#34495e', // Dark Blue for Not Attempted - Background Article
+    '#e67e22'  // Orange for Missing Some Artifacts
+  ];
+
+  funnelBreakdown.forEach((item, idx) => {
+    reproLabels.push(`${item.name} (${item.count})`);
+    reproCounts.push(item.count);
+  });
+
+  // Render pie chart 2
+  new Chart(canvas2, {
+    type: 'pie',
+    data: {
+      labels: reproLabels,
+      datasets: [{
+        data: reproCounts,
+        backgroundColor: reproColors
+      }]
+    },
+    options: {
+      plugins: {
+        legend: { position: 'bottom' },
+        title: {
+          display: false // Title is handled by h5 element above
+        }
+      }
+    }
+  });
+
+  // Breakdown table for Pie Chart 2
+  const table2 = document.createElement('table');
+  table2.className = 'table table-sm table-striped mt-3';
+  const thead2 = document.createElement('thead');
+  thead2.innerHTML = '<tr><th>Reproduction Status / Exclusion Reason</th><th>Count</th><th>%</th></tr>';
+  table2.appendChild(thead2);
+  const tbody2 = document.createElement('tbody');
+  table2.appendChild(tbody2);
+
+  const totalPapers = 518; // Total papers in-scope
+  funnelBreakdown.forEach((item) => {
+    const percentage = (item.count / totalPapers * 100).toFixed(1);
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>${item.name}</td><td>${item.count}</td><td>${percentage}%</td>`;
+    tbody2.appendChild(row);
+  });
+  section.appendChild(table2);
 }
 
 function createSankeyDiagram(data) {
@@ -213,7 +341,7 @@ function createSankeyDiagram(data) {
     let consolidatedReason;
     
     if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
-      consolidatedReason = 'review / background article / survey (no novel method presented)';
+      consolidatedReason = 'review/background article';
     } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
       consolidatedReason = 'No codebase/implementation';
     } else if (reason === '__EXR__no-fulltext') {
@@ -263,65 +391,179 @@ function createSankeyDiagram(data) {
   if (remainingExcluded > 0) {
     nodes.push({ id: nodeId, name: `Other reasons (${remainingExcluded})` });
     links.push({ source: 2, target: nodeId, value: remainingExcluded });
+    nodeId++;
   }
+
+  // Add funnel breakdown nodes - DATA EXTRACTION STAGE
+  // All flowing from In-Scope (node 3) - these represent data extraction results
+  // Data from funnel_overall_pie.png
+  const funnelBreakdown = [
+    { name: 'Fully Reproduced', count: 46 },
+    { name: 'Partially Reproduced (above threshold)', count: 38 },
+    { name: 'Partially Reproduced (below threshold)', count: 14 },
+    { name: 'Has All Artifacts but Failed', count: 8 },
+    { name: 'Missing Code', count: 51 },
+    { name: 'Not Attempted - No Fulltext', count: 6 },
+    { name: 'Not Attempted - Off Topic', count: 33 },
+    { name: 'Not Attempted - Not a Research Article', count: 3 },
+    { name: 'Not Attempted - Background Article', count: 8 },
+    { name: 'Missing Some Artifacts (not code, e.g. data, model, etc.)', count: 311 }
+  ];
+
+  const funnelStartNodeId = nodeId; // Store starting ID for funnel nodes
+  funnelBreakdown.forEach((item) => {
+    nodes.push({ id: nodeId, name: `${item.name} (${item.count})` });
+    links.push({ source: 3, target: nodeId, value: item.count }); // All from In-Scope (node 3)
+    nodeId++;
+  });
 
   // Create the final Sankey data object
   const sankeyData = { nodes, links };
 
-  // Set up the SVG
+  // Set up the SVG - wider to accommodate funnel nodes
   const container = document.getElementById('sankey-container');
-  const width = container.offsetWidth || 800;
+  // Use a fixed wide width to ensure funnel nodes are visible
+  let width = 2000; // Fixed wide width
   const height = 400;
   const margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
   // Clear any existing SVG
   d3.select('#sankey-container').selectAll('*').remove();
 
-  const svg = d3.select('#sankey-container')
+  let svg = d3.select('#sankey-container')
     .append('svg')
     .attr('width', width)
-    .attr('height', height)
-    .append('g')
+    .attr('height', height);
+  
+  const svgGroup = svg.append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
 
   // Color scale
   const color = d3.scaleOrdinal(d3.schemeCategory10);
 
-  // Create the Sankey layout
+  // Create the Sankey layout - FIRST run without funnel nodes to get original positions
+  // Use narrower extent to compress the original diagram
+  const originalDiagramWidth = 600; // Reduced width for original diagram
   const sankey = d3.sankey()
-    .nodeWidth(15)
-    .nodePadding(10)
-    .extent([[1, 1], [width - margin.left - margin.right - 1, height - margin.top - margin.bottom - 5]]);
+    .nodeWidth(12) // Slightly narrower nodes
+    .nodePadding(8) // Less padding
+    .extent([[1, 1], [originalDiagramWidth - 1, height - margin.top - margin.bottom - 5]]);
 
-  // Apply the layout
-  const { nodes: layoutNodes, links: layoutLinks } = sankey({
-    nodes: sankeyData.nodes.map(d => Object.assign({}, d)),
-    links: sankeyData.links.map(d => Object.assign({}, d))
+  // Create data WITHOUT funnel nodes to get original layout
+  const nodesWithoutFunnel = sankeyData.nodes.filter(n => n.id < funnelStartNodeId);
+  const linksWithoutFunnel = sankeyData.links.filter(l => l.target < funnelStartNodeId);
+  
+  // Apply layout to original nodes only
+  const { nodes: originalNodes, links: originalLinks } = sankey({
+    nodes: nodesWithoutFunnel.map(d => Object.assign({}, d)),
+    links: linksWithoutFunnel.map(d => Object.assign({}, d))
   });
 
-  // Add the links
-  svg.append('g')
+  // Move exclusion nodes (nodes with id >= 4) AND In-Scope node (id 3) further to the right
+  // to extend the orange links from "After Dedup" (node 2) and align them all
+  const exclusionNodeStartId = 3; // Start from In-Scope (id 3) to include it
+  const exclusionExtension = 225; // Reduced by 1/4: 300 * 0.75 = 225px
+  
+  originalNodes.forEach(node => {
+    // If this is In-Scope (id 3) or an exclusion node (id >= 4 and < funnelStartNodeId)
+    if (node.id >= exclusionNodeStartId && node.id < funnelStartNodeId) {
+      node.x0 += exclusionExtension;
+      node.x1 += exclusionExtension;
+    }
+  });
+
+  // Now add funnel nodes positioned to the right
+  const funnelNodeIds = [];
+  for (let i = funnelStartNodeId; i < funnelStartNodeId + funnelBreakdown.length; i++) {
+    funnelNodeIds.push(i);
+  }
+  
+  // Find the rightmost x position of original nodes
+  const rightmostX = Math.max(...originalNodes.map(n => n.x1), 0);
+  
+  // Position funnel nodes in a new column to the right (moved MUCH further right to extend link length)
+  const funnelColumnX = originalDiagramWidth + 400; // 400px gap to show separation and extend link length
+  const availableHeight = height - margin.top - margin.bottom;
+  const nodeSpacing = availableHeight / (funnelBreakdown.length + 1);
+  
+  const funnelNodes = [];
+  funnelNodeIds.forEach((funnelId, idx) => {
+    const originalNode = sankeyData.nodes.find(n => n.id === funnelId);
+    const nodeHeight = Math.max(8, nodeSpacing * 0.85);
+    const yPos = margin.top + (idx + 1) * nodeSpacing - (nodeHeight / 2);
+    
+    funnelNodes.push({
+      id: funnelId,
+      name: originalNode.name,
+      x0: funnelColumnX,
+      x1: funnelColumnX + 15,
+      y0: yPos,
+      y1: yPos + nodeHeight
+    });
+  });
+  
+  // Combine original nodes with funnel nodes
+  const layoutNodes = [...originalNodes, ...funnelNodes];
+  
+  // Create links for funnel nodes
+  const funnelLinks = [];
+  const inScopeNode = originalNodes.find(n => n.id === 3);
+  funnelNodeIds.forEach((funnelId, idx) => {
+    const funnelNode = funnelNodes[idx];
+    const linkValue = funnelBreakdown[idx].count;
+    
+    // Calculate link path with extended length for large links (like Missing Some Artifacts)
+    const linkMidpointX = inScopeNode.x1 + (funnelColumnX - inScopeNode.x1) * 0.6; // Extend link path
+    
+    funnelLinks.push({
+      source: inScopeNode,
+      target: funnelNode,
+      value: linkValue,
+      y0: inScopeNode.y0 + (inScopeNode.y1 - inScopeNode.y0) / 2,
+      y1: funnelNode.y0 + (funnelNode.y1 - funnelNode.y0) / 2,
+      width: Math.max(1, Math.min(linkValue * 0.15, 15)), // Much smaller width, capped at 15px max
+      // Store extended path info for custom rendering if needed
+      extendedPath: linkValue > 200 // For large links like Missing Some Artifacts (311)
+    });
+  });
+  
+  // Combine original links with funnel links
+  const layoutLinks = [...originalLinks, ...funnelLinks];
+  
+  // Update SVG width to ensure funnel nodes are visible (increased for more spacing)
+  const finalRequiredWidth = funnelColumnX + 15 + margin.left + margin.right + 450; // Extra space for labels (increased to 450)
+  if (finalRequiredWidth > width) {
+    width = finalRequiredWidth;
+    svg.attr('width', width);
+  }
+
+  // Add the links - render BEFORE nodes so labels appear on top
+  const linkGroup = svgGroup.append('g')
     .selectAll('path')
     .data(layoutLinks)
     .join('path')
     .attr('class', 'link')
     .attr('d', d3.sankeyLinkHorizontal())
+    .attr('fill', 'none') // CRITICAL: Set fill to none to prevent black fill on export
     .attr('stroke', d => color(d.source.id))
     .attr('stroke-width', d => Math.max(1, d.width))
-    .style('stroke-opacity', 0.5)
+    .attr('stroke-opacity', 0.4) // Set as attribute, not just style
+    .style('stroke-opacity', 0.4) // Also set as style for browser display
+    .style('z-index', 1) // Behind nodes
     .on('mouseover', function(event, d) {
-      d3.select(this).style('stroke-opacity', 0.8);
+      d3.select(this).style('stroke-opacity', 0.7);
     })
     .on('mouseout', function(event, d) {
-      d3.select(this).style('stroke-opacity', 0.5);
+      d3.select(this).style('stroke-opacity', 0.4);
     });
 
-  // Add the nodes
-  const node = svg.append('g')
+  // Add the nodes - render AFTER links so they appear on top
+  const node = svgGroup.append('g')
     .selectAll('g')
     .data(layoutNodes)
     .join('g')
-    .attr('class', 'node');
+    .attr('class', 'node')
+    .style('z-index', 2); // Above links
 
   node.append('rect')
     .attr('x', d => d.x0)
@@ -331,17 +573,37 @@ function createSankeyDiagram(data) {
     .attr('fill', d => color(d.id))
     .attr('stroke', '#000');
 
-  // Add the node labels
+  // Add the node labels - render AFTER everything so they're on top
+  // Create a set for faster lookup
+  const funnelNodeIdSet = new Set(funnelNodeIds);
+  
   node.append('text')
-    .attr('x', d => d.x0 < (width - margin.left - margin.right) / 2 ? d.x1 + 6 : d.x0 - 6)
+    .attr('x', d => {
+      // For funnel nodes (rightmost), place labels further to the right to avoid link overlap
+      if (funnelNodeIdSet.has(d.id)) {
+        return d.x1 + 18; // Further increased spacing to avoid link overlap (was 15)
+      }
+      // For original nodes, use original logic
+      return d.x0 < (originalDiagramWidth) / 2 ? d.x1 + 6 : d.x0 - 6;
+    })
     .attr('y', d => (d.y1 + d.y0) / 2)
     .attr('dy', '0.35em')
-    .attr('text-anchor', d => d.x0 < (width - margin.left - margin.right) / 2 ? 'start' : 'end')
-    .style('font-size', '12px')
+    .attr('text-anchor', d => {
+      // For funnel nodes, always anchor to start (left side of text, so it appears to the right)
+      if (funnelNodeIdSet.has(d.id)) {
+        return 'start';
+      }
+      // For original nodes, use original logic
+      return d.x0 < (originalDiagramWidth) / 2 ? 'start' : 'end';
+    })
+    .style('font-size', '10px') // Smaller font to reduce overlap
+    .style('pointer-events', 'none') // Allow clicks to pass through
+    .style('fill', '#000') // Ensure text is visible
+    .style('font-weight', 'normal') // Not bold to reduce visual weight
     .text(d => d.name);
 
   // Add value labels on the links
-  svg.append('g')
+  svgGroup.append('g')
     .selectAll('text')
     .data(layoutLinks)
     .join('text')
@@ -352,6 +614,299 @@ function createSankeyDiagram(data) {
     .style('font-size', '12px')
     .style('font-weight', 'bold')
     .text(d => d.value.toLocaleString());
+}
+
+// Export functions for Sankey diagram
+function exportSankeyAsPNG() {
+  const container = document.getElementById('sankey-container');
+  const svg = container.querySelector('svg');
+  
+  if (!svg) {
+    alert('Sankey diagram not found. Please wait for it to load.');
+    return;
+  }
+  
+  // Clone the SVG to avoid modifying the original
+  const svgClone = svg.cloneNode(true);
+  
+  // Function to inline computed styles - critical for proper export
+  function inlineStyles(element) {
+    const computed = window.getComputedStyle(element);
+    const styleProps = [
+      'fill', 'stroke', 'stroke-width', 'stroke-opacity', 'opacity',
+      'font-family', 'font-size', 'font-weight', 'text-anchor'
+    ];
+    
+    styleProps.forEach(prop => {
+      const value = computed.getPropertyValue(prop);
+      if (value && value !== 'none' && value !== 'rgba(0, 0, 0, 0)') {
+        const attrName = prop.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+        element.setAttribute(attrName, value);
+      }
+    });
+  }
+  
+  // Inline styles for all elements - this preserves styles during export
+  const allElements = svgClone.querySelectorAll('*');
+  allElements.forEach(el => {
+    inlineStyles(el);
+  });
+  
+  // Remove black strokes from nodes
+  const nodeRects = svgClone.querySelectorAll('.node rect');
+  nodeRects.forEach(rect => {
+    const computed = window.getComputedStyle(rect);
+    const stroke = computed.stroke;
+    if (stroke === 'rgb(0, 0, 0)' || stroke === '#000' || stroke === 'black') {
+      rect.setAttribute('stroke', 'none');
+    }
+  });
+  
+  // CRITICAL FIX: Set fill='none' on all links - SVG paths default to black fill!
+  const links = svgClone.querySelectorAll('.link');
+  links.forEach(link => {
+    // THIS IS THE KEY FIX - SVG paths default to black fill if not set
+    link.setAttribute('fill', 'none');
+    
+    const computed = window.getComputedStyle(link);
+    const stroke = computed.stroke;
+    const originalStroke = link.getAttribute('stroke');
+    
+    // Preserve the original colored stroke
+    if (originalStroke && originalStroke !== '#000' && originalStroke !== 'black' && originalStroke !== 'rgb(0, 0, 0)') {
+      link.setAttribute('stroke', originalStroke);
+    } else if (stroke && stroke !== 'rgb(0, 0, 0)' && stroke !== '#000' && stroke !== 'black') {
+      link.setAttribute('stroke', stroke);
+    }
+    
+    // Ensure stroke-opacity is set
+    const strokeOpacity = link.getAttribute('stroke-opacity') || computed.getPropertyValue('stroke-opacity') || '0.4';
+    link.setAttribute('stroke-opacity', strokeOpacity);
+    
+    link.removeAttribute('filter');
+  });
+  
+  // Remove shadow filters
+  const defs = svgClone.querySelectorAll('defs');
+  defs.forEach(def => {
+    const filters = def.querySelectorAll('filter');
+    filters.forEach(filter => {
+      const filterId = filter.getAttribute('id');
+      if (filterId && (filterId.includes('shadow') || filterId.includes('drop'))) {
+        filter.remove();
+      }
+    });
+  });
+  
+  // Get actual SVG dimensions
+  const width = svg.width.baseVal.value || svg.getBoundingClientRect().width;
+  const height = svg.height.baseVal.value || svg.getBoundingClientRect().height;
+  
+  // Ensure the clone has explicit dimensions
+  svgClone.setAttribute('width', width);
+  svgClone.setAttribute('height', height);
+  svgClone.setAttribute('style', 'background: white;');
+  
+  // Serialize the cloned SVG with proper namespace
+  const svgData = new XMLSerializer().serializeToString(svgClone);
+  
+  // Add XML declaration and ensure proper namespace
+  const svgWithNamespace = '<?xml version="1.0" encoding="UTF-8"?>' +
+    '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ' +
+    `width="${width}" height="${height}">` +
+    '<rect width="100%" height="100%" fill="white"/>' +
+    svgData.replace(/<svg[^>]*>/, '').replace('</svg>', '') +
+    '</svg>';
+  
+  // Create canvas
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d');
+  
+  // Set white background
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, width, height);
+  
+  // Convert SVG to image
+  const svgBlob = new Blob([svgWithNamespace], { type: 'image/svg+xml;charset=utf-8' });
+  const url = URL.createObjectURL(svgBlob);
+  
+  const img = new Image();
+  img.onload = function() {
+    ctx.drawImage(img, 0, 0, width, height);
+    URL.revokeObjectURL(url);
+    
+    // Download as PNG
+    canvas.toBlob(function(blob) {
+      const link = document.createElement('a');
+      link.download = 'sankey_diagram.png';
+      link.href = URL.createObjectURL(blob);
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }, 'image/png');
+  };
+  img.onerror = function() {
+    alert('Error exporting PNG. Please try again.');
+    URL.revokeObjectURL(url);
+  };
+  img.src = url;
+}
+
+function exportSankeyAsPDF() {
+  const container = document.getElementById('sankey-container');
+  const svg = container.querySelector('svg');
+  
+  if (!svg) {
+    alert('Sankey diagram not found. Please wait for it to load.');
+    return;
+  }
+  
+  // Check if jsPDF is loaded
+  if (typeof window.jspdf === 'undefined') {
+    // Load jsPDF dynamically
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+    script.onload = () => {
+      exportSankeyAsPDF(); // Retry after loading
+    };
+    document.head.appendChild(script);
+    return;
+  }
+  
+  // Clone the SVG to avoid modifying the original
+  const svgClone = svg.cloneNode(true);
+  
+  // Function to inline computed styles - critical for proper export
+  function inlineStyles(element) {
+    const computed = window.getComputedStyle(element);
+    const styleProps = [
+      'fill', 'stroke', 'stroke-width', 'stroke-opacity', 'opacity',
+      'font-family', 'font-size', 'font-weight', 'text-anchor'
+    ];
+    
+    styleProps.forEach(prop => {
+      const value = computed.getPropertyValue(prop);
+      if (value && value !== 'none' && value !== 'rgba(0, 0, 0, 0)') {
+        const attrName = prop.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+        element.setAttribute(attrName, value);
+      }
+    });
+  }
+  
+  // Inline styles for all elements - this preserves styles during export
+  const allElements = svgClone.querySelectorAll('*');
+  allElements.forEach(el => {
+    inlineStyles(el);
+  });
+  
+  // Remove black strokes from nodes
+  const nodeRects = svgClone.querySelectorAll('.node rect');
+  nodeRects.forEach(rect => {
+    const computed = window.getComputedStyle(rect);
+    const stroke = computed.stroke;
+    if (stroke === 'rgb(0, 0, 0)' || stroke === '#000' || stroke === 'black') {
+      rect.setAttribute('stroke', 'none');
+    }
+  });
+  
+  // CRITICAL FIX: Set fill='none' on all links - SVG paths default to black fill!
+  const links = svgClone.querySelectorAll('.link');
+  links.forEach(link => {
+    // THIS IS THE KEY FIX - SVG paths default to black fill if not set
+    link.setAttribute('fill', 'none');
+    
+    const computed = window.getComputedStyle(link);
+    const stroke = computed.stroke;
+    const originalStroke = link.getAttribute('stroke');
+    
+    // Preserve the original colored stroke
+    if (originalStroke && originalStroke !== '#000' && originalStroke !== 'black' && originalStroke !== 'rgb(0, 0, 0)') {
+      link.setAttribute('stroke', originalStroke);
+    } else if (stroke && stroke !== 'rgb(0, 0, 0)' && stroke !== '#000' && stroke !== 'black') {
+      link.setAttribute('stroke', stroke);
+    }
+    
+    // Ensure stroke-opacity is set
+    const strokeOpacity = link.getAttribute('stroke-opacity') || computed.getPropertyValue('stroke-opacity') || '0.4';
+    link.setAttribute('stroke-opacity', strokeOpacity);
+    
+    link.removeAttribute('filter');
+  });
+  
+  // Remove shadow filters
+  const defs = svgClone.querySelectorAll('defs');
+  defs.forEach(def => {
+    const filters = def.querySelectorAll('filter');
+    filters.forEach(filter => {
+      const filterId = filter.getAttribute('id');
+      if (filterId && (filterId.includes('shadow') || filterId.includes('drop'))) {
+        filter.remove();
+      }
+    });
+  });
+  
+  // Get actual SVG dimensions
+  const width = svg.width.baseVal.value || svg.getBoundingClientRect().width;
+  const height = svg.height.baseVal.value || svg.getBoundingClientRect().height;
+  
+  // Ensure the clone has explicit dimensions
+  svgClone.setAttribute('width', width);
+  svgClone.setAttribute('height', height);
+  svgClone.setAttribute('style', 'background: white;');
+  
+  // Serialize the cloned SVG with proper namespace
+  const svgData = new XMLSerializer().serializeToString(svgClone);
+  
+  // Add XML declaration and ensure proper namespace
+  const svgWithNamespace = '<?xml version="1.0" encoding="UTF-8"?>' +
+    '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ' +
+    `width="${width}" height="${height}">` +
+    '<rect width="100%" height="100%" fill="white"/>' +
+    svgData.replace(/<svg[^>]*>/, '').replace('</svg>', '') +
+    '</svg>';
+  
+  // Create canvas
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d');
+  
+  // Set white background
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, width, height);
+  
+  // Convert SVG to image
+  const svgBlob = new Blob([svgWithNamespace], { type: 'image/svg+xml;charset=utf-8' });
+  const url = URL.createObjectURL(svgBlob);
+  
+  const img = new Image();
+  img.onload = function() {
+    ctx.drawImage(img, 0, 0, width, height);
+    URL.revokeObjectURL(url);
+    
+    // Convert canvas to image data
+    const imgData = canvas.toDataURL('image/png');
+    
+    // Create PDF - convert pixels to mm (1px = 0.264583mm at 96dpi)
+    const { jsPDF } = window.jspdf;
+    const widthMM = width * 0.264583;
+    const heightMM = height * 0.264583;
+    
+    const pdf = new jsPDF({
+      orientation: width > height ? 'landscape' : 'portrait',
+      unit: 'mm',
+      format: [widthMM, heightMM]
+    });
+    
+    pdf.addImage(imgData, 'PNG', 0, 0, widthMM, heightMM);
+    pdf.save('sankey_diagram.pdf');
+  };
+  img.onerror = function() {
+    alert('Error exporting PDF. Please try again.');
+    URL.revokeObjectURL(url);
+  };
+  img.src = url;
 }
 
 function populatePaperLists(included, excluded, overviewData) {
@@ -499,7 +1054,7 @@ function categorizeExcludedPapersFromOverview(overviewData, excluded) {
     
     // Map to consolidated categories (same logic as in populateOverview)
     if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
-      consolidatedReason = 'review / background article / survey (no novel method presented)';
+      consolidatedReason = 'review/background article';
     } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
       consolidatedReason = 'No codebase/implementation';
     } else if (reason === '__EXR__no-fulltext') {
@@ -564,7 +1119,7 @@ function categorizeExcludedPapersFromConsolidatedData(overviewData, excluded) {
     
     // Map to consolidated categories (same logic as in populateOverview)
     if (reason === 'Survey/review paper' || reason === 'Review paper' || reason === 'Background article') {
-      consolidatedReason = 'review / background article / survey (no novel method presented)';
+      consolidatedReason = 'review/background article';
     } else if (reason === 'Other/Unclear' || reason === '__EXR__wrong outcome' || reason === '__EXR__engl' || reason === '__EXR__v') {
       consolidatedReason = 'No codebase/implementation';
     } else if (reason === '__EXR__no-fulltext') {
@@ -630,12 +1185,12 @@ function getReadableExclusionReason(criterion) {
   const reasonMap = {
     '__EXR__off-topic': 'Off-topic/Not neuro-symbolic',
     '__EXR__no-codebase': 'No codebase/implementation',
-    '__EXR__survey': 'review / background article / survey (no novel method presented)',
-    '__EXR__background article': 'review / background article / survey (no novel method presented)',
+    '__EXR__survey': 'review/background article',
+    '__EXR__background article': 'review/background article',
     '__EXR__not-research': 'Not research paper',
     '__EXR__no-eval': 'No evaluation',
     '__EXR__duplicate': 'Duplicate',
-    '__EXR__review': 'review / background article / survey (no novel method presented)',
+    '__EXR__review': 'review/background article',
     '__EXR__no-fulltext': 'no-fulltext',
     '__EXR__not-in-english': 'not-in-english',
     '__EXR__foreign language': 'not-in-english',
@@ -668,6 +1223,255 @@ function setupSearch(searchId, listId, allPapers) {
       categoryDivs.forEach(categoryDiv => {
         const dropdownContent = categoryDiv.querySelector('.dropdown-content');
         const papersList = dropdownContent.querySelector('ul');
+        const listItems = papersList.querySelectorAll('li');
+        let hasVisibleItems = false;
+        
+        listItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          const isVisible = text.includes(searchTerm);
+          item.style.display = isVisible ? 'block' : 'none';
+          if (isVisible) hasVisibleItems = true;
+        });
+        
+        // Show/hide entire category based on whether it has visible items
+        categoryDiv.style.display = hasVisibleItems ? 'block' : 'none';
+      });
+    }
+  });
+}
+
+function populateFinalPaperLists(finalIncluded, finalExcluded) {
+  const finalIncSection = document.getElementById('finalIncludedSection');
+  const finalExcSection = document.getElementById('finalExcludedSection');
+  finalIncSection.innerHTML = '';
+  finalExcSection.innerHTML = '';
+
+  // Add search functionality for final included papers
+  const finalIncSearchDiv = document.createElement('div');
+  finalIncSearchDiv.className = 'mb-3';
+  finalIncSearchDiv.innerHTML = `
+    <div class="input-group">
+      <span class="input-group-text">🔍</span>
+      <input type="text" class="form-control" id="final-included-search" placeholder="Search final included papers by title or author...">
+    </div>
+  `;
+  finalIncSection.appendChild(finalIncSearchDiv);
+
+  const finalIncList = document.createElement('ul');
+  finalIncList.className = 'paper-list';
+  finalIncList.id = 'final-included-papers-list';
+  finalIncList.style.maxHeight = '600px';
+  finalIncList.style.overflowY = 'auto';
+  finalIncluded.forEach(a => finalIncList.appendChild(createPaperListItem(a)));
+  finalIncSection.appendChild(finalIncList);
+
+  // Add count summary
+  const finalIncCount = document.createElement('p');
+  finalIncCount.className = 'mt-3 text-muted';
+  finalIncCount.textContent = `Total: ${finalIncluded.length} papers`;
+  finalIncSection.appendChild(finalIncCount);
+
+  // Add search functionality for final excluded papers
+  const finalExcSearchDiv = document.createElement('div');
+  finalExcSearchDiv.className = 'mb-3';
+  finalExcSearchDiv.innerHTML = `
+    <div class="input-group">
+      <span class="input-group-text">🔍</span>
+      <input type="text" class="form-control" id="final-excluded-search" placeholder="Search final excluded papers by title or author...">
+    </div>
+  `;
+  finalExcSection.appendChild(finalExcSearchDiv);
+
+  // Categorize excluded papers by exclusion reason
+  const categorizedFinalExcluded = categorizeFinalExcludedPapers(finalExcluded);
+  const finalExcList = document.createElement('div');
+  finalExcList.id = 'final-excluded-papers-list';
+  finalExcList.style.maxHeight = '600px';
+  finalExcList.style.overflowY = 'auto';
+  
+  Object.entries(categorizedFinalExcluded).forEach(([reason, papers]) => {
+    const categoryDiv = document.createElement('div');
+    categoryDiv.className = 'mb-3';
+    
+    // Create dropdown header
+    const dropdownHeader = document.createElement('div');
+    dropdownHeader.className = 'dropdown-header d-flex justify-content-between align-items-center p-2 bg-light border rounded-top';
+    dropdownHeader.style.cursor = 'pointer';
+    dropdownHeader.innerHTML = `
+      <h6 class="mb-0">${reason} <span class="badge bg-secondary">${papers.length}</span></h6>
+      <i class="fas fa-chevron-down dropdown-icon"></i>
+    `;
+    
+    // Create dropdown content
+    const dropdownContent = document.createElement('div');
+    dropdownContent.className = 'dropdown-content border border-top-0 rounded-bottom';
+    dropdownContent.style.display = 'none';
+    dropdownContent.style.maxHeight = '400px';
+    dropdownContent.style.overflowY = 'auto';
+    
+    const papersList = document.createElement('ul');
+    papersList.className = 'paper-list mb-0';
+    papersList.style.listStyle = 'none';
+    papersList.style.padding = '0';
+    papers.forEach(paper => {
+      const li = createPaperListItem(paper);
+      li.style.padding = '8px 12px';
+      li.style.borderBottom = '1px solid #eee';
+      papersList.appendChild(li);
+    });
+    dropdownContent.appendChild(papersList);
+    
+    // Add click functionality for dropdown toggle
+    dropdownHeader.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const icon = this.querySelector('.dropdown-icon');
+      
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        icon.className = 'fas fa-chevron-up dropdown-icon';
+      } else {
+        content.style.display = 'none';
+        icon.className = 'fas fa-chevron-down dropdown-icon';
+      }
+    });
+    
+    categoryDiv.appendChild(dropdownHeader);
+    categoryDiv.appendChild(dropdownContent);
+    finalExcList.appendChild(categoryDiv);
+  });
+  
+  finalExcSection.appendChild(finalExcList);
+
+  // Add count summary
+  const finalExcCount = document.createElement('p');
+  finalExcCount.className = 'mt-3 text-muted';
+  finalExcCount.textContent = `Total: ${finalExcluded.length} papers`;
+  finalExcSection.appendChild(finalExcCount);
+
+  // Add search functionality
+  setupFinalSearch('final-included-search', 'final-included-papers-list', finalIncluded);
+  setupFinalSearch('final-excluded-search', 'final-excluded-papers-list', finalExcluded);
+}
+
+function categorizeFinalExcludedPapers(excluded) {
+  const categories = {};
+  
+  excluded.forEach(paper => {
+    // Get exclusion reason from excel_data or exclusion_reason field
+    let reason = 'Not specified';
+    
+    // Check exclusion_reason field first
+    if (paper.exclusion_reason && paper.exclusion_reason !== 'N/A' && paper.exclusion_reason !== '' && paper.exclusion_reason !== 'Not extracted from spreadsheet') {
+      reason = paper.exclusion_reason;
+    } else if (paper.excel_data) {
+      // Try various column names for exclusion reason
+      const possibleReasonColumns = [
+        'If exclude, provide reason',
+        'If exclude, provide reason ',
+        'Exclusion Reason',
+        'Reason for Exclusion'
+      ];
+      
+      for (const col of possibleReasonColumns) {
+        if (paper.excel_data[col] && paper.excel_data[col] !== 'N/A' && paper.excel_data[col] !== '') {
+          reason = paper.excel_data[col];
+          break;
+        }
+      }
+      
+      // If no reason found, check if it's marked as excluded
+      if (reason === 'Not specified') {
+        const decisionCols = [
+          'Final Decision to Include / Exclude Study',
+          'Final Decision to Include / Exclude Study ',
+          'Final Decision'
+        ];
+        for (const col of decisionCols) {
+          if (paper.excel_data[col]) {
+            const decision = String(paper.excel_data[col]).toLowerCase();
+            if (decision.includes('exclude')) {
+              reason = 'Excluded (reason not specified)';
+              break;
+            }
+          }
+        }
+      }
+    }
+    
+    // Normalize reason
+    reason = normalizeExclusionReason(reason);
+    
+    if (!categories[reason]) {
+      categories[reason] = [];
+    }
+    categories[reason].push(paper);
+  });
+  
+  // Sort categories by count (descending)
+  return Object.fromEntries(
+    Object.entries(categories).sort((a, b) => b[1].length - a[1].length)
+  );
+}
+
+function normalizeExclusionReason(reason) {
+  if (!reason || reason === 'N/A' || reason === '') {
+    return 'Not specified';
+  }
+  
+  const reasonLower = reason.toLowerCase();
+  
+  // Map common exclusion reasons
+  if (reasonLower.includes('missing code') || reasonLower.includes('no code')) {
+    return 'Missing Code';
+  } else if (reasonLower.includes('missing data') || reasonLower.includes('no data')) {
+    return 'Missing Data';
+  } else if (reasonLower.includes('missing model') || reasonLower.includes('no model')) {
+    return 'Missing Model Artifacts';
+  } else if (reasonLower.includes('missing artifact') || reasonLower.includes('missing some artifact')) {
+    return 'Missing Some Artifacts';
+  } else if (reasonLower.includes('failed') || reasonLower.includes('not reproduced')) {
+    return 'Reproduction Failed';
+  } else if (reasonLower.includes('off topic') || reasonLower.includes('not neuro-symbolic')) {
+    return 'Off Topic / Not Neuro-Symbolic';
+  } else if (reasonLower.includes('background') || reasonLower.includes('review') || reasonLower.includes('survey')) {
+    return 'Review/Background Article';
+  } else if (reasonLower.includes('no fulltext') || reasonLower.includes('no full text')) {
+    return 'No Fulltext Available';
+  } else if (reasonLower.includes('not research') || reasonLower.includes('not a research')) {
+    return 'Not a Research Article';
+  } else if (reasonLower.includes('partial') && reasonLower.includes('below threshold')) {
+    return 'Partially Reproduced (Below Threshold)';
+  }
+  
+  // Return capitalized version if no match
+  return reason.charAt(0).toUpperCase() + reason.slice(1);
+}
+
+function setupFinalSearch(searchId, listId, allPapers) {
+  const searchInput = document.getElementById(searchId);
+  if (!searchInput) return;
+  
+  const listElement = document.getElementById(listId);
+  if (!listElement) return;
+  
+  searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    
+    if (listId === 'final-included-papers-list') {
+      // Simple search for included papers
+      const listItems = listElement.querySelectorAll('li');
+      listItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(searchTerm) ? 'block' : 'none';
+      });
+    } else {
+      // Search for excluded papers (dropdown structure)
+      const categoryDivs = listElement.querySelectorAll('.mb-3');
+      categoryDivs.forEach(categoryDiv => {
+        const dropdownContent = categoryDiv.querySelector('.dropdown-content');
+        if (!dropdownContent) return;
+        const papersList = dropdownContent.querySelector('ul');
+        if (!papersList) return;
         const listItems = papersList.querySelectorAll('li');
         let hasVisibleItems = false;
         
