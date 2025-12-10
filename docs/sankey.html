@@ -2,6 +2,7 @@
 <html>
 <head>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12/dist/d3-sankey.min.js"></script>
     <style>
         .node rect {
             fill-opacity: 0.8;
@@ -27,20 +28,51 @@
         const data = {
             nodes: [
                 { id: 0, name: "Total Hits (5,387)" },
-                { id: 1, name: "After Dedup (2,356)" },
-                { id: 2, name: "In-Scope (505)" },
-                { id: 3, name: "Out-of-Scope (1,851)" }
+                { id: 1, name: "After Dedup (2,369)" },
+                { id: 2, name: "In-Scope (518)" },
+                { id: 3, name: "Out-of-Scope (1,851)" },
+                { id: 4, name: "Included (84)" },
+                { id: 5, name: "Excluded (434)" },
+                { id: 6, name: "Fully Reproduced (46)" },
+                { id: 7, name: "Partially Reproduced (within threshold) (38)" },
+                { id: 8, name: "Not Reproducible (384)" },
+                { id: 9, name: "No Full Manuscript (6)" },
+                { id: 10, name: "Off Topic (33)" },
+                { id: 11, name: "Background/Literature Review (8)" },
+                { id: 12, name: "Not Research Article (2)" },
+                { id: 13, name: "Partially Reproduced (below threshold) (14)" },
+                { id: 14, name: "Has All Artifacts but Failed (7)" },
+                { id: 15, name: "Missing Code (51)" },
+                { id: 16, name: "Missing Some Artifacts (312)" }
             ],
             links: [
-                { source: 0, target: 1, value: 2356 },
-                { source: 1, target: 2, value: 505 },
-                { source: 1, target: 3, value: 1851 }
+                // Initial screening
+                { source: 0, target: 1, value: 2369 },
+                { source: 1, target: 2, value: 518 },
+                { source: 1, target: 3, value: 1851 },
+                // In-Scope breakdown
+                { source: 2, target: 4, value: 84 },
+                { source: 2, target: 5, value: 434 },
+                // Included breakdown
+                { source: 4, target: 6, value: 46 },
+                { source: 4, target: 7, value: 38 },
+                // Excluded breakdown
+                { source: 5, target: 8, value: 384 },
+                { source: 5, target: 9, value: 6 },
+                { source: 5, target: 10, value: 33 },
+                { source: 5, target: 11, value: 8 },
+                { source: 5, target: 12, value: 2 },
+                // Not Reproducible breakdown
+                { source: 8, target: 13, value: 14 },
+                { source: 8, target: 14, value: 7 },
+                { source: 8, target: 15, value: 51 },
+                { source: 8, target: 16, value: 312 }
             ]
         };
 
         // Set up the SVG
-        const width = 800;
-        const height = 400;
+        const width = 1200;
+        const height = 800;
         const margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
         const svg = d3.select("#sankey")
@@ -55,8 +87,8 @@
 
         // Create the Sankey layout
         const sankey = d3.sankey()
-            .nodeWidth(15)
-            .nodePadding(10)
+            .nodeWidth(20)
+            .nodePadding(15)
             .extent([[1, 1], [width - 1, height - 5]]);
 
         // Apply the layout
@@ -103,6 +135,7 @@
             .attr("y", d => (d.y1 + d.y0) / 2)
             .attr("dy", "0.35em")
             .attr("text-anchor", d => d.x0 < width / 2 ? "start" : "end")
+            .style("font-size", "11px")
             .text(d => d.name);
 
         // Add value labels on the links
