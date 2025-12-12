@@ -517,15 +517,16 @@ function populateOverview(data) {
   // Numbers match funnel_overall_pie.png/pdf
   // Note: "Partially Reproduced (below threshold)" removed as count is 0 (all such papers have "Include" in decision column)
   const funnelBreakdown = [
-    { name: 'Fully Reproduced', count: 47 },
+    { name: 'Fully Reproduced', count: 48 },
     { name: 'Partially Reproduced (above threshold)', count: 37 },
     { name: 'Has All Artifacts but Failed', count: 7 },
-    { name: 'Missing Code', count: 45 },
+    { name: 'Missing Code', count: 42 },
     { name: 'Not Attempted - No Fulltext', count: 6 },
-    { name: 'Not Attempted - Off Topic', count: 34 },
-    { name: 'Not Attempted - Not a Research Article', count: 3 },
-    { name: 'Not Attempted - Background Article', count: 8 },
-    { name: 'Missing Some Artifacts (not code, e.g. data, model, etc.)', count: 329 }
+    { name: 'Not Attempted - Off Topic', count: 30 },
+    { name: 'Not Attempted - Not a Research Article', count: 1 },
+    { name: 'Not Attempted - Background Article', count: 3 },
+    { name: 'No quantitative evaluation', count: 21 },
+    { name: 'Missing Some Artifacts (not code, e.g. data, model, etc.)', count: 321 }
   ];
 
   const reproLabels = [];
@@ -539,6 +540,7 @@ function populateOverview(data) {
     '#f39c12', // Yellow/Orange for Not Attempted - Off Topic
     '#3498db', // Blue for Not Attempted - Not a Research Article
     '#34495e', // Dark Blue for Not Attempted - Background Article
+    '#9370DB', // Purple for No quantitative evaluation
     '#e67e22'  // Orange for Missing Some Artifacts
   ];
 
@@ -663,15 +665,16 @@ function createSankeyDiagram(data) {
   // Data from funnel_overall_pie.png - updated to match actual pie chart
   // Note: "Partially Reproduced (below threshold)" removed as count is 0 (all such papers have "Include" in decision column)
   const funnelBreakdown = [
-    { name: 'Fully Reproduced', count: 47 },
+    { name: 'Fully Reproduced', count: 48 },
     { name: 'Partially Reproduced (above threshold)', count: 37 },
     { name: 'Has All Artifacts but Failed', count: 7 },
-    { name: 'Missing Code', count: 45 },
+    { name: 'Missing Code', count: 42 },
     { name: 'Not Attempted - No Fulltext', count: 6 },
-    { name: 'Not Attempted - Off Topic', count: 34 },
-    { name: 'Not Attempted - Not a Research Article', count: 3 },
-    { name: 'Not Attempted - Background Article', count: 8 },
-    { name: 'Missing Some Artifacts (not code, e.g. data, model, etc.)', count: 329 }
+    { name: 'Not Attempted - Off Topic', count: 30 },
+    { name: 'Not Attempted - Not a Research Article', count: 1 },
+    { name: 'Not Attempted - Background Article', count: 3 },
+    { name: 'No quantitative evaluation', count: 21 },
+    { name: 'Missing Some Artifacts (not code, e.g. data, model, etc.)', count: 321 }
   ];
 
   const funnelStartNodeId = nodeId; // Store starting ID for funnel nodes
@@ -1646,13 +1649,14 @@ function categorizeFinalExcludedPapers(excluded) {
   // Expected counts from pie chart (for validation)
   // Note: "Partially Reproduced (Below Threshold)" removed as count is 0 (all such papers have "Include" in decision column)
   const expectedCounts = {
-    'Missing Some Artifacts (not code, e.g. data, model, etc.)': 329,
-    'Missing Code': 45,
-    'Not Attempted - Off Topic': 34,
+    'Missing Some Artifacts (not code, e.g. data, model, etc.)': 321,
+    'Missing Code': 42,
+    'Not Attempted - Off Topic': 30,
     'Has All Artifacts but Failed': 7,
-    'Not Attempted - Background Article': 8,
+    'Not Attempted - Background Article': 3,
     'Not Attempted - No Fulltext': 6,
-    'Not Attempted - Not a Research Article': 3
+    'Not Attempted - Not a Research Article': 1,
+    'No quantitative evaluation': 21
   };
   
   excluded.forEach(paper => {
@@ -1694,8 +1698,15 @@ function categorizeFinalExcludedPapers(excluded) {
       const hasCodebase = excel['The paper has an associated codebase'] || '';
       const hasCodebaseLower = String(hasCodebase).toLowerCase();
       
+      // Check quantitative evaluation (exclusion reason)
+      const hasQuantEval = excel['Does the paper include a Quantitative Evaluation'] || '';
+      const hasQuantEvalLower = String(hasQuantEval).toLowerCase();
+      
       // Categorize (matching pie chart logic)
-      if (isOffTopicLower === 'no') {
+      // First check quantitative evaluation (exclusion reason)
+      if (hasQuantEvalLower === 'no' || hasQuantEvalLower === 'n' || hasQuantEvalLower === 'false' || hasQuantEvalLower === '0') {
+        reason = 'No quantitative evaluation';
+      } else if (isOffTopicLower === 'no') {
         reason = 'Not Attempted - Off Topic';
       } else if (isBackgroundLower === 'no') {
         reason = 'Not Attempted - Background Article';
@@ -1764,6 +1775,8 @@ function normalizeExclusionReasonForFinalExcluded(reason) {
     return 'Not Attempted - No Fulltext';
   } else if (reasonLower.includes('not attempted') && reasonLower.includes('not a research')) {
     return 'Not Attempted - Not a Research Article';
+  } else if (reasonLower.includes('no quantitative evaluation') || reasonLower.includes('quantitative evaluation') && reasonLower.includes('no')) {
+    return 'No quantitative evaluation';
   } else if (reasonLower.includes('off topic') || reasonLower.includes('not neuro-symbolic')) {
     return 'Not Attempted - Off Topic';
   } else if (reasonLower.includes('background') || reasonLower.includes('review')) {

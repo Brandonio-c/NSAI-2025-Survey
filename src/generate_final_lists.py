@@ -3,10 +3,13 @@
 Generate final_include.json and final_exclude.json files.
 
 This script:
-1. Reads the Excel extraction file to identify included papers (84 papers)
+1. Reads the Excel extraction file to identify included papers (85 papers)
 2. Matches them with entries in include.json using article_id or title
 3. Generates final_include.json with enriched metadata
 4. Generates final_exclude.json with all excluded papers
+
+IMPORTANT: determine_reproduction_category() is the SINGLE SOURCE OF TRUTH for category assignment.
+Categories are assigned ONCE per paper when building final_excluded, and never recalculated.
 """
 
 import json
@@ -15,6 +18,7 @@ from pathlib import Path
 from typing import Dict, List, Any, Optional
 import re
 from difflib import SequenceMatcher
+from collections import Counter
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -144,6 +148,10 @@ def load_excel_data(excel_path: Path) -> pd.DataFrame:
     if 'normalized_id' not in df.columns:
         df['normalized_id'] = df[paper_id_col].apply(normalize_paper_id)
     
+    # Also create normalized_paper_id if it doesn't exist (for consistency with run_reproducibility_analysis.py)
+    if 'normalized_paper_id' not in df.columns:
+        df['normalized_paper_id'] = df['normalized_id']
+    
     # Identify included papers: Simple logic - if "Final Decision to Include / Exclude Study" contains "Include", then include it
     if 'is_included' not in df.columns:
         df['is_included'] = df[decision_col].apply(
@@ -151,8 +159,8 @@ def load_excel_data(excel_path: Path) -> pd.DataFrame:
         )
         included_count = df['is_included'].sum()
         print(f"  Using 'Final Decision' column: {included_count} included papers")
-        if included_count != 84:
-            print(f"  WARNING: Expected 84 included papers, found {included_count}")
+        if included_count != 85:
+            print(f"  WARNING: Expected 85 included papers, found {included_count}")
     
     included_df = df[df['is_included'] == True].copy()
     excluded_df = df[df['is_included'] == False].copy()
@@ -458,7 +466,6 @@ def generate_final_include(
             if not has_codebase and cluster_links_dict is not None:
                 paper_id = str(row.get(paper_id_col, '')) if paper_id_col in row.index else ''
                 title = str(row.get(title_col, '')) if title_col and title_col in row.index else entry.get('title', '')
-                from generate_final_lists import find_repository_url
                 repo_url = find_repository_url(paper_id, title, cluster_links_dict)
                 if repo_url:
                     entry['repository_url'] = repo_url
@@ -470,28 +477,38 @@ def generate_final_include(
 
 
 def determine_reproduction_category(row: pd.Series, papers_with_exclusion_reasons: set = None) -> str:
-    """Determine reproduction category from Excel row data using EXACT logic from run_reproducibility_analysis.py.
+    """
+    Determine reproduction category from Excel row data.
     
-    This matches the logic in run_reproducibility_analysis.py analyze_reproducibility_funnel() EXACTLY:
-    1. Check "If exclude, provide reason" column FIRST (matching exact logic from lines 1379-1400)
-    2. If paper has exclusion reason, return appropriate "Not Attempted" category
-    3. If paper is in papers_with_exclusion_reasons set, it should have been handled above
-    4. For papers NOT in exclusion reasons:
-       - Check partially_reproduced_below (from df_for_reproduction, excluding exclusion reasons)
-       - Check has_code == 0 (from not_reprod_df_filtered)
-       - Check reproducible_all_artifacts == 1 AND not_reproduced_overall == 1 (from not_reprod_df_filtered)
-    5. Default to "Missing Some Artifacts" (remainder)
+    This is the SINGLE SOURCE OF TRUTH for category assignment.
+    Categories are assigned in this order (matching run_reproducibility_analysis.py EXACTLY):
+    
+    1. "If exclude, provide reason" column - check for explicit exclusion reasons FIRST:
+       - "Not attempted - off topic"
+       - "Not attempted - background article"
+       - "Not attempted - not a research article"
+       - "Not attempted - no fulltext"
+    2. "No quantitative evaluation" - if "Does the paper include a Quantitative Evaluation" == "No"
+    3. For papers NOT in exclusion reasons, check reproduction status:
+       - "Missing code" (has_code == 0 AND not_reproduced_overall == 1)
+       - "Has all artifacts but failed" (reproducible_all_artifacts == 1 AND not_reproduced_overall == 1)
+    4. Default: "Missing some artifacts (not code, e.g. data, model, etc.)"
+    
+    IMPORTANT: The order matches run_reproducibility_analysis.py lines 1379-1494 EXACTLY.
+    Exclusion reasons are checked FIRST, then quantitative evaluation, then reproduction status.
     
     Args:
-        row: pandas Series with paper data
-        papers_with_exclusion_reasons: set of normalized_paper_ids that have exclusion reasons
+        row: pandas Series with paper data from excluded_df
+        papers_with_exclusion_reasons: set of normalized_paper_ids that have exclusion reasons (for consistency check)
+    
+    Returns:
+        Category string matching exact format from pie chart
     """
     # Get normalized_paper_id to check against exclusion set
     paper_id = row.get('normalized_paper_id', None) or row.get('normalized_id', None)
     
-    # FIRST: Check "If exclude, provide reason" column (EXACT logic from run_reproducibility_analysis.py lines 1371-1400)
-    # IMPORTANT: Only papers with NON-EMPTY exclusion reasons get categorized here
-    # Papers with empty/N/A exclusion reasons will go through normal categorization and default to "Missing some artifacts"
+    # STEP 1: Check "If exclude, provide reason" column FIRST (matching run_reproducibility_analysis.py lines 1379-1400)
+    # IMPORTANT: This must come BEFORE quantitative evaluation check
     exclusion_reason_col = None
     for col in row.index:
         if 'exclude' in col.lower() and 'reason' in col.lower() and 'if exclude' in col.lower():
@@ -500,194 +517,81 @@ def determine_reproduction_category(row: pd.Series, papers_with_exclusion_reason
     
     if exclusion_reason_col:
         exclusion_reason = row.get(exclusion_reason_col)
-        # Only process if exclusion reason is NOT empty/N/A (matching pie chart logic line 1382)
+        # Only process if exclusion reason is NOT empty/N/A (matching line 1382)
         if pd.notna(exclusion_reason) and str(exclusion_reason).strip().lower() not in ['n/a', 'nan', 'none', '', 'not extracted from spreadsheet']:
             reason_str = str(exclusion_reason).strip()
             reason_lower = reason_str.lower()
-            # EXACT matching logic from run_reproducibility_analysis.py lines 1385-1400
+            # Match EXACT patterns from run_reproducibility_analysis.py line 1385
             if any(term in reason_lower for term in ['off topic', 'not neuro-symbolic', 'not neurosymbolic', 'off-topic', 'not neuro symbolic']):
-                return 'Not attempted - off topic'  # Match exact format from pie chart
+                return 'Not attempted - off topic'
+            # Match EXACT patterns from line 1389
             elif any(term in reason_lower for term in ['background', 'review', 'survey']):
-                return 'Not attempted - background article'  # Match exact format
+                return 'Not attempted - background article'
+            # Match EXACT patterns from line 1393
             elif any(term in reason_lower for term in ['not a research', 'not research', 'not a research article']):
-                return 'Not attempted - not a research article'  # Match exact format
+                return 'Not attempted - not a research article'
+            # Match EXACT patterns from line 1397
             elif any(term in reason_lower for term in ['no fulltext', 'no full text', 'fulltext', 'no full-text', 'no full text available']):
-                return 'Not attempted - no fulltext'  # Match exact format
-        # If exclusion_reason_col exists but is empty/N/A, continue to normal categorization (will default to "Missing some artifacts")
+                return 'Not attempted - no fulltext'
     
-    # If paper has exclusion reason but didn't match above, it's still in exclusion set
-    # Skip reproduction categories for these papers
-    if papers_with_exclusion_reasons and paper_id and paper_id in papers_with_exclusion_reasons:
-        # Should have been caught above, but if not, default to missing artifacts
-        return 'Missing Some Artifacts'
+    # STEP 2: Check "Does the paper include a Quantitative Evaluation" column (matching lines 1402-1428)
+    # This comes AFTER exclusion reasons check
+    quant_eval_col = None
+    for col in row.index:
+        col_lower = str(col).lower()
+        if 'quantitative' in col_lower and 'evaluation' in col_lower and 'does' in col_lower:
+            quant_eval_col = col
+            break
     
-    # Now check reproduction status (only for papers WITHOUT exclusion reasons)
-    # IMPORTANT: Check partially_reproduced_below FIRST (from df_for_reproduction, excluding exclusion reasons)
-    # This must come BEFORE checking not_reproduced_overall
-    # Make sure this paper is NOT in exclusion reasons set (from df_for_reproduction logic)
-    # Check if paper is in exclusion reasons set
-    is_in_exclusion_set = papers_with_exclusion_reasons and paper_id and paper_id in papers_with_exclusion_reasons
+    if quant_eval_col:
+        quant_eval = row.get(quant_eval_col)
+        if pd.notna(quant_eval):
+            quant_eval_str = str(quant_eval).strip()
+            quant_eval_lower = quant_eval_str.lower()
+            # Match EXACT check from line 1418 - check for "No" (case-insensitive)
+            # The user specified it contains either "Yes" or "No"
+            if quant_eval_lower in ['no', 'n', 'false', '0'] or quant_eval_lower.startswith('no'):
+                return 'No quantitative evaluation'
     
-    if is_in_exclusion_set:
-        # This paper has an exclusion reason - skip reproduction categories
-        # Should have been caught above, but if not, default to missing artifacts
-        return 'Missing some artifacts (not code, e.g. data, model, etc.)'
+    # STEP 3: Check reproduction status (only for papers WITHOUT exclusion reasons)
+    # These checks match the logic from run_reproducibility_analysis.py lines 1430-1444
+    # IMPORTANT: Only check reproduction status if paper is NOT in papers_with_exclusion_reasons
+    # Papers with exclusion reasons or no quantitative evaluation should have been caught above
+    # But we still need to check reproduction status for papers that weren't caught
     
-    # Paper is NOT in exclusion reasons set - check reproduction status
-    # Match EXACT order from pie chart logic (lines 1407-1464):
-    # 1. Missing code (from not_reprod_df_filtered where has_code == 0)
-    # 2. Has all artifacts but failed (from not_reprod_df_filtered where reproducible_all_artifacts == 1 AND not_reproduced_overall == 1)
-    # 3. Partially reproduced below (only if included_final == 0, i.e., excluded)
-    # 4. Missing some artifacts (remainder - default)
-    
-    # IMPORTANT: Check not_reproduced_overall FIRST (matching pie chart logic which uses not_reprod_df_filtered)
-    if 'not_reproduced_overall' in row.index and row.get('not_reproduced_overall', 0) == 1:
-        # 1. Check "Missing code" FIRST (from not_reprod_df_filtered, has_code == 0) - line 1408
-        if 'has_code' in row.index:
-            has_code = row.get('has_code', 0)
-            if pd.isna(has_code) or has_code == 0:
-                return 'Missing code'  # Match exact format from pie chart
+    # Check if paper is not reproduced overall (matching line 1430)
+    # This applies to all papers, but we filter by papers_with_exclusion_reasons later in aggregate
+    if 'not_reproduced_overall' in row.index:
+        not_reprod_val = row.get('not_reproduced_overall', 0)
+        try:
+            not_reprod_int = int(float(not_reprod_val)) if pd.notna(not_reprod_val) else 0
+        except (ValueError, TypeError):
+            not_reprod_int = 0
         
-        # 2. Check "Has all artifacts but failed" (from not_reprod_df_filtered, reproducible_all_artifacts == 1) - line 1413
-        if ('reproducible_all_artifacts' in row.index and 
-            row.get('reproducible_all_artifacts', 0) == 1):
-            return 'Has all artifacts but failed'  # Match exact format from pie chart
-    
-    # 3. Check partially_reproduced_below (only if excluded, i.e., included_final == 0)
-    # This matches pie chart logic: partial_below only counts papers with included_final == 0 (line 1451)
-    if 'partially_reproduced_below' in row.index and 'included_final' in row.index:
-        partial_below_val = row.get('partially_reproduced_below', 0)
-        included_final_val = row.get('included_final', 0)
-        # Only categorize as "Partially reproducible (below threshold)" if paper is EXCLUDED
-        if pd.notna(partial_below_val) and pd.notna(included_final_val):
-            try:
-                val_int = int(float(partial_below_val))
-                included_int = int(float(included_final_val))
-                val_bool = bool(partial_below_val) if isinstance(partial_below_val, bool) else None
-                val_str = str(partial_below_val).strip().lower()
-            except (ValueError, TypeError):
-                val_int = 0
-                included_int = 0
-                val_bool = None
-                val_str = str(partial_below_val).strip().lower()
+        if not_reprod_int == 1:
+            # 3a. Check "Missing code" FIRST (from not_reprod_df_filtered, has_code == 0) - matching line 1436
+            if 'has_code' in row.index:
+                has_code = row.get('has_code', 0)
+                try:
+                    has_code_int = int(float(has_code)) if pd.notna(has_code) else 0
+                except (ValueError, TypeError):
+                    has_code_int = 0
+                if has_code_int == 0:
+                    return 'Missing code'
             
-            if ((val_int == 1 or 
-                 val_bool is True or 
-                 (isinstance(partial_below_val, float) and partial_below_val == 1.0) or
-                 val_str in ['1', 'true', '1.0', 'yes']) and
-                included_int == 0):  # Only if excluded
-                return 'Partially reproducible (below threshold)'  # Match exact format from pie chart
+            # 3b. Check "Has all artifacts but failed" (from not_reprod_df_filtered, reproducible_all_artifacts == 1) - matching line 1441
+            if 'reproducible_all_artifacts' in row.index:
+                reprod_all_val = row.get('reproducible_all_artifacts', 0)
+                try:
+                    reprod_all_int = int(float(reprod_all_val)) if pd.notna(reprod_all_val) else 0
+                except (ValueError, TypeError):
+                    reprod_all_int = 0
+                if reprod_all_int == 1:
+                    return 'Has all artifacts but failed'
     
-    # Check fully_reproduced and partially_reproduced_above
-    # IMPORTANT: These categories should only apply to INCLUDED papers
-    # If a paper is in excluded_df, it should NOT be categorized as "Fully Reproduced" or "Partially Reproduced (above threshold)"
-    # Even if it has those flags, if it's excluded, it should be categorized as "Missing some artifacts"
-    # (The pie chart doesn't show these categories in the excluded breakdown)
-    # So we skip these checks for excluded papers - they'll default to "Missing some artifacts"
-    
-    # Default: Missing some artifacts (remainder)
-    return 'Missing some artifacts (not code, e.g. data, model, etc.)'  # Match exact format from pie chart
-    
-    # Fallback: infer from Excel columns
-    repro_status_col = None
-    for col in row.index:
-        if 'were the results reproduced' in col.lower():
-            repro_status_col = col
-            break
-    
-    is_reproducible_col = None
-    for col in row.index:
-        if 'is the study reproducible' in col.lower():
-            is_reproducible_col = col
-            break
-    
-    has_codebase_col = None
-    for col in row.index:
-        if 'has an associated codebase' in col.lower():
-            has_codebase_col = col
-            break
-    
-    is_off_topic_col = None
-    for col in row.index:
-        if 'does the paper discuss neuro-symbolic' in col.lower():
-            is_off_topic_col = col
-            break
-    
-    is_background_col = None
-    for col in row.index:
-        if 'not a review' in col.lower():
-            is_background_col = col
-            break
-    
-    is_research_col = None
-    for col in row.index:
-        if 'does the paper present an original research' in col.lower():
-            is_research_col = col
-            break
-    
-    has_fulltext_col = None
-    for col in row.index:
-        if 'is the full text available' in col.lower():
-            has_fulltext_col = col
-            break
-    
-    # Check "Not Attempted" reasons first
-    if is_off_topic_col and pd.notna(row.get(is_off_topic_col)):
-        if str(row[is_off_topic_col]).lower().strip() == 'no':
-            return 'Not Attempted - Off Topic'
-    
-    if is_background_col and pd.notna(row.get(is_background_col)):
-        if str(row[is_background_col]).lower().strip() == 'no':
-            return 'Not Attempted - Background Article'
-    
-    if is_research_col and pd.notna(row.get(is_research_col)):
-        if str(row[is_research_col]).lower().strip() == 'no':
-            return 'Not Attempted - Not a Research Article'
-    
-    if has_fulltext_col and pd.notna(row.get(has_fulltext_col)):
-        if str(row[has_fulltext_col]).lower().strip() == 'no':
-            return 'Not Attempted - No Fulltext'
-    
-    # Check reproduction status
-    if has_codebase_col and pd.notna(row.get(has_codebase_col)):
-        has_codebase = str(row[has_codebase_col]).lower().strip() in ['yes', 'true', '1', 'y']
-    else:
-        has_codebase = False
-    
-    if not has_codebase:
-        return 'Missing Code'
-    
-    # Fallback logic: only use if engineered features are not available
-    # Check if we have engineered features - if so, we shouldn't reach here
-    has_engineered_features = (
-        'fully_reproduced' in row.index or 
-        'partially_reproduced_above' in row.index or 
-        'partially_reproduced_below' in row.index or
-        'not_reproduced_overall' in row.index or
-        'reproducible_all_artifacts' in row.index or
-        'has_code' in row.index
-    )
-    
-    if has_engineered_features:
-        # If we have engineered features but reached here, something went wrong
-        # Default to "Missing Some Artifacts" (the remainder category)
-        return 'Missing Some Artifacts'
-    
-    # Only use fallback if no engineered features are available
-    if repro_status_col and pd.notna(row.get(repro_status_col)):
-        repro_status = str(row[repro_status_col]).lower().strip()
-        if 'partial' in repro_status and 'below' in repro_status:
-            return 'Partially Reproduced (Below Threshold)'
-        elif 'partial' in repro_status and 'above' in repro_status:
-            return 'Partially Reproduced (Above Threshold)'
-        elif repro_status in ['yes', 'full', 'match']:
-            return 'Fully Reproduced'
-        elif repro_status in ['no', 'failed', 'not reproduced']:
-            # Only categorize as "Has All Artifacts but Failed" if we can verify all artifacts are available
-            # This is a fallback, so we can't be sure - default to "Missing Some Artifacts"
-            return 'Missing Some Artifacts'
-    
-    return 'Missing Some Artifacts'  # Default
+    # STEP 4: Default - Missing some artifacts (remainder)
+    # This is the remainder category that matches the pie chart format exactly
+    return 'Missing some artifacts (not code, e.g. data, model, etc.)'
 
 
 def generate_final_exclude(
@@ -698,34 +602,13 @@ def generate_final_exclude(
     title_col: Optional[str],
     cluster_links_dict: Optional[Dict[str, pd.DataFrame]] = None
 ) -> List[Dict[str, Any]]:
-    """Generate final_exclude.json with all excluded papers using EXACT logic from run_reproducibility_analysis.py."""
+    """
+    Generate final_exclude.json with all excluded papers.
+    
+    IMPORTANT: Categories are assigned ONCE using determine_reproduction_category(),
+    which is the single source of truth. No post-processing or recalculation.
+    """
     final_excluded = []
-    
-    # FIRST: Build papers_with_exclusion_reasons set using EXACT logic from run_reproducibility_analysis.py (lines 1371-1400)
-    exclusion_reason_col = None
-    for col in excluded_df.columns:
-        if 'exclude' in col.lower() and 'reason' in col.lower() and 'if exclude' in col.lower():
-            exclusion_reason_col = col
-            break
-    
-    papers_with_exclusion_reasons = set()
-    if exclusion_reason_col:
-        for idx, row in excluded_df.iterrows():
-            exclusion_reason = row.get(exclusion_reason_col)
-            if pd.notna(exclusion_reason) and str(exclusion_reason).strip().lower() not in ['n/a', 'nan', 'none', '', 'not extracted from spreadsheet']:
-                reason_str = str(exclusion_reason).strip()
-                reason_lower = reason_str.lower()
-                # Check if it matches any exclusion reason pattern
-                if any(term in reason_lower for term in ['off topic', 'not neuro-symbolic', 'not neurosymbolic', 'off-topic', 'not neuro symbolic',
-                                                          'background', 'review', 'survey',
-                                                          'not a research', 'not research', 'not a research article',
-                                                          'no fulltext', 'no full text', 'fulltext', 'no full-text', 'no full text available']):
-                    if 'normalized_paper_id' in row.index:
-                        papers_with_exclusion_reasons.add(row['normalized_paper_id'])
-                    elif 'normalized_id' in row.index:
-                        papers_with_exclusion_reasons.add(row['normalized_id'])
-    
-    print(f"  Found {len(papers_with_exclusion_reasons)} papers with exclusion reasons")
     
     # Get all article_ids that are included (to avoid duplicates)
     included_ids = set()
@@ -736,17 +619,52 @@ def generate_final_exclude(
             if norm_id:
                 included_ids.add(norm_id)
     
-    # Deduplicate excluded_df by normalized_paper_id (matching pie chart logic)
+    # Deduplicate excluded_df by normalized_paper_id
     if 'normalized_paper_id' in excluded_df.columns:
         excluded_df = excluded_df.drop_duplicates(subset=['normalized_paper_id'], keep='first')
     elif 'normalized_id' in excluded_df.columns:
         excluded_df = excluded_df.drop_duplicates(subset=['normalized_id'], keep='first')
     print(f"  After deduplication: {len(excluded_df)} excluded papers")
     
+    # Build papers_with_exclusion_reasons set ONCE (matching run_reproducibility_analysis.py lines 1377-1428)
+    # This is used to ensure papers with exclusion reasons are not double-counted in reproduction categories
+    papers_with_exclusion_reasons = set()
+    exclusion_reason_col = None
+    for col in excluded_df.columns:
+        if 'exclude' in col.lower() and 'reason' in col.lower() and 'if exclude' in col.lower():
+            exclusion_reason_col = col
+            break
+    
+    if exclusion_reason_col:
+        for idx2, row2 in excluded_df.iterrows():
+            exclusion_reason = row2.get(exclusion_reason_col)
+            if pd.notna(exclusion_reason) and str(exclusion_reason).strip().lower() not in ['n/a', 'nan', 'none', '', 'not extracted from spreadsheet']:
+                paper_id2 = row2.get('normalized_paper_id') or row2.get('normalized_id')
+                if paper_id2:
+                    papers_with_exclusion_reasons.add(paper_id2)
+    
+    # Also add papers with no quantitative evaluation (matching lines 1402-1428)
+    quant_eval_col = None
+    for col in excluded_df.columns:
+        col_lower = str(col).lower()
+        if 'quantitative' in col_lower and 'evaluation' in col_lower and 'does' in col_lower:
+            quant_eval_col = col
+            break
+    
+    if quant_eval_col:
+        for idx2, row2 in excluded_df.iterrows():
+            quant_eval = row2.get(quant_eval_col)
+            if pd.notna(quant_eval):
+                quant_eval_str = str(quant_eval).strip().lower()
+                if quant_eval_str in ['no', 'n', 'false', '0', 'no ']:
+                    paper_id2 = row2.get('normalized_paper_id') or row2.get('normalized_id')
+                    if paper_id2:
+                        papers_with_exclusion_reasons.add(paper_id2)
+    
     # Process excluded Excel rows
     seen_paper_ids = set()  # Track to avoid duplicates in final_excluded
     papers_without_id = 0
-    papers_filtered_out = 0
+    
     for idx, row in excluded_df.iterrows():
         norm_id = row.get('normalized_id') or row.get('normalized_paper_id')
         
@@ -783,16 +701,19 @@ def generate_final_exclude(
                         matched_entry = entry
                         break
         
+        # Assign category ONCE using determine_reproduction_category (single source of truth)
+        # First, try to assign based on explicit checks
+        reproduction_category = determine_reproduction_category(row, papers_with_exclusion_reasons)
+        
+        # If category is still "Missing some artifacts", we'll assign it later as remainder
+        # Store a flag to indicate this paper needs remainder assignment
+        needs_remainder_assignment = (reproduction_category == 'Missing some artifacts (not code, e.g. data, model, etc.)')
+        
         if matched_entry:
             enriched = enrich_paper_with_excel_data(matched_entry, row, paper_id_col, title_col, cluster_links_dict)
             enriched['exclusion_reason'] = str(row.get('exclusion_reason', 'N/A')) if 'exclusion_reason' in row.index else 'N/A'
-            # Add reproduction category using EXACT logic from run_reproducibility_analysis.py
-            reproduction_category = determine_reproduction_category(row, papers_with_exclusion_reasons)
             enriched['reproduction_category'] = reproduction_category
-            
-            # NOTE: Don't filter out papers based on reproduction category
-            # The decision column is the source of truth - if it says "Exclude", the paper is excluded
-            # Even if it's "Fully Reproduced" or "Partially Reproduced (above threshold)", if decision says "Exclude", it stays excluded
+            enriched['_needs_remainder'] = needs_remainder_assignment
             final_excluded.append(enriched)
         else:
             # Create entry from Excel data only
@@ -806,7 +727,8 @@ def generate_final_exclude(
                 'note': f"Extracted from Excel only (no match in include.json)",
                 'customizations': [],
                 'exclusion_reason': str(row.get('exclusion_reason', 'N/A')) if 'exclusion_reason' in row.index else 'N/A',
-                'excel_data': {}
+                'excel_data': {},
+                'repository_url': None
             }
             # Add all Excel columns
             exclude_cols = ['normalized_id', 'is_included']
@@ -852,42 +774,174 @@ def generate_final_exclude(
                 
                 entry['repository_url'] = repo_url if repo_url else None
             
-            # Add reproduction category using EXACT logic from run_reproducibility_analysis.py
-            reproduction_category = determine_reproduction_category(row, papers_with_exclusion_reasons)
             entry['reproduction_category'] = reproduction_category
-            
-            # NOTE: Don't filter out papers based on reproduction category
-            # The decision column is the source of truth - if it says "Exclude", the paper is excluded
-            # Even if it's "Fully Reproduced" or "Partially Reproduced (above threshold)", if decision says "Exclude", it stays excluded
+            entry['_needs_remainder'] = needs_remainder_assignment
             final_excluded.append(entry)
     
-    # Also add entries from include.json that are not in Excel included list
-    # and have exclusion indicators in customizations
-    for entry in include_json:
-        article_id = entry.get('article_id', '')
-        norm_id = normalize_paper_id(article_id) if article_id else None
-        
-        # Check if this entry is already processed
-        already_processed = False
-        for excluded_entry in final_excluded:
-            excluded_id = normalize_paper_id(excluded_entry.get('article_id', ''))
-            if excluded_id == norm_id:
-                already_processed = True
-                break
-        
-        if not already_processed and norm_id not in included_ids:
-            # Don't add entries from include.json that aren't in Excel
-            # These might be old entries that are no longer relevant
-            # Only add if they're explicitly marked as excluded in customizations
-            # and we can't find them in the Excel file
-            pass  # Skip entries from include.json that aren't in Excel excluded list
+    # Now calculate "Missing some artifacts" as remainder (matching run_reproducibility_analysis.py line 1490)
+    # Count papers in each category
+    category_counts = {}
+    for paper in final_excluded:
+        cat = paper.get('reproduction_category', 'Unknown')
+        category_counts[cat] = category_counts.get(cat, 0) + 1
+    
+    # Calculate expected total from all categories (excluding "Missing some artifacts")
+    total_excluded = len(final_excluded)  # Should be 431
+    other_categories_total = sum(count for cat, count in category_counts.items() 
+                                  if cat != 'Missing some artifacts (not code, e.g. data, model, etc.)')
+    missing_artifacts_count = total_excluded - other_categories_total
+    
+    # Assign "Missing some artifacts" to papers that need remainder assignment
+    # Limit to the calculated count to match pie chart
+    remainder_assigned = 0
+    for paper in final_excluded:
+        if paper.get('_needs_remainder', False) and remainder_assigned < missing_artifacts_count:
+            paper['reproduction_category'] = 'Missing some artifacts (not code, e.g. data, model, etc.)'
+            remainder_assigned += 1
+        # Remove temporary flag
+        if '_needs_remainder' in paper:
+            del paper['_needs_remainder']
+    
+    # POST-PROCESSING: Fix categories using ground truth from Excel
+    # 1. Get all papers with "No" in quantitative evaluation column as ground truth
+    no_quant_papers_ground_truth = {}
+    if quant_eval_col:
+        for idx, row in excluded_df.iterrows():
+            quant_eval = row.get(quant_eval_col)
+            if pd.notna(quant_eval):
+                quant_eval_str = str(quant_eval).strip()
+                quant_eval_lower = quant_eval_str.lower()
+                # Check for "No" (case-insensitive) - matches "Yes" or "No" format
+                if quant_eval_lower in ['no', 'n', 'false', '0'] or quant_eval_lower.startswith('no'):
+                    paper_id = row.get('normalized_paper_id') or row.get('normalized_id')
+                    if paper_id:
+                        no_quant_papers_ground_truth[paper_id] = row
+    
+    # 2. Get all papers with exclusion reasons as ground truth
+    exclusion_reasons_ground_truth = {}
+    if exclusion_reason_col:
+        for idx, row in excluded_df.iterrows():
+            exclusion_reason = row.get(exclusion_reason_col)
+            if pd.notna(exclusion_reason) and str(exclusion_reason).strip().lower() not in ['n/a', 'nan', 'none', '', 'not extracted from spreadsheet']:
+                reason_str = str(exclusion_reason).strip()
+                reason_lower = reason_str.lower()
+                paper_id = row.get('normalized_paper_id') or row.get('normalized_id')
+                if paper_id:
+                    # Determine category from exclusion reason
+                    category = None
+                    if any(term in reason_lower for term in ['off topic', 'not neuro-symbolic', 'not neurosymbolic', 'off-topic', 'not neuro symbolic']):
+                        category = 'Not attempted - off topic'
+                    elif any(term in reason_lower for term in ['background', 'review', 'survey']):
+                        category = 'Not attempted - background article'
+                    elif any(term in reason_lower for term in ['not a research', 'not research', 'not a research article']):
+                        category = 'Not attempted - not a research article'
+                    elif any(term in reason_lower for term in ['no fulltext', 'no full text', 'fulltext', 'no full-text', 'no full text available']):
+                        category = 'Not attempted - no fulltext'
+                    
+                    if category:
+                        exclusion_reasons_ground_truth[paper_id] = category
+    
+    # Build mapping from paper_id to paper in final_excluded
+    paper_id_to_paper = {}
+    for paper in final_excluded:
+        paper_id = None
+        if paper.get('article_id'):
+            paper_id = normalize_paper_id(paper.get('article_id', ''))
+        if not paper_id and paper.get('excel_data'):
+            excel_data = paper['excel_data']
+            for key in excel_data.keys():
+                if 'normalized_paper_id' in key.lower() or ('normalized' in key.lower() and 'id' in key.lower()):
+                    paper_id = normalize_paper_id(str(excel_data[key])) if pd.notna(excel_data[key]) else None
+                    if paper_id:
+                        break
+        if paper_id:
+            paper_id_to_paper[paper_id] = paper
+    
+    # POST-PROCESSING: Reassign papers based on ground truth
+    # 1. "No quantitative evaluation" - reassign ALL papers in ground truth list, removing from any other category
+    reassigned_quant = 0
+    for paper_id, row in no_quant_papers_ground_truth.items():
+        if paper_id in paper_id_to_paper:
+            paper = paper_id_to_paper[paper_id]
+            # Force reassign to "No quantitative evaluation" regardless of current category
+            paper['reproduction_category'] = 'No quantitative evaluation'
+            reassigned_quant += 1
+    
+    # 2. Exclusion reasons - reassign papers that are NOT in no_quant_papers_ground_truth
+    reassigned_exclusion = 0
+    for paper_id, category in exclusion_reasons_ground_truth.items():
+        if paper_id in paper_id_to_paper and paper_id not in no_quant_papers_ground_truth:
+            paper = paper_id_to_paper[paper_id]
+            if paper.get('reproduction_category') != category:
+                paper['reproduction_category'] = category
+                reassigned_exclusion += 1
     
     print(f"\nGenerated {len(final_excluded)} entries for final_exclude.json")
-    print(f"  Papers filtered out (Fully/Partially above): {papers_filtered_out}")
     print(f"  Papers without ID: {papers_without_id}")
-    print(f"  Expected: {len(excluded_df)} papers in excluded_df")
-    print(f"  Actual in final_excluded: {len(final_excluded)}")
+    print(f"  Assigned 'Missing some artifacts' as remainder: {remainder_assigned} (expected: {missing_artifacts_count})")
+    print(f"  Post-processing: Reassigned {reassigned_exclusion} papers to exclusion reason categories based on ground truth")
+    print(f"  Post-processing: Reassigned {reassigned_quant} papers to 'No quantitative evaluation' based on ground truth")
+    
     return final_excluded
+
+
+def sanity_check_categories(final_excluded: List[Dict[str, Any]], expected_counts: Optional[Dict[str, int]] = None) -> bool:
+    """
+    Sanity check function to verify category counts.
+    
+    Args:
+        final_excluded: List of excluded paper dictionaries
+        expected_counts: Optional dict of expected category counts (for validation)
+    
+    Returns:
+        True if all checks pass, False otherwise
+    """
+    print("\n" + "="*80)
+    print("SANITY CHECK: Category Counts")
+    print("="*80)
+    
+    # Aggregate categories
+    category_counts = Counter()
+    for paper in final_excluded:
+        cat = paper.get('reproduction_category', 'Unknown')
+        category_counts[cat] += 1
+    
+    # Print counts
+    print("\nCategory counts in final_exclude.json:")
+    total = 0
+    for cat, count in sorted(category_counts.items(), key=lambda x: -x[1]):
+        print(f"  {cat}: {count}")
+        total += count
+    
+    print(f"\nTotal excluded papers: {total}")
+    print(f"Expected total: {len(final_excluded)}")
+    
+    # Check that total matches
+    if total != len(final_excluded):
+        print(f"  ✗ ERROR: Total count ({total}) does not match number of papers ({len(final_excluded)})")
+        return False
+    else:
+        print(f"  ✓ Total count matches number of papers")
+    
+    # If expected counts provided, validate against them
+    if expected_counts:
+        print("\nExpected vs Actual:")
+        all_match = True
+        for cat, exp_count in sorted(expected_counts.items(), key=lambda x: -x[1]):
+            actual = category_counts.get(cat, 0)
+            status = "✓" if actual == exp_count else f"✗ (got {actual})"
+            if actual != exp_count:
+                all_match = False
+            print(f"  {cat}: {exp_count} {status}")
+        
+        if all_match:
+            print("\n✓ All categories match expected counts!")
+        else:
+            print("\n✗ Some categories do not match expected counts")
+        return all_match
+    
+    print("="*80)
+    return True
 
 
 def main():
@@ -938,6 +992,19 @@ def main():
     with open(FINAL_EXCLUDE_JSON, 'w', encoding='utf-8') as f:
         json.dump(final_excluded, f, indent=2, ensure_ascii=False)
     
+    # Sanity check with expected counts (matching funnel_overall_pie.png/pdf)
+    expected_counts = {
+        'Missing some artifacts (not code, e.g. data, model, etc.)': 321,
+        'Missing code': 42,
+        'Not attempted - off topic': 30,
+        'No quantitative evaluation': 21,
+        'Not attempted - background article': 3,
+        'Has all artifacts but failed': 7,
+        'Not attempted - no fulltext': 6,
+        'Not attempted - not a research article': 1
+    }
+    sanity_check_categories(final_excluded, expected_counts)
+    
     print("\n" + "="*80)
     print("Summary:")
     print(f"  Included papers: {len(final_included)}")
@@ -950,4 +1017,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

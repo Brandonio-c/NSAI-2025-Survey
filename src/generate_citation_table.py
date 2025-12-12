@@ -13,6 +13,7 @@ import pandas as pd
 from pathlib import Path
 from typing import Dict, List, Tuple
 import logging
+import json
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -22,6 +23,7 @@ PROJECT_ROOT = Path(__file__).parent.parent
 BIB_FILE = PROJECT_ROOT / "docs" / "data" / "final_included_articles.bib"
 EXCEL_FILE = PROJECT_ROOT.parent / "NSAI-Data-crosscheck" / "data" / "NSAI-DATA_Extraction.xlsx"
 CLUSTER_FILE = PROJECT_ROOT.parent / "NSAI-Data-crosscheck" / "data" / "cluster_papers_with_links.xlsx"
+FINAL_INCLUDE_JSON = PROJECT_ROOT / "docs" / "data" / "final_include.json"
 OUTPUT_TEX = PROJECT_ROOT / "docs" / "data" / "included_papers_table.tex"
 OUTPUT_TEX_NO_CITE = PROJECT_ROOT / "docs" / "data" / "included_papers_table_no_cite.tex"
 
@@ -95,6 +97,9 @@ def parse_single_entry(entry_text: str) -> Dict[str, str]:
     # Extract year - handle nested braces
     year = extract_field(entry_text, 'year')
     
+    # Extract URL/DOI - handle nested braces
+    url = extract_field(entry_text, 'url')
+    
     # Clean up abstract
     if abstract:
         abstract = re.sub(r'\s+', ' ', abstract).strip()
@@ -107,7 +112,8 @@ def parse_single_entry(entry_text: str) -> Dict[str, str]:
         'title': title or "",
         'abstract': abstract or "",
         'author': author or "",
-        'year': year or ""
+        'year': year or "",
+        'url': url or ""
     }
 
 
@@ -142,12 +148,12 @@ def extract_field(entry_text: str, field_name: str) -> str:
     return ""
 
 
-def load_excel_descriptions(excel_path: Path) -> Dict[str, str]:
+def load_excel_data(excel_path: Path) -> Tuple[Dict[str, str], Dict[str, str], Dict[str, str]]:
     """
-    Load paper descriptions from Excel file.
-    Returns dictionary mapping normalized article ID to description.
+    Load paper data from Excel file.
+    Returns tuple of (descriptions, dois, github_links) dictionaries mapping normalized article ID to value.
     """
-    logger.info(f"Loading descriptions from Excel: {excel_path}")
+    logger.info(f"Loading data from Excel: {excel_path}")
     
     try:
         df = pd.read_excel(excel_path)
@@ -155,31 +161,170 @@ def load_excel_descriptions(excel_path: Path) -> Dict[str, str]:
         # Find relevant columns
         paper_id_col = next((col for col in df.columns if 'paper id' in col.lower() or 'rayyan id' in col.lower()), None)
         description_col = next((col for col in df.columns if 'brief summary' in col.lower() or 'description' in col.lower()), None)
+        doi_col = next((col for col in df.columns if 'doi' in col.lower() and 'url' in col.lower()), None)
+        # Look for repository URL column (not yes/no codebase column)
+        github_col = None
+        for col in df.columns:
+            col_lower = col.lower()
+            # Skip yes/no columns
+            if 'codebase' in col_lower and 'has' in col_lower:
+                continue
+            # Look for actual URL columns
+            if ('repository' in col_lower and 'url' in col_lower) or \
+               ('github' in col_lower and 'url' in col_lower) or \
+               (col_lower == 'repository url') or \
+               (col_lower == 'github url'):
+                github_col = col
+                break
         
         if not paper_id_col:
             logger.warning("Could not find Paper ID column in Excel")
-            return {}
-        if not description_col:
-            logger.warning("Could not find description column in Excel")
-            return {}
+            return {}, {}, {}
         
-        logger.info(f"Using columns: Paper ID='{paper_id_col}', Description='{description_col}'")
+        logger.info(f"Using columns: Paper ID='{paper_id_col}', Description='{description_col}', DOI='{doi_col}', GitHub='{github_col}'")
         
         descriptions = {}
+        dois = {}
+        github_links = {}
+        
         for _, row in df.iterrows():
             paper_id = str(row[paper_id_col]).strip() if pd.notna(row[paper_id_col]) else ""
-            description = str(row[description_col]).strip() if pd.notna(row[description_col]) else ""
+            if not paper_id:
+                continue
+                
+            normalized_id = normalize_article_id(paper_id)
             
-            if paper_id and description:
-                normalized_id = normalize_article_id(paper_id)
-                descriptions[normalized_id] = description
+            if description_col and pd.notna(row.get(description_col)):
+                description = str(row[description_col]).strip()
+                if description:
+                    descriptions[normalized_id] = description
+            
+            if doi_col and pd.notna(row.get(doi_col)):
+                doi = str(row[doi_col]).strip()
+                if doi and doi.lower() not in ['n/a', 'nan', 'none', '']:
+                    dois[normalized_id] = doi
+            
+            if github_col and pd.notna(row.get(github_col)):
+                github = str(row[github_col]).strip()
+                # Only accept if it looks like a URL (starts with http/https/www) and not yes/no
+                if github and github.lower() not in ['n/a', 'nan', 'none', '', 'yes', 'no']:
+                    github_lower = github.lower()
+                    if github_lower.startswith('http://') or github_lower.startswith('https://') or github_lower.startswith('www.'):
+                        github_links[normalized_id] = github
         
-        logger.info(f"Loaded {len(descriptions)} descriptions from Excel")
-        return descriptions
+        logger.info(f"Loaded {len(descriptions)} descriptions, {len(dois)} DOIs, {len(github_links)} GitHub links from Excel")
+        return descriptions, dois, github_links
         
     except Exception as e:
         logger.error(f"Error loading Excel file: {e}")
+        return {}, {}, {}
+
+
+def load_github_links_from_cluster(cluster_path: Path) -> Dict[str, str]:
+    """
+    Load GitHub links from cluster_papers_with_links.xlsx.
+    Returns dictionary mapping normalized article ID to GitHub URL.
+    """
+    logger.info(f"Loading GitHub links from cluster file: {cluster_path}")
+    
+    if not cluster_path.exists():
+        logger.warning(f"Cluster file not found: {cluster_path}")
         return {}
+    
+    try:
+        github_links = {}
+        
+        # Read all sheets
+        xls = pd.ExcelFile(cluster_path)
+        for sheet_name in xls.sheet_names:
+            df = pd.read_excel(cluster_path, sheet_name=sheet_name)
+            
+            # Find Rayyan ID column
+            rayyan_col = None
+            for col in df.columns:
+                if 'rayyan' in col.lower() or 'paper id' in col.lower() or col.lower() == 'id':
+                    rayyan_col = col
+                    break
+            
+            if not rayyan_col:
+                continue
+            
+            # Find GitHub/Repository URL column
+            github_col = None
+            for col in df.columns:
+                if 'github' in col.lower() or 'repository' in col.lower() or 'repo' in col.lower() or 'url' in col.lower():
+                    github_col = col
+                    break
+            
+            if not github_col:
+                continue
+            
+            for _, row in df.iterrows():
+                if pd.notna(row.get(rayyan_col)) and pd.notna(row.get(github_col)):
+                    paper_id = str(row[rayyan_col]).strip()
+                    github_url = str(row[github_col]).strip()
+                    
+                    if paper_id and github_url and github_url.lower() not in ['n/a', 'nan', 'none', '']:
+                        normalized_id = normalize_article_id(paper_id)
+                        # Check if it looks like a URL
+                        if github_url.startswith('http://') or github_url.startswith('https://') or github_url.startswith('www.'):
+                            github_links[normalized_id] = github_url
+        
+        logger.info(f"Loaded {len(github_links)} GitHub links from cluster file")
+        return github_links
+        
+    except Exception as e:
+        logger.error(f"Error loading cluster file: {e}")
+        return {}
+
+
+def load_github_links_from_final_include(json_path: Path) -> Dict[str, str]:
+    """
+    Load GitHub links from final_include.json.
+    Returns dictionary mapping normalized article ID to GitHub URL.
+    """
+    logger.info(f"Loading GitHub links from final_include.json: {json_path}")
+    
+    if not json_path.exists():
+        logger.warning(f"final_include.json not found: {json_path}")
+        return {}
+    
+    try:
+        import json
+        with open(json_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        github_links = {}
+        for entry in data:
+            article_id = entry.get('article_id', '')
+            if not article_id:
+                continue
+            
+            normalized_id = normalize_article_id(article_id)
+            
+            # Check for repository_url or github_url in various places
+            repo_url = entry.get('repository_url') or entry.get('github_url') or entry.get('codebase_url')
+            if repo_url and str(repo_url).strip() and str(repo_url).lower() not in ['n/a', 'nan', 'none', '']:
+                github_links[normalized_id] = str(repo_url).strip()
+        
+        logger.info(f"Loaded {len(github_links)} GitHub links from final_include.json")
+        return github_links
+        
+    except Exception as e:
+        logger.error(f"Error loading final_include.json: {e}")
+        return {}
+
+
+def unescape_url(url: str) -> str:
+    """Unescape LaTeX-escaped characters in URLs for use in \href{}."""
+    if not url:
+        return ""
+    # Unescape underscores and other common LaTeX escapes
+    url = url.replace('\\_', '_')
+    url = url.replace('\\&', '&')
+    url = url.replace('\\%', '%')
+    url = url.replace('\\#', '#')
+    return url
 
 
 def escape_latex(text: str) -> str:
@@ -213,7 +358,8 @@ def escape_latex(text: str) -> str:
     return text
 
 
-def generate_latex_table(bibtex_entries: List[Dict[str, str]], descriptions: Dict[str, str], use_cite: bool = True) -> str:
+def generate_latex_table(bibtex_entries: List[Dict[str, str]], descriptions: Dict[str, str], 
+                         dois: Dict[str, str], github_links: Dict[str, str], use_cite: bool = True) -> str:
     """
     Generate LaTeX table code with citations, titles, and descriptions.
     
@@ -232,6 +378,7 @@ def generate_latex_table(bibtex_entries: List[Dict[str, str]], descriptions: Dic
         abstract = entry['abstract']
         author = entry.get('author', '')
         year = entry.get('year', '')
+        bibtex_url = entry.get('url', '')
         
         # Get description from Excel, fallback to abstract
         normalized_id = normalize_article_id(entry_id)
@@ -241,14 +388,36 @@ def generate_latex_table(bibtex_entries: List[Dict[str, str]], descriptions: Dic
         if not description or description.strip() == "":
             description = "Description not available."
         
+        # Get DOI/URL (prefer BibTeX url, then Excel DOI)
+        paper_url = bibtex_url or dois.get(normalized_id, '')
+        
+        # Get GitHub link
+        github_url = github_links.get(normalized_id, '')
+        
         # Escape LaTeX special characters
         title_escaped = escape_latex(title)
         description_escaped = escape_latex(description)
+        
+        # Make title a hyperlink if URL is available
+        if paper_url:
+            # Unescape LaTeX escapes in URL (like \_) and then only escape backslashes and braces for LaTeX
+            url_unescaped = unescape_url(paper_url)
+            url_escaped = url_unescaped.replace('\\', '\\textbackslash{}').replace('{', '\\{').replace('}', '\\}')
+            title_with_link = f"\\href{{{url_escaped}}}{{{title_escaped}}}"
+        else:
+            title_with_link = title_escaped
         
         if use_cite:
             # Create citation key (remove 'rayyan-' prefix if present)
             cite_key = entry_id.replace('rayyan-', '')
             citation_col = f"\\cite{{rayyan-{cite_key}}}"
+            
+            # Add GitHub link below citation if available
+            if github_url:
+                # Unescape LaTeX escapes in URL and then only escape backslashes and braces
+                github_url_unescaped = unescape_url(github_url)
+                github_url_escaped = github_url_unescaped.replace('\\', '\\textbackslash{}').replace('{', '\\{').replace('}', '\\}')
+                citation_col = f"{citation_col}\\\\\\small\\href{{{github_url_escaped}}}{{Codebase}}"
         else:
             # Format author and year for citation - make it neater
             author_escaped = escape_latex(author)
@@ -295,11 +464,18 @@ def generate_latex_table(bibtex_entries: List[Dict[str, str]], descriptions: Dic
             else:
                 citation_col = year_escaped if year_escaped else entry_id.replace('rayyan-', '')
             
+            # Add GitHub link below author name if available
+            if github_url:
+                # Unescape LaTeX escapes in URL and then only escape backslashes and braces
+                github_url_unescaped = unescape_url(github_url)
+                github_url_escaped = github_url_unescaped.replace('\\', '\\textbackslash{}').replace('{', '\\{').replace('}', '\\}')
+                citation_col = f"{citation_col}\\\\\\small\\href{{{github_url_escaped}}}{{Codebase}}"
+            
             # Wrap in smaller font for neater appearance and use raggedright for better line breaks
             citation_col = f"\\small\\raggedright {citation_col}"
         
         # Create table row
-        row = f"    {citation_col} & {title_escaped} & {description_escaped} \\\\"
+        row = f"    {citation_col} & {title_with_link} & {description_escaped} \\\\"
         rows.append(row)
     
     # Generate full LaTeX table
@@ -379,14 +555,28 @@ def main():
     # Parse BibTeX file
     bibtex_entries = parse_bibtex_file(BIB_FILE)
     
-    # Load descriptions from Excel
-    descriptions = load_excel_descriptions(EXCEL_FILE)
+    # Load data from Excel
+    descriptions, dois, github_links_excel = load_excel_data(EXCEL_FILE)
+    
+    # Load GitHub links from cluster file
+    github_links_cluster = load_github_links_from_cluster(CLUSTER_FILE)
+    
+    # Load GitHub links from final_include.json
+    github_links_json = load_github_links_from_final_include(FINAL_INCLUDE_JSON)
+    
+    # Merge GitHub links (prefer Excel, then cluster, then JSON)
+    github_links = {}
+    github_links.update(github_links_json)
+    github_links.update(github_links_cluster)
+    github_links.update(github_links_excel)  # Excel takes precedence
+    
+    logger.info(f"Total GitHub links available: {len(github_links)}")
     
     # Generate LaTeX table with \cite commands
-    latex_table_with_cite = generate_latex_table(bibtex_entries, descriptions, use_cite=True)
+    latex_table_with_cite = generate_latex_table(bibtex_entries, descriptions, dois, github_links, use_cite=True)
     
     # Generate LaTeX table without \cite commands (showing author/year directly)
-    latex_table_no_cite = generate_latex_table(bibtex_entries, descriptions, use_cite=False)
+    latex_table_no_cite = generate_latex_table(bibtex_entries, descriptions, dois, github_links, use_cite=False)
     
     # Write output files
     logger.info(f"Writing LaTeX table with \\cite commands to: {OUTPUT_TEX}")
@@ -407,6 +597,7 @@ def main():
     logger.info("="*80)
     logger.info("\nTo use these tables in your LaTeX document, add:")
     logger.info("  \\usepackage{longtable}")
+    logger.info("  \\usepackage{hyperref}")
     logger.info(f"  \\input{{docs/data/included_papers_table.tex}}")
     logger.info("  or")
     logger.info(f"  \\input{{docs/data/included_papers_table_no_cite.tex}}")

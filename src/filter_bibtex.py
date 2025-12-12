@@ -3,9 +3,9 @@
 Filter BibTeX entries to create final_included_articles.bib.
 
 This script:
-1. Reads final_exclude.json to get a list of excluded article IDs
+1. Reads final_include.json to get a list of included article IDs
 2. Reads included_articles.bib to get all BibTeX entries
-3. Filters out excluded papers from the BibTeX entries
+3. Keeps only papers that are in final_include.json
 4. Writes the remaining entries to final_included_articles.bib
 """
 
@@ -16,7 +16,7 @@ from typing import Set, List, Tuple
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent
-FINAL_EXCLUDE_JSON = PROJECT_ROOT / "docs" / "data" / "final_exclude.json"
+FINAL_INCLUDE_JSON = PROJECT_ROOT / "docs" / "data" / "final_include.json"
 INCLUDED_ARTICLES_BIB = PROJECT_ROOT / "docs" / "data" / "included_articles.bib"
 FINAL_INCLUDED_ARTICLES_BIB = PROJECT_ROOT / "docs" / "data" / "final_included_articles.bib"
 
@@ -32,22 +32,22 @@ def normalize_article_id(article_id: str) -> str:
     return article_id.lower()
 
 
-def load_excluded_ids(exclude_json_path: Path) -> Set[str]:
-    """Load excluded article IDs from JSON file."""
-    print(f"Loading excluded article IDs from: {exclude_json_path}")
+def load_included_ids(include_json_path: Path) -> Set[str]:
+    """Load included article IDs from JSON file."""
+    print(f"Loading included article IDs from: {include_json_path}")
     
-    with open(exclude_json_path, 'r', encoding='utf-8') as f:
-        excluded_data = json.load(f)
+    with open(include_json_path, 'r', encoding='utf-8') as f:
+        included_data = json.load(f)
     
-    excluded_ids = set()
-    for entry in excluded_data:
+    included_ids = set()
+    for entry in included_data:
         article_id = entry.get('article_id', '')
         if article_id:
             normalized_id = normalize_article_id(article_id)
-            excluded_ids.add(normalized_id)
+            included_ids.add(normalized_id)
     
-    print(f"Found {len(excluded_ids)} unique excluded article IDs")
-    return excluded_ids
+    print(f"Found {len(included_ids)} unique included article IDs")
+    return included_ids
 
 
 def parse_bibtex_entry(bibtex_text: str) -> Tuple[str, str]:
@@ -121,9 +121,9 @@ def parse_bibtex_file(bibtex_path: Path) -> List[Tuple[str, str]]:
     return entries
 
 
-def filter_bibtex_entries(entries: List[Tuple[str, str]], excluded_ids: Set[str]) -> List[str]:
+def filter_bibtex_entries(entries: List[Tuple[str, str]], included_ids: Set[str]) -> List[str]:
     """
-    Filter out entries whose IDs are in excluded_ids.
+    Keep only entries whose IDs are in included_ids.
     Returns list of entry texts (not tuples).
     """
     included_entries = []
@@ -132,13 +132,12 @@ def filter_bibtex_entries(entries: List[Tuple[str, str]], excluded_ids: Set[str]
     for entry_id, entry_text in entries:
         normalized_id = normalize_article_id(entry_id)
         
-        if normalized_id in excluded_ids:
+        if normalized_id in included_ids:
+            included_entries.append(entry_text)
+        else:
             excluded_count += 1
-            continue
-        
-        included_entries.append(entry_text)
     
-    print(f"Filtered out {excluded_count} excluded entries")
+    print(f"Filtered out {excluded_count} entries not in final_include.json")
     print(f"Kept {len(included_entries)} included entries")
     
     return included_entries
@@ -164,14 +163,14 @@ def main():
     print("Filter BibTeX Entries")
     print("="*80)
     
-    # Load excluded IDs
-    excluded_ids = load_excluded_ids(FINAL_EXCLUDE_JSON)
+    # Load included IDs
+    included_ids = load_included_ids(FINAL_INCLUDE_JSON)
     
     # Parse BibTeX file
     bibtex_entries = parse_bibtex_file(INCLUDED_ARTICLES_BIB)
     
-    # Filter entries
-    included_entries = filter_bibtex_entries(bibtex_entries, excluded_ids)
+    # Filter entries - keep only those in included_ids
+    included_entries = filter_bibtex_entries(bibtex_entries, included_ids)
     
     # Write output file
     write_bibtex_file(included_entries, FINAL_INCLUDED_ARTICLES_BIB)
@@ -179,7 +178,7 @@ def main():
     print("\n" + "="*80)
     print("Summary:")
     print(f"  Total entries in original BibTeX: {len(bibtex_entries)}")
-    print(f"  Excluded entries: {len(bibtex_entries) - len(included_entries)}")
+    print(f"  Entries not in final_include.json: {len(bibtex_entries) - len(included_entries)}")
     print(f"  Final included entries: {len(included_entries)}")
     print(f"  Output file: {FINAL_INCLUDED_ARTICLES_BIB}")
     print("="*80)

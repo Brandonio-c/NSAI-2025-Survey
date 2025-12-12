@@ -115,7 +115,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083891"
     },
     "repository_url": "https://github.com/damo-cv/TransReID",
     "exclusion_reason": "N/A",
@@ -219,7 +220,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083907"
     },
     "repository_url": "https://github.com/rezacsedu/SemanticRobot",
     "exclusion_reason": "N/A",
@@ -363,7 +365,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083763"
     },
     "repository_url": "https://github.com/UTAustin-SwarmLab/Neuro-Symbolic-Video-Search-Temporal-Logic",
     "exclusion_reason": "Continue",
@@ -510,11 +513,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083850"
     },
     "repository_url": "https://github.com/pylon-lib/pylon; https://pylon-lib.github.io/",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Not attempted - off topic"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242083852",
@@ -636,7 +640,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083852"
     },
     "repository_url": "https://github.com/UCLA-StarAI/PseudoSL",
     "exclusion_reason": "SKIP",
@@ -741,7 +746,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083977"
     },
     "repository_url": "https://github.com/ml-research/answersetnetworks",
     "exclusion_reason": "SKIP",
@@ -847,7 +853,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083978"
     },
     "repository_url": "https://github.com/askrix/SLASH?tab=readme-ov-file",
     "exclusion_reason": "SKIP",
@@ -953,7 +960,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084010"
     },
     "repository_url": "https://github.com/ibaaj/pi-nesy",
     "exclusion_reason": "SKIP",
@@ -1059,11 +1067,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084021"
     },
     "repository_url": "https://github.com/sbadredd/interval-ltn",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084182",
@@ -1179,7 +1188,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084182"
     },
     "repository_url": "https://github.com/tdurieux/anonymous_github",
     "exclusion_reason": "SKIP",
@@ -1285,7 +1295,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084275"
     },
     "repository_url": "https://github.com/linqs/dickens-arxiv24",
     "exclusion_reason": "SKIP",
@@ -1390,7 +1401,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084519"
     },
     "repository_url": "https://github.com/YousIA/NSViT-LTN",
     "exclusion_reason": "SKIP",
@@ -1496,7 +1508,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084541"
     },
     "repository_url": "https://github.com/Dongranyu/NSF-SRL",
     "exclusion_reason": "SKIP",
@@ -1601,7 +1614,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084414"
     },
     "repository_url": "https://github.com/DanCunnington/FFNSL",
     "exclusion_reason": "SKIP",
@@ -1707,7 +1721,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084604"
     },
     "repository_url": "https://github.com/HEmile/differentiable-fuzzy-logics",
     "exclusion_reason": "SKIP",
@@ -1813,7 +1828,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084612"
     },
     "repository_url": "https://github.com/ezhan94/neurosymbolic-encoders",
     "exclusion_reason": "SKIP",
@@ -1919,7 +1935,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084620"
     },
     "repository_url": "https://github.com/Fadi2200/ASPEN",
     "exclusion_reason": "SKIP",
@@ -2025,7 +2042,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084657"
     },
     "repository_url": "https://github.com/jonathanfeldstein/SPECTRUM",
     "exclusion_reason": "SKIP",
@@ -2124,7 +2142,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084659"
     },
     "repository_url": null,
     "exclusion_reason": "SKIP",
@@ -2257,7 +2276,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084734"
     },
     "repository_url": "https://github.com/kamel-usp/dpasp",
     "exclusion_reason": "SKIP",
@@ -2362,7 +2382,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084739"
     },
     "repository_url": "https://github.com/oschart/neures",
     "exclusion_reason": "SKIP",
@@ -2466,7 +2487,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084755"
     },
     "repository_url": "https://github.com/atatomir/CCN",
     "exclusion_reason": "SKIP",
@@ -2572,7 +2594,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084833"
     },
     "repository_url": "https://github.com/coolang2022/COOLang?search=1",
     "exclusion_reason": "SKIP",
@@ -2684,7 +2707,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084853"
     },
     "repository_url": "https://git.nju.edu.cn/Alkane/clion.git",
     "exclusion_reason": "SKIP",
@@ -2797,7 +2821,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084898"
     },
     "repository_url": "https://github.com/IBM/raven-large-language-models; https://github.com/IBM/abductive-rule-learner-with-context-awareness",
     "exclusion_reason": "SKIP",
@@ -2902,7 +2927,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084966"
     },
     "repository_url": "https://github.com/AbductiveLearning/ABLSim",
     "exclusion_reason": "SKIP",
@@ -3007,7 +3033,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084967"
     },
     "repository_url": "https://github.com/AbductiveLearning/ABL",
     "exclusion_reason": "SKIP",
@@ -3112,7 +3139,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084998"
     },
     "repository_url": "https://github.com/tushancse04/MNTN",
     "exclusion_reason": "SKIP",
@@ -3217,7 +3245,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085027"
     },
     "repository_url": "https://github.com/ML-KULeuven/amc-grad",
     "exclusion_reason": "SKIP",
@@ -3322,7 +3351,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085028"
     },
     "repository_url": "https://github.com/jjcmoon/hardness-nesy",
     "exclusion_reason": "SKIP",
@@ -3427,7 +3457,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085155"
     },
     "repository_url": "https://github.com/ais-climber/AAAI2024",
     "exclusion_reason": "SKIP",
@@ -3532,7 +3563,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085197"
     },
     "repository_url": "https://github.com/MECLabTUDA/AutoSNAP",
     "exclusion_reason": "SKIP",
@@ -3657,7 +3689,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085153"
     },
     "repository_url": "https://github.com/kkirchheim/logic-ood",
     "exclusion_reason": "SKIP",
@@ -3762,7 +3795,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085255"
     },
     "repository_url": "https://github.com/ML-KULeuven/probabilistic-arithmetic",
     "exclusion_reason": "SKIP",
@@ -3874,7 +3908,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085291"
     },
     "repository_url": "https://github.com/SoftWiser-group/NeSy-without-Shortcuts",
     "exclusion_reason": "SKIP",
@@ -3979,7 +4014,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085359"
     },
     "repository_url": "https://github.com/AbductiveLearning/ABL-TL",
     "exclusion_reason": "SKIP",
@@ -4084,7 +4120,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085377"
     },
     "repository_url": "https://github.com/jjcmoon/DeepSoftLog",
     "exclusion_reason": "SKIP",
@@ -4189,7 +4226,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085414"
     },
     "repository_url": "https://github.com/FrancescoManigrass/PROTO-LTN.git",
     "exclusion_reason": "SKIP",
@@ -4295,7 +4333,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085482"
     },
     "repository_url": "https://github.com/MalumaDev/SymbolicSudoku",
     "exclusion_reason": "SKIP",
@@ -4400,7 +4439,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085566"
     },
     "repository_url": "https://github.com/petrichor1998/nesyfold_codebase",
     "exclusion_reason": "SKIP",
@@ -4513,7 +4553,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085654"
     },
     "repository_url": "https://github.com/Ermine516/DILP2",
     "exclusion_reason": "SKIP",
@@ -4618,7 +4659,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085665"
     },
     "repository_url": "https://github.com/KULeuvenADVISE/CGGD",
     "exclusion_reason": "SKIP",
@@ -4723,7 +4765,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085814"
     },
     "repository_url": "https://github.com/DavideScassola/score-based-constrained-generation",
     "exclusion_reason": "SKIP",
@@ -4828,7 +4871,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085826"
     },
     "repository_url": "https://github.com/locuslab/SATNet",
     "exclusion_reason": "SKIP",
@@ -4941,7 +4985,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085834"
     },
     "repository_url": "https://bitbucket.org/tsamoura/neurolog/src/master/",
     "exclusion_reason": "SKIP",
@@ -5085,7 +5130,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085843"
     },
     "repository_url": "https://github.com/anupshakya07/SSPM",
     "exclusion_reason": "Continue",
@@ -5189,7 +5235,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085867"
     },
     "repository_url": "https://github.com/Neural-Symbolic-ImageLabeling/NSILWeb",
     "exclusion_reason": "SKIP",
@@ -5294,7 +5341,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085876"
     },
     "repository_url": "https://github.com/SimretA/Variation-Theory-in-Counterfactual-Data-Augmentation",
     "exclusion_reason": "SKIP",
@@ -5399,7 +5447,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085896"
     },
     "repository_url": "https://github.com/cais-lab/revelionn",
     "exclusion_reason": "SKIP",
@@ -5503,7 +5552,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085929"
     },
     "repository_url": "https://github.com/linqs/psl-examples/tree/master",
     "exclusion_reason": "SKIP",
@@ -5608,7 +5658,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085945"
     },
     "repository_url": "https://github.com/HStromfelt/neurips22-FCA",
     "exclusion_reason": "SKIP",
@@ -5713,7 +5764,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086048"
     },
     "repository_url": "https://github.com/KULeuvenADVISE/CGGD",
     "exclusion_reason": "SKIP",
@@ -5819,7 +5871,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086081"
     },
     "repository_url": "https://github.com/benediktwagner/LTN_fairness",
     "exclusion_reason": "SKIP",
@@ -5924,7 +5977,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086162"
     },
     "repository_url": "https://github.com",
     "exclusion_reason": "SKIP",
@@ -6029,7 +6083,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086229"
     },
     "repository_url": "https://github.com/yxliu99/AutoInt",
     "exclusion_reason": "SKIP",
@@ -6134,7 +6189,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084351"
     },
     "repository_url": "https://gitlab.tuwien.ac.at/kbs/nesy-ai/ilp4sd",
     "exclusion_reason": "SKIP",
@@ -6239,7 +6295,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084437"
     },
     "repository_url": "https://github.com/davidescassola/score-based-constrained-generation",
     "exclusion_reason": "SKIP",
@@ -6344,7 +6401,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084596"
     },
     "repository_url": "https://github.com/ema-marconato/reasoning-shortcuts",
     "exclusion_reason": "SKIP",
@@ -6487,7 +6545,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083833"
     },
     "repository_url": "https://github.com/AdriBento/Greybox-",
     "exclusion_reason": "Continue",
@@ -6628,7 +6687,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083853"
     },
     "repository_url": "https://github.com/Joagai23/robot-neuro-symbolic-system",
     "exclusion_reason": "Continue",
@@ -6736,7 +6796,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083877"
     },
     "repository_url": "https://github.com/alcedok/SocialNav_paper",
     "exclusion_reason": "SKIP",
@@ -6840,7 +6901,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084684"
     },
     "repository_url": "https://gitlab.com/grains2/flvn",
     "exclusion_reason": "SKIP",
@@ -6960,7 +7022,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084902"
     },
     "repository_url": "https://github.com/ml-research/nsfr",
     "exclusion_reason": "SKIP",
@@ -7066,7 +7129,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086113"
     },
     "repository_url": "https://github.com/wead-hsu/logicmp",
     "exclusion_reason": "SKIP",
@@ -7171,7 +7235,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086161"
     },
     "repository_url": "https://github.com/ZelinXu2000/SKI-HL",
     "exclusion_reason": "SKIP",
@@ -7220,9 +7285,9 @@
       "Does the paper include a Quantitative Evaluation": "Yes",
       "Does the paper discuss Neuro-Symbolic AI": "Yes",
       "Is the Full Text available for the paper?": "Yes",
-      "Is the study reproducible (is the codebase AND data AND model artifacts required to reproduce publicly available)? ": "Yes",
-      "Were the results reproduced? (did the results obtained match (from full to partial) the reported results from the paper)": "Yes",
-      "If you answered YES to all of the above OR answered NO to just the final question (were the results reproduced)  - Select continue. \n\n\n\nIf you answered NO to any of the other sections above, this paper will be Excluded - Select SKIP ": "Continue",
+      "Is the study reproducible (is the codebase AND data AND model artifacts required to reproduce publicly available)? ": "No",
+      "Were the results reproduced? (did the results obtained match (from full to partial) the reported results from the paper)": "No",
+      "If you answered YES to all of the above OR answered NO to just the final question (were the results reproduced)  - Select continue. \n\n\n\nIf you answered NO to any of the other sections above, this paper will be Excluded - Select SKIP ": "Skip",
       "Repository URL": "https://github.com/alessiocpt/teriyaki",
       "Primary language / framework": "PDDL / Python",
       "Documentation / code comments is provided to describe its use (for novel methods introduced in the paper)": "Yes",
@@ -7287,9 +7352,7 @@
       "How relevant is this paper to our research objective?\n(Linear Scale: 1-10, where 1 = Not Relevant, 10 = Highly Relevant)": "8.0",
       "Perceived novelty / contribution level (Linear scale (1–10) where 1 = Incremental, 10 = Highly novel / field‑shaping)": "8.0",
       "Clarity & completeness of reporting  (Linear scale (1–10) where 1 = Poor , 10 = Excellent)": "10.0",
-      "Reproducibility confidence (after our attempt)": "Fully reproducible",
       "Reviewer confidence in this extraction ( Linear scale (1–10) where 1 = Low confidence,  10 = Very confident)": "10.0",
-      "Raw logs / result tables made available?": "Full",
       "Primary task metrics reported ": "Other (specify below)",
       "Primary task metrics reported (for other) specify here:": "planning validity (% solved), plan length (steps), timing (t_max, t_avg, t_std)",
       "Split / Protocol": "Other (specify below)",
@@ -7301,31 +7364,29 @@
       "A motivation is given for why the experiments are conducted on the selected datasets": "Yes",
       "All datasets drawn from the existing literature are publicly available": "Yes",
       "Baselines / ablations compared against": "Symbolic Probe baseline",
-      "Reproduction outcome ": "Fully reproduced within reported variance",
-      "Gap between reported and reproduced (%)": "0",
       "Final Decision to Include / Exclude Study": "Exclude",
-      "If Included, in one sentence, describe why the paper should be included in this review.": "Paper presentes a novel neuro-symbolic planning framework. ",
+      "If exclude, provide reason": "the reported results were not reproduceable",
+      "Comments on reproduction / Action items / follow‑up needed (if applicable) ": "the exact fine-tuned GPT-3 model used by the authors is not publicly available and cannot be accessed or executed by external researchers. The notebook references an OpenAI fine-tuned engine ID that is private to the authors’ OpenAI organization, and OpenAI’s infrastructure does not allow cross-organization use of fine-tuned models. No model weights or reproducible checkpoints are released, and the underlying base model (davinci) used for fine-tuning has since been deprecated. As a result, it is impossible to evaluate or benchmark the original model, and any reproduction would require training a new model that cannot be guaranteed to match the original.",
       "has_code": "1",
       "has_data": "1",
-      "has_model_artifacts": "1",
-      "reproducible_all_artifacts": "1",
-      "reproduction_outcome_cat": "fully_reproduced",
-      "reproduction_outcome_raw": "Fully reproduced within reported variance",
+      "has_model_artifacts": "0",
+      "reproducible_all_artifacts": "0",
+      "reproduction_outcome_cat": "not_attempted",
+      "reproduction_outcome_raw": "",
       "reproduction_attempted": "1",
       "repro_attempted": "1",
-      "repro_positive": "1",
+      "repro_positive": "0",
       "repro_negative": "0",
-      "fully_reproduced": "1",
+      "fully_reproduced": "0",
       "partially_reproduced": "0",
       "not_reproduced": "0",
-      "any_reproduced": "1",
-      "not_reproduced_overall": "0",
-      "failed_due_to_missing_artifacts": "0",
+      "any_reproduced": "0",
+      "not_reproduced_overall": "1",
+      "failed_due_to_missing_artifacts": "1",
       "failed_with_artifacts": "0",
-      "repro_status_overall": "fully_reproduced",
-      "gap_percent": "0.0",
+      "repro_status_overall": "no_artifacts_or_access",
       "included_final": "0",
-      "exclusion_reason": "Continue",
+      "exclusion_reason": "Skip",
       "exp_reporting_index": "3.0",
       "doc_governance_index": "2.0",
       "nsai_domain_original": "neurosymbolic-planning, PDDL, robot-planning",
@@ -7347,7 +7408,7 @@
       "param_scale_band": "unknown",
       "licence_category": "MIT",
       "access_level_cat": "API_only",
-      "all_eval_data_public": "1",
+      "all_eval_data_public": "0",
       "new_dataset_released": "1.0",
       "human_eval_present": "0",
       "clarity_score": "10.0",
@@ -7363,10 +7424,11 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083892"
     },
     "repository_url": "https://github.com/alessiocpt/teriyaki",
-    "exclusion_reason": "Continue",
+    "exclusion_reason": "Skip",
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -7510,7 +7572,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083941"
     },
     "repository_url": "https://github.com/gavlegoat/safe-learning",
     "exclusion_reason": "Continue",
@@ -7615,7 +7678,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083963"
     },
     "repository_url": "https://github.com/Gianlu94/A-neuro-symbolic-approach-for-real-world-event-recognition-from-weak-supervision",
     "exclusion_reason": "SKIP",
@@ -7722,7 +7786,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083985"
     },
     "repository_url": "https://github.com/guicho271828/latplan",
     "exclusion_reason": "SKIP",
@@ -7850,7 +7915,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084032"
     },
     "repository_url": "https://github.com/kingsaint/InductiveExplainableLinkPrediction",
     "exclusion_reason": "SKIP",
@@ -7963,7 +8029,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084089"
     },
     "repository_url": "https://github.com/ZhengyaoJiang/NLRL",
     "exclusion_reason": "SKIP",
@@ -8068,7 +8135,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084107"
     },
     "repository_url": "https://github.com/sarthak268/nesca-pytorch",
     "exclusion_reason": "SKIP",
@@ -8175,7 +8243,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084168"
     },
     "repository_url": "https://github.com/bgLeon/Latent-Goal-Architectures",
     "exclusion_reason": "SKIP",
@@ -8296,7 +8365,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084067"
     },
     "repository_url": "https://github.com/kittykg/neural-dnf-mt-policy-learning",
     "exclusion_reason": "SKIP",
@@ -8404,7 +8474,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084183"
     },
     "repository_url": "https://github.com/lab-v2/Error-Detection-and-Correction",
     "exclusion_reason": "SKIP",
@@ -8511,7 +8582,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084262"
     },
     "repository_url": "https://github.com/dnandha/RobLM",
     "exclusion_reason": "SKIP",
@@ -8617,11 +8689,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084277"
     },
     "repository_url": "https://github.com/ChathurangiShyalika/SmartPilot",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084278",
@@ -8759,7 +8832,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084278"
     },
     "repository_url": "https://github.com/ChathurangiShyalika/NSF-MAP",
     "exclusion_reason": "Continue",
@@ -8866,7 +8940,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084315"
     },
     "repository_url": "https://github.com/yangalan123/anhp-andtt",
     "exclusion_reason": "SKIP",
@@ -8973,7 +9048,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084318"
     },
     "repository_url": "https://github.com/hasktorch/hasktorch",
     "exclusion_reason": "SKIP",
@@ -9080,7 +9156,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084325"
     },
     "repository_url": "https://github.com/Learning-and-Intelligent-Systems/predicators/releases/tag/skill-learning-june-2022",
     "exclusion_reason": "SKIP",
@@ -9188,7 +9265,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084317"
     },
     "repository_url": "https://github.com/chenxi-yang/DSE",
     "exclusion_reason": "SKIP",
@@ -9329,7 +9407,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084355"
     },
     "repository_url": "https://github.com/marcocominelli/csi-vae",
     "exclusion_reason": "Continue",
@@ -9436,7 +9515,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084241"
     },
     "repository_url": "https://github.com/ari-dasci/S-PlanningProblemGeneration",
     "exclusion_reason": "SKIP",
@@ -9542,7 +9622,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084500"
     },
     "repository_url": "https://github.com/MichielDhont/Forecasting-Traffic-Progression-in-Terms-of-Semantically-Interpretable-States",
     "exclusion_reason": "SKIP",
@@ -9671,7 +9752,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084471"
     },
     "repository_url": "https://github.com/k4ntz/NUDGE",
     "exclusion_reason": "Continue",
@@ -9778,7 +9860,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084505"
     },
     "repository_url": "https://github.com/ivanDonadello/semantic-PASCAL-Part",
     "exclusion_reason": "SKIP",
@@ -9885,7 +9968,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084632"
     },
     "repository_url": "https://github.com/FardinJalilPiran/FedHDPrivacy",
     "exclusion_reason": "SKIP",
@@ -9992,7 +10076,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084688"
     },
     "repository_url": "https://github.com/ProjectSEM/SEM",
     "exclusion_reason": "SKIP",
@@ -10100,7 +10185,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084619"
     },
     "repository_url": "https://github.com/ai4society/sofai_tool",
     "exclusion_reason": "SKIP",
@@ -10208,7 +10294,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084586"
     },
     "repository_url": "https://github.com/KRLGroup/NeuralRewardMachines",
     "exclusion_reason": "SKIP",
@@ -10323,7 +10410,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084789"
     },
     "repository_url": "https://github.com/nlsgrndn/SCoBots/tree/dev; https://github.com/k4ntz/SCoBots/tree/space_detector; https://github.com/k4ntz/SCoBots",
     "exclusion_reason": "SKIP",
@@ -10430,7 +10518,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084808"
     },
     "repository_url": "https://github.com/reail-iitd/goalnet",
     "exclusion_reason": "SKIP",
@@ -10544,11 +10633,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084889"
     },
     "repository_url": "https://github.com/kit-dsn/how-to-raise-a-robot-beyond-ac",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Not attempted - background article"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084903",
@@ -10673,7 +10763,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084903"
     },
     "repository_url": "https://github.com/ml-research/blendrl",
     "exclusion_reason": "SKIP",
@@ -10777,7 +10868,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084963"
     },
     "repository_url": "https://github.com/qhuang18-97/BAMS",
     "exclusion_reason": "SKIP",
@@ -10883,7 +10975,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084989"
     },
     "repository_url": "https://github.com/jinala/multi-agent-neurosym-transformers",
     "exclusion_reason": "SKIP",
@@ -11004,11 +11097,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085009"
     },
     "repository_url": "https://github.com/boschresearch/causalAssembly",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084987",
@@ -11147,7 +11241,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084987"
     },
     "repository_url": "https://github.com/CAV-Research-Lab/Safe-Reinforcement-Learning-using-Symbolic-Logical-Programming-for-Autonomous-Highway-Driving",
     "exclusion_reason": "SKIP",
@@ -11255,7 +11350,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085061, rayyan-242085844"
     },
     "repository_url": "https://github.com/Hoar012/ABIL-KDD-2025",
     "exclusion_reason": "SKIP",
@@ -11369,7 +11465,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085121"
     },
     "repository_url": "https://github.com/kaustubhsridhar/Constrained_Models",
     "exclusion_reason": "SKIP",
@@ -11497,7 +11594,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085128"
     },
     "repository_url": "https://github.com/HRI-EU/NeuroSymbolicImitationLearning; https://hri-eu.github.io/NeuroSymbolicImitationLearning/",
     "exclusion_reason": "SKIP",
@@ -11611,7 +11709,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085236"
     },
     "repository_url": "https://github.com/laurenok24/NSAQA",
     "exclusion_reason": "SKIP",
@@ -11733,7 +11832,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085295"
     },
     "repository_url": "https://github.com/unclebob7/PST-KDD24",
     "exclusion_reason": "SKIP",
@@ -11840,7 +11940,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085324"
     },
     "repository_url": "https://github.com/ins-rl/insight",
     "exclusion_reason": "SKIP",
@@ -11947,7 +12048,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085432"
     },
     "repository_url": "https://github.com/sariahmghames/NeuroSyM-prediction",
     "exclusion_reason": "SKIP",
@@ -12054,7 +12156,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085433"
     },
     "repository_url": "https://github.com/sariahmghames/neuROSym",
     "exclusion_reason": "SKIP",
@@ -12175,7 +12278,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085497"
     },
     "repository_url": "https://github.com/dair-iitd/nsrmp; https://nsrmp.github.io/",
     "exclusion_reason": "SKIP",
@@ -12282,7 +12386,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083800"
     },
     "repository_url": "https://github.com/PasaLab/dolphin",
     "exclusion_reason": "SKIP",
@@ -12434,7 +12539,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084593"
     },
     "repository_url": "https://github.com/ema-marconato/NeSy-CL?utm_source=chatgpt.com",
     "exclusion_reason": "Continue",
@@ -12541,7 +12647,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085396"
     },
     "repository_url": "https://github.com/ema-marconato/glancenet",
     "exclusion_reason": "SKIP",
@@ -12649,7 +12756,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085663"
     },
     "repository_url": "https://github.com/k4ntz/HackAtari",
     "exclusion_reason": "SKIP",
@@ -12771,7 +12879,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085702"
     },
     "repository_url": "https://github.com/Barnard-PL-Labs/CYOA-TSL",
     "exclusion_reason": "SKIP",
@@ -12878,7 +12987,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085721"
     },
     "repository_url": "https://github.com/DavidMrd/LogicConceptSoftTrees",
     "exclusion_reason": "SKIP",
@@ -12984,7 +13094,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083811"
     },
     "repository_url": "https://github.com/smileslab/deep-infusion/blob/main/deepinfusion.ipynb",
     "exclusion_reason": "SKIP",
@@ -13091,7 +13202,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085745"
     },
     "repository_url": "https://github.com/cognitiveailab/neurosymbolic",
     "exclusion_reason": "SKIP",
@@ -13199,7 +13311,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085746"
     },
     "repository_url": "https://github.com/ctu-vras/monoforce",
     "exclusion_reason": "SKIP",
@@ -13334,7 +13447,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085756"
     },
     "repository_url": "https://github.com/UTAustin-SwarmLab/NeuS-V; https://minkyuchoi-07.github.io/2025/06/11/neusv/#more; https://utaustin-swarmlab.github.io/NeuS-V/",
     "exclusion_reason": "SKIP",
@@ -13448,7 +13562,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085845"
     },
     "repository_url": "https://github.com/Sids2k/RLAP",
     "exclusion_reason": "SKIP",
@@ -13562,7 +13677,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085788"
     },
     "repository_url": "https://github.com/souravsanyal06/EV-Planner",
     "exclusion_reason": "SKIP",
@@ -13676,7 +13792,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085764"
     },
     "repository_url": "https://github.com/swarnaHub/System-1.x",
     "exclusion_reason": "SKIP",
@@ -13791,7 +13908,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085846"
     },
     "repository_url": "https://github.com/reail-iitd/goalnet",
     "exclusion_reason": "SKIP",
@@ -13898,7 +14016,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085873"
     },
     "repository_url": "https://github.com/Learning-and-Intelligent-Systems/predicators/releases/tag/skill-learning-june-2022",
     "exclusion_reason": "SKIP",
@@ -14005,7 +14124,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085960"
     },
     "repository_url": "https://github.com/jlwu002/VSRL",
     "exclusion_reason": "SKIP",
@@ -14112,7 +14232,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085961"
     },
     "repository_url": "https://github.com/rcpsl/Neurosymbolic_planning",
     "exclusion_reason": "SKIP",
@@ -14219,7 +14340,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086155"
     },
     "repository_url": "https://github.com/NESL/Neuroplex",
     "exclusion_reason": "SKIP",
@@ -14326,7 +14448,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085326"
     },
     "repository_url": "https://github.com/less-and-less-bugs/LogicMD",
     "exclusion_reason": "SKIP",
@@ -14419,8 +14542,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084607"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -14555,7 +14680,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086194"
     },
     "repository_url": "https://github.com/sled-group/DANLI",
     "exclusion_reason": "Continue",
@@ -14683,7 +14809,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084466"
     },
     "repository_url": "https://github.com/ML-KULeuven/nesy-minihack",
     "exclusion_reason": "SKIP",
@@ -14777,8 +14904,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084373"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -14932,7 +15061,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083766"
     },
     "repository_url": "https://github.com/TamaraCucumides/UnRavL",
     "exclusion_reason": "SKIP",
@@ -15039,7 +15169,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084538"
     },
     "repository_url": "https://github.com/hedongxiao-tju/NSLM",
     "exclusion_reason": "SKIP",
@@ -15180,7 +15311,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084883"
     },
     "repository_url": "https://github.com/facebookresearch/EgoTV",
     "exclusion_reason": "Continue",
@@ -15287,7 +15419,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086238"
     },
     "repository_url": "https://github.com/sair-lab/PhysORD",
     "exclusion_reason": "SKIP",
@@ -15394,11 +15527,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085077"
     },
     "repository_url": "https://github.com/CQCL/text_to_discocirc",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Not attempted - background article"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242085088",
@@ -15502,7 +15636,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085088"
     },
     "repository_url": "https://github.com/MoonshotAI/CombiBench",
     "exclusion_reason": "SKIP",
@@ -15609,7 +15744,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085165"
     },
     "repository_url": "https://github.com/konstantinosKokos/neural-proof-nets",
     "exclusion_reason": "SKIP",
@@ -15716,7 +15852,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086212"
     },
     "repository_url": "https://github.com/uic-nlp-lab/virtualcoachdata",
     "exclusion_reason": "SKIP",
@@ -15809,8 +15946,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083969"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -15900,8 +16039,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083957"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -16020,7 +16161,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084086"
     },
     "repository_url": "https://gitlab.com/EAVISE/bca/verus-lm",
     "exclusion_reason": "SKIP",
@@ -16127,7 +16269,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084506"
     },
     "repository_url": "https://github.com/linqs/dickens-arxiv24",
     "exclusion_reason": "SKIP",
@@ -16227,7 +16370,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084547"
     },
     "repository_url": null,
     "exclusion_reason": "SKIP",
@@ -16371,7 +16515,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084653"
     },
     "repository_url": "https://github.com/jonathanfeldstein/Concordia; https://github.com/jonathanfeldstein/PRISM; https://github.com/jonathanfeldstein/SPECTRUM; https://github.com/jonathanfeldstein/KnowledgeCompilation; https://github.com/jonathanfeldstein/wfomi",
     "exclusion_reason": "SKIP",
@@ -16477,7 +16622,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083832"
     },
     "repository_url": "https://github.com/hpi-sam",
     "exclusion_reason": "SKIP",
@@ -16584,7 +16730,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084655"
     },
     "repository_url": "https://github.com/jonathanfeldstein/Concordia",
     "exclusion_reason": "SKIP",
@@ -16697,11 +16844,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085753"
     },
     "repository_url": "https://github.com/ruwantw/DSceneKG",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084676",
@@ -16840,7 +16988,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "1",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084676"
     },
     "repository_url": "https://github.com/jmflach/SymbolicLambda",
     "exclusion_reason": "Continue",
@@ -16954,7 +17103,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084765"
     },
     "repository_url": "https://tufts.box.com/s/qeypcyn6xyq60vvm6l0adqu647ltttgw",
     "exclusion_reason": "SKIP",
@@ -17068,11 +17218,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084766"
     },
     "repository_url": "https://cdn.aaai.org/ocs/871/871-4244-1-PB.pdf",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing code"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084851",
@@ -17189,7 +17340,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084851"
     },
     "repository_url": "https://arxiv.org/pdf/2206.00257",
     "exclusion_reason": "SKIP",
@@ -17311,7 +17463,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084886"
     },
     "repository_url": "https://www.arxiv.org/pdf/2503.00510",
     "exclusion_reason": "SKIP",
@@ -17417,7 +17570,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084483"
     },
     "repository_url": "https://github.com/demid5111/NeuralTuringMachine",
     "exclusion_reason": "SKIP",
@@ -17537,11 +17691,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084027"
     },
     "repository_url": "https://github.com/BiEchi/FAP",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084738",
@@ -17644,7 +17799,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084738"
     },
     "repository_url": "https://github.com/gtziafas/hots",
     "exclusion_reason": "SKIP",
@@ -17751,7 +17907,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083966"
     },
     "repository_url": "https://github.com/ShushanArakelyan/modular_code_search",
     "exclusion_reason": "SKIP",
@@ -17858,7 +18015,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085516"
     },
     "repository_url": "https://github.com/LUNAProject22/KML",
     "exclusion_reason": "SKIP",
@@ -17966,7 +18124,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085981"
     },
     "repository_url": "https://github.com/creeper121386/RAVENtest",
     "exclusion_reason": "SKIP",
@@ -18073,7 +18232,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084037"
     },
     "repository_url": "https://github.com/hanzo2020/GNNLR",
     "exclusion_reason": "SKIP",
@@ -18194,7 +18354,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085772"
     },
     "repository_url": "https://github.com/gsakkas/seq2parse; https://ranjitjhala.github.io/static/seq2parse-oopsla22.pdf",
     "exclusion_reason": "SKIP",
@@ -18302,7 +18463,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084143"
     },
     "repository_url": "https://github.com/benedekrozemberczki/GraphWaveMachine",
     "exclusion_reason": "SKIP",
@@ -18458,7 +18620,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084798"
     },
     "repository_url": "https://github.com/FFI-no/Paper-NeSy24/tree/main/LTN",
     "exclusion_reason": "Continue",
@@ -18603,7 +18766,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083872"
     },
     "repository_url": "https://github.com/MahmudulAlam/Subitizing",
     "exclusion_reason": "Continue",
@@ -18710,7 +18874,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083995"
     },
     "repository_url": "https://github.com/trishullab/cosmos",
     "exclusion_reason": "SKIP",
@@ -18830,7 +18995,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085283"
     },
     "repository_url": "https://github.com/yixxuan-li/R2G",
     "exclusion_reason": "SKIP",
@@ -18980,7 +19146,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083874"
     },
     "repository_url": "https://github.com/FutureComputing4AI/Hrrformer",
     "exclusion_reason": "Continue",
@@ -19087,7 +19254,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084864"
     },
     "repository_url": "https://github.com/ihmn02/forest_ecology_neuro_symbolic_framework?tab=readme-ov-file",
     "exclusion_reason": "SKIP",
@@ -19236,7 +19404,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085696"
     },
     "repository_url": "https://github.com/kdexd/probnmn-clevr/tree/master",
     "exclusion_reason": "Continue",
@@ -19374,7 +19543,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084110"
     },
     "repository_url": "https://github.com/Bhanu068/LAGNN/",
     "exclusion_reason": "Continue",
@@ -19481,11 +19651,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085625"
     },
     "repository_url": "https://github.com/singnet/semantic-vision/tree/master/experiments/opencog/cog_module",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Not attempted - not a research article"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084084",
@@ -19623,7 +19794,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084084"
     },
     "repository_url": "https://github.com/SymposiumOrganization/ControllableNeuralSymbolicRegression",
     "exclusion_reason": "Continue",
@@ -19737,11 +19909,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084830"
     },
     "repository_url": "https://github.com/patham9/ANSNA?tab=readme-ov-file",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Not attempted - off topic"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084065",
@@ -19843,7 +20016,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084065"
     },
     "repository_url": "https://github.com/pudumagico/NSGRAPH",
     "exclusion_reason": "SKIP",
@@ -19950,11 +20124,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084582"
     },
     "repository_url": "https://github.com/michipritz/nesy-asp-vqa-pipeline",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing code"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242085280",
@@ -20079,7 +20254,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085280"
     },
     "repository_url": "https://arxiv.org/pdf/2503.08059; https://ojs.aaai.org/index.php/AAAI/article/view/34037",
     "exclusion_reason": "SKIP",
@@ -20200,7 +20376,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085276"
     },
     "repository_url": "https://github.com/liqing-ustc/nsr",
     "exclusion_reason": "SKIP",
@@ -20314,7 +20491,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085292"
     },
     "repository_url": "https://github.com/SoftWiser-group/Soften-NeSy-learning",
     "exclusion_reason": "SKIP",
@@ -20421,7 +20599,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085325"
     },
     "repository_url": "https://github.com/sbx126/NToC",
     "exclusion_reason": "SKIP",
@@ -20513,8 +20692,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083967"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -20604,8 +20785,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084306"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -20710,7 +20893,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084517"
     },
     "repository_url": "https://github.com/Xpitfire/bpda",
     "exclusion_reason": "SKIP",
@@ -20804,9 +20988,11 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084591"
     },
-    "reproduction_category": "Not attempted - background article"
+    "repository_url": null,
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084899",
@@ -20950,7 +21136,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "1",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084899"
     },
     "repository_url": "https://github.com/IBM/neuro-vector-symbolic-architectures",
     "exclusion_reason": "Continue",
@@ -21173,7 +21360,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "1",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084301"
     },
     "repository_url": "https://github.com/chenxiachan/KAN_inversed_problem",
     "exclusion_reason": "Continue",
@@ -21312,7 +21500,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084305"
     },
     "repository_url": "https://github.com/ZhaoChenCivilSciML/Forecasting-of-nonlinear-dynamics-based-on-symbolic-invariance",
     "exclusion_reason": "Continue",
@@ -21441,7 +21630,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084906"
     },
     "repository_url": "https://github.com/THinnerichs/Declarative-DeepProblog",
     "exclusion_reason": "SKIP",
@@ -21569,7 +21759,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084907"
     },
     "repository_url": "https://github.com/nhiratani/quadratic_binding",
     "exclusion_reason": "SKIP",
@@ -21711,7 +21902,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084328"
     },
     "repository_url": "https://github.com/alaiasolkobreslin/CTSketch",
     "exclusion_reason": "Continue",
@@ -21854,7 +22046,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084334"
     },
     "repository_url": "https://github.com/Decadz/Evolved-Model-Agnostic-Loss",
     "exclusion_reason": "Continue",
@@ -22008,7 +22201,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084931"
     },
     "repository_url": "https://github.com/jyhong0304/SII",
     "exclusion_reason": "Continue",
@@ -22149,7 +22343,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084343"
     },
     "repository_url": "https://github.com/nuric/pix2rule",
     "exclusion_reason": "Continue",
@@ -22293,7 +22488,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084370"
     },
     "repository_url": "https://github.com/reactive-systems/neurosynt",
     "exclusion_reason": "Continue",
@@ -22400,7 +22596,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084507"
     },
     "repository_url": "https://github.com/linqs/aaai-make24",
     "exclusion_reason": "SKIP",
@@ -22507,7 +22704,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084981"
     },
     "repository_url": "https://github.com/miferroudjene/FB15k-CVT",
     "exclusion_reason": "SKIP",
@@ -22643,7 +22841,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084478"
     },
     "repository_url": "https://github.com/demid5111/ldss-tensor-structures",
     "exclusion_reason": "Continue",
@@ -22750,7 +22949,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084982"
     },
     "repository_url": "https://github.com/IBM/self-supervised-rule-learning",
     "exclusion_reason": "SKIP",
@@ -22857,7 +23057,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084995"
     },
     "repository_url": "https://github.com/dair-iitd/NeuSTIP",
     "exclusion_reason": "SKIP",
@@ -22972,7 +23173,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085145"
     },
     "repository_url": "https://github.com/khvedant02/Neurosymbolic-Mental-Health-Monitoring-COVID19",
     "exclusion_reason": "SKIP",
@@ -23107,7 +23309,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084482"
     },
     "repository_url": "https://github.com/demid5111/ldss-tensor-structures",
     "exclusion_reason": "Continue",
@@ -23215,7 +23418,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085147"
     },
     "repository_url": "https://github.com/tdurieux/anonymous_github",
     "exclusion_reason": "SKIP",
@@ -23323,7 +23527,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085013"
     },
     "repository_url": "https://github.com/kracr/reonto-relation-extraction",
     "exclusion_reason": "SKIP",
@@ -23466,7 +23671,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084485"
     },
     "repository_url": "https://github.com/dice-group/DRILL",
     "exclusion_reason": "Continue",
@@ -23574,7 +23780,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084992"
     },
     "repository_url": "https://github.com/erg0dic/gnn-sg",
     "exclusion_reason": "SKIP",
@@ -23737,7 +23944,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084040"
     },
     "repository_url": "https://github.com/aleqrt/mask-rcnn-api",
     "exclusion_reason": "Continue",
@@ -23880,7 +24088,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085043"
     },
     "repository_url": "https://github.com/VerificationLearning/VerificationLearning",
     "exclusion_reason": "Continue",
@@ -23987,7 +24196,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085047"
     },
     "repository_url": "https://github.com/JindongJiang/GNM",
     "exclusion_reason": "SKIP",
@@ -24154,7 +24364,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084066"
     },
     "repository_url": "https://github.com/kittykg/neural-dnf-cub",
     "exclusion_reason": "Continue",
@@ -24261,7 +24472,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084970"
     },
     "repository_url": "https://github.com/Huanhuaneryuan/SR-PLR",
     "exclusion_reason": "SKIP",
@@ -24368,7 +24580,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085344"
     },
     "repository_url": "https://github.com/ceslop84/perceptsent",
     "exclusion_reason": "SKIP",
@@ -24476,7 +24689,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085581"
     },
     "repository_url": "https://github.com/zparvez2z/NeuroSym-BioCAT",
     "exclusion_reason": "SKIP",
@@ -24583,7 +24797,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085583"
     },
     "repository_url": "https://github.com/mappauk/Neuro-Symbolic-Final-Project",
     "exclusion_reason": "SKIP",
@@ -24698,7 +24913,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085607"
     },
     "repository_url": "https://github.com/orbis-security/pe-malware-ontology",
     "exclusion_reason": "SKIP",
@@ -24805,7 +25021,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085609"
     },
     "repository_url": "https://github.com/KRR-Oxford/GNNQ",
     "exclusion_reason": "SKIP",
@@ -24912,7 +25129,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085393"
     },
     "repository_url": "https://github.com/hanzo2020/NLQ",
     "exclusion_reason": "SKIP",
@@ -25019,7 +25237,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085410"
     },
     "repository_url": "https://github.com/diligmic/R2N_KBS2024",
     "exclusion_reason": "SKIP",
@@ -25133,7 +25352,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085775"
     },
     "repository_url": "https://github.com/SDM-TIB/BioLinkerAI",
     "exclusion_reason": "SKIP",
@@ -25247,7 +25467,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085655"
     },
     "repository_url": "https://github.com/SDM-TIB/KOSMOS",
     "exclusion_reason": "SKIP",
@@ -25361,7 +25582,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085714"
     },
     "repository_url": "https://github.com/arivasm/Neuro-Symbolic_Treatment-Response",
     "exclusion_reason": "SKIP",
@@ -25467,7 +25689,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085815"
     },
     "repository_url": "https://github.com/d1egoprog/KG-SLR4LLM",
     "exclusion_reason": "SKIP",
@@ -25587,7 +25810,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085718"
     },
     "repository_url": "https://github.com/hriaz17/softrules; https://hriaz17.github.io/publications/",
     "exclusion_reason": "SKIP",
@@ -25694,7 +25918,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085925"
     },
     "repository_url": "https://github.com/swapUniba/KARS_NeSy_KGE_with_FOL_rules",
     "exclusion_reason": "SKIP",
@@ -25801,7 +26026,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085927"
     },
     "repository_url": "https://github.com/swapUniba/Deep_CBRS_Amar",
     "exclusion_reason": "SKIP",
@@ -25908,7 +26134,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085939"
     },
     "repository_url": "https://github.com/stephba/diff-fnn",
     "exclusion_reason": "SKIP",
@@ -26015,7 +26242,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085926"
     },
     "repository_url": "https://github.com/giuspillo/RepoNeSyRecSys2022",
     "exclusion_reason": "SKIP",
@@ -26122,7 +26350,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083838"
     },
     "repository_url": "https://github.com/matthias-samwald/Fast-and-scalable-neural-embedding-models-for-biomedical-sentence-classification",
     "exclusion_reason": "SKIP",
@@ -26237,7 +26466,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083861"
     },
     "repository_url": null,
     "exclusion_reason": "SKIP",
@@ -26344,7 +26574,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085980"
     },
     "repository_url": "https://github.com/XiaojuanTang/RulE",
     "exclusion_reason": "SKIP",
@@ -26451,7 +26682,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086100"
     },
     "repository_url": "https://github.com/JChander/DeepMiR2GO",
     "exclusion_reason": "SKIP",
@@ -26558,7 +26790,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086145"
     },
     "repository_url": "https://github.com/orcax/CAFÉ",
     "exclusion_reason": "SKIP",
@@ -26664,7 +26897,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086160"
     },
     "repository_url": "https://github.com/zjukg/ENeSy",
     "exclusion_reason": "SKIP",
@@ -26771,7 +27005,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086163"
     },
     "repository_url": "https://github.com/aqSeabiscuit/ONSEP",
     "exclusion_reason": "SKIP",
@@ -26878,7 +27113,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086228"
     },
     "repository_url": "https://github.com/EdmundYanJ/NS-ICF",
     "exclusion_reason": "SKIP",
@@ -26985,7 +27221,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086230"
     },
     "repository_url": "https://github.com/senticnet/senticvec",
     "exclusion_reason": "SKIP",
@@ -27092,7 +27329,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086239"
     },
     "repository_url": "https://github.com/DeepGraphLearning/GNN-QE",
     "exclusion_reason": "SKIP",
@@ -27199,7 +27437,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085956"
     },
     "repository_url": "https://github.com/kianasun/table-understanding-system",
     "exclusion_reason": "SKIP",
@@ -27306,7 +27545,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084969"
     },
     "repository_url": "https://github.com/DeepGraphLearning/GNN-QE",
     "exclusion_reason": "SKIP",
@@ -27413,7 +27653,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086248"
     },
     "repository_url": "https://github.com/Cyn7hia/Neurosymbolic_AI-PSA",
     "exclusion_reason": "SKIP",
@@ -27556,7 +27797,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083992"
     },
     "repository_url": "https://github.com/FutureComputing4AI/Learning-with-Holographic-Reduced-Representations",
     "exclusion_reason": "Continue",
@@ -27663,7 +27905,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086242"
     },
     "repository_url": "https://github.com/HazyResearch/KGEmb",
     "exclusion_reason": "SKIP",
@@ -27770,11 +28013,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085078"
     },
     "repository_url": "https://github.com/TuringMachinegun/Turing_Neural_Networks",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Not attempted - off topic"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242085146",
@@ -27885,7 +28129,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085146"
     },
     "repository_url": "https://github.com/khvedant02/CSP-SOFAI-Instance",
     "exclusion_reason": "SKIP",
@@ -27992,7 +28237,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084082"
     },
     "repository_url": "https://github.com/allenai/tracie",
     "exclusion_reason": "SKIP",
@@ -28099,7 +28345,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084758"
     },
     "repository_url": "https://github.com/GiuseppeMarra/nmln/tree/uai2021",
     "exclusion_reason": "SKIP",
@@ -28205,11 +28452,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084034"
     },
     "repository_url": null,
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing code"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084621",
@@ -28312,7 +28560,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084621"
     },
     "repository_url": "https://cplint.eu/e/phil/phil_examples.swinb",
     "exclusion_reason": "SKIP",
@@ -28419,7 +28668,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085338"
     },
     "repository_url": "https://github.com/chadlzx/NSP_QA; https://github.com/zihao-wang/Number-NLI",
     "exclusion_reason": "SKIP",
@@ -28526,7 +28776,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084063"
     },
     "repository_url": "https://github.com/kinjalbasu/explorer",
     "exclusion_reason": "SKIP",
@@ -28634,7 +28885,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084577"
     },
     "repository_url": "https://github.com/com/blog",
     "exclusion_reason": "SKIP",
@@ -28741,7 +28993,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084829"
     },
     "repository_url": "https://github.com/kyleiwaniec/neuro-symbolic-ai-systematic-review",
     "exclusion_reason": "SKIP",
@@ -28848,7 +29101,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085446"
     },
     "repository_url": "https://github.com/uclnlp/ctp",
     "exclusion_reason": "SKIP",
@@ -28955,7 +29209,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085467"
     },
     "repository_url": "https://github.com/neuro-symbolic-ai/diff_comb_explainer",
     "exclusion_reason": "SKIP",
@@ -29063,7 +29318,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085494"
     },
     "repository_url": "https://github.com/usc-isi-i2/analogical-transfer-learning",
     "exclusion_reason": "SKIP",
@@ -29170,7 +29426,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085505"
     },
     "repository_url": "https://github.com/JHU-CLSP/treewise",
     "exclusion_reason": "SKIP",
@@ -29277,7 +29534,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085506"
     },
     "repository_url": "https://github.com/JHU-CLSP/NELLIE",
     "exclusion_reason": "SKIP",
@@ -29384,7 +29642,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085213"
     },
     "repository_url": "https://github.com/april-tools/pal",
     "exclusion_reason": "SKIP",
@@ -29492,7 +29751,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085267"
     },
     "repository_url": "https://github.com/wufeiwuwoshihua/nshy",
     "exclusion_reason": "SKIP",
@@ -29614,7 +29874,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085518"
     },
     "repository_url": "https://github.com/orgdlabs/neuroQL",
     "exclusion_reason": "SKIP",
@@ -29735,7 +29996,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085521"
     },
     "repository_url": "https://github.com/zjunlp/OneEdit",
     "exclusion_reason": "SKIP",
@@ -29842,7 +30104,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085404"
     },
     "repository_url": "https://github.com/nu-c3lab/satyrn",
     "exclusion_reason": "SKIP",
@@ -29949,7 +30212,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084567"
     },
     "repository_url": "https://github.com/Monireh2/kg-deductive-reasoner",
     "exclusion_reason": "SKIP",
@@ -30056,7 +30320,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084128"
     },
     "repository_url": "https://github.com/vinid/logical_commonsense",
     "exclusion_reason": "SKIP",
@@ -30163,7 +30428,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083919"
     },
     "repository_url": "https://github.com/bio-ontology-research-group/walking-rdf-and-owl",
     "exclusion_reason": "SKIP",
@@ -30270,7 +30536,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084527"
     },
     "repository_url": "https://github.com/dodo47/cyberML",
     "exclusion_reason": "SKIP",
@@ -30377,7 +30644,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084529"
     },
     "repository_url": "https://github.com/toniodo/InterpretE",
     "exclusion_reason": "SKIP",
@@ -30505,7 +30773,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "https://github.com/vakker/cilp/tree/master"
     },
     "repository_url": "https://github.com/vakker/CILP/tree/master",
     "exclusion_reason": "SKIP",
@@ -30627,7 +30896,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085546"
     },
     "repository_url": "https://github.com/orensul/LLMs_proof_generation",
     "exclusion_reason": "SKIP",
@@ -30734,11 +31004,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085571"
     },
     "repository_url": "https://github.com/Glottocrisio/IKG4CH",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Not attempted - off topic"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242083964",
@@ -30872,11 +31143,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083964"
     },
     "repository_url": "https://github.com/ForoughA/CORGI?tab=readme-ov-file",
     "exclusion_reason": "Continue",
-    "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084028",
@@ -31029,7 +31301,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084028"
     },
     "repository_url": "https://github.com/Karpovich-alex/mdpi_argumentations",
     "exclusion_reason": "Continue",
@@ -31168,7 +31441,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084033"
     },
     "repository_url": "https://github.com/delftcrowd/FindItOut/blob/main/experiments/data_analysis_2.ipynb",
     "exclusion_reason": "Continue",
@@ -31275,7 +31549,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084722"
     },
     "repository_url": "https://github.com/SDM-TIB/NSSC",
     "exclusion_reason": "SKIP",
@@ -31389,7 +31664,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084762"
     },
     "repository_url": "https://github.com/ChEB-AI/python-chebai",
     "exclusion_reason": "SKIP",
@@ -31496,7 +31772,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084761"
     },
     "repository_url": "https://github.com/ChEB-AI",
     "exclusion_reason": "SKIP",
@@ -31603,7 +31880,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084226"
     },
     "repository_url": "https://github.com/senticnet",
     "exclusion_reason": "SKIP",
@@ -31710,7 +31988,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084656"
     },
     "repository_url": "https://github.com/jonathanfeldstein/PRISM",
     "exclusion_reason": "SKIP",
@@ -31817,7 +32096,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084614"
     },
     "repository_url": "https://github.com/DiTEC-project/semantic-association-rule-learning",
     "exclusion_reason": "SKIP",
@@ -31924,7 +32204,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083921"
     },
     "repository_url": "https://github.com/bio-ontology-research-group/EmbedPVP",
     "exclusion_reason": "SKIP",
@@ -32089,11 +32370,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085588"
     },
     "repository_url": "https://github.com/ptarau/natlog",
     "exclusion_reason": "Continue",
-    "reproduction_category": "Not attempted - background article"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242085747",
@@ -32204,11 +32486,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085747"
     },
     "repository_url": "https://github.com/ruslanmv/Neuro-symbolic-interaction",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Not attempted - background article"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242084800",
@@ -32311,7 +32594,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084800"
     },
     "repository_url": "https://github.com/ngl567/EngineKG",
     "exclusion_reason": "SKIP",
@@ -32418,7 +32702,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084841"
     },
     "repository_url": "https://github.com/IBM/LNN; https://ibm.github.io/LNN/",
     "exclusion_reason": "SKIP",
@@ -32532,7 +32817,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084862"
     },
     "repository_url": "https://github.com/hriaz17/ELLEN",
     "exclusion_reason": "SKIP",
@@ -32639,7 +32925,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084941"
     },
     "repository_url": "https://github.com/hossain013/NeSyDPP4-QSAR",
     "exclusion_reason": "SKIP",
@@ -32760,7 +33047,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083815"
     },
     "repository_url": "https://github.com/savithasam88/CLEVR-POC/tree/master",
     "exclusion_reason": "SKIP",
@@ -32874,7 +33162,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083824"
     },
     "repository_url": "https://github.com/dali-does/clevr-math",
     "exclusion_reason": "SKIP",
@@ -32982,7 +33271,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083855"
     },
     "repository_url": "https://github.com/hassanhub/R3Transformer",
     "exclusion_reason": "SKIP",
@@ -33082,7 +33372,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083933"
     },
     "repository_url": null,
     "exclusion_reason": "SKIP",
@@ -33189,7 +33480,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083934"
     },
     "repository_url": "https://github.com/microsoft/DFOL-VQA",
     "exclusion_reason": "SKIP",
@@ -33296,7 +33588,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084152"
     },
     "repository_url": "https://github.com/mxbi/arckit",
     "exclusion_reason": "SKIP",
@@ -33403,7 +33696,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084319"
     },
     "repository_url": "https://github.com/WellyZhang/ACRE",
     "exclusion_reason": "SKIP",
@@ -33511,7 +33805,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085016"
     },
     "repository_url": "https://github.com/jakpra/LinguisticStructureLM",
     "exclusion_reason": "SKIP",
@@ -33640,7 +33935,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085116"
     },
     "repository_url": "https://github.com/katesanders9/tv-trees",
     "exclusion_reason": "SKIP",
@@ -33747,7 +34043,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085131"
     },
     "repository_url": "https://github.com/ellisk42/LambdaBeam",
     "exclusion_reason": "SKIP",
@@ -33854,7 +34151,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086236"
     },
     "repository_url": "https://github.com",
     "exclusion_reason": "SKIP",
@@ -33961,7 +34259,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085818"
     },
     "repository_url": "https://github.com/Kat-rin-sc/ExpCPSKGE",
     "exclusion_reason": "SKIP",
@@ -34068,7 +34367,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085134"
     },
     "repository_url": "https://github.com/kexinyi/ns-vqa",
     "exclusion_reason": "SKIP",
@@ -34175,7 +34475,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085140"
     },
     "repository_url": "https://github.com/jaleedkhan/neusire",
     "exclusion_reason": "SKIP",
@@ -34282,7 +34583,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085143"
     },
     "repository_url": "https://github.com/jaleedkhan/zsrr-sgg",
     "exclusion_reason": "SKIP",
@@ -34389,7 +34691,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085157"
     },
     "repository_url": "https://github.com/Kayzaks/VividNet",
     "exclusion_reason": "SKIP",
@@ -34497,7 +34800,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085192"
     },
     "repository_url": "https://github.com/VoxML/VoxSim",
     "exclusion_reason": "SKIP",
@@ -34619,7 +34923,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085284"
     },
     "repository_url": "https://github.com/YunxinLi/NDCR",
     "exclusion_reason": "SKIP",
@@ -34726,7 +35031,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085933"
     },
     "repository_url": "https://github.com/mlresearch/NeSyXIL",
     "exclusion_reason": "SKIP",
@@ -34833,7 +35139,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086082"
     },
     "repository_url": "https://github.com/benediktwagner/ltn-reasoning",
     "exclusion_reason": "SKIP",
@@ -34941,7 +35248,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085296"
     },
     "repository_url": "https://github.com/Lizw14/CaliCO.git",
     "exclusion_reason": "SKIP",
@@ -35062,7 +35370,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085761"
     },
     "repository_url": "https://github.com/CIPITR/CIPITR",
     "exclusion_reason": "SKIP",
@@ -35169,7 +35478,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085660"
     },
     "repository_url": "https://github.com/neuro-symbolic-ai/explanation_based_ethical_reasoning",
     "exclusion_reason": "SKIP",
@@ -35276,7 +35586,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084842"
     },
     "repository_url": "https://github.com/HKUST-KnowComp/FIT",
     "exclusion_reason": "SKIP",
@@ -35383,7 +35694,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085865"
     },
     "repository_url": "https://github.com/shiquanyang/NS-Dial",
     "exclusion_reason": "SKIP",
@@ -35490,7 +35802,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085661"
     },
     "repository_url": "https://github.com/neuro-symbolic-ai/explanation_refinement",
     "exclusion_reason": "SKIP",
@@ -35597,7 +35910,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085866"
     },
     "repository_url": "https://huggingface.co/datasets/bethgelab/simplegeometry",
     "exclusion_reason": "SKIP",
@@ -35711,7 +36025,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085857"
     },
     "repository_url": "https://github.com/shijihao/neunli",
     "exclusion_reason": "SKIP",
@@ -35818,7 +36133,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085890"
     },
     "repository_url": "https://github.com/SiyuanWangw/RuleApplication",
     "exclusion_reason": "SKIP",
@@ -35925,7 +36241,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085928"
     },
     "repository_url": "https://github.com/Zayne-Sprague/MuSR",
     "exclusion_reason": "SKIP",
@@ -36039,7 +36356,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085817"
     },
     "repository_url": "https://github.com/boschresearch/quite-emnlp24",
     "exclusion_reason": "SKIP",
@@ -36167,7 +36485,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085970"
     },
     "repository_url": "https://github.com/build-club-ai-indonesia/edge-prompt",
     "exclusion_reason": "SKIP",
@@ -36275,7 +36594,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085967"
     },
     "repository_url": "https://github.com/fau-is/MLXIncon",
     "exclusion_reason": "SKIP",
@@ -36382,7 +36702,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085962"
     },
     "repository_url": "https://github.com/ke-01/NS-LCR",
     "exclusion_reason": "SKIP",
@@ -36496,7 +36817,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084496"
     },
     "repository_url": "https://iclr2018anon.github.io/semantic_code_repair/index.html",
     "exclusion_reason": "SKIP",
@@ -36603,7 +36925,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084578"
     },
     "repository_url": "https://github.com/pudumagico/nsvqasp",
     "exclusion_reason": "SKIP",
@@ -36709,7 +37032,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084579"
     },
     "repository_url": "https://github.com/Macehil/nesy-asp-vqa-pipeline",
     "exclusion_reason": "SKIP",
@@ -36816,7 +37140,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084827"
     },
     "repository_url": "https://github.com/HalleyYoung/NeurosymGenModelsProgSyn",
     "exclusion_reason": "SKIP",
@@ -36936,7 +37261,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084904"
     },
     "repository_url": "https://github.com/ml-research/neumann",
     "exclusion_reason": "SKIP",
@@ -37044,11 +37370,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084976"
     },
     "repository_url": "https://github.com/AnthonyHuo/SAM-DAM-for-Compositional-Reasoning",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242086112",
@@ -37151,7 +37478,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086112"
     },
     "repository_url": "https://github.com/Yyy11181/LLMs-based-Neuro-Symbolic-Framework-for-DWI-cases",
     "exclusion_reason": "SKIP",
@@ -37256,189 +37584,11 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086146"
     },
     "repository_url": "https://github.com/BitSecret/HyperGNet",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
-  },
-  {
-    "article_id": "rayyan-242085977",
-    "title": "An Experimental Pipeline for Automated Reasoning in Natural Language (Short Paper)",
-    "year": "2023",
-    "author": "Tammet, Tanel and Priit, Jarv and Martin, Verrev and Dirk, Draheim",
-    "url": "",
-    "abstract": "We describe an experimental implementation of a logic-based end-to-end pipeline of performing inference and giving explained answers to questions posed in natural language. The main components of the pipeline are semantic parsing, integration with large knowledge bases, automated reasoning using extended first order logic, and finally the translation of proofs back to natural language. While able to answer relatively simple questions on its own, the implementation is targeting research into building hybrid neurosymbolic systems for gaining trustworthiness and explainability. The end goal is to combine machine learning and large language models with the components of the implementation and to use the automated reasoner as an interface between natural language and external tools like database systems and scientific calculations.",
-    "note": "RAYYAN-INCLUSION: {\"brandon\"=>\"Included\"} | USER-NOTES: {\"brandon\"=>[\"http://github.com/tammet/nlpsolver.\"]",
-    "customizations": [
-      {
-        "created_at": "2025-07-15T04:51:15.435Z",
-        "user_id": 546715,
-        "user_email": "brandcol@umd.edu",
-        "key": "note-14323995",
-        "value": "1"
-      },
-      {
-        "created_at": "2025-07-15T04:51:16.795Z",
-        "user_id": 546715,
-        "user_email": "brandcol@umd.edu",
-        "key": "included",
-        "value": "1"
-      }
-    ],
-    "excel_data": {
-      "Timestamp": "2025-11-24 14:57:33.521000",
-      "Email Address": "brandcol@umd.edu",
-      "Reviewer Name": "Brandon",
-      "Paper ID\n(the Rayyan ID from the excel spreadsheet) ": "rayyan-242085977",
-      "Paper DOI / URL": "https://link.springer.com/chapter/10.1007/978-3-031-38499-8_29",
-      "Paper Title ": "An Experimental Pipeline for Automated Reasoning in Natural Language (Short Paper)",
-      "Publication Year\n(e.g. 2025, 2024, 2023 ....) ": "2023",
-      "Journal or Conference Name\n(add arXiv if you cannot find journal / conference publication)": "Springer Link Nature",
-      "Study design / paper type ( dataset paper, framework/demo, etc.)": "Framework",
-      "Your Brief Summary on the paper \n(in 1-2 sentences, describe what the paper is presenting) ": "The paper presents NLPSolver, an experimental end-to-end pipeline that parses English text with a neural UD parser, converts it into extended first-order logic with defaults and confidences, performs reasoning with a high-performance default logic engine, and converts proofs back into natural language answers and explanations. The authors evaluate the system on toy NLI/QA examples, a subset of HANS, and AllenAI ProofWriter demos, showing strong performance there and highlighting the pipeline as a basis for future hybrid neuro-symbolic systems.",
-      "Is the paper written in English?": "Yes",
-      "The paper is Not a Review": "Yes",
-      "Does the paper present an original research study?": "Yes",
-      "Paper is Peer Reviewed (including arXiv) ": "Yes",
-      "The paper has an associated codebase": "Yes",
-      "Does the paper include a Quantitative Evaluation": "Yes",
-      "Does the paper discuss Neuro-Symbolic AI": "Yes",
-      "Is the Full Text available for the paper?": "Yes",
-      "Is the study reproducible (is the codebase AND data AND model artifacts required to reproduce publicly available)? ": "Yes",
-      "Were the results reproduced? (did the results obtained match (from full to partial) the reported results from the paper)": "Yes",
-      "If you answered YES to all of the above OR answered NO to just the final question (were the results reproduced)  - Select continue. \n\n\n\nIf you answered NO to any of the other sections above, this paper will be Excluded - Select SKIP ": "Continue",
-      "Repository URL": "https://github.com/tammet/nlpsolver",
-      "Primary language / framework": "Python",
-      "Commit / tag / release hash used": "V 0.3.0",
-      "If yes: Provide link": "https://github.com/tammet/nlpsolver/releases/tag/v0.3.0",
-      "Documentation / code comments is provided to describe its use (for novel methods introduced in the paper)": "Partial",
-      "Build successful on first try?": "No",
-      "Is a new dataset released with paper?": "No",
-      "Limitations section reported?": "No",
-      "Broader‑impact / ethics statement present?": "No",
-      "Pre‑processing scripts included?": "Yes",
-      "Exact run command / environment file provided?  (e.g. Docker/Conda provided?)": "Partial",
-      "Compute/hardware reported ": "CPU only",
-      "Total compute budget disclosed?": "No",
-      "Number of independent runs reported?": "No",
-      "Variance / error bars shown?": "No",
-      " Rationale for dataset choice clearly stated?": "Yes",
-      "Includes a conceptual outline and/or pseudocode de-scription of AI methods introduced?": "Yes",
-      "Notes on reproduction": " Apache-2.0 license",
-      "Were the results reproduced? (did the results obtained match (from full to partial) the reported results from the paper).1": "Yes - Continue",
-      "Primary NSAI Domain (Provide tags - singular concepts separated by a comma)": "commonsense reasoning, natural language inference, question answering, explainable reasoning, neurosymbolic pipeline",
-      "Application area(s) (Provide tags - singular concepts separated by a comma)": "explainable QA, natural language interfaces, knowledge-based reasoning, scientific and database querying (future use), verification of LLM outputs",
-      "Task type(s) (Provide tags - singular concepts, separated by a comma)": "natural language inference, yes/no question answering, wh-question answering, robustness to distractors, synthetic logical reasoning, proof explanation",
-      "Real‑world application claimed?": "Yes",
-      "If Yes: Brief description of application": "Proposed as a backbone for natural-language interfaces to external tools such as databases and scientific calculation engines, and as a symbolic reasoning component to complement large language models with trustworthy, explainable inference.",
-      "Neural model name & family ": "Other (specify below)",
-      "Neural model name & family (for other) specify here:": "Other: Stanford Stanza English UD pipeline (BiLSTM-based neural dependency parser and tagger)",
-      "Neural architecture type(s) ": "RNN, LSTM, Other (specify below)",
-      "Neural architecture type(s) (for other) specify here:": "Stanza neural NLP pipeline (PyTorch-based sequence models for tagging and dependency parsing)",
-      "Prompting strategy (if applicable)": "Not reported / unclear",
-      "Alignment / Safety Filters Applied (if applicable) ": "No filters applied / not reported",
-      "Pre‑training source(s) ": "Not reported / unclear, Other (specify)",
-      "Pre‑training source(s) (for other) specify here:": "Universal Dependencies (UD) treebanks and related annotated corpora (Stanza’s standard training data; not re-trained in this work)",
-      "Fine‑tuning / adaptation details": "Not reported / unclear",
-      "Access level ": "Open weights downloadable",
-      "How neural outputs are used by the symbolic part ": "Generated text parsed into symbols/rules",
-      "Existing symbolic project used (if applicable) ": "WordNet, ConceptNet, Other (specify below)",
-      "Existing symbolic project used (if applicable) (for other) specify here:": "Quasimodo and other commonsense KBs integrated via the authors’ earlier work (referenced integration paper)",
-      "Link to Existing symbolic project used (if applicable) ": "NLPSolver repo: https://github.com/tammet/nlpsolver  GK/GKC reasoner: https://github.com/tammet/gkc  WordNet: https://wordnet.princeton.edu/  ConceptNet: https://conceptnet.io/",
-      "Symbolic representation(s)": "First‑order / predicate logic, Knowledge graphs / RDF triples, Taxonomies / hierarchies / thesauri, Logic programs (Horn clauses, Datalog)",
-      "Reasoning / inference engine": "Custom in‑house rule/constraint engines, Other (specify below)",
-      "Reasoning / inference engine (for other) specify here:": "GK reasoner (extended first-order default logic engine built on GKC)",
-      "Source of symbolic knowledge": "Hand‑crafted by authors / domain experts, Imported from existing KBs or ontologies (e.g., WordNet, Wikidata, UMLS)",
-      "Update / learning of symbols": "Static (fixed once authored/imported)",
-      "Integration strategy with neural part": "Pipeline: neural → symbolic (neural generates facts/rules fed to a reasoner)",
-      "Example of a rule / triple / formula (copy from paper)": "“Most elephants are big. Young elephants are not big. Mike is probably an elephant. John is a young elephant.” becomes rules like\n∀x (Elephant(x) → Big(x)) (default with confidence)\n∀x (YoungElephant(x) → ¬Big(x))",
-      "Tooling / libraries for symbolic side": "Custom in‑house engine (name below)",
-      "Tooling / libraries for symbolic side (for other) specify here:": "In-house engine (GK/GKC)",
-      "What are the key findings of the study (1-4 dot points)?": "A full end-to-end neuro-symbolic pipeline can map English text through a neural UD parser into extended FOL with defaults and confidences, and then use a high-performance default-logic reasoner to answer questions and generate human-readable explanations.\n\nThe system achieves strong performance on an adversarial NLI benchmark (≈95% accuracy on HANS, with errors mainly due to UD parse errors) and solves almost all of the AllenAI ProofWriter demo examples.\n\nThe pipeline is robust to distractor sentences in the input where LLMs like GPT can fail, illustrating complementary strengths of symbolic reasoning relative to end-to-end LLMs.\n\nLarge integrated commonsense knowledge bases can be leveraged by a theorem prover, but scaling to very large KBs causes combinatorial explosion in proof search, pointing to open research problems in efficiency.",
-      "Author‑reported limitations": "Performance is described as “miserable” on most standard NLI/QA benchmarks oriented toward machine learning systems.\n\nThe system’s performance on HANS is limited by errors from the Stanza UD parser.\n\nReasoning with very large (~1GB) knowledge bases causes search-space explosion, leading to timeouts and scalability issues.\n\nThe implementation is a research prototype, not optimized for broad coverage or high-throughput production deployment.",
-      "Reviewer‑identified limitations / threats to validity": "Evaluation is focused on a curated subset of tasks (HANS, ProofWriter demos, and synthetic examples) without broad comparisons to many modern NSAI baselines.\n\nThe neural component (Stanza) is treated as a black box; the impact of different parser versions is acknowledged but not systematically explored.\n\nThe KB integration is complex and partly dependent on external resources whose full licensing and versioning are not exhaustively detailed in this paper.",
-      "Ethics / legal / privacy concerns listed": "No",
-      "How relevant is this paper to our research objective?\n(Linear Scale: 1-10, where 1 = Not Relevant, 10 = Highly Relevant)": "7.0",
-      "Perceived novelty / contribution level (Linear scale (1–10) where 1 = Incremental, 10 = Highly novel / field‑shaping)": "6.0",
-      "Clarity & completeness of reporting  (Linear scale (1–10) where 1 = Poor , 10 = Excellent)": "6.0",
-      "Reproducibility confidence (after our attempt)": "Fully reproducible",
-      "Reviewer confidence in this extraction ( Linear scale (1–10) where 1 = Low confidence,  10 = Very confident)": "10.0",
-      "Raw logs / result tables made available?": "Partial",
-      "Primary task metrics reported ": "Classification / structured prediction, Accuracy, Energy / FLOPs / latency / throughput",
-      "Split / Protocol": "Zero‑shot (no task‑specific training), Adversarial / counterfactual test set, Other (specify below)",
-      "Split / Protocol (for other) specify here:": "Custom synthetic test sets (for core toy examples and ProofWriter demos)",
-      "Evaluation assets provided (if yes / partial above) ": "Evaluation scripts / notebooks released, Preprocessed data & official splits provided, Checkpoints / weights for evaluation",
-      "Datasets used for Evaluation ": "Other (specify below)",
-      "Evaluation Datasets (for other) specify here:": "HANS (Heuristic Analysis for NLI Systems), AllenAI ProofWriter demo examples,  and Custom dataset (introduced in paper) – synthetic natural language problems embedded in tests_core.py",
-      "Link to evaluation dataset used (if other)": "HANS: https://arxiv.org/abs/1902.01007  (dataset and official resources)  ProofWriter demo: https://proofwriter.apps.allenai.org/",
-      "A motivation is given for why the experiments are conducted on the selected datasets": "Yes",
-      "All datasets drawn from the existing literature are publicly available": "Yes",
-      "Baselines / ablations compared against": "The paper qualitatively compares NLPSolver’s behavior to earlier LLMs (GPT/BERT families and ChatGPT) on selected examples and contrasts accuracy on HANS (=95% vs =60% for pre-GPT-3 LLMs and 50% random), but no detailed ablation study of NLPSolver itself is presented.",
-      "Reproduction outcome ": "Fully reproduced within reported variance",
-      "Gap between reported and reproduced (%)": "Within =0 to 5% absolute on the relevant classification metrics",
-      "Final Decision to Include / Exclude Study": "Exclude",
-      "If Included, in one sentence, describe why the paper should be included in this review.": "combines a neural UD parser with a first-order default-logic reasoner, provides a public codebase and test harness",
-      "has_code": "1",
-      "has_data": "0",
-      "has_model_artifacts": "1",
-      "reproducible_all_artifacts": "0",
-      "reproduction_outcome_cat": "fully_reproduced",
-      "reproduction_outcome_raw": "Fully reproduced within reported variance",
-      "reproduction_attempted": "1",
-      "repro_attempted": "1",
-      "repro_positive": "1",
-      "repro_negative": "0",
-      "fully_reproduced": "1",
-      "partially_reproduced": "0",
-      "not_reproduced": "0",
-      "any_reproduced": "1",
-      "not_reproduced_overall": "0",
-      "failed_due_to_missing_artifacts": "0",
-      "failed_with_artifacts": "0",
-      "repro_status_overall": "fully_reproduced",
-      "gap_percent": "5.0",
-      "included_final": "0",
-      "exclusion_reason": "Continue",
-      "nsai_domain_original": "commonsense reasoning, natural language inference, question answering, explainable reasoning, neurosymbolic pipeline",
-      "nsai_domain": "commonsense reasoning",
-      "application_area_original": "explainable QA, natural language interfaces, knowledge-based reasoning, scientific and database querying (future use), verification of LLM outputs",
-      "application_area": "explainable QA",
-      "task_type_original": "natural language inference, yes/no question answering, wh-question answering, robustness to distractors, synthetic logical reasoning, proof explanation",
-      "task_type": "natural language inference",
-      "symbolic_representation_original": "First‑order / predicate logic, Knowledge graphs / RDF triples, Taxonomies / hierarchies / thesauri, Logic programs (Horn clauses, Datalog)",
-      "symbolic_representation": "First‑order / predicate logic",
-      "reasoning_engine_original": "Custom in‑house rule/constraint engines, Other (specify below)",
-      "reasoning_engine": "Custom in‑house rule/constraint engines",
-      "integration_strategy_original": "Pipeline: neural → symbolic (neural generates facts/rules fed to a reasoner)",
-      "integration_strategy": "Pipeline: neural → symbolic (neural generates facts/rules fed to a reasoner)",
-      "knowledge_source_original": "Hand‑crafted by authors / domain experts, Imported from existing KBs or ontologies (e.g., WordNet, Wikidata, UMLS)",
-      "knowledge_source": "Hand‑crafted by authors / domain experts",
-      "model_family_original": "Other (specify below)",
-      "model_family": "Other (specify below)",
-      "param_scale_band": "unknown",
-      "licence_category": "unknown",
-      "access_level_cat": "open_weights",
-      "all_eval_data_public": "1",
-      "new_dataset_released": "0.0",
-      "human_eval_present": "0",
-      "clarity_score": "6.0",
-      "reviewer_confidence_score": "10.0",
-      "publication_year": "2023.0",
-      "venue_raw": "Springer Link Nature",
-      "venue_canonical": "Springer",
-      "venue_group_bin": "Springer journals/proceedings",
-      "venue_group_plot": "Springer journals/proceedings",
-      "venue_clean": "springer",
-      "venue_norm": "Springer journals/proceedings",
-      "venue_group": "Springer journals/proceedings",
-      "positive_reproduced_all": "0",
-      "negative_reproduced_all": "1",
-      "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
-    },
-    "repository_url": "https://github.com/tammet/nlpsolver",
-    "exclusion_reason": "Continue",
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -37542,7 +37692,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086156"
     },
     "repository_url": "https://github.com/xiulinyang/compositional_drs_parsing",
     "exclusion_reason": "SKIP",
@@ -37649,7 +37800,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086200"
     },
     "repository_url": "https://github.com/Alsace08/Meta-Reasoning",
     "exclusion_reason": "SKIP",
@@ -37756,7 +37908,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086202"
     },
     "repository_url": "https://github.com/ML-KULeuven/deepstochlog-lm",
     "exclusion_reason": "SKIP",
@@ -37864,7 +38017,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086234"
     },
     "repository_url": "https://github.com/XR-Lee/neural-symbolic",
     "exclusion_reason": "SKIP",
@@ -37972,7 +38126,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086213"
     },
     "repository_url": "https://github.com/FishAndWasabi/RealLOD",
     "exclusion_reason": "SKIP",
@@ -38078,7 +38233,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084108"
     },
     "repository_url": "https://github.com/sarthak268/sample-efficient-visual-concept-learning",
     "exclusion_reason": "SKIP",
@@ -38185,11 +38341,12 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084513"
     },
     "repository_url": "https://github.com/Pamasi/sgg_av",
     "exclusion_reason": "SKIP",
-    "reproduction_category": "Not attempted - not a research article"
+    "reproduction_category": "No quantitative evaluation"
   },
   {
     "article_id": "rayyan-242085015",
@@ -38292,7 +38449,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085015"
     },
     "repository_url": "https://github.com/pudumagico/NSGRAPH",
     "exclusion_reason": "SKIP",
@@ -38399,7 +38557,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084946"
     },
     "repository_url": "https://github.com/joyhsu0504/NS3D",
     "exclusion_reason": "SKIP",
@@ -38513,7 +38672,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084809"
     },
     "repository_url": "https://github.com/allenai/visprog",
     "exclusion_reason": "SKIP",
@@ -38621,7 +38781,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086107"
     },
     "repository_url": "https://xingruiwang.github.io/projects/DynSuperCLEVR/",
     "exclusion_reason": "SKIP",
@@ -38728,7 +38889,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085346"
     },
     "repository_url": "https://github.com",
     "exclusion_reason": "SKIP",
@@ -38834,7 +38996,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085333"
     },
     "repository_url": "https://github.com/Xianwei-Liu/PGSNN",
     "exclusion_reason": "SKIP",
@@ -38942,7 +39105,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085490"
     },
     "repository_url": "https://github.com/rohanmukh/nsg",
     "exclusion_reason": "SKIP",
@@ -39085,7 +39249,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085347"
     },
     "repository_url": "https://github.com/continual-nesy/LTLZinc",
     "exclusion_reason": "Continue",
@@ -39193,7 +39358,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085420"
     },
     "repository_url": "https://github.com/mtensor/rulesynthesis",
     "exclusion_reason": "SKIP",
@@ -39341,7 +39507,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085367"
     },
     "repository_url": "https://github.com/aitomatic/openssa/blob/main/openssa/core/agent/dana.py",
     "exclusion_reason": "Continue",
@@ -39499,7 +39666,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085560"
     },
     "repository_url": "https://gitlab.com/purdueNlp/DRaiL",
     "exclusion_reason": "Continue",
@@ -39606,7 +39774,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085584"
     },
     "repository_url": "https://github.com/psoulos/sdtm",
     "exclusion_reason": "SKIP",
@@ -39713,7 +39882,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085608"
     },
     "repository_url": "https://github.com/vektordev/haskell-dppl",
     "exclusion_reason": "SKIP",
@@ -39835,7 +40005,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085522"
     },
     "repository_url": "https://github.com/vikramnitin9/c2saferrust",
     "exclusion_reason": "SKIP",
@@ -39981,7 +40152,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085610"
     },
     "repository_url": "https://github.com/MalumaDev/FocalLTN",
     "exclusion_reason": "Continue",
@@ -40089,7 +40261,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085573"
     },
     "repository_url": "https://github.com/ycpNotFound/GeoGen",
     "exclusion_reason": "SKIP",
@@ -40197,7 +40370,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085595"
     },
     "repository_url": "https://github.com/future-item/AbdGen",
     "exclusion_reason": "SKIP",
@@ -40337,7 +40511,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085456"
     },
     "repository_url": "https://github.com/JAX-DIPS/JAX-DIPS",
     "exclusion_reason": "Continue",
@@ -40475,7 +40650,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085484"
     },
     "repository_url": "https://github.com/spechub/Hets",
     "exclusion_reason": "Continue",
@@ -40606,7 +40782,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085511"
     },
     "repository_url": "http://www.di.fc.ul.pt/~jpn/netdef/netdef.htm",
     "exclusion_reason": "Continue",
@@ -40714,7 +40891,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085536"
     },
     "repository_url": "https://github.com/camlab-ethz/LoDE",
     "exclusion_reason": "SKIP",
@@ -40820,7 +40998,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085579"
     },
     "repository_url": null,
     "exclusion_reason": "SKIP",
@@ -40976,7 +41155,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085549"
     },
     "repository_url": "https://github.com/eXascaleInfolab/Nessy_RE",
     "exclusion_reason": "Continue",
@@ -41096,7 +41276,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084222"
     },
     "repository_url": "https://github.com/ControlNet/NAVER",
     "exclusion_reason": "SKIP",
@@ -41217,7 +41398,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084308"
     },
     "repository_url": "https://github.com/zfchenUnique/compositional_physics_learner",
     "exclusion_reason": "SKIP",
@@ -41325,7 +41507,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085667"
     },
     "repository_url": "https://github.com/rkjones4/TemplatePrograms",
     "exclusion_reason": "SKIP",
@@ -41432,7 +41615,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084320"
     },
     "repository_url": "https://github.com/WellyZhang/PrAE",
     "exclusion_reason": "SKIP",
@@ -41538,7 +41722,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084341"
     },
     "repository_url": "https://github.com/chunfeng3364/LARC",
     "exclusion_reason": "SKIP",
@@ -41657,7 +41842,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084797"
     },
     "repository_url": "https://gitlab.com/KiaraGrouwstra/hasktorch/-/tree/synthesis/synthesis",
     "exclusion_reason": "SKIP",
@@ -41765,7 +41951,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085743"
     },
     "repository_url": "https://github.com/rujiewu/Bongard-OpenWorld",
     "exclusion_reason": "SKIP",
@@ -41872,7 +42059,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085320"
     },
     "repository_url": "https://github.com/google/uncertainty-baselines/tree/main/baselines/t5",
     "exclusion_reason": "SKIP",
@@ -41979,7 +42167,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085673"
     },
     "repository_url": "https://github.com/AAAI-DISIM-UnivAQ/Neural-Logic-Reinforcement-Learning",
     "exclusion_reason": "SKIP",
@@ -42093,7 +42282,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085763"
     },
     "repository_url": "https://github.com/nesl/neurosymbolic-tinyml",
     "exclusion_reason": "SKIP",
@@ -42200,7 +42390,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085321"
     },
     "repository_url": "https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank",
     "exclusion_reason": "SKIP",
@@ -42308,7 +42499,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083918"
     },
     "repository_url": "https://github.com/machine-teaching-group/ProgresSyn",
     "exclusion_reason": "SKIP",
@@ -42415,7 +42607,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085796"
     },
     "repository_url": "https://github.com/PauliusSasnauskas/sasde",
     "exclusion_reason": "SKIP",
@@ -42522,7 +42715,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084961"
     },
     "repository_url": "https://github.com/moqingyan/object_reference_synthesis",
     "exclusion_reason": "SKIP",
@@ -42630,7 +42824,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086134"
     },
     "repository_url": "https://github.com/wumin86/PruneSymNet",
     "exclusion_reason": "SKIP",
@@ -42758,7 +42953,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084901"
     },
     "repository_url": "https://github.com/tuananhle7/mws",
     "exclusion_reason": "SKIP",
@@ -42866,7 +43062,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085916"
     },
     "repository_url": "https://github.com/95616ARG/SyReNN",
     "exclusion_reason": "SKIP",
@@ -42973,7 +43170,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085298"
     },
     "repository_url": "https://github.com/iris-sast/iris",
     "exclusion_reason": "SKIP",
@@ -43080,7 +43278,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086187"
     },
     "repository_url": "https://github.com/coli-saar/Seq2seq-on-COGS",
     "exclusion_reason": "SKIP",
@@ -43219,7 +43418,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085064"
     },
     "repository_url": "https://github.com/QinJinghui/NS-Solver",
     "exclusion_reason": "Continue",
@@ -43326,7 +43526,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086071"
     },
     "repository_url": "https://github.com/machine-teaching-group/tmlr2024_neurtasksyn",
     "exclusion_reason": "SKIP",
@@ -43433,7 +43634,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086164"
     },
     "repository_url": "https://github.com/LivXue/VCIN",
     "exclusion_reason": "SKIP",
@@ -43540,7 +43742,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086148"
     },
     "repository_url": "https://github.com/LebronX/Neuro-Symbolic-Verification",
     "exclusion_reason": "SKIP",
@@ -43645,7 +43848,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086105"
     },
     "repository_url": "https://github.com/xiaomeiyy/NSR_Captioning",
     "exclusion_reason": "SKIP",
@@ -43752,7 +43956,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086106"
     },
     "repository_url": "https://github.com/XingruiWang/3D-Aware-VQA",
     "exclusion_reason": "SKIP",
@@ -43898,7 +44103,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085042"
     },
     "repository_url": "https://github.com/PersonNoName/FGeoDRL",
     "exclusion_reason": "Continue",
@@ -44005,7 +44211,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085821"
     },
     "repository_url": "https://github.com/DAMO-NLP-SG/CaRing",
     "exclusion_reason": "SKIP",
@@ -44112,7 +44319,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085900"
     },
     "repository_url": "https://github.com/eXascaleInfolab/Nessy_RE",
     "exclusion_reason": "SKIP",
@@ -44212,7 +44420,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084694"
     },
     "repository_url": null,
     "exclusion_reason": "SKIP",
@@ -44319,7 +44528,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086108"
     },
     "repository_url": "https://github.com/Neural-Symbolic-Image-Labeling/Rapid",
     "exclusion_reason": "SKIP",
@@ -44439,7 +44649,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084304"
     },
     "repository_url": "https://github.com/UMass-Embodied-AGI/genome",
     "exclusion_reason": "SKIP",
@@ -44579,7 +44790,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084978"
     },
     "repository_url": "https://github.com/Hyun-Ryu/clover",
     "exclusion_reason": "Continue",
@@ -44687,7 +44899,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084432"
     },
     "repository_url": "https://github.com/djherron/NeSy4VRD",
     "exclusion_reason": "SKIP",
@@ -44827,7 +45040,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084971"
     },
     "repository_url": "https://github.com/Xnhyacinth/NesyCD",
     "exclusion_reason": "Continue",
@@ -44934,7 +45148,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084413"
     },
     "repository_url": "https://github.com/hlr/nesycoco",
     "exclusion_reason": "SKIP",
@@ -45041,7 +45256,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084436"
     },
     "repository_url": "https://github.com/AML14/tratto",
     "exclusion_reason": "SKIP",
@@ -45148,7 +45364,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084470"
     },
     "repository_url": "https://github.com/delfimpandiani/Stitching-Gaps",
     "exclusion_reason": "SKIP",
@@ -45262,7 +45479,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085239"
     },
     "repository_url": "https://github.com/trishullab/houdini",
     "exclusion_reason": "SKIP",
@@ -45369,7 +45587,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084408"
     },
     "repository_url": "https://github.com/rdang-nhu/PLANS",
     "exclusion_reason": "SKIP",
@@ -45504,7 +45723,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085275"
     },
     "repository_url": "https://github.com/liqing-ustc/CL-mIRT",
     "exclusion_reason": "SKIP",
@@ -45618,7 +45838,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085278"
     },
     "repository_url": "https://dl.acm.org/doi/pdf/10.1145/3720508",
     "exclusion_reason": "SKIP",
@@ -45732,7 +45953,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084882"
     },
     "repository_url": "https://arxiv.org/pdf/2304.08349",
     "exclusion_reason": "SKIP",
@@ -45840,7 +46062,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083778"
     },
     "repository_url": "https://github.com/MarcRoigVilamala/DeepProbCEP",
     "exclusion_reason": "SKIP",
@@ -45961,7 +46184,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085282"
     },
     "repository_url": "https://github.com/42x00/p3i",
     "exclusion_reason": "SKIP",
@@ -46101,7 +46325,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084823"
     },
     "repository_url": "https://github.com/seacowx/EnigmaToM",
     "exclusion_reason": "Continue",
@@ -46222,7 +46447,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084748"
     },
     "repository_url": "https://github.com/gijswijnholds/syntactic_nl2i; https://github.com/gijswijnholds/dynamic-proof-nets-disambiguation; https://github.com/gijswijnholds/udparsing_bert",
     "exclusion_reason": "SKIP",
@@ -46329,7 +46555,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084753"
     },
     "repository_url": "https://github.com/SwagarikaGiri/Multi-PredGO",
     "exclusion_reason": "SKIP",
@@ -46469,7 +46696,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084627"
     },
     "repository_url": "https://github.com/UKPLab/acl2024-DARA",
     "exclusion_reason": "Continue",
@@ -46603,7 +46831,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084628"
     },
     "repository_url": "https://github.com/hyintell/LLMSymbolic?tab=readme-ov-file",
     "exclusion_reason": "Continue",
@@ -46737,7 +46966,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084631"
     },
     "repository_url": "https://github.com/xufangzhi/ENVISIONS?tab=readme-ov-file",
     "exclusion_reason": "Continue",
@@ -46829,8 +47059,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083805"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -46963,7 +47195,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "1",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084658"
     },
     "repository_url": "https://github.com/chefkoch24/neuro-symbolic-asag",
     "exclusion_reason": "Continue",
@@ -47100,7 +47333,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084372"
     },
     "repository_url": "https://github.com/DennisCraandijk/DL-Abstract-Argumentation?tab=readme-ov-file",
     "exclusion_reason": "Continue",
@@ -47233,7 +47467,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084314"
     },
     "repository_url": "https://github.com/xlang-ai/Binder?tab=readme-ov-file",
     "exclusion_reason": "Continue",
@@ -47323,8 +47558,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084386"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -47414,8 +47651,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084310"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -47505,8 +47744,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084669"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -47653,7 +47894,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084928"
     },
     "repository_url": "https://github.com/eduardhogea/DDS_Paper",
     "exclusion_reason": "Continue",
@@ -47761,7 +48003,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085161"
     },
     "repository_url": "https://github.com/IBM/cpg; https://github.com/lark-parser/lark",
     "exclusion_reason": "SKIP",
@@ -47868,7 +48111,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083784"
     },
     "repository_url": "https://github.com/rowanz/piglet",
     "exclusion_reason": "SKIP",
@@ -47975,7 +48219,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084064"
     },
     "repository_url": "https://github.com/Batorskq/NSA",
     "exclusion_reason": "SKIP",
@@ -48082,7 +48327,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084219"
     },
     "repository_url": "https://github.com/Qualcomm-AI-research/codeit",
     "exclusion_reason": "SKIP",
@@ -48232,7 +48478,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084223"
     },
     "repository_url": "https://github.com/ddidacus/loco-llm",
     "exclusion_reason": "SKIP",
@@ -48368,7 +48615,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083812"
     },
     "repository_url": "https://github.com/lovishchopra/NL2FOL",
     "exclusion_reason": "SKIP",
@@ -48475,7 +48723,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084285"
     },
     "repository_url": "https://github.com/crazydonkey200/neural-symbolic-machines",
     "exclusion_reason": "SKIP",
@@ -48582,7 +48831,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084378"
     },
     "repository_url": "https://github.com/DanCunnington/NSIL",
     "exclusion_reason": "SKIP",
@@ -48689,7 +48939,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084188"
     },
     "repository_url": "https://github.com/nlx-group/Commonsense-Reasoning-Neuro-only-vs-Neuro-Symbolic-Methods",
     "exclusion_reason": "SKIP",
@@ -48796,7 +49047,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085032"
     },
     "repository_url": "https://github.com/google-research/task-oriented-dialogue",
     "exclusion_reason": "SKIP",
@@ -48904,7 +49156,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242085059"
     },
     "repository_url": "https://retool-rl.github.io/",
     "exclusion_reason": "SKIP",
@@ -49011,7 +49264,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084295"
     },
     "repository_url": "https://github.com/utopia-group/WebQA",
     "exclusion_reason": "SKIP",
@@ -49156,7 +49410,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084959"
     },
     "repository_url": "https://github.com/DevinJake/NS-CQA",
     "exclusion_reason": "Continue",
@@ -49278,8 +49533,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083883"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -49370,8 +49627,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242084095"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -49495,8 +49754,10 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242083810"
     },
+    "repository_url": null,
     "reproduction_category": "Missing some artifacts (not code, e.g. data, model, etc.)"
   },
   {
@@ -49600,7 +49861,8 @@
       "positive_reproduced_all": "0",
       "negative_reproduced_all": "1",
       "partially_reproduced_above": "0",
-      "partially_reproduced_below": "0"
+      "partially_reproduced_below": "0",
+      "normalized_paper_id": "242086254"
     },
     "repository_url": "https://github.com/Lizw14/Super-CLEVR",
     "exclusion_reason": "SKIP",
