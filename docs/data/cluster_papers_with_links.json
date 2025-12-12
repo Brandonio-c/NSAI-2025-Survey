@@ -1,0 +1,2931 @@
+{
+  "Cluster_0_Logical_Fallacy_Detec": [
+    {
+      "paper_id": "rayyan-242083812",
+      "title": "Autoformalizing Natural Language to First-Order Logic: A Case Study in Logical Fallacy Detection",
+      "codebase": "https://github.com/lovishchopra/NL2FOL",
+      "other_links": "https://www.semanticscholar.org/reader/99829812c2e5b2ee2669c839020addd2921dc673"
+    },
+    {
+      "paper_id": "rayyan-242083826",
+      "title": "Leveraging Large Language Models to Generate Answer Set Programs",
+      "codebase": "https://github.com/azreasoners/gpt-asp-rules",
+      "other_links": "https://openreview.net/forum?id=cq6jL6EUiG&referrer=%5Bthe%20profile%20of%20Zhun%20Yang%5D(%2Fprofile%3Fid%3D~Zhun_Yang1)"
+    },
+    {
+      "paper_id": "rayyan-242083964",
+      "title": "Conversational neuro-symbolic commonsense reasoning",
+      "codebase": "https://github.com/ForoughA/CORGI"
+    },
+    {
+      "paper_id": "rayyan-242084028",
+      "title": "Argument Identification for Neuro-Symbolic Dispute Resolution in Scientific Peer Review",
+      "codebase": "https://github.com/Karpovich-alex/mdpi_argumentations",
+      "other_links": "https://github.com/Karpovich-alex/mdpi_argumentations"
+    },
+    {
+      "paper_id": "rayyan-242084033",
+      "title": "Ready Player One! Eliciting Diverse Knowledge Using A Configurable Game",
+      "codebase": "https://github.com/delftcrowd/FindItOut"
+    },
+    {
+      "paper_id": "rayyan-242084034",
+      "title": "Fine-Tuning Large Enterprise Language Models via Ontological Reasoning",
+      "codebase": "Code requested/not yet available"
+    },
+    {
+      "paper_id": "rayyan-242084063",
+      "title": "EXPLORER: Exploration-guided Reasoning for Textual Reinforcement Learning",
+      "codebase": "https://github.com/kinjalbasu/explorer"
+    },
+    {
+      "paper_id": "rayyan-242084064",
+      "title": "NSA: Neuro-symbolic ARC Challenge",
+      "codebase": "https://github.com/Batorskq/NSA"
+    },
+    {
+      "paper_id": "rayyan-242084188",
+      "title": "Commonsense Reasoning: how do Neuro-Symbolic and Neuro-only approaches compare?",
+      "codebase": "https://github.com/nlx-group/Commonsense-Reasoning-Neuro-only-vs-Neuro-Symbolic-Methods"
+    },
+    {
+      "paper_id": "rayyan-242084219",
+      "title": "CodeIt: Self-Improving Language Models with Prioritized Hindsight Replay",
+      "codebase": "https://github.com/Qualcomm-AI-research/codeit"
+    },
+    {
+      "paper_id": "rayyan-242084223",
+      "title": "Logically consistent language models via neuro-symbolic integration",
+      "codebase": "https://github.com/ddidacus/loco-llm"
+    },
+    {
+      "paper_id": "rayyan-242084271",
+      "title": "Neuro-symbolic commonsense social reasoning",
+      "codebase": "https://github.com/chanind/amr-social-chemistry-reasoner"
+    },
+    {
+      "paper_id": "rayyan-242084285",
+      "title": "Neural Symbolic Machines: Learning Semantic Parsers on Freebase with Weak Supervision",
+      "codebase": "https://github.com/crazydonkey200/neural-symbolic-machines",
+      "other_links": "https://github.com/crazydonkey200/neural-symbolic-machines"
+    },
+    {
+      "paper_id": "rayyan-242084295",
+      "title": "Web question answering with neurosymbolic program synthesis",
+      "codebase": "https://github.com/utopia-group/WebQA",
+      "other_links": "https://github.com/utopia-group/WebQA"
+    },
+    {
+      "paper_id": "rayyan-242084309",
+      "title": "ConvFinQA: Exploring the Chain of Numerical Reasoning in Conversational Finance Question Answering",
+      "codebase": "https://github.com/czyssrs/ConvFinQA"
+    },
+    {
+      "paper_id": "rayyan-242084314",
+      "title": "Binding Language Models in Symbolic Languages",
+      "codebase": "https://github.com/xlang-ai/Binder"
+    },
+    {
+      "paper_id": "rayyan-242084358",
+      "title": "MDD-5k: A New Diagnostic Conversation Dataset for Mental Disorders Synthesized via Neuro-Symbolic LLM Agents",
+      "codebase": "https://github.com/lemonsis/MDD-5k"
+    },
+    {
+      "paper_id": "rayyan-242084372",
+      "title": "Enforcement Heuristics for Argumentation with Deep Reinforcement Learning",
+      "codebase": "https://github.com/DennisCraandijk/DL-Abstract-Argumentation"
+    },
+    {
+      "paper_id": "rayyan-242084378",
+      "title": "Neuro-symbolic learning of answer set programs from raw data",
+      "codebase": "https://github.com/DanCunnington/NSIL"
+    },
+    {
+      "paper_id": "rayyan-242084532",
+      "title": "CORRPUS: Code-based Structured Prompting for Neurosymbolic Story Understanding",
+      "codebase": "https://github.com/dong-river/CoRRPUS"
+    },
+    {
+      "paper_id": "rayyan-242084577",
+      "title": "MRKL Systems: A modular, neuro-symbolic architecture that combines large language models, external knowledge sources and discrete reasoning",
+      "codebase": "https://github.com/com/blog",
+      "other_links": "https://www.ai21.com/blog/announcing-ai21-studio-and-jurassic-1/"
+    },
+    {
+      "paper_id": "rayyan-242084627",
+      "title": "DARA: Decomposition-Alignment-Reasoning Autonomous Language Agent for Question Answering over Knowledge Graphs",
+      "codebase": "https://github.com/UKPLab/acl2024-DARA"
+    },
+    {
+      "paper_id": "rayyan-242084628",
+      "title": "Large language models are neurosymbolic reasoners",
+      "codebase": "https://github.com/hyintell/LLMSymbolic"
+    },
+    {
+      "paper_id": "rayyan-242084631",
+      "title": "Interactive Evolution: A Neural-Symbolic Self-Training Framework For Large Language Models",
+      "codebase": "https://github.com/xufangzhi/ENVISIONS"
+    },
+    {
+      "paper_id": "rayyan-242084658",
+      "title": "Enhancing Multi-Domain Automatic Short Answer Grading through an Explainable Neuro-Symbolic Pipeline",
+      "codebase": "https://github.com/chefkoch24/neuro-symbolic-asag"
+    },
+    {
+      "paper_id": "rayyan-242084661",
+      "title": "Neuro-symbolic natural logic with introspective revision for natural language inference",
+      "codebase": "https://github.com/feng-yufei/NS-NLI"
+    },
+    {
+      "paper_id": "rayyan-242084748",
+      "title": "Structural Ambiguity and its Disambiguation in Language Model Based Parsers: the Case of Dutch Clause Relativization",
+      "codebase": "https://github.com/gijswijnholds/syntactic_nl2i; https://github.com/gijswijnholds/dynamic-proof-nets-disambiguation; https://github.com/gijswijnholds/udparsing_bert",
+      "other_links": "https://arxiv.org/pdf/2305.14917"
+    },
+    {
+      "paper_id": "rayyan-242084823",
+      "title": "EnigmaToM: Improve LLMs' Theory-of-Mind Reasoning Capabilities with Neural Knowledge Base of Entity States",
+      "codebase": "https://github.com/seacowx/EnigmaToM",
+      "other_links": "https://arxiv.org/pdf/2503.03340"
+    },
+    {
+      "paper_id": "rayyan-242084829",
+      "title": "Is Neuro-Symbolic AI Meeting its Promise in Natural Language Processing? A Structured Review",
+      "codebase": "https://github.com/kyleiwaniec/neuro-symbolic-ai-systematic-review"
+    },
+    {
+      "paper_id": "rayyan-242084891",
+      "title": "Enhancing SQL Query Generation with Neurosymbolic Reasoning",
+      "codebase": "https://github.com/henrijsprincis/Xander"
+    },
+    {
+      "paper_id": "rayyan-242084959",
+      "title": "Less is more: Data-efficient complex question answering over knowledge bases",
+      "codebase": "https://github.com/DevinJake/NS-CQA",
+      "other_links": "https://github.com/DevinJake/NS-CQA"
+    },
+    {
+      "paper_id": "rayyan-242084971",
+      "title": "Neural-Symbolic Collaborative Distillation: Advancing Small Language Models for Complex Reasoning Tasks",
+      "codebase": "https://github.com/Xnhyacinth/NesyCD",
+      "other_links": "https://github.com/Xnhyacinth/NesyCD"
+    },
+    {
+      "paper_id": "rayyan-242084978",
+      "title": "Divide and Translate: Compositional First-Order Logic Translation and Verification for Complex Logical Reasoning",
+      "codebase": "https://github.com/Hyun-Ryu/clover",
+      "other_links": "https://github.com/Hyun-Ryu/clover"
+    },
+    {
+      "paper_id": "rayyan-242085032",
+      "title": "AnyTOD: A Programmable Task-Oriented Dialog System",
+      "codebase": "https://github.com/google-research/task-oriented-dialogue",
+      "other_links": "https://github.com/google-research/task-oriented-dialogue"
+    },
+    {
+      "paper_id": "rayyan-242085042",
+      "title": "FGeo-DRL: Deductive Reasoning for Geometric Problems through Deep Reinforcement Learning",
+      "codebase": "https://github.com/PersonNoName/FGeoDRL",
+      "other_links": "https://github.com/PersonNoName/FGeoDRL"
+    },
+    {
+      "paper_id": "rayyan-242085059",
+      "title": "ReTool: Reinforcement Learning for Strategic Tool Use in LLMs",
+      "codebase": "https://retool-rl.github.io/"
+    },
+    {
+      "paper_id": "rayyan-242085064",
+      "title": "Neural-Symbolic Solver for Math Word Problems with Auxiliary Tasks",
+      "codebase": "https://github.com/QinJinghui/NS-Solver",
+      "other_links": "https://github.com/QinJinghui/NS-Solver"
+    },
+    {
+      "paper_id": "rayyan-242085077",
+      "title": "A Pipeline For Discourse Circuits From CCG",
+      "codebase": "https://github.com/CQCL/text_to_discocirc",
+      "other_links": "https://github.com/CQCL/text_to_discocirc"
+    },
+    {
+      "paper_id": "rayyan-242085088",
+      "title": "CombiBench: Benchmarking LLM Capability for Combinatorial Mathematics",
+      "codebase": "https://github.com/MoonshotAI/CombiBench"
+    },
+    {
+      "paper_id": "rayyan-242085093",
+      "title": "Knowledge-driven Data Construction for Zero-shot Evaluation in Commonsense Question Answering",
+      "codebase": "https://github.com/Mayer123/HyKAS-CSKG",
+      "other_links": "https://github.com/Mayer123/HyKAS-CSKG"
+    },
+    {
+      "paper_id": "rayyan-242085129",
+      "title": "There and back again: extracting formal domains for controllable neurosymbolic story authoring",
+      "codebase": "https://github.com/alex-calderwood/there-and-back/blob/main/README.md",
+      "other_links": "https://github.com/alex-calderwood/there-and-back/blob/main/README.md"
+    },
+    {
+      "paper_id": "rayyan-242085165",
+      "title": "Neural Proof Nets",
+      "codebase": "https://github.com/konstantinosKokos/neural-proof-nets"
+    },
+    {
+      "paper_id": "rayyan-242085252",
+      "title": "Diakop: Dialogue-based knowledge-oriented programming for neural-symbolic knowledge base question answering",
+      "codebase": "https://github.com/THU-KEG/DiaKoP",
+      "other_links": "https://github.com/THU-KEG/DiaKoP"
+    },
+    {
+      "paper_id": "rayyan-242085267",
+      "title": "Leveraging LLMs for Hypothetical Deduction in Logical Inference: A Neuro-Symbolic Approach",
+      "codebase": "https://github.com/wufeiwuwoshihua/nshy",
+      "other_links": "https://github.com/wufeiwuwoshihua/nshy"
+    },
+    {
+      "paper_id": "rayyan-242085297",
+      "title": "Relational Programming with Foundation Models",
+      "codebase": "https://github.com/scallop-lang/scallop",
+      "other_links": "https://github.com/scalloplang/scallop"
+    },
+    {
+      "paper_id": "rayyan-242085338",
+      "title": "A neural-symbolic approach to natural language understanding",
+      "codebase": "https://github.com/chadlzx/NSP_QA; https://github.com/zihao-wang/Number-NLI",
+      "other_links": "https://github.com/zihao-wang/Number-NLI"
+    },
+    {
+      "paper_id": "rayyan-242085341",
+      "title": "Autoformalizing Euclidean Geometry",
+      "codebase": "https://github.com/loganrjmurphy/LeanEuclid",
+      "other_links": "https://github.com/loganrjmurphy/LeanEuclid"
+    },
+    {
+      "paper_id": "rayyan-242085404",
+      "title": "Satyrn: A Platform for Analytics Augmented Generation",
+      "codebase": "https://github.com/nu-c3lab/satyrn",
+      "other_links": "https://github.com/nu-c3lab/satyrn"
+    },
+    {
+      "paper_id": "rayyan-242085446",
+      "title": "Learning Reasoning Strategies in End-to-End Differentiable Proving",
+      "codebase": "https://github.com/uclnlp/ctp"
+    },
+    {
+      "paper_id": "rayyan-242085467",
+      "title": "A Differentiable Integer Linear Programming Solver for Explanation-Based Natural Language Inference",
+      "codebase": "https://github.com/neuro-symbolic-ai/diff_comb_explainer",
+      "other_links": "https://github.com/neuro-symbolic-ai/diff_comb_explainer"
+    },
+    {
+      "paper_id": "rayyan-242085494",
+      "title": "Understanding Narratives through Dimensions of Analogy",
+      "codebase": "https://github.com/usc-isi-i2/analogical-transfer-learning",
+      "other_links": "https://github.com/usc-isi-i2/analogical-transfer-learning"
+    },
+    {
+      "paper_id": "rayyan-242085505",
+      "title": "Enhancing Systematic Decompositional Natural Language Inference Using Informal Logic",
+      "codebase": "https://github.com/JHU-CLSP/treewise",
+      "other_links": "https://github.com/JHU-CLSP/treewise"
+    },
+    {
+      "paper_id": "rayyan-242085506",
+      "title": "NELLIE: A Neuro-Symbolic Inference Engine for Grounded, Compositional, and Explainable Reasoning",
+      "codebase": "https://github.com/JHU-CLSP/NELLIE",
+      "other_links": "https://github.com/JHU-CLSP/NELLIE"
+    },
+    {
+      "paper_id": "rayyan-242085518",
+      "title": "NeuroQL: A Neuro-Symbolic Language and Dataset for Inter-Subjective Reasoning",
+      "codebase": "https://github.com/orgdlabs/neuroQL",
+      "other_links": "https://github.com/orgdlabs/neuroQL"
+    },
+    {
+      "paper_id": "rayyan-242085521",
+      "title": "OneEdit: A Neural-Symbolic Collaboratively Knowledge Editing System",
+      "codebase": "https://github.com/zjunlp/OneEdit",
+      "other_links": "https://github.com/zjunlp/OneEdit"
+    },
+    {
+      "paper_id": "rayyan-242085538",
+      "title": "(sic) LINC: A Neurosymbolic Approach for Logical Reasoning by Combining Language Models with First-Order Logic Provers",
+      "codebase": "https://github.com/benlipkin/linc",
+      "other_links": "https://github.com/benlipkin/linc"
+    },
+    {
+      "paper_id": "rayyan-242085546",
+      "title": "Towards Reliable Proof Generation with LLMs: A Neuro-Symbolic Approach",
+      "codebase": "https://github.com/orensul/LLMs_proof_generation",
+      "other_links": "https://arxiv.org/pdf/2505.14479; https://www.orensultan.com/llm_proof_generator/; https://github.com/orensul/LLMs_proof_generation"
+    },
+    {
+      "paper_id": "rayyan-242085571",
+      "title": "Neurosymbolic Narrative Generation for Cultural Heritage",
+      "codebase": "https://github.com/Glottocrisio/IKG4CH",
+      "other_links": "https://github.com/Glottocrisio/IKG4CH"
+    },
+    {
+      "paper_id": "rayyan-242085588",
+      "title": "Natlog: Embedding Logic Programming into the Python Deep-Learning Ecosystem",
+      "codebase": "https://github.com/ptarau/natlog",
+      "other_links": "https://arxiv.org/pdf/2308.15890"
+    },
+    {
+      "paper_id": "rayyan-242085659",
+      "title": "Peirce: Unifying material and formal reasoning via llm-driven neuro-symbolic refinement",
+      "codebase": "https://github.com/neuro-symbolic-ai/peirce"
+    },
+    {
+      "paper_id": "rayyan-242085660",
+      "title": "Enhancing Ethical Explanations of Large Language Models through Iterative Symbolic Refinement",
+      "codebase": "https://github.com/neuro-symbolic-ai/explanation_based_ethical_reasoning"
+    },
+    {
+      "paper_id": "rayyan-242085661",
+      "title": "Verification and Refinement of Natural Language Explanations through LLM-Symbolic Theorem Proving",
+      "codebase": "https://github.com/neuro-symbolic-ai/explanation_refinement"
+    },
+    {
+      "paper_id": "rayyan-242085747",
+      "title": "Enhancing Large Language Models through Neuro-Symbolic Integration and Ontological Reasoning",
+      "codebase": "https://github.com/ruslanmv/Neuro-symbolic-interaction",
+      "other_links": "https://github.com/ruslanmv/Neuro-symbolic-interaction; https://arxiv.org/pdf/2504.07640"
+    },
+    {
+      "paper_id": "rayyan-242085761",
+      "title": "Complex Program Induction for Querying Knowledge Bases in the Absence of Gold Programs",
+      "codebase": "https://github.com/CIPITR/CIPITR",
+      "other_links": "https://aclanthology.org/Q19-1012/; https://aclanthology.org/Q19-1012.pdf; https://github.com/CIPITR/CIPITR"
+    },
+    {
+      "paper_id": "rayyan-242085817",
+      "title": "QUITE: Quantifying Uncertainty in Natural Language Text in Bayesian Reasoning Scenarios",
+      "codebase": "https://github.com/boschresearch/quite-emnlp24"
+    },
+    {
+      "paper_id": "rayyan-242085821",
+      "title": "Neuro-Symbolic Integration Brings Causal and Reliable Reasoning Proofs",
+      "codebase": "https://github.com/DAMO-NLP-SG/CaRing",
+      "other_links": "https://github.com/DAMO-NLP-SG/CaRing"
+    },
+    {
+      "paper_id": "rayyan-242085857",
+      "title": "Neural Natural Logic Inference for Interpretable Question Answering",
+      "codebase": "https://github.com/shijihao/neunli",
+      "other_links": "https://aclanthology.org/2021.emnlp-main.298/; https://github.com/shijihao/neunli"
+    },
+    {
+      "paper_id": "rayyan-242085865",
+      "title": "An Interpretable Neuro-Symbolic Reasoning Framework for Task-Oriented Dialogue Generation",
+      "codebase": "https://github.com/shiquanyang/NS-Dial",
+      "other_links": "https://github.com/shiquanyang/NS-Dial"
+    },
+    {
+      "paper_id": "rayyan-242085866",
+      "title": "Wu's Method can Boost Symbolic AI to Rival Silver Medalists and AlphaGeometry to Outperform Gold Medalists at IMO Geometry",
+      "codebase": "https://huggingface.co/datasets/bethgelab/simplegeometry",
+      "data": "https://huggingface.co/datasets/bethgelab/simplegeometry"
+    },
+    {
+      "paper_id": "rayyan-242085890",
+      "title": "Symbolic Working Memory Enhances Language Models for Complex Rule Application",
+      "codebase": "https://github.com/SiyuanWangw/RuleApplication",
+      "other_links": "https://github.com/SiyuanWangw/RuleApplication"
+    },
+    {
+      "paper_id": "rayyan-242085928",
+      "title": "MuSR: Testing the Limits of Chain-of-thought with Multistep Soft Reasoning",
+      "codebase": "https://github.com/Zayne-Sprague/MuSR",
+      "other_links": "https://github.com/Zayne-Sprague/MuSR"
+    },
+    {
+      "paper_id": "rayyan-242085962",
+      "title": "Logic Rules as Explanations for Legal Case Retrieval",
+      "codebase": "https://github.com/ke-01/NS-LCR",
+      "other_links": "https://github.com/ke-01/NS-LCR"
+    },
+    {
+      "paper_id": "rayyan-242085967",
+      "title": "(Neural-Symbolic) Machine Learning for Inconsistency Measurement",
+      "codebase": "https://github.com/fau-is/MLXIncon",
+      "other_links": "https://github.com/fau-is/MLXIncon"
+    },
+    {
+      "paper_id": "rayyan-242085970",
+      "title": "EdgePrompt: Engineering Guardrail Techniques for Offline LLMs in K-12 Educational Settings",
+      "codebase": "https://github.com/build-club-ai-indonesia/edge-prompt",
+      "other_links": "https://github.com/build-club-ai-indonesia/edge-prompt"
+    },
+    {
+      "paper_id": "rayyan-242085977",
+      "title": "An Experimental Pipeline for Automated Reasoning in Natural Language (Short Paper)",
+      "codebase": "https://github.com/tammet/nlpsolver",
+      "other_links": "http://github.com/tammet/nlpsolver"
+    },
+    {
+      "paper_id": "rayyan-242086029",
+      "title": "Solving olympiad geometry without human demonstrations",
+      "codebase": "https://github.com/google-deepmind/alphageometry",
+      "other_links": "https://github.com/google-deepmind/alphageometry"
+    },
+    {
+      "paper_id": "rayyan-242086112",
+      "title": "An LLMs-based neuro-symbolic legal judgment prediction framework for civil cases",
+      "codebase": "https://github.com/Yyy11181/LLMs-based-Neuro-Symbolic-Framework-for-DWI-cases",
+      "other_links": "https://github.com/Yyy11181/LLMs-based-Neuro-Symbolic-Framework-for-DWI-cases"
+    },
+    {
+      "paper_id": "rayyan-242086133",
+      "title": "LLM Meets Bounded Model Checking: Neuro-symbolic Loop Invariant Inference",
+      "codebase": "https://github.com/SoftWiser-group/LaM4Inv.git",
+      "other_links": "https://github.com/SoftWiser-group/LaM4Inv.git"
+    },
+    {
+      "paper_id": "rayyan-242086146",
+      "title": "FGeo-HyperGNet: Geometric Problem Solving Integrating Formal Symbolic System and Hypergraph Neural Network",
+      "codebase": "https://github.com/BitSecret/HyperGNet",
+      "other_links": "https://github.com/BitSecret/HyperGNet"
+    },
+    {
+      "paper_id": "rayyan-242086150",
+      "title": "Neuro-Conceptual Artificial Intelligence: Integrating OPM with Deep Learning to Enhance Question Answering Quality",
+      "codebase": "https://github.com/kangxin/NCAI",
+      "other_links": "https://github.com/kangxin/NCAI"
+    },
+    {
+      "paper_id": "rayyan-242086156",
+      "title": "Scope-enhanced Compositional Semantic Parsing for DRT",
+      "codebase": "https://github.com/xiulinyang/compositional_drs_parsing",
+      "other_links": "https://github.com/xiulinyang/compositional_drs_parsing"
+    },
+    {
+      "paper_id": "rayyan-242086200",
+      "title": "Meta-Reasoning: Semantics-Symbol Deconstruction for Large Language Models",
+      "codebase": "https://github.com/Alsace08/Meta-Reasoning",
+      "other_links": "https://github.com/Alsace08/Meta-Reasoning"
+    },
+    {
+      "paper_id": "rayyan-242086202",
+      "title": "Valid Text-to-SQL Generation with Unification-based DeepStochLog",
+      "codebase": "https://github.com/ML-KULeuven/deepstochlog-lm",
+      "other_links": "https://github.com/ML-KULeuven/deepstochlog-lm"
+    },
+    {
+      "paper_id": "rayyan-242086212",
+      "title": "Modeling Low-Resource Health Coaching Dialogues via Neuro-Symbolic Goal Summarization and Text-Units-Text Generation",
+      "codebase": "https://github.com/uic-nlp-lab/virtualcoachdata",
+      "data": "https://github.com/uic-nlp-lab/virtualcoachdata"
+    },
+    {
+      "paper_id": "rayyan-242086220",
+      "title": "Proving Olympiad Inequalities by Synergizing LLMs and Symbolic Reasoning",
+      "codebase": "https://github.com/Lizn-zn/NeqLIPS",
+      "other_links": "https://github.com/Lizn-zn/NeqLIPS"
+    },
+    {
+      "paper_id": "rayyan-242083969",
+      "title": "Identifying Logical Patterns in Text for Reasoning",
+      "codebase": "https://gitlab.com/anabasis-public/delir"
+    },
+    {
+      "paper_id": "rayyan-242083957",
+      "title": "A Neuro-Symbolic Approach to Monitoring Salt Content in Food",
+      "codebase": "https://github.com/anujatayal/NS-Monitoring-Salt-Content-in-Food; https://github.com/anujatayal/NS-Monitoring-Salt-Content"
+    },
+    {
+      "paper_id": "rayyan-242084086",
+      "title": "VERUS-LM: a Versatile Framework for Combining LLMs with Symbolic Reasoning",
+      "codebase": "https://gitlab.com/EAVISE/bca/verus-lm"
+    }
+  ],
+  "Cluster_1_Neuro_Symbolic_Event_": [
+    {
+      "paper_id": "rayyan-242083763",
+      "title": "Neuro-symbolic video search",
+      "codebase": "https://github.com/UTAustin-SwarmLab/Neuro-Symbolic-Video-SearchTemporal-Logic"
+    },
+    {
+      "paper_id": "rayyan-242083778",
+      "title": "DUPLICATE!  A Hybrid Neuro-Symbolic Approach for Complex Event Processing",
+      "codebase": "https://github.com/MarcRoigVilamala/DeepProbCEP",
+      "other_links": "https://github.com/MarcRoigVilamala/DeepProbCEP"
+    },
+    {
+      "paper_id": "rayyan-242083833",
+      "title": "Greybox XAI: a Neural-Symbolic learning framework to produce interpretable predictions for image classification",
+      "codebase": "https://github.com/AdrienBennetot/Greybox-",
+      "other_links": "https://www.researchgate.net/publication/364090265_Greybox_XAI_A_Neural-Symbolic_learning_framework_to_produce_interpretable_predictions_for_image_classification"
+    },
+    {
+      "paper_id": "rayyan-242083853",
+      "title": "Twist and Snap: A Neuro-Symbolic System for Affordance Learning of Opening Jars and Bottles",
+      "codebase": "https://github.com/Joagai23/robot-neuro-symbolic-system"
+    },
+    {
+      "paper_id": "rayyan-242083877",
+      "title": "Perspective-Shifted Neuro-Symbolic World Models: A Framework for Socially-Aware Robot Navigation",
+      "codebase": "https://github.com/alcedok/SocialNav_paper"
+    },
+    {
+      "paper_id": "rayyan-242083892",
+      "title": "A Framework for Neurosymbolic Robot Action Planning using Large Language Models",
+      "codebase": "https://github.com/alessiocpt/teriyaki",
+      "other_links": "https://github.com/alessiocpt/teriyaki"
+    },
+    {
+      "paper_id": "rayyan-242083941",
+      "title": "Neurosymbolic reinforcement learning with formally verified exploration",
+      "codebase": "https://github.com/gavlegoat/safe-learning; https://github.com/dair-iitd/NS-KGC-AUG",
+      "other_links": "https://github.com/gavlegoat/safe-learning"
+    },
+    {
+      "paper_id": "rayyan-242083963",
+      "title": "A neuro-symbolic approach for real-world event recognition from weak supervision",
+      "codebase": "https://github.com/Gianlu94/A-neuro-symbolic-approach-for-real-world-event-recognition-from-weak-supervision"
+    },
+    {
+      "paper_id": "rayyan-242083985",
+      "title": "Neural-Symbolic Descriptive Action Model from Images: The Search for STRIPS",
+      "codebase": "https://github.com/guicho271828/latplan",
+      "other_links": "https://github.com/guicho271828/latplan"
+    },
+    {
+      "paper_id": "rayyan-242083986",
+      "title": "Learning neural-symbolic descriptive planning models via cube-space priors: The voyage home (to STRIPS)",
+      "codebase": "https://github.com/guicho271828/latplan",
+      "other_links": "https://github.com/guicho271828/latplan"
+    },
+    {
+      "paper_id": "rayyan-242084032",
+      "title": "xLP: Explainable Link Prediction for Master Data Management",
+      "codebase": "https://github.com/kingsaint/InductiveExplainableLinkPrediction",
+      "other_links": "https://github.com/kingsaint/InductiveExplainableLinkPrediction"
+    },
+    {
+      "paper_id": "rayyan-242084067",
+      "title": "Neural DNF-MT: A Neuro-symbolic Approach for Learning Interpretable and Editable Policies",
+      "codebase": "https://github.com/kittykg/neural-dnf-mt-policy-learning",
+      "other_links": "https://github.com/kittykg/neural-dnf-mt-policy-learning"
+    },
+    {
+      "paper_id": "rayyan-242084089",
+      "title": "Preliminary Results on a State-Driven Method for Rule Construction in Neural-Symbolic Reinforcement Learning",
+      "codebase": "https://github.com/ZhengyaoJiang/NLRL"
+    },
+    {
+      "paper_id": "rayyan-242084107",
+      "title": "Let Me Help You! Neuro-Symbolic Short-Context Action Anticipation",
+      "codebase": "https://github.com/sarthak268/nesca-pytorch"
+    },
+    {
+      "paper_id": "rayyan-242084168",
+      "title": "In a Nutshell, the Human Asked for This: Latent Goals for Following Temporal Specifications",
+      "codebase": "https://github.com/bgLeon/Latent-Goal-Architectures"
+    },
+    {
+      "paper_id": "rayyan-242084181",
+      "title": "LogiCity: Advancing Neuro-Symbolic AI with Abstract Urban Simulation",
+      "codebase": "https://github.com/Jaraxxus-Me/LogiCity"
+    },
+    {
+      "paper_id": "rayyan-242084183",
+      "title": "Rule-Based Error Detection and Correction to Operationalize Movement Trajectory Classification",
+      "codebase": "https://github.com/lab-v2/Error-Detection-and-Correction"
+    },
+    {
+      "paper_id": "rayyan-242084241",
+      "title": "NeSIG: A Neuro-Symbolic Method for Learning to Generate Planning Problems",
+      "codebase": "https://github.com/ari-dasci/S-PlanningProblemGeneration"
+    },
+    {
+      "paper_id": "rayyan-242084262",
+      "title": "Learning to reason over scene graphs: a case study of finetuning GPT-2 into a robot language model for grounded task planning",
+      "codebase": "https://github.com/dnandha/RobLM"
+    },
+    {
+      "paper_id": "rayyan-242084277",
+      "title": "SmartPilot: A Multiagent CoPilot for Adaptive and Intelligent Manufacturing",
+      "codebase": "https://github.com/ChathurangiShyalika/SmartPilot"
+    },
+    {
+      "paper_id": "rayyan-242084278",
+      "title": "NSF-MAP: Neurosymbolic Multimodal Fusion for Robust and Interpretable Anomaly Prediction in Assembly Pipelines",
+      "codebase": "https://github.com/ChathurangiShyalika/NSF-MAP"
+    },
+    {
+      "paper_id": "rayyan-242084315",
+      "title": "Transformer Embeddings of Irregularly Spaced Events and Their Participants",
+      "codebase": "https://github.com/yangalan123/anhp-andtt"
+    },
+    {
+      "paper_id": "rayyan-242084317",
+      "title": "Safe Neurosymbolic Learning with Differentiable Symbolic Execution",
+      "codebase": "https://github.com/chenxi-yang/DSE"
+    },
+    {
+      "paper_id": "rayyan-242084318",
+      "title": "Formally Verified Neurosymbolic Trajectory Learning via Tensor-based Linear Temporal Logic on Finite Traces",
+      "codebase": "https://github.com/hasktorch/hasktorch "
+    },
+    {
+      "paper_id": "rayyan-242084325",
+      "title": "Learning neuro-symbolic relational transition models for bilevel planning",
+      "codebase": "https://github.com/Learning-and-Intelligent-Systems/predicators/releases/tag/skill-learning-june-2022"
+    },
+    {
+      "paper_id": "rayyan-242084355",
+      "title": "Neuro-Symbolic Fusion of Wi-Fi Sensing Data for Passive Radar with Inter-Modal Knowledge Transfer",
+      "codebase": "https://github.com/marcocominelli/csi-vae/tree/fusion2024"
+    },
+    {
+      "paper_id": "rayyan-242084397",
+      "title": "Dynamic Planning with a LLM",
+      "codebase": "https://github.com/itl-ed/llm-dp"
+    },
+    {
+      "paper_id": "rayyan-242084419",
+      "title": "Learning Signal Temporal Logic through Neural Network for Interpretable Classification",
+      "codebase": "https://github.com/danyangl6/nn-tli",
+      "other_links": "https://github.com/danyangl6/nn-tli"
+    },
+    {
+      "paper_id": "rayyan-242084471",
+      "title": "Interpretable and Explainable Logical Policies via Neurally Guided Symbolic Abstraction",
+      "codebase": "https://github.com/k4ntz/NUDGE"
+    },
+    {
+      "paper_id": "rayyan-242084500",
+      "title": "Forecasting Traffic Progression in Terms of Semantically Interpretable States by Exploring Multiple Data Representations",
+      "codebase": "https://github.com/MichielDhont/Forecasting-Traffic-Progression-in-Terms-of-Semantically-Interpretable-States"
+    },
+    {
+      "paper_id": "rayyan-242084505",
+      "title": "EXplainable Neural-Symbolic Learning (X-NeSyL) methodology to fuse deep learning representations with expert knowledge graphs: The MonuMAI cultural heritage use case",
+      "codebase": "https://github.com/ivanDonadello/semantic-PASCAL-Part"
+    },
+    {
+      "paper_id": "rayyan-242084586",
+      "title": "Neural Reward Machines",
+      "codebase": "https://github.com/KRLGroup/NeuralRewardMachines"
+    },
+    {
+      "paper_id": "rayyan-242084619",
+      "title": "Plan-SOFAI: A neuro-symbolic planning architecture",
+      "codebase": "https://github.com/ai4society/sofai_tool"
+    },
+    {
+      "paper_id": "rayyan-242084632",
+      "title": "Privacy-Preserving Federated Learning with Differentially Private Hyperdimensional Computing",
+      "codebase": "https://github.com/FardinJalilPiran/FedHDPrivacy"
+    },
+    {
+      "paper_id": "rayyan-242084688",
+      "title": "Structured Event Memory: A neuro-symbolic model of event cognition",
+      "codebase": "https://github.com/ProjectSEM/SEM"
+    },
+    {
+      "paper_id": "rayyan-242084789",
+      "title": "Interpretable end-to-end Neurosymbolic Reinforcement Learning agents",
+      "codebase": "https://github.com/nlsgrndn/SCoBots/tree/dev; https://github.com/k4ntz/SCoBots/tree/space_detector; https://github.com/k4ntz/SCoBots",
+      "other_links": "https://arxiv.org/pdf/2410.14371"
+    },
+    {
+      "paper_id": "rayyan-242084808",
+      "title": "GOALNET: Interleaving Neural Goal Predicate Inference with Classical Planning for Generalization in Robot Instruction Following",
+      "codebase": "https://github.com/reail-iitd/goalnet"
+    },
+    {
+      "paper_id": "rayyan-242084882",
+      "title": "Deep explainable relational reinforcement learning: a neuro-symbolic approach",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://arxiv.org/pdf/2304.08349"
+    },
+    {
+      "paper_id": "rayyan-242084883",
+      "title": "EgoTV : Egocentric Task Verification from Natural Language Task Descriptions",
+      "codebase": "https://github.com/facebookresearch/EgoTV; https://rishihazra.github.io/EgoTV/",
+      "other_links": "https://arxiv.org/pdf/2303.16975"
+    },
+    {
+      "paper_id": "rayyan-242084889",
+      "title": "BlueSky: How to Raise a Robot-A Case for Neuro-Symbolic AI in Constrained Task Planning for Humanoid Assistive Robots",
+      "codebase": "https://github.com/kit-dsn/how-to-raise-a-robot-beyond-ac"
+    },
+    {
+      "paper_id": "rayyan-242084903",
+      "title": "BlendRL: A Framework for Merging Symbolic and Neural Policy Learning",
+      "codebase": "https://github.com/ml-research/blendrl",
+      "other_links": "https://github.com/ml-research/blendrl; https://arxiv.org/pdf/2410.11689"
+    },
+    {
+      "paper_id": "rayyan-242084963",
+      "title": "Multi-agent Cooperative Games Using Belief Map Assisted Training",
+      "codebase": "https://github.com/qhuang18-97/BAMS",
+      "other_links": "https://github.com/qhuang18-97/BAMS"
+    },
+    {
+      "paper_id": "rayyan-242084987",
+      "title": "Towards Safe Autonomous Driving Policies using a Neuro-Symbolic Deep Reinforcement Learning Approach",
+      "codebase": "https://github.com/CAV-Research-Lab/Safe-Reinforcement-Learning-using-Symbolic-Logical-Programming-for-Autonomous-Highway-Driving",
+      "other_links": "https://github.com/CAV-Research-Lab/Safe-Reinforcement-Learning-using-Symbolic-Logical-Programming-for-Autonomous-Highway-Driving"
+    },
+    {
+      "paper_id": "rayyan-242084989",
+      "title": "Neurosymbolic transformers for multi-agent communication",
+      "codebase": "https://github.com/jinala/multi-agent-neurosym-transformers",
+      "other_links": "https://github.com/jinala/multi-agent-neurosym-transformers"
+    },
+    {
+      "paper_id": "rayyan-242085009",
+      "title": "Causal Neuro-Symbolic AI for Root Cause Analysis in Smart Manufacturing",
+      "codebase": "https://github.com/boschresearch/causalAssembly",
+      "data": "https://www.kaggle.com/datasets/ramyharik/ff-2023-12-12-analog-dataset",
+      "other_links": "https://github.com/boschresearch/causalAssembly"
+    },
+    {
+      "paper_id": "rayyan-242085061",
+      "title": "Learning for Long-Horizon Planning via Neuro-Symbolic Abductive Imitation",
+      "codebase": "https://github.com/Hoar012/ABIL-KDD-2025",
+      "other_links": "https://github.com/Hoar012/ABIL-KDD-2025"
+    },
+    {
+      "paper_id": "rayyan-242085117",
+      "title": "Tunable Neural Encoding of a Symbolic Robotic Manipulation Algorithm",
+      "codebase": "https://github.com/garrettkatz/poppy-muffin/tree/master/pybullet/tasks/pick_and_place",
+      "other_links": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8712426/; https://github.com/garrettkatz/poppy-muffin/tree/master/pybullet/tasks/pick_and_place"
+    },
+    {
+      "paper_id": "rayyan-242085121",
+      "title": "Guaranteed Conformance of Neurosymbolic Models to Natural Constraints",
+      "codebase": "https://github.com/kaustubhsridhar/Constrained_Models",
+      "other_links": "https://arxiv.org/pdf/2212.01346; https://github.com/kaustubhsridhar/Constrained_Models"
+    },
+    {
+      "paper_id": "rayyan-242085128",
+      "title": "Neuro-Symbolic Imitation Learning: Discovering Symbolic Abstractions for Skill Learning",
+      "codebase": "https://github.com/HRI-EU/NeuroSymbolicImitationLearning; https://hri-eu.github.io/NeuroSymbolicImitationLearning/",
+      "other_links": "https://arxiv.org/pdf/2503.21406; https://github.com/HRI-EU/NeuroSymbolicImitationLearning"
+    },
+    {
+      "paper_id": "rayyan-242085166",
+      "title": "Probabilistic Mission Design in Neuro-Symbolic Systems",
+      "codebase": "https://github.com/HRI-EU/ProMis",
+      "other_links": "https://github.com/HRI-EU/ProMis"
+    },
+    {
+      "paper_id": "rayyan-242085167",
+      "title": "The Constitutional Filter",
+      "codebase": "https://github.com/HRI-EU/ProMis/tree/cofi",
+      "other_links": "https://www.github.com/HRI-EU/ProMis/tree/cofi"
+    },
+    {
+      "paper_id": "rayyan-242085236",
+      "title": "Hierarchical NeuroSymbolic Approach for Comprehensive and Explainable Action Quality Assessment",
+      "codebase": "https://github.com/laurenok24/NSAQA",
+      "other_links": "https://github.com/laurenok24/NSAQA; https://arxiv.org/pdf/2403.13798"
+    },
+    {
+      "paper_id": "rayyan-242085295",
+      "title": "PST: Improving Quantitative Trading via Program Sketch-based Tuning",
+      "codebase": "https://github.com/unclebob7/PST-KDD24",
+      "other_links": "https://arxiv.org/pdf/2310.05551v2; https://sites.google.com/view/pst-kdd24; https://github.com/unclebob7/PST-KDD24"
+    },
+    {
+      "paper_id": "rayyan-242085324",
+      "title": "End-to-End Neuro-Symbolic Reinforcement Learning with Textual Explanations",
+      "codebase": "https://github.com/ins-rl/insight",
+      "other_links": "https://github.com/ins-rl/insight"
+    },
+    {
+      "paper_id": "rayyan-242085387",
+      "title": "NeSyA: Neurosymbolic Automata",
+      "codebase": "https://github.com/nmanginas/nesya",
+      "other_links": "https://github.com/nmanginas/nesya"
+    },
+    {
+      "paper_id": "rayyan-242085396",
+      "title": "GlanceNets: Interpretable, Leak-proof Concept-based Models",
+      "codebase": "https://github.com/ema-marconato/glancenet",
+      "other_links": "https://github.com/ema-marconato/glancenet"
+    },
+    {
+      "paper_id": "rayyan-242085432",
+      "title": "A neuro-symbolic approach for enhanced human motion prediction",
+      "codebase": "https://github.com/sariahmghames/NeuroSyM-prediction ",
+      "other_links": "https://github.com/sariahmghames/NeuroSyM-prediction"
+    },
+    {
+      "paper_id": "rayyan-242085433",
+      "title": "neuROSym: Deployment and Evaluation of a ROS-based Neuro-Symbolic Model for Human Motion Prediction",
+      "codebase": "https://github.com/sariahmghames/neuROSym",
+      "other_links": "https://github.com/sariahmghames/neuROSym"
+    },
+    {
+      "paper_id": "rayyan-242085497",
+      "title": "Learning Neuro-symbolic Programs for Language Guided Robot Manipulation",
+      "codebase": "https://github.com/dair-iitd/nsrmp; https://nsrmp.github.io/",
+      "other_links": "https://github.com/dair-iitd/nsrmp"
+    },
+    {
+      "paper_id": "rayyan-242085663",
+      "title": "HackAtari: Atari Learning Environments for Robust and Continual Reinforcement Learning",
+      "codebase": "https://github.com/k4ntz/HackAtari",
+      "other_links": "https://github.com/k4ntz/HackAtari"
+    },
+    {
+      "paper_id": "rayyan-242085702",
+      "title": "Procedural Adherence and Interpretability Through Neuro-Symbolic Generative Agents",
+      "codebase": "https://github.com/Barnard-PL-Labs/CYOA-TSL",
+      "other_links": "https://ravenrothkopf.com/publications/; https://github.com/Barnard-PL-Labs/CYOA-TSL; https://arxiv.org/pdf/2402.16905"
+    },
+    {
+      "paper_id": "rayyan-242085721",
+      "title": "Concept logic trees: enabling user interaction for transparent image classification and human-in-the-loop learning",
+      "codebase": "https://github.com/DavidMrd/LogicConceptSoftTrees",
+      "other_links": "https://github.com/DavidMrd/LogicConceptSoftTrees"
+    },
+    {
+      "paper_id": "rayyan-242085726",
+      "title": "DeepProbCEP: A neuro-symbolic approach for complex event processing in adversarial settings",
+      "codebase": "https://github.com/dais-ita/DeepProbCEP",
+      "other_links": "https://github.com/dais-ita/DeepProbCEP"
+    },
+    {
+      "paper_id": "rayyan-242085745",
+      "title": "Behavior Cloned Transformers are Neurosymbolic Reasoners",
+      "codebase": "https://github.com/cognitiveailab/neurosymbolic",
+      "other_links": "http://github.com/cognitiveailab/neurosymbolic"
+    },
+    {
+      "paper_id": "rayyan-242085746",
+      "title": "MonoForce: Learnable Image-conditioned Physics Engine",
+      "codebase": "https://github.com/ctu-vras/monoforce",
+      "other_links": "https://github.com/ctu-vras/monoforce"
+    },
+    {
+      "paper_id": "rayyan-242085756",
+      "title": "Neuro-Symbolic Evaluation of Text-to-Video Models using Formal Verification",
+      "codebase": "https://github.com/UTAustin-SwarmLab/NeuS-V; https://minkyuchoi-07.github.io/2025/06/11/neusv/#more; https://utaustin-swarmlab.github.io/NeuS-V/",
+      "data": "https://huggingface.co/spaces/Syzygianinfern0/NeuS-V",
+      "other_links": "https://github.com/UTAustin-SwarmLab/NeuS-V; https://huggingface.co/spaces/Syzygianinfern0/NeuS-V; https://arxiv.org/pdf/2411.16718"
+    },
+    {
+      "paper_id": "rayyan-242085764",
+      "title": "System-1.x: Learning to Balance Fast and Slow Planning with Language Models",
+      "codebase": "https://github.com/swarnaHub/System-1.x",
+      "other_links": "https://arxiv.org/pdf/2407.14414; https://github.com/swarnaHub/System-1.x"
+    },
+    {
+      "paper_id": "rayyan-242085788",
+      "title": "EV-Planner: Energy-Efficient Robot Navigation via Event-Based Physics-Guided Neuromorphic Planner",
+      "codebase": "https://github.com/souravsanyal06/EV-Planner",
+      "other_links": "https://arxiv.org/pdf/2307.11349; https://github.com/souravsanyal06/EV-Planner"
+    },
+    {
+      "paper_id": "rayyan-242085844",
+      "title": "DUPLICATE! Abductive Learning for Neuro-Symbolic Grounded Imitation",
+      "codebase": "https://github.com/Hoar012/ABIL-KDD-2025",
+      "other_links": "https://dl.acm.org/doi/10.1145/3690624.3709344; https://www.lamda.nju.edu.cn/shaojj/KDD25_ABIL/; https://github.com/Hoar012/ABIL-KDD-2025"
+    },
+    {
+      "paper_id": "rayyan-242085845",
+      "title": "Unsupervised Learning of Neuro-symbolic Rules for Generalizable Context-aware Planning in Object Arrangement Tasks",
+      "codebase": "https://github.com/Sids2k/RLAP",
+      "other_links": "https://ieeexplore.ieee.org/document/10610696; https://github.com/Sids2k/RLAP"
+    },
+    {
+      "paper_id": "rayyan-242085846",
+      "title": "GoalNet: Inferring Conjunctive Goal Predicates from Human Plan Demonstrations for Robot Instruction Following",
+      "codebase": "https://github.com/reail-iitd/goalnet",
+      "other_links": "https://arxiv.org/pdf/2205.07081; https://github.com/reail-iitd/goalnet"
+    },
+    {
+      "paper_id": "rayyan-242085873",
+      "title": "Learning neuro-symbolic skills for bilevel planning",
+      "codebase": "https://github.com/Learning-and-Intelligent-Systems/predicators/releases/tag/skill-learning-june-2022",
+      "other_links": "https://github.com/Learning-and-Intelligent-Systems/predicators/releases/tag/skill-learning-june-2022"
+    },
+    {
+      "paper_id": "rayyan-242085960",
+      "title": "Safe Learning and Verification of Neural Network Controllers for Autonomous Systems",
+      "codebase": "https://github.com/jlwu002/VSRL",
+      "other_links": "https://github.com/jlwu002/VSRL"
+    },
+    {
+      "paper_id": "rayyan-242085961",
+      "title": "Neurosymbolic Motion and Task Planning for Linear Temporal Logic Tasks",
+      "codebase": "https://github.com/rcpsl/Neurosymbolic_planning",
+      "other_links": "https://github.com/rcpsl/Neurosymbolic_planning"
+    },
+    {
+      "paper_id": "rayyan-242086052",
+      "title": "DUPLICATE!  The DeepProbCEP system for neuro-symbolic complex event recognition",
+      "codebase": "https://github.com/marcRoigVilamala/DeepProbCEP",
+      "other_links": "https://github.com/marcRoigVilamala/DeepProbCEP"
+    },
+    {
+      "paper_id": "rayyan-242086155",
+      "title": "Neuroplex: Learning to Detect Complex Events in Sensor Networks through Knowledge Injection",
+      "codebase": "https://github.com/NESL/Neuroplex",
+      "other_links": "https://github.com/NESL/Neuroplex"
+    },
+    {
+      "paper_id": "rayyan-242086194",
+      "title": "DANLI: Deliberative Agent for Following Natural Language Instructions",
+      "codebase": "https://github.com/sled-group/DANLI",
+      "other_links": "https://github.com/sled-group/DANLI"
+    },
+    {
+      "paper_id": "rayyan-242086238",
+      "title": "PhysORD: A neuro-symbolic approach for physics-infused motion prediction in off-road driving",
+      "codebase": "https://github.com/sair-lab/PhysORD",
+      "other_links": "https://github.com/sair-lab/PhysORD"
+    },
+    {
+      "paper_id": "rayyan-242084373",
+      "title": "Hierarchical Planning for Complex Tasks with Knowledge Graph-RAG and Symbolic Verification",
+      "codebase": "https://github.com/corneliocristina/HVR"
+    },
+    {
+      "paper_id": "rayyan-242084607",
+      "title": "NSP: A Neuro-Symbolic Natural Language Navigational Planner",
+      "codebase": "https://github.com/Dubascudes/NSP"
+    },
+    {
+      "paper_id": "rayyan-242084466",
+      "title": "Neurosymbolic Reinforcement Learning: Playing MiniHack With Probabilistic Logic Shields",
+      "codebase": "https://github.com/ML-KULeuven/nesy-minihack"
+    }
+  ],
+  "Cluster_2_Scalable_Neuro_Symbol": [
+    {
+      "paper_id": "rayyan-242083800",
+      "title": "Dolphin: A Programmable Framework for Scalable Neurosymbolic Learning",
+      "codebase": "https://github.com/PasaLab/dolphin",
+      "other_links": "https://github.com/PasaLab/dolphin"
+    },
+    {
+      "paper_id": "rayyan-242083811",
+      "title": "DeepInfusion: A dynamic infusion based-neuro-symbolic AI model for segmentation of intracranial aneurysms",
+      "codebase": "https://github.com/smileslab/deep-infusion/blob/main/deepinfusion.ipynb"
+    },
+    {
+      "paper_id": "rayyan-242083818",
+      "title": "Neurosymbolic AI for Travel Demand Prediction: Integrating Decision Tree Rules into Neural Networks",
+      "codebase": "https://github.com/lotussavy/IWCMC-2025",
+      "other_links": "https://www.researchgate.net/publication/388686587_Neurosymbolic_AI_for_Travel_Demand_Prediction_Integrating_Decision_Tree_Rules_into_Neural_Networks"
+    },
+    {
+      "paper_id": "rayyan-242083832",
+      "title": "Principled Transfer Learning for Autonomic Systems: A Neuro-Symbolic Vision",
+      "codebase": "https://github.com/hpi-sam"
+    },
+    {
+      "paper_id": "rayyan-242083847",
+      "title": "Semantic probabilistic layers for neuro-symbolic learning",
+      "codebase": "https://github.com/KareemYousrii/SPL"
+    },
+    {
+      "paper_id": "rayyan-242083849",
+      "title": "Neuro-symbolic entropy regularization",
+      "codebase": "https://github.com/UCLA-StarAI/NeSyEntropy"
+    },
+    {
+      "paper_id": "rayyan-242083872",
+      "title": "Towards generalization in subitizing with neuro-symbolic loss using holographic reduced representations",
+      "codebase": "https://github.com/MahmudulAlam/Subitizing"
+    },
+    {
+      "paper_id": "rayyan-242083874",
+      "title": "Recasting Self-Attention with Holographic Reduced Representations",
+      "codebase": "https://github.com/NeuromorphicComputationResearchProgram/Hrrformer"
+    },
+    {
+      "paper_id": "rayyan-242083875",
+      "title": "A Walsh Hadamard Derived Linear Vector Symbolic Architecture",
+      "codebase": "https://github.com/FutureComputing4AI/Hadamard-derived-Linear-Binding"
+    },
+    {
+      "paper_id": "rayyan-242083917",
+      "title": "Neuro-symbolic language modeling with automaton-augmented retrieval",
+      "codebase": "https://github.com/neulab/retomaton"
+    },
+    {
+      "paper_id": "rayyan-242083992",
+      "title": "Learning with Holographic Reduced Representations",
+      "codebase": "https://github.com/FutureComputing4AI/Learning-with-Holographic-Reduced-Representations",
+      "other_links": "https://github.com/FutureComputing4AI/Learning-with-Holographic-Reduced-Representations"
+    },
+    {
+      "paper_id": "rayyan-242083994",
+      "title": "Embed2sym-scalable neuro-symbolic reasoning via clustered embeddings",
+      "codebase": "https://github.com/YanivAspis/Embed2Sym",
+      "other_links": "https://github.com/YanivAspis/Embed2Sym"
+    },
+    {
+      "paper_id": "rayyan-242084040",
+      "title": "Neuro-symbolic AI for compliance checking of electrical control panels",
+      "codebase": "https://github.com/aleqrt/mask-rcnn-api"
+    },
+    {
+      "paper_id": "rayyan-242084066",
+      "title": "Neuro-symbolic rule learning in real-world classification tasks",
+      "codebase": "https://github.com/kittykg/neural-dnf-cub; https://github.com/kittykg/neural-dnf-tmc",
+      "other_links": "https://github.com/kittykg/neural-dnf-cub"
+    },
+    {
+      "paper_id": "rayyan-242084084",
+      "title": "Controllable neural symbolic regression",
+      "codebase": "https://github.com/SymposiumOrganization/ControllableNeuralSymbolicRegression",
+      "other_links": "https://github.com/SymposiumOrganization/ControllableNeuralSymbolicRegression"
+    },
+    {
+      "paper_id": "rayyan-242084132",
+      "title": "Neural symbolic regression that scales",
+      "codebase": "https://github.com/SymposiumOrganization/NeuralSymbolicRegressionThatScales"
+    },
+    {
+      "paper_id": "rayyan-242084274",
+      "title": "Convex and Bilevel Optimization for Neuro-Symbolic Inference and Learning",
+      "codebase": "https://github.com/linqs/dickens-icml24"
+    },
+    {
+      "paper_id": "rayyan-242084305",
+      "title": "Forecasting of nonlinear dynamics based on symbolic invariance",
+      "codebase": "https://github.com/ZhaoChenCivilSciML/Forecasting-of-nonlinear-dynamics-based-on-symbolic-invariance"
+    },
+    {
+      "paper_id": "rayyan-242084328",
+      "title": "CTSketch: Compositional Tensor Sketching for Scalable Neurosymbolic Learning",
+      "codebase": "https://github.com/alaiasolkobreslin/CTSketch"
+    },
+    {
+      "paper_id": "rayyan-242084334",
+      "title": "Learning Symbolic Model-Agnostic Loss Functions via Meta-Learning",
+      "codebase": "https://github.com/Decadz/Evolved-Model-Agnostic-Loss"
+    },
+    {
+      "paper_id": "rayyan-242084343",
+      "title": "pix2rule: End-to-end Neuro-symbolic Rule Learning",
+      "codebase": "https://github.com/nuric/pix2rule"
+    },
+    {
+      "paper_id": "rayyan-242084370",
+      "title": "Neurosynt: A neuro-symbolic portfolio solver for reactive synthesis",
+      "codebase": "https://github.com/reactive-systems/neurosynt"
+    },
+    {
+      "paper_id": "rayyan-242084398",
+      "title": "Vehicle: Bridging the embedding gap in the verification of neuro-symbolic programs",
+      "codebase": "https://github.com/vehicle-lang/vehicle"
+    },
+    {
+      "paper_id": "rayyan-242084478",
+      "title": "Encoding and Decoding of Recursive Structures in Neural-Symbolic Systems",
+      "codebase": "https://github.com/demid5111/ldss-tensor-structures"
+    },
+    {
+      "paper_id": "rayyan-242084482",
+      "title": "Automatic Construction of Tensor Product Variable Binding Neural Networks for Neural-Symbolic Intelligent Systems",
+      "codebase": "https://github.com/demid5111/ldss-tensor-structures"
+    },
+    {
+      "paper_id": "rayyan-242084483",
+      "title": "Exploring Neural Turing Machines Applicability in Neural-Symbolic Decision Support Systems",
+      "codebase": "https://github.com/demid5111/NeuralTuringMachine"
+    },
+    {
+      "paper_id": "rayyan-242084485",
+      "title": "Neuro-Symbolic Class Expression Learning",
+      "codebase": "https://github.com/dice-group/DRILL"
+    },
+    {
+      "paper_id": "rayyan-242084497",
+      "title": "Improving Rule-based Reasoning in LLMs via Neurosymbolic Representations",
+      "codebase": "https://github.com/vdhanraj/Neurosymbolic-LLM"
+    },
+    {
+      "paper_id": "rayyan-242084506",
+      "title": "A Unifying Mathematical Framework for Neural-Symbolic Systems",
+      "codebase": "https://github.com/linqs/dickens-arxiv24"
+    },
+    {
+      "paper_id": "rayyan-242084507",
+      "title": "Modeling patterns for neural-symbolic reasoning using energy-based models",
+      "codebase": "https://github.com/linqs/aaai-make24"
+    },
+    {
+      "paper_id": "rayyan-242084517",
+      "title": "Parameter Choice and Neuro-Symbolic Approaches for Deep Domain-Invariant Learning",
+      "codebase": "https://github.com/Xpitfire/bpda"
+    },
+    {
+      "paper_id": "rayyan-242084582",
+      "title": "Pattern-based engineering of Neurosymbolic AI Systems",
+      "codebase": "https://github.com/michipritz/nesy-asp-vqa-pipeline"
+    },
+    {
+      "paper_id": "rayyan-242084593",
+      "title": "Neuro-Symbolic Continual Learning: Knowledge, Reasoning Shortcuts and Concept Rehearsal",
+      "codebase": "https://github.com/ema-marconato/NeSy-CL"
+    },
+    {
+      "paper_id": "rayyan-242084653",
+      "title": "Towards scalable and model-agnostic neuro-symbolic artificial intelligence",
+      "codebase": "https://github.com/jonathanfeldstein/Concordia; https://github.com/jonathanfeldstein/PRISM; https://github.com/jonathanfeldstein/SPECTRUM; https://github.com/jonathanfeldstein/KnowledgeCompilation; https://github.com/jonathanfeldstein/wfomi"
+    },
+    {
+      "paper_id": "rayyan-242084655",
+      "title": "Parallel neurosymbolic integration with Concordia",
+      "codebase": "https://github.com/jonathanfeldstein/Concordia"
+    },
+    {
+      "paper_id": "rayyan-242084676",
+      "title": "A Neural Lambda Calculus: Neurosymbolic AI meets the foundations of computing and functional programming",
+      "codebase": "https://github.com/jmflach/SymbolicLambda"
+    },
+    {
+      "paper_id": "rayyan-242084765",
+      "title": "A neurosymbolic cognitive architecture framework for handling novelties in open worlds",
+      "codebase": "https://tufts.box.com/s/qeypcyn6xyq60vvm6l0adqu647ltttgw"
+    },
+    {
+      "paper_id": "rayyan-242084766",
+      "title": "OpenCog NS: A Deeply-Interactive Hybrid Neural-Symbolic Cognitive Architecture Designed for Global/Local Memory Synergy",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://cdn.aaai.org/ocs/871/871-4244-1-PB.pdf"
+    },
+    {
+      "paper_id": "rayyan-242084782",
+      "title": "Neuro-Symbolic Embedding for Short and Effective Feature Selection via Autoregressive Generation",
+      "codebase": "https://github.com/NanxuGong/feature-selection-via-autoregreesive-generation",
+      "other_links": "https://dl.acm.org/doi/10.1145/3709011"
+    },
+    {
+      "paper_id": "rayyan-242084798",
+      "title": "On the use of neurosymbolic AI for defending against cyber attacks",
+      "codebase": "https://github.com/FFI-no/Paper-NeSy24",
+      "other_links": "https://arxiv.org/pdf/2408.04996"
+    },
+    {
+      "paper_id": "rayyan-242084825",
+      "title": "ANSR-DT: An Adaptive Neuro-Symbolic Learning and Reasoning Framework for Digital Twins",
+      "codebase": "https://github.com/sbhakim/ansr-dt",
+      "other_links": "https://arxiv.org/pdf/2501.08561"
+    },
+    {
+      "paper_id": "rayyan-242084830",
+      "title": "Adaptive neuro-symbolic network agent",
+      "codebase": "https://github.com/patham9/ANSNA?tab=readme-ov-file",
+      "other_links": "https://cis.temple.edu/tagit/publications/ANSNA.pdf"
+    },
+    {
+      "paper_id": "rayyan-242084851",
+      "title": "CoNSoLe: Convex Neural Symbolic Learning",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://arxiv.org/pdf/2206.00257"
+    },
+    {
+      "paper_id": "rayyan-242084864",
+      "title": "A Neuro-Symbolic Framework for Tree Crown Delineation and Tree Species Classification",
+      "codebase": "https://github.com/ihmn02/forest_ecology_neuro_symbolic_framework?tab=readme-ov-file"
+    },
+    {
+      "paper_id": "rayyan-242084886",
+      "title": "NeuroSymAD: A Neuro-Symbolic Framework for Interpretable Alzheimer's Disease Diagnosis",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://www.arxiv.org/pdf/2503.00510"
+    },
+    {
+      "paper_id": "rayyan-242084899",
+      "title": "A neuro-vector-symbolic architecture for solving Raven's progressive matrices",
+      "codebase": "https://github.com/IBM/raven-large-language-models; https://github.com/IBM/neuro-vector-symbolic-architectures",
+      "other_links": "https://github.com/IBM/raven-large-language-models; https://github.com/IBM/neuro-vector-symbolic-architectures"
+    },
+    {
+      "paper_id": "rayyan-242084906",
+      "title": "Towards a fully declarative neuro-symbolic language",
+      "codebase": "https://github.com/THinnerichs/Declarative-DeepProblog"
+    },
+    {
+      "paper_id": "rayyan-242084907",
+      "title": "Optimal quadratic binding for relational reasoning in vector symbolic neural architectures",
+      "codebase": "https://github.com/nhiratani/quadratic_binding",
+      "other_links": "https://github.com/nhiratani/quadratic_binding; https://arxiv.org/pdf/2204.07186"
+    },
+    {
+      "paper_id": "rayyan-242084922",
+      "title": "SymbolNet: Neural Symbolic Regression with Adaptive Dynamic Pruning",
+      "codebase": "https://github.com/hftsoi/SymbolNet",
+      "other_links": "https://github.com/hftsoi/SymbolNet; https://arxiv.org/pdf/2401.09949"
+    },
+    {
+      "paper_id": "rayyan-242084931",
+      "title": "An insect-inspired randomly, weighted neural network with random fourier features for neuro-symbolic relational learning",
+      "codebase": "https://github.com/jyhong0304/SII",
+      "other_links": "https://github.com/jyhong0304/SII; https://arxiv.org/pdf/2109.06663"
+    },
+    {
+      "paper_id": "rayyan-242084944",
+      "title": "Neurocomparatives: Neuro-symbolic distillation of comparative knowledge",
+      "codebase": "https://github.com/IntelLabs/multimodal_cognitive_ai/tree/main/NeuroComparatives",
+      "data": "https://huggingface.co/datasets/Intel/NeuroComparatives"
+    },
+    {
+      "paper_id": "rayyan-242085029",
+      "title": "KLay: Accelerating Arithmetic Circuits for Neurosymbolic AI",
+      "codebase": "https://github.com/ML-KULeuven/klay",
+      "other_links": "https://github.com/ML-KULeuven/klay"
+    },
+    {
+      "paper_id": "rayyan-242085043",
+      "title": "Verification Learning: Make Unsupervised Neuro-Symbolic System Feasible",
+      "codebase": "https://github.com/VerificationLearning/VerificationLearning",
+      "other_links": "https://github.com/VerificationLearning/VerificationLearning"
+    },
+    {
+      "paper_id": "rayyan-242085047",
+      "title": "Generative neurosymbolic machines",
+      "codebase": "https://github.com/JindongJiang/GNM",
+      "other_links": "https://github.com/JindongJiang/GNM"
+    },
+    {
+      "paper_id": "rayyan-242085060",
+      "title": "A Neural Symbolic Model for Space Physics",
+      "codebase": "https://github.com/Jie0618/PhysicsRegression",
+      "other_links": "https://github.com/Jie0618/PhysicsRegression"
+    },
+    {
+      "paper_id": "rayyan-242085078",
+      "title": "Invariants for neural automata",
+      "codebase": "https://github.com/TuringMachinegun/Turing_Neural_Networks",
+      "other_links": "https://github.com/TuringMachinegun/Turing_Neural_Networks"
+    },
+    {
+      "paper_id": "rayyan-242085146",
+      "title": "A Neurosymbolic Fast and Slow Architecture for Graph Coloring",
+      "codebase": "https://github.com/khvedant02/CSP-SOFAI-Instance",
+      "other_links": "https://arxiv.org/abs/2412.01752; https://github.com/khvedant02/CSP-SOFAI-Instance"
+    },
+    {
+      "paper_id": "rayyan-242085185",
+      "title": "Formal verification of parameterised neural-symbolic multi-agent systems",
+      "codebase": "https://github.com/NeuralMAS/venmas",
+      "other_links": "https://www.ijcai.org/proceedings/2024/0012.pdf; https://ceur-ws.org/Vol-3819/short1.pdf; https://github.com/NeuralMAS/venmas"
+    },
+    {
+      "paper_id": "rayyan-242085213",
+      "title": "A Probabilistic Neuro-symbolic Layer for Algebraic Constraint Satisfaction",
+      "codebase": "https://github.com/april-tools/pal"
+    },
+    {
+      "paper_id": "rayyan-242085276",
+      "title": "NEURAL-SYMBOLIC RECURSIVE MACHINE FOR SYSTEMATIC GENERALIZATION",
+      "codebase": "https://github.com/liqing-ustc/nsr",
+      "other_links": "https://par.nsf.gov/servlets/purl/10561839; https://arxiv.org/pdf/2210.01603; https://github.com/liqing-ustc/nsr; https://liqing.io/NSR/"
+    },
+    {
+      "paper_id": "rayyan-242085280",
+      "title": "Symbolic Neural Ordinary Differential Equations",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://arxiv.org/pdf/2503.08059; https://ojs.aaai.org/index.php/AAAI/article/view/34037"
+    },
+    {
+      "paper_id": "rayyan-242085286",
+      "title": "Scallop: A language for neurosymbolic programming",
+      "codebase": "https://github.com/scallop-lang/scallop",
+      "other_links": "https://arxiv.org/pdf/2304.04812; https://github.com/scallop-lang/scallop"
+    },
+    {
+      "paper_id": "rayyan-242085292",
+      "title": "SOFTENED SYMBOL GROUNDING FOR NEUROSYMBOLIC SYSTEMS",
+      "codebase": "https://github.com/SoftWiser-group/Soften-NeSy-learning",
+      "other_links": "https://arxiv.org/abs/2403.00323; https://github.com/SoftWiser-group/Soften-NeSy-learning"
+    },
+    {
+      "paper_id": "rayyan-242085325",
+      "title": "Out-of-distribution generalization by neural-symbolic joint training",
+      "codebase": "https://github.com/sbx126/NToC",
+      "other_links": "https://github.com/sbx126/NToC"
+    },
+    {
+      "paper_id": "rayyan-242085333",
+      "title": "Physics-guided symbolic neural network reveals optimal functional forms describing ground motions",
+      "codebase": "https://github.com/Xianwei-Liu/PGSNN",
+      "other_links": "https://github.com/Xianwei-Liu/PGSNN"
+    },
+    {
+      "paper_id": "rayyan-242085346",
+      "title": "The KANDY Benchmark: Incremental Neuro-Symbolic Learning and Reasoning with Kandinsky Patterns",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://github.com"
+    },
+    {
+      "paper_id": "rayyan-242085347",
+      "title": "A Neuro-Symbolic Framework for Sequence Classification with Relational and Temporal Knowledge",
+      "codebase": "https://github.com/continual-nesy/LTLZinc",
+      "other_links": "https://github.com/continual-nesy/LTLZinc"
+    },
+    {
+      "paper_id": "rayyan-242085367",
+      "title": "DANA: Domain-Aware Neurosymbolic Agents for Consistency and Accuracy",
+      "codebase": "https://github.com/aitomatic/openssa/blob/main/openssa/core/agent/dana.py",
+      "other_links": "https://github.com/aitomatic/openssa/blob/main/openssa/core/agent/dana.py"
+    },
+    {
+      "paper_id": "rayyan-242085427",
+      "title": "LARS-VSA: A Vector Symbolic Architecture For Learning with Abstract Rules",
+      "codebase": "https://github.com/mmejri3/LARS-VSA",
+      "other_links": "https://github.com/mmejri3/LARS-VSA"
+    },
+    {
+      "paper_id": "rayyan-242085456",
+      "title": "JAX-DIPS: Neural bootstrapping of finite discretization methods and application to elliptic problems with discontinuities",
+      "codebase": "https://github.com/JAX-DIPS/JAX-DIPS",
+      "other_links": "https://github.com/JAX-DIPS/JAX-DIPS"
+    },
+    {
+      "paper_id": "rayyan-242085484",
+      "title": "Modular design patterns for neural-symbolic integration: refinement and combination",
+      "codebase": "https://github.com/spechub/Hets",
+      "other_links": "https://github.com/spechub/Hets"
+    },
+    {
+      "paper_id": "rayyan-242085511",
+      "title": "Symbolic processing in neural networks",
+      "codebase": "https://www.di.fc.ul.pt/~jpn/netdef/netdef.htm"
+    },
+    {
+      "paper_id": "rayyan-242085536",
+      "title": "Neuro-Symbolic AI for Analytical Solutions of Differential Equations",
+      "codebase": "https://github.com/camlab-ethz/LoDE",
+      "other_links": "https://github.com/camlab-ethz/LoDE"
+    },
+    {
+      "paper_id": "rayyan-242085549",
+      "title": "NESSY3L: a neurosymbolic system with 3 levels",
+      "codebase": "https://github.com/eXascaleInfolab/Nessy_RE",
+      "other_links": "https://github.com/eXascaleInfolab/Nessy_RE; https://ieeexplore.ieee.org/document/9860090/media#media; https://pure.tudelft.nl/ws/portalfiles/portal/155838874/Nessy_A_Neuro_Symbolic_System_for_Label_Noise_Reduction.pdf"
+    },
+    {
+      "paper_id": "rayyan-242085560",
+      "title": "Hands-On Interactive Neuro-Symbolic NLP with DRaiL",
+      "codebase": "https://gitlab.com/purdueNlp/DRaiL; https://blast-cu.github.io/publications/",
+      "other_links": "https://gitlab.com/purdueNlp/DRaiL; https://aclanthology.org/2022.emnlp-demos.37/"
+    },
+    {
+      "paper_id": "rayyan-242085579",
+      "title": "Discrete Dictionary-based Decomposition Layer for Structured Representation Learning",
+      "codebase": "Codebase information not available in notes"
+    },
+    {
+      "paper_id": "rayyan-242085584",
+      "title": "Compositional Generalization Across Distributional Shifts with Sparse Tree Operations",
+      "codebase": "https://github.com/psoulos/sdtm",
+      "other_links": "https://github.com/psoulos/sdtm"
+    },
+    {
+      "paper_id": "rayyan-242085608",
+      "title": "NeST: The Neuro-Symbolic Transpiler",
+      "codebase": "https://github.com/vektordev/haskell-dppl",
+      "other_links": "https://github.com/vektordev/haskell-dppl"
+    },
+    {
+      "paper_id": "rayyan-242085610",
+      "title": "Enhancing Neuro-Symbolic Integration with Focal Loss: A Study on Logic Tensor Networks",
+      "codebase": "https://github.com/MalumaDev/FocalLTN",
+      "other_links": "https://link.springer.com/chapter/10.1007/978-3-031-71170-1_2; https://github.com/MalumaDev/FocalLTN"
+    },
+    {
+      "paper_id": "rayyan-242085624",
+      "title": "Accelerating UMR adoption: Neuro-symbolic conversion from AMR-to-UMR with low supervision",
+      "codebase": "https://github.com/clairepost/AMRtoUMR"
+    },
+    {
+      "paper_id": "rayyan-242085638",
+      "title": "Neuro-symbolic Training for Reasoning over Spatial Language",
+      "codebase": "https://github.com/HLR/SpaRTUNQChain",
+      "other_links": "https://aclanthology.org/2025.findings-naacl.128/; https://arxiv.org/pdf/2406.13828; https://github.com/HLR/SpaRTUNQChain"
+    },
+    {
+      "paper_id": "rayyan-242085673",
+      "title": "Experimenting an approach to Neuro-Symbolic RL",
+      "codebase": "https://github.com/AAAI-DISIM-UnivAQ/Neural-Logic-Reinforcement-Learning",
+      "other_links": "https://github.com/AAAI-DISIM-UnivAQ/Neural-Logic-Reinforcement-Learning"
+    },
+    {
+      "paper_id": "rayyan-242085763",
+      "title": "TinyNS: Platform-aware neurosymbolic auto tiny machine learning",
+      "codebase": "https://github.com/nesl/neurosymbolic-tinyml",
+      "other_links": "https://dl.acm.org/doi/full/10.1145/3603171; https://github.com/nesl/neurosymbolic-tinyml"
+    },
+    {
+      "paper_id": "rayyan-242085796",
+      "title": "Symbolic neural architecture search for differential equations",
+      "codebase": "https://github.com/PauliusSasnauskas/sasde",
+      "other_links": "https://github.com/PauliusSasnauskas/sasde"
+    },
+    {
+      "paper_id": "rayyan-242085818",
+      "title": "Causality Prediction with Neural-Symbolic Systems: A Case Study in Smart Grids",
+      "codebase": "https://github.com/Kat-rin-sc/ExpCPSKGE",
+      "other_links": "https://github.com/Kat-rin-sc/ExpCPSKGE"
+    },
+    {
+      "paper_id": "rayyan-242085900",
+      "title": "Nessy: A neuro-symbolic system for label noise reduction",
+      "codebase": "https://github.com/eXascaleInfolab/Nessy_RE",
+      "other_links": "https://github.com/eXascaleInfolab/Nessy_RE"
+    },
+    {
+      "paper_id": "rayyan-242085916",
+      "title": "A symbolic neural network representation and its application to understanding, verifying, and patching networks",
+      "codebase": "https://github.com/95616ARG/SyReNN",
+      "other_links": "https://github.com/95616ARG/SyReNN"
+    },
+    {
+      "paper_id": "rayyan-242085933",
+      "title": "Right for the right concept: Revising neuro-symbolic concepts by interacting with their explanations",
+      "codebase": "https://github.com/mlresearch/NeSyXIL",
+      "other_links": "https://github.com/mlresearch/NeSyXIL"
+    },
+    {
+      "paper_id": "rayyan-242086082",
+      "title": "Neural-symbolic reasoning under open-world and closed-world assumptions",
+      "codebase": "https://github.com/benediktwagner/ltn-reasoning",
+      "other_links": "https://github.com/benediktwagner/ltn-reasoning"
+    },
+    {
+      "paper_id": "rayyan-242086108",
+      "title": "Rapid image labeling via neuro-symbolic learning",
+      "codebase": "https://github.com/Neural-Symbolic-Image-Labeling/Rapid"
+    },
+    {
+      "paper_id": "rayyan-242086134",
+      "title": "PruneSymNet: A Symbolic Neural Network and Pruning Algorithm for Symbolic Regression",
+      "codebase": "https://github.com/wumin86/PruneSymNet",
+      "other_links": "https://github.com/wumin86/PruneSymNet"
+    },
+    {
+      "paper_id": "rayyan-242086137",
+      "title": "MILE: Memory-Interactive Learning Engine for Neuro-Symbolic Solutions to Mathematical Problems",
+      "codebase": "https://github.com/evan-ak/mile",
+      "other_links": "https://github.com/evan-ak/mile"
+    },
+    {
+      "paper_id": "rayyan-242086148",
+      "title": "Neuro-symbolic verification of deep neural networks",
+      "codebase": "https://github.com/LebronX/Neuro-Symbolic-Verification",
+      "other_links": "https://github.com/LebronX/Neuro-Symbolic-Verification"
+    },
+    {
+      "paper_id": "rayyan-242086236",
+      "title": "An interpretable neuro-symbolic model for raven's progressive matrices reasoning",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://github.com"
+    },
+    {
+      "paper_id": "rayyan-242083967",
+      "title": "A Neuro-Symbolic Approach for Fault Diagnosis in Smart Power Grids",
+      "codebase": "https://github.com/faravanis/PCI_2022"
+    },
+    {
+      "paper_id": "rayyan-242084306",
+      "title": "Symbolic Deep Learning for Structural System Identification",
+      "codebase": "https://github.com/ZhaoChenCivilSciML/Symbolic-Neural-Net-for-Structural-Identification"
+    },
+    {
+      "paper_id": "rayyan-242084591",
+      "title": "Shadow of the (Hierarchical) Tree: Reconciling Symbolic and Predictive Components of the Neural Code for Syntax",
+      "codebase": "https://github.com/ElliotMurphy91/ROSE",
+      "other_links": "https://doi.org/10.1080/17588928.2025.2523875; https://github.com/ElliotMurphy91/ROSE"
+    },
+    {
+      "paper_id": "rayyan-242083960",
+      "title": "Empirical investigation of neural symbolic reasoning strategies",
+      "codebase": "https://github.com/ao1neko/reasoning-strategy"
+    },
+    {
+      "paper_id": "rayyan-242084301",
+      "title": "Integrating Symbolic Neural Networks with Building Physics: A Study and Proposal",
+      "codebase": "https://github.com/chenxiachan/KAN_inversed_problem"
+    }
+  ],
+  "Cluster_3_Graph_Enhanced_Knowle": [
+    {
+      "paper_id": "rayyan-242083766",
+      "title": "UnRavL: A Neuro-Symbolic Framework for Answering Graph Pattern Queries in Knowledge Graphs",
+      "codebase": "https://github.com/TamaraCucumides/UnRavL"
+    },
+    {
+      "paper_id": "rayyan-242083838",
+      "title": "Fast and scalable learning of neuro-symbolic representations of biomedical knowledge",
+      "codebase": "https://github.com/matthias-samwald/Fast-and-scalable-neural-embedding-models-for-biomedical-sentence-classification"
+    },
+    {
+      "paper_id": "rayyan-242083861",
+      "title": "Psychic: A neuro-symbolic framework for knowledge graph question-answering grounding",
+      "codebase": "Code requested/not yet available",
+      "data": "https://huggingface.co/HannaAbiAkl/psychic"
+    },
+    {
+      "paper_id": "rayyan-242083885",
+      "title": "Knowledge Enhanced Neural Networks for relational domains",
+      "codebase": "https://github.com/DanieleAlessandro/KENN2",
+      "other_links": "https://github.com/DanieleAlessandro/KENN2"
+    },
+    {
+      "paper_id": "rayyan-242083919",
+      "title": "Neuro-symbolic representation learning on biological knowledge graphs",
+      "codebase": "https://github.com/bio-ontology-research-group/walking-rdf-and-owl"
+    },
+    {
+      "paper_id": "rayyan-242083921",
+      "title": "Prioritizing genomic variants through neuro-symbolic, knowledge-enhanced learning",
+      "codebase": "https://github.com/bio-ontology-research-group/EmbedPVP"
+    },
+    {
+      "paper_id": "rayyan-242084037",
+      "title": "Neural-Symbolic Recommendation with Graph-Enhanced Information",
+      "codebase": "https://github.com/hanzo2020/GNNLR"
+    },
+    {
+      "paper_id": "rayyan-242084082",
+      "title": "Temporal Reasoning on Implicit Events from Distant Supervision",
+      "codebase": "https://github.com/allenai/tracie",
+      "other_links": "https://github.com/allenai/tracie"
+    },
+    {
+      "paper_id": "rayyan-242084128",
+      "title": "Complementing Logical Reasoning with Sub-symbolic Commonsense",
+      "codebase": "https://github.com/vinid/logical_commonsense"
+    },
+    {
+      "paper_id": "rayyan-242084143",
+      "title": "Deep Node Ranking for Neuro-symbolic Structural Node Embedding and Classification",
+      "codebase": "https://github.com/benedekrozemberczki/GraphWaveMachine"
+    },
+    {
+      "paper_id": "rayyan-242084226",
+      "title": "SenticNet 7: A Commonsense-based Neurosymbolic AI Framework for Explainable Sentiment Analysis",
+      "codebase": "https://github.com/senticnet"
+    },
+    {
+      "paper_id": "rayyan-242084246",
+      "title": "Mitigating data sparsity via neuro-symbolic knowledge transfer",
+      "codebase": "https://github.com/tommasocarraro/NESYKnowledgeTransfer",
+      "other_links": "https://github.com/tommasocarraro/NESYKnowledgeTransfer"
+    },
+    {
+      "paper_id": "rayyan-242084473",
+      "title": "Mars: A neurosymbolic approach for interpretable drug discovery",
+      "codebase": "https://github.com/laurendelong21/MARS"
+    },
+    {
+      "paper_id": "rayyan-242084527",
+      "title": "An energy-based model for neuro-symbolic reasoning on knowledge graphs",
+      "codebase": "https://github.com/dodo47/cyberML"
+    },
+    {
+      "paper_id": "rayyan-242084529",
+      "title": "Bringing Back Semantics to Knowledge Graph Embeddings: An Interpretability Approach",
+      "codebase": "https://github.com/toniodo/InterpretE"
+    },
+    {
+      "paper_id": "rayyan-242084538",
+      "title": "Unveiling implicit deceptive patterns in multi-modal fake news via neuro-symbolic reasoning",
+      "codebase": "https://github.com/hedongxiao-tju/NSLM"
+    },
+    {
+      "paper_id": "rayyan-242084547",
+      "title": "Neuro-symbolic XAI: Application to drug repurposing for rare diseases",
+      "codebase": "Codebase information not available in notes"
+    },
+    {
+      "paper_id": "rayyan-242084567",
+      "title": "Neuro-symbolic deductive reasoning for cross-knowledge graph entailment",
+      "codebase": "https://github.com/Monireh2/kg-deductive-reasoner"
+    },
+    {
+      "paper_id": "rayyan-242084614",
+      "title": "Learning Semantic Association Rules from Internet of Things Data",
+      "codebase": "https://github.com/DiTEC-project/semantic-association-rule-learning"
+    },
+    {
+      "paper_id": "rayyan-242084615",
+      "title": "Neurosymbolic Association Rule Mining from Tabular Data",
+      "codebase": "https://github.com/DiTEC-project/pyaerial"
+    },
+    {
+      "paper_id": "rayyan-242084621",
+      "title": "Neural-Symbolic Ensemble Learning for early-stage prediction of critical state of Covid-19 patients",
+      "codebase": "https://cplint.eu/e/phil/phil_examples.swinb"
+    },
+    {
+      "paper_id": "rayyan-242084656",
+      "title": "Principled and Efficient Motif Finding for Structure Learning of Lifted Graphical Models",
+      "codebase": "https://github.com/jonathanfeldstein/PRISM"
+    },
+    {
+      "paper_id": "rayyan-242084682",
+      "title": "Fast relational learning using bottom clause propositionalization with artificial neural networks",
+      "codebase": "https://github.com/vakker/CILP/tree/master"
+    },
+    {
+      "paper_id": "rayyan-242084722",
+      "title": "NSSC: a neuro-symbolic AI system for enhancing accuracy of named entity recognition and linking from oncologic clinical notes",
+      "codebase": "https://github.com/SDM-TIB/NSSC",
+      "other_links": "https://github.com/SDM-TIB/NSSC"
+    },
+    {
+      "paper_id": "rayyan-242084753",
+      "title": "MultiPredGO: Deep Multi-Modal Protein Function Prediction by Amalgamating Protein Structure, Sequence, and Interaction Information",
+      "codebase": "https://github.com/SwagarikaGiri/Multi-PredGO"
+    },
+    {
+      "paper_id": "rayyan-242084758",
+      "title": "Neural Markov Logic Networks",
+      "codebase": "https://github.com/GiuseppeMarra/nmln/tree/uai2021"
+    },
+    {
+      "paper_id": "rayyan-242084761",
+      "title": "Chebifier: automating semantic classification in ChEBI to accelerate data-driven discovery",
+      "codebase": "https://github.com/ChEB-AI",
+      "other_links": "https://chebifier.hastingslab.org/; https://pmc.ncbi.nlm.nih.gov/articles/PMC11094693/"
+    },
+    {
+      "paper_id": "rayyan-242084762",
+      "title": "Ontology Pre-training for Poison Prediction",
+      "codebase": "https://github.com/ChEB-AI/python-chebai",
+      "other_links": "https://arxiv.org/pdf/2301.08577"
+    },
+    {
+      "paper_id": "rayyan-242084800",
+      "title": "Perform Like an Engine: A Closed-Loop Neural-Symbolic Learning Framework for Knowledge Graph Inference",
+      "codebase": "https://github.com/ngl567/EngineKG",
+      "other_links": "https://arxiv.org/pdf/2112.01040"
+    },
+    {
+      "paper_id": "rayyan-242084841",
+      "title": "LNN-EL: A Neuro-Symbolic Approach to Short-text Entity Linking",
+      "codebase": "https://github.com/IBM/LNN; https://ibm.github.io/LNN/",
+      "other_links": "https://arxiv.org/pdf/2106.09795"
+    },
+    {
+      "paper_id": "rayyan-242084842",
+      "title": "Rethinking Complex Queries on Knowledge Graphs with Neural Link Predictors",
+      "codebase": "https://github.com/HKUST-KnowComp/FIT",
+      "other_links": "https://arxiv.org/pdf/2304.07063"
+    },
+    {
+      "paper_id": "rayyan-242084862",
+      "title": "ELLEN: Extremely Lightly Supervised Learning For Efficient Named Entity Recognition",
+      "codebase": "https://github.com/hriaz17/ELLEN",
+      "other_links": "https://arxiv.org/pdf/2403.17385"
+    },
+    {
+      "paper_id": "rayyan-242084941",
+      "title": "NeSyDPP4-QSAR: A Neuro-Symbolic AI Approach for Potent DPP-4-Inhibitor Discovery in Diabetes Treatment",
+      "codebase": "https://github.com/hossain013/NeSyDPP4-QSAR",
+      "other_links": "https://github.com/hossain013/NeSyDPP4-QSAR"
+    },
+    {
+      "paper_id": "rayyan-242084969",
+      "title": "Relation Aware Neural-Symbolic Models for Logical Queries on Knowledge Graphs",
+      "codebase": "Not Available ",
+      "other_links": "https://github.com/DeepGraphLearning/GNN-QE"
+    },
+    {
+      "paper_id": "rayyan-242084970",
+      "title": "Sequential Recommendation with Probabilistic Logical Reasoning",
+      "codebase": "https://github.com/Huanhuaneryuan/SR-PLR",
+      "other_links": "https://github.com/Huanhuaneryuan/SR-PLR"
+    },
+    {
+      "paper_id": "rayyan-242084981",
+      "title": "FB15k-CVT: A Challenging Dataset for Knowledge Graph Embedding Models",
+      "codebase": "https://github.com/miferroudjene/FB15k-CVT",
+      "other_links": "https://github.com/miferroudjene/FB15k-CVT"
+    },
+    {
+      "paper_id": "rayyan-242084982",
+      "title": "Self-Supervised Rule Learning to Link Text Segments to Relational Elements of Structured Knowledge",
+      "codebase": "https://github.com/IBM/self-supervised-rule-learning",
+      "other_links": "https://github.com/IBM/self-supervised-rule-learning"
+    },
+    {
+      "paper_id": "rayyan-242084992",
+      "title": "Systematic Relational Reasoning With Epistemic Graph Neural Networks",
+      "codebase": "https://github.com/erg0dic/gnn-sg",
+      "other_links": "https://github.com/erg0dic/gnn-sg"
+    },
+    {
+      "paper_id": "rayyan-242084995",
+      "title": "NeuSTIP: A Novel Neuro-Symbolic Model for Link and Time Prediction in Temporal Knowledge Graphs",
+      "codebase": "https://github.com/dair-iitd/NeuSTIP",
+      "other_links": "https://github.com/dair-iitd/NeuSTIP"
+    },
+    {
+      "paper_id": "rayyan-242085013",
+      "title": "ReOnto: A neuro-symbolic approach for biomedical relation extraction",
+      "codebase": "https://github.com/kracr/reonto-relation-extraction",
+      "other_links": "https://github.com/kracr/reonto-relation-extraction"
+    },
+    {
+      "paper_id": "rayyan-242085145",
+      "title": "A domain-agnostic neurosymbolic approach for big social data analysis: Evaluating mental health sentiment on social media during covid-19",
+      "codebase": "https://github.com/khvedant02/Neurosymbolic-Mental-Health-Monitoring-COVID19",
+      "other_links": "https://arxiv.org/pdf/2411.07163; https://ieeexplore.ieee.org/document/10825174; https://github.com/khvedant02/Neurosymbolic-Mental-Health-Monitoring-COVID19"
+    },
+    {
+      "paper_id": "rayyan-242085147",
+      "title": "NeuroLit Navigator: A Neurosymbolic Approach to Scholarly Article Searches for Systematic Reviews",
+      "codebase": "https://github.com/tdurieux/anonymous_github"
+    },
+    {
+      "paper_id": "rayyan-242085203",
+      "title": "Semantic similarity and machine learning with ontologies",
+      "codebase": "https://github.com/bio-ontology-research-group/machine-learning-with-ontologies",
+      "other_links": "https://github.com/bio-ontology-research-group/machine-learning-with-ontologies"
+    },
+    {
+      "paper_id": "rayyan-242085204",
+      "title": "Protein function prediction as approximate semantic entailment",
+      "codebase": "https://github.com/bio-ontology-research-group/deepgo2",
+      "other_links": "https://github.com/bio-ontology-research-group/deepgo2"
+    },
+    {
+      "paper_id": "rayyan-242085326",
+      "title": "Interpretable Multimodal Misinformation Detection with Logic Reasoning",
+      "codebase": "https://github.com/less-and-less-bugs/LogicMD",
+      "other_links": "https://github.com/less-and-less-bugs/LogicMD"
+    },
+    {
+      "paper_id": "rayyan-242085344",
+      "title": "PerceptSent - Exploring Subjectivity in a Novel Dataset for Visual Sentiment Analysis",
+      "codebase": "https://github.com/ceslop84/perceptsent",
+      "other_links": "https://github.com/ceslop84/perceptsent"
+    },
+    {
+      "paper_id": "rayyan-242085393",
+      "title": "Neuro-Symbolic Recommendation Model based on Logic Query",
+      "codebase": "https://github.com/hanzo2020/NLQ",
+      "other_links": "https://github.com/hanzo2020/NLQ"
+    },
+    {
+      "paper_id": "rayyan-242085410",
+      "title": "Relational reasoning networks",
+      "codebase": "https://github.com/diligmic/R2N_KBS2024",
+      "other_links": "https://github.com/diligmic/R2N_KBS2024"
+    },
+    {
+      "paper_id": "rayyan-242085581",
+      "title": "NeuroSym-BioCAT: Leveraging Neuro-Symbolic Methods for Biomedical Scholarly Document Categorization and Question Answering",
+      "codebase": "https://github.com/zparvez2z/NeuroSym-BioCAT",
+      "other_links": "https://github.com/zparvez2z/NeuroSym-BioCAT"
+    },
+    {
+      "paper_id": "rayyan-242085583",
+      "title": "Pauk at semeval-2024 task 4: A neuro-symbolic method for consistent classification of propaganda techniques in memes",
+      "codebase": "https://github.com/mappauk/Neuro-Symbolic-Final-Project",
+      "other_links": "https://github.com/mappauk/Neuro-Symbolic-Final-Project"
+    },
+    {
+      "paper_id": "rayyan-242085607",
+      "title": "Knowledge-Based Dataset for Training PE Malware Detection Models",
+      "codebase": "https://github.com/orbis-security/pe-malware-ontology",
+      "other_links": "https://arxiv.org/pdf/2301.00153; https://github.com/orbis-security/pe-malware-ontology"
+    },
+    {
+      "paper_id": "rayyan-242085609",
+      "title": "GNNQ: A neuro-symbolic approach to query answering over incomplete knowledge graphs",
+      "codebase": "https://github.com/KRR-Oxford/GNNQ",
+      "other_links": "https://github.com/KRR-Oxford/GNNQ"
+    },
+    {
+      "paper_id": "rayyan-242085655",
+      "title": "Enhancing Medical Knowledge Discovery: A Neuro-symbolic System for Inductive Learning over Medical KGs",
+      "codebase": "https://github.com/SDM-TIB/KOSMOS",
+      "other_links": "https://dl.acm.org/doi/abs/10.1145/3701551.3708814?download=true; https://github.com/SDM-TIB/KOSMOS"
+    },
+    {
+      "paper_id": "rayyan-242085714",
+      "title": "A neuro-symbolic system over knowledge graphs for link prediction",
+      "codebase": "https://github.com/arivasm/Neuro-Symbolic_Treatment-Response",
+      "other_links": "https://github.com/arivasm/Neuro-Symbolic_Treatment-Response; https://www.semantic-web-journal.net/system/files/swj3203.pdf"
+    },
+    {
+      "paper_id": "rayyan-242085718",
+      "title": "Best of Both Worlds: A Pliable and Generalizable Neuro-Symbolic Approach for Relation Classification",
+      "codebase": "https://github.com/hriaz17/softrules; https://hriaz17.github.io/publications/",
+      "other_links": "https://www.cs.jhu.edu/~kevinduh/t/naacl24/final_pdf/paper626.pdf; https://github.com/hriaz17/softrules"
+    },
+    {
+      "paper_id": "rayyan-242085775",
+      "title": "BioLinkerAI: Leveraging LLMs to Improve Biomedical Entity Linking and Knowledge Capture",
+      "codebase": "https://github.com/SDM-TIB/BioLinkerAI",
+      "other_links": "https://dl.acm.org/doi/10.1145/3701551.3708812"
+    },
+    {
+      "paper_id": "rayyan-242085815",
+      "title": "Scaling Scientific Knowledge Discovery with Neuro-Symbolic AI and Large Language Models",
+      "codebase": "https://github.com/d1egoprog/KG-SLR4LLM",
+      "other_links": "https://github.com/d1egoprog/KG-SLR4LLM"
+    },
+    {
+      "paper_id": "rayyan-242085925",
+      "title": "Recommender systems based on neuro-symbolic knowledge graph embeddings encoding first-order logic rules",
+      "codebase": "https://github.com/swapUniba/KARS_NeSy_KGE_with_FOL_rules",
+      "other_links": "https://github.com/swapUniba/KARS_NeSy_KGE_with_FOL_rules"
+    },
+    {
+      "paper_id": "rayyan-242085926",
+      "title": "Exploiting Neuro-Symbolic Graph Embeddings based on First-Order Logical Rules for Knowledge-aware Recommendations",
+      "codebase": "https://github.com/giuspillo/RepoNeSyRecSys2022"
+    },
+    {
+      "paper_id": "rayyan-242085927",
+      "title": "Knowledge-aware recommendations based on neuro-symbolic graph embeddings and first-order logical rules",
+      "codebase": "https://github.com/swapUniba/Deep_CBRS_Amar",
+      "other_links": "https://github.com/swapUniba/Deep_CBRS_Amar"
+    },
+    {
+      "paper_id": "rayyan-242085939",
+      "title": "Differentiable Fuzzy Neural Networks for Recommender Systems",
+      "codebase": "https://github.com/stephba/diff-fnn",
+      "other_links": "https://github.com/stephba/diff-fnn"
+    },
+    {
+      "paper_id": "rayyan-242085956",
+      "title": "A Hybrid Probabilistic Approach for Table Understanding",
+      "codebase": "https://github.com/kianasun/table-understanding-system",
+      "other_links": "https://github.com/kianasun/table-understanding-system"
+    },
+    {
+      "paper_id": "rayyan-242085980",
+      "title": "Rule: neural-symbolic knowledge graph reasoning with rule embedding",
+      "codebase": "https://github.com/XiaojuanTang/RulE",
+      "other_links": "https://github.com/XiaojuanTang/RulE"
+    },
+    {
+      "paper_id": "rayyan-242086100",
+      "title": "DeepMiR2GO: Inferring Functions of Human MicroRNAs Using a Deep Multi-Label Classification Model",
+      "codebase": "https://github.com/JChander/DeepMiR2GO",
+      "other_links": "https://github.com/JChander/DeepMiR2GO"
+    },
+    {
+      "paper_id": "rayyan-242086145",
+      "title": "CAFE: Coarse-to-fine neural symbolic reasoning for explainable recommendation",
+      "codebase": "https://github.com/orcax/CAFÉ",
+      "other_links": "https://github.com/orcax/PGPR"
+    },
+    {
+      "paper_id": "rayyan-242086160",
+      "title": "Neural-symbolic entangled framework for complex query answering",
+      "codebase": "https://github.com/zjukg/ENeSy",
+      "other_links": "https://github.com/zjukg/ENeSy"
+    },
+    {
+      "paper_id": "rayyan-242086163",
+      "title": "ONSEP: A Novel Online Neural-Symbolic Framework for Event Prediction Based on Large Language Model",
+      "codebase": "https://github.com/aqSeabiscuit/ONSEP",
+      "other_links": "https://github.com/aqSeabiscuit/ONSEP"
+    },
+    {
+      "paper_id": "rayyan-242086228",
+      "title": "Neuro-symbolic interpretable collaborative filtering for attribute-based recommendation",
+      "codebase": "https://github.com/EdmundYanJ/NS-ICF",
+      "other_links": "https://github.com/EdmundYanJ/NS-ICF"
+    },
+    {
+      "paper_id": "rayyan-242086230",
+      "title": "SenticVec: Toward robust and human-centric neurosymbolic sentiment analysis",
+      "codebase": "https://github.com/senticnet/senticvec",
+      "other_links": "https://github.com/senticnet/senticvec"
+    },
+    {
+      "paper_id": "rayyan-242086239",
+      "title": "Neural-Symbolic Models for Logical Queries on Knowledge Graphs",
+      "codebase": "https://github.com/DeepGraphLearning/GNN-QE",
+      "other_links": "https://github.com/DeepGraphLearning/GNN-QE"
+    },
+    {
+      "paper_id": "rayyan-242086242",
+      "title": "Low-Dimensional Hyperbolic Knowledge Graph Embedding for Better Extrapolation to Under-Represented Data",
+      "codebase": "https://github.com/HazyResearch/KGEmb",
+      "other_links": "https://github.com/nsai-uio/HolmE-KGE"
+    },
+    {
+      "paper_id": "rayyan-242086248",
+      "title": "Neurosymbolic AI for personalized sentiment analysis",
+      "codebase": "https://github.com/Cyn7hia/Neurosymbolic_AI-PSA",
+      "other_links": "https://github.com/Cyn7hia/Neurosymbolic_AI-PSA"
+    }
+  ],
+  "Cluster_4_Visual_Logical_Intera": [
+    {
+      "paper_id": "rayyan-242083784",
+      "title": "PIGLeT: Language Grounding Through Neuro-Symbolic Interaction in a 3D World",
+      "codebase": "https://github.com/rowanz/piglet",
+      "other_links": "https://github.com/rowanz/piglet"
+    },
+    {
+      "paper_id": "rayyan-242083815",
+      "title": "CLEVR-POC: Reasoning-Intensive Visual Question Answering in Partially Observable Environments",
+      "codebase": "https://github.com/savithasam88/CLEVR-POC/tree/master",
+      "other_links": "https://arxiv.org/abs/2403.03203"
+    },
+    {
+      "paper_id": "rayyan-242083824",
+      "title": "CLEVR-Math: A Dataset for Compositional Language, Visual and Mathematical Reasoning",
+      "codebase": "https://github.com/dali-does/clevr-math",
+      "other_links": "https://ceur-ws.org/Vol-3212/paper11.pdf"
+    },
+    {
+      "paper_id": "rayyan-242083828",
+      "title": "Composing Neural Learning and Symbolic Reasoning with an Application to Visual Discrimination",
+      "codebase": "https://github.com/muraliadithya/vdp"
+    },
+    {
+      "paper_id": "rayyan-242083855",
+      "title": "Neuro-symbolic representations for video captioning: A case for leveraging inductive biases for vision and language",
+      "codebase": "https://github.com/hassanhub/R3Transformer"
+    },
+    {
+      "paper_id": "rayyan-242083862",
+      "title": "NeSy is alive and well: A LLM-driven symbolic approach for better code comment data generation and classification",
+      "codebase": "https://github.com/HannaAbiAkl/NeSy-Code-Generation-Workflow"
+    },
+    {
+      "paper_id": "rayyan-242083903",
+      "title": "AlphaTrans: A Neuro-Symbolic Compositional Approach for Repository-Level Code Translation and Validation",
+      "codebase": "https://github.com/Intelligent-CAT-Lab/AlphaTrans",
+      "other_links": "https://github.com/Intelligent-CAT-Lab/AlphaTrans"
+    },
+    {
+      "paper_id": "rayyan-242083918",
+      "title": "Synthesizing a Progression of Subtasks for Block-Based Visual Programming Tasks",
+      "codebase": "https://github.com/machine-teaching-group/ProgresSyn"
+    },
+    {
+      "paper_id": "rayyan-242083933",
+      "title": "Neuro-symbolic visual reasoning: Disentangling",
+      "codebase": "Codebase information not available in notes"
+    },
+    {
+      "paper_id": "rayyan-242083934",
+      "title": "Neuro-Symbolic Visual Reasoning: Disentangling ``Visual '' from ``Reasoning ''",
+      "codebase": "https://github.com/microsoft/DFOL-VQA",
+      "other_links": "https://github.com/microsoft/DFOL-VQA"
+    },
+    {
+      "paper_id": "rayyan-242083966",
+      "title": "NS3: Neuro-symbolic semantic code search",
+      "codebase": "https://github.com/ShushanArakelyan/modular_code_search"
+    },
+    {
+      "paper_id": "rayyan-242083995",
+      "title": "Neurosymbolic Grounding for Compositional World Models",
+      "codebase": "https://github.com/trishullab/cosmos",
+      "other_links": "https://github.com/trishullab/cosmos"
+    },
+    {
+      "paper_id": "rayyan-242084027",
+      "title": "A Practical Three-phase Approach To Fully Automated Programming Using System Decomposition And Coding Copilots",
+      "codebase": "https://github.com/BiEchi/FAP",
+      "other_links": "https://github.com/BiEchi/FAP"
+    },
+    {
+      "paper_id": "rayyan-242084029",
+      "title": "CodePlan: Repository-Level Coding using LLMs and Planning",
+      "codebase": "https://github.com/microsoft/codeplan"
+    },
+    {
+      "paper_id": "rayyan-242084050",
+      "title": "ImageEye: Batch Image Processing using Program Synthesis",
+      "codebase": "https://github.com/celestebarnaby/ImageEye",
+      "other_links": "https://github.com/celestebarnaby/ImageEye"
+    },
+    {
+      "paper_id": "rayyan-242084065",
+      "title": "Neuro-symbolic visual graph question answering with LLMs for language parsing",
+      "codebase": "https://github.com/pudumagico/NSGRAPH"
+    },
+    {
+      "paper_id": "rayyan-242084108",
+      "title": "Sample- Efficient Learning of Novel Visual Concepts",
+      "codebase": "https://github.com/sarthak268/sample-efficient-visual-concept-learning"
+    },
+    {
+      "paper_id": "rayyan-242084110",
+      "title": "Language Independent Neuro-Symbolic Semantic Parsing for Form Understanding",
+      "codebase": "https://github.com/Bhanu068/LAGNN"
+    },
+    {
+      "paper_id": "rayyan-242084152",
+      "title": "Neural networks for abstraction and reasoning: Towards broad generalization in machines",
+      "codebase": "https://github.com/mxbi/arckit"
+    },
+    {
+      "paper_id": "rayyan-242084222",
+      "title": "NAVER: A Neuro-Symbolic Compositional Automaton for Visual Grounding with Explicit Logic Reasoning",
+      "codebase": "https://github.com/ControlNet/NAVER"
+    },
+    {
+      "paper_id": "rayyan-242084302",
+      "title": "Neurosymbolic Repair of Test Flakiness",
+      "codebase": "https://github.com/Intelligent-CAT-Lab/FlakyDoctor",
+      "data": "https://zenodo.org/records/12670050"
+    },
+    {
+      "paper_id": "rayyan-242084304",
+      "title": "Genome: generative neuro-symbolic visual reasoning by growing and reusing modules",
+      "codebase": "https://github.com/UMass-Embodied-AGI/genome",
+      "other_links": "https://github.com/UMass-Embodied-AGI/genome"
+    },
+    {
+      "paper_id": "rayyan-242084308",
+      "title": "ComPhy: Compositional Physical Reasoning of Objects and Events from Videos",
+      "codebase": "https://github.com/zfchenUnique/compositional_physics_learner"
+    },
+    {
+      "paper_id": "rayyan-242084319",
+      "title": "ACRE: Abstract Causal REasoning Beyond Covariation",
+      "codebase": "https://github.com/WellyZhang/ACRE"
+    },
+    {
+      "paper_id": "rayyan-242084320",
+      "title": "Abstract Spatial-Temporal Reasoning via Probabilistic Abduction and Execution",
+      "codebase": "https://github.com/WellyZhang/PrAE"
+    },
+    {
+      "paper_id": "rayyan-242084341",
+      "title": "Naturally Supervised 3D Visual Grounding with Language-Regularized Concept Learners",
+      "codebase": "https://github.com/chunfeng3364/LARC"
+    },
+    {
+      "paper_id": "rayyan-242084408",
+      "title": "Plans: Neuro-symbolic program learning from videos",
+      "codebase": "https://github.com/rdang-nhu/PLANS",
+      "other_links": "https://github.com/rdang-nhu/PLANS"
+    },
+    {
+      "paper_id": "rayyan-242084413",
+      "title": "NeSyCoCo: A Neuro-Symbolic Concept Composer for Compositional Generalization",
+      "codebase": "https://github.com/hlr/nesycoco",
+      "other_links": "https://github.com/hlr/nesycoco"
+    },
+    {
+      "paper_id": "rayyan-242084432",
+      "title": "NeSy4VRD: A Multifaceted Resource for Neurosymbolic AI Research using Knowledge Graphs in Visual Relationship Detection",
+      "codebase": "https://github.com/djherron/NeSy4VRD",
+      "other_links": "https://github.com/djherron/NeSy4VRD"
+    },
+    {
+      "paper_id": "rayyan-242084436",
+      "title": "Tratto: A Neuro-Symbolic Approach to Deriving Axiomatic Test Oracles",
+      "codebase": "https://github.com/AML14/tratto",
+      "other_links": "https://github.com/AML14/tratto"
+    },
+    {
+      "paper_id": "rayyan-242084470",
+      "title": "Stitching Gaps: Fusing Situated Perceptual Knowledge with Vision Transformers for High-Level Image Classification",
+      "codebase": "https://github.com/delfimpandiani/Stitching-Gaps"
+    },
+    {
+      "paper_id": "rayyan-242084496",
+      "title": "Semantic code repair using neuro-symbolic transformation networks",
+      "codebase": "https://iclr2018anon.github.io/semantic_code_repair/index.html"
+    },
+    {
+      "paper_id": "rayyan-242084513",
+      "title": "Scene graph generation in autonomous driving: a neuro-symbolic approach",
+      "codebase": "https://github.com/Pamasi/sgg_av"
+    },
+    {
+      "paper_id": "rayyan-242084578",
+      "title": "A Logic-based Approach to Contrastive Explainability for Neurosymbolic Visual Question Answering",
+      "codebase": "https://github.com/pudumagico/nsvqasp"
+    },
+    {
+      "paper_id": "rayyan-242084579",
+      "title": "A neuro-symbolic ASP pipeline for visual question answering",
+      "codebase": "https://github.com/Macehil/nesy-asp-vqa-pipeline"
+    },
+    {
+      "paper_id": "rayyan-242084581",
+      "title": "A Modular Neurosymbolic Approach for Visual Graph Question Answering",
+      "codebase": "https://github.com/pudumagico/NSGRAPH"
+    },
+    {
+      "paper_id": "rayyan-242084606",
+      "title": "Motion Question Answering via Modular Motion Programs",
+      "codebase": "https://github.com/markendo/HumanMotionQA"
+    },
+    {
+      "paper_id": "rayyan-242084694",
+      "title": "LILO: Learning Interpretable Libraries by Compressing and Documenting Code",
+      "codebase": "Codebase information not available in notes"
+    },
+    {
+      "paper_id": "rayyan-242084738",
+      "title": "Enhancing Interpretability and Interactivity in Robot Manipulation: A Neurosymbolic Approach",
+      "codebase": "https://github.com/gtziafas/hots",
+      "other_links": "https://github.com/gtziafas/hots"
+    },
+    {
+      "paper_id": "rayyan-242084797",
+      "title": "Type-driven Neural Programming by Example",
+      "codebase": "https://gitlab.com/KiaraGrouwstra/hasktorch/-/tree/synthesis/synthesis",
+      "other_links": "https://arxiv.org/pdf/2008.12613"
+    },
+    {
+      "paper_id": "rayyan-242084809",
+      "title": "Visual Programming: Compositional visual reasoning without training",
+      "codebase": "https://github.com/allenai/visprog",
+      "other_links": "https://prior.allenai.org/projects/visprog"
+    },
+    {
+      "paper_id": "rayyan-242084827",
+      "title": "Learning Neurosymbolic Generative Models via Program Synthesis",
+      "codebase": "https://github.com/HalleyYoung/NeurosymGenModelsProgSyn"
+    },
+    {
+      "paper_id": "rayyan-242084901",
+      "title": "Learning to learn generative programs with Memoised Wake-Sleep",
+      "codebase": "https://github.com/tuananhle7/mws"
+    },
+    {
+      "paper_id": "rayyan-242084904",
+      "title": "Learning Differentiable Logic Programs for Abstract Visual Reasoning",
+      "codebase": "https://github.com/ml-research/neumann",
+      "other_links": "https://github.com/ml-research/neumann; https://sites.google.com/view/neumann-tuda"
+    },
+    {
+      "paper_id": "rayyan-242084946",
+      "title": "Ns3d: Neuro-symbolic grounding of 3d objects and relations",
+      "codebase": "https://github.com/joyhsu0504/NS3D",
+      "other_links": "https://github.com/joyhsu0504/NS3D"
+    },
+    {
+      "paper_id": "rayyan-242084961",
+      "title": "Generating Programmatic Referring Expressions via Program Synthesis",
+      "codebase": "https://github.com/moqingyan/object_reference_synthesis",
+      "other_links": "https://github.com/moqingyan/object_reference_synthesis"
+    },
+    {
+      "paper_id": "rayyan-242084976",
+      "title": "Composition Vision-Language Understanding via Segment and Depth Anything Model",
+      "codebase": "https://github.com/AnthonyHuo/SAM-DAM-for-Compositional-Reasoning",
+      "other_links": "https://github.com/AnthonyHuo/SAM-DAM-for-Compositional-Reasoning"
+    },
+    {
+      "paper_id": "rayyan-242084996",
+      "title": "Think before You Simulate: Symbolic Reasoning to Orchestrate Neural Computation for Counterfactual Question Answering",
+      "codebase": "https://github.com/azreasoners/crcg; https://github.com/potassco/guide/releases/tag/v2.2.0",
+      "other_links": "https://github.com/potassco/guide/releases/tag/v2.2.0"
+    },
+    {
+      "paper_id": "rayyan-242085015",
+      "title": "Visual Graph Question Answering with ASP and LLMs for Language Parsing",
+      "codebase": "https://github.com/pudumagico/NSGRAPH",
+      "other_links": "https://github.com/pudumagico/NSGRAPH"
+    },
+    {
+      "paper_id": "rayyan-242085016",
+      "title": "Linguistic Frameworks Go Toe-to-Toe at Neuro-Symbolic Language Modeling",
+      "codebase": "https://github.com/jakpra/LinguisticStructureLM",
+      "other_links": "https://github.com/jakpra/LinguisticStructureLM"
+    },
+    {
+      "paper_id": "rayyan-242085116",
+      "title": "TV-TREES: Multimodal Entailment Trees for Neuro-Symbolic Video Reasoning",
+      "codebase": "https://github.com/katesanders9/tv-trees",
+      "other_links": "https://arxiv.org/pdf/2402.19467"
+    },
+    {
+      "paper_id": "rayyan-242085131",
+      "title": "LambdaBeam: Neural Program Search with Higher-Order Functions and Lambdas",
+      "codebase": "https://github.com/ellisk42/LambdaBeam",
+      "other_links": "https://github.com/ellisk42/LambdaBeam"
+    },
+    {
+      "paper_id": "rayyan-242085134",
+      "title": "Neural-Symbolic VQA: Disentangling Reasoning from Vision and Language Understanding",
+      "codebase": "https://github.com/kexinyi/ns-vqa",
+      "other_links": "https://github.com/kexinyi/ns-vqa"
+    },
+    {
+      "paper_id": "rayyan-242085140",
+      "title": "NeuSyRE: Neuro-symbolic visual understanding and reasoning framework based on scene graph enrichment",
+      "codebase": "https://github.com/jaleedkhan/neusire"
+    },
+    {
+      "paper_id": "rayyan-242085143",
+      "title": "KnowZRel: Common Sense Knowledge-based Zero-Shot Relationship Retrieval for Generalised Scene Graph Generation",
+      "codebase": "https://github.com/jaleedkhan/zsrr-sgg",
+      "other_links": "https://github.com/jaleedkhan/zsrr-sgg"
+    },
+    {
+      "paper_id": "rayyan-242085157",
+      "title": "A neural-symbolic architecture for inverse graphics improved by lifelong meta-learning",
+      "codebase": "https://github.com/Kayzaks/VividNet",
+      "other_links": "https://github.com/Kayzaks/VividNet"
+    },
+    {
+      "paper_id": "rayyan-242085161",
+      "title": "Compositional Program Generation for Few-Shot Systematic Generalization",
+      "codebase": "https://github.com/IBM/cpg; https://github.com/lark-parser/lark",
+      "other_links": "https://github.com/lark-parser/lark"
+    },
+    {
+      "paper_id": "rayyan-242085192",
+      "title": "Affordance embeddings for situated language understanding",
+      "codebase": "https://github.com/VoxML/VoxSim",
+      "other_links": "https://github.com/VoxML/VoxSim"
+    },
+    {
+      "paper_id": "rayyan-242085239",
+      "title": "HOUDINI: Lifelong Learning as Program Synthesis",
+      "codebase": "https://github.com/trishullab/houdini",
+      "other_links": "https://arxiv.org/pdf/1804.00218; https://github.com/trishullab/houdini"
+    },
+    {
+      "paper_id": "rayyan-242085275",
+      "title": "A Competence-aware Curriculum for Visual Concepts Learning via Question Answering",
+      "codebase": "https://github.com/liqing-ustc/CL-mIRT",
+      "other_links": "https://arxiv.org/pdf/2007.01499; https://liqing.io/CL-mIRT/; https://github.com/liqing-ustc/CL-mIRT"
+    },
+    {
+      "paper_id": "rayyan-242085278",
+      "title": "Combining Formal and Informal Information in Bayesian Program Analysis via Soft Evidences",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://dl.acm.org/doi/pdf/10.1145/3720508"
+    },
+    {
+      "paper_id": "rayyan-242085281",
+      "title": "AdaLoGN: Adaptive Logic Graph Network for Reasoning-Based Machine Reading Comprehension",
+      "codebase": "https://github.com/nju-websoft/AdaLoGN/blob/main/README.md",
+      "other_links": "https://aclanthology.org/2022.acl-long.494/; https://github.com/nju-websoft/AdaLoGN/blob/main/README.md; https://arxiv.org/abs/2203.08992"
+    },
+    {
+      "paper_id": "rayyan-242085282",
+      "title": "Perspective Plane Program Induction from a Single Image",
+      "codebase": "https://github.com/42x00/p3i",
+      "other_links": "https://arxiv.org/pdf/2006.14708; http://p3i.csail.mit.edu/; https://github.com/42x00/p3i"
+    },
+    {
+      "paper_id": "rayyan-242085283",
+      "title": "R2G: Reasoning to Ground in 3D Scenes",
+      "codebase": "https://github.com/yixxuan-li/R2G",
+      "other_links": "https://arxiv.org/pdf/2408.13499; https://sites.google.com/view/reasoning-to-ground; https://github.com/yixxuan-li/R2G"
+    },
+    {
+      "paper_id": "rayyan-242085284",
+      "title": "A Neural Divide-and-Conquer Reasoning Framework for Image Retrieval from Linguistically Complex Text",
+      "codebase": "https://github.com/YunxinLi/NDCR",
+      "other_links": "https://aclanthology.org/2023.acl-long.909/; https://aclanthology.org/2023.acl-long.909.pdf; https://github.com/YunxinLi/NDCR"
+    },
+    {
+      "paper_id": "rayyan-242085296",
+      "title": "Calibrating Concepts and Operations: Towards Symbolic Reasoning on Real Images",
+      "codebase": "https://github.com/Lizw14/CaliCO.git",
+      "other_links": "https://github.com/Lizw14/CaliCO.git"
+    },
+    {
+      "paper_id": "rayyan-242085298",
+      "title": "LLM-Assisted Static Analysis for Detecting Security Vulnerabilities",
+      "codebase": "https://github.com/iris-sast/iris",
+      "other_links": "https://github.com/iris-sast/iris"
+    },
+    {
+      "paper_id": "rayyan-242085320",
+      "title": "Towards collaborative neural-symbolic graph semantic parsing via uncertainty",
+      "codebase": "https://github.com/google/uncertainty-baselines/tree/main/baselines/t5",
+      "other_links": "https://github.com/google/uncertainty-baselines/tree/main/baselines/t5"
+    },
+    {
+      "paper_id": "rayyan-242085321",
+      "title": "Neural-symbolic inference for robust autoregressive graph parsing via compositional uncertainty quantification",
+      "codebase": "https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank",
+      "data": "https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank"
+    },
+    {
+      "paper_id": "rayyan-242085420",
+      "title": "Learning Compositional Rules via Neural Program Synthesis",
+      "codebase": "https://github.com/mtensor/rulesynthesis",
+      "other_links": "https://github.com/mtensor/rulesynthesis"
+    },
+    {
+      "paper_id": "rayyan-242085490",
+      "title": "Neural Program Generation Modulo Static Analysis",
+      "codebase": "https://github.com/rohanmukh/nsg",
+      "other_links": "https://github.com/rohanmukh/nsg"
+    },
+    {
+      "paper_id": "rayyan-242085516",
+      "title": "Neuro Symbolic Knowledge Reasoning for Procedural Video Question Answering",
+      "codebase": "https://github.com/LUNAProject22/KML",
+      "other_links": "https://github.com/LUNAProject22/KML"
+    },
+    {
+      "paper_id": "rayyan-242085522",
+      "title": "C2SaferRust: Transforming C Projects into Safer Rust with NeuroSymbolic Techniques",
+      "codebase": "https://github.com/vikramnitin9/c2saferrust",
+      "other_links": "https://github.com/vikramnitin9/c2saferrust"
+    },
+    {
+      "paper_id": "rayyan-242085573",
+      "title": "Enhancing the Geometric Problem-Solving Ability of Multimodal LLMs via Symbolic-Neural Integration",
+      "codebase": "https://github.com/ycpNotFound/GeoGen",
+      "other_links": "https://github.com/ycpNotFound/GeoGen"
+    },
+    {
+      "paper_id": "rayyan-242085595",
+      "title": "Generating by Understanding: Neural Visual Generation with Logical Symbol Groundings",
+      "codebase": "https://github.com/future-item/AbdGen",
+      "other_links": "https://github.com/future-item/AbdGen"
+    },
+    {
+      "paper_id": "rayyan-242085625",
+      "title": "Cognitive Module Networks for Grounded Reasoning",
+      "codebase": "https://github.com/singnet/semantic-vision/tree/master/experiments/opencog/cog_module"
+    },
+    {
+      "paper_id": "rayyan-242085667",
+      "title": "Learning to Infer Generative Template Programs for Visual Concepts",
+      "codebase": "https://github.com/rkjones4/TemplatePrograms",
+      "other_links": "https://github.com/rkjones4/TemplatePrograms"
+    },
+    {
+      "paper_id": "rayyan-242085696",
+      "title": "Probabilistic Neural-symbolic Models for Interpretable Visual Question Answering",
+      "codebase": "https://github.com/kdexd/probnmn-clevr",
+      "other_links": "https://arxiv.org/pdf/1902.07864; https://github.com/kdexd/probnmn-clevr"
+    },
+    {
+      "paper_id": "rayyan-242085743",
+      "title": "Bongard-OpenWorld: Few-Shot Reasoning for Free-form Visual Concepts in the Real World",
+      "codebase": "https://github.com/rujiewu/Bongard-OpenWorld",
+      "other_links": "https://github.com/rujiewu/Bongard-OpenWorld"
+    },
+    {
+      "paper_id": "rayyan-242085753",
+      "title": "Knowledge Graphs of Driving Scenes to Empower the Emerging Capabilities of Neurosymbolic AI",
+      "codebase": "https://github.com/ruwantw/DSceneKG",
+      "other_links": "https://arxiv.org/pdf/2411.03225; https://github.com/ruwantw/DSceneKG"
+    },
+    {
+      "paper_id": "rayyan-242085772",
+      "title": "Seq2Parse: neurosymbolic parse error repair",
+      "codebase": "https://github.com/gsakkas/seq2parse; https://ranjitjhala.github.io/static/seq2parse-oopsla22.pdf",
+      "other_links": "https://github.com/gsakkas/seq2parse; https://dl.acm.org/doi/10.1145/3563330"
+    },
+    {
+      "paper_id": "rayyan-242085981",
+      "title": "Multi-Granularity Modularized Network for Abstract Visual Reasoning",
+      "codebase": "https://github.com/creeper121386/RAVENtest",
+      "other_links": "https://github.com/creeper121386/RAVENtest"
+    },
+    {
+      "paper_id": "rayyan-242086071",
+      "title": "Neural Task Synthesis for Visual Programming",
+      "codebase": "https://github.com/machine-teaching-group/tmlr2024_neurtasksyn",
+      "other_links": "https://github.com/machine-teaching-group/tmlr2024_neurtasksyn"
+    },
+    {
+      "paper_id": "rayyan-242086105",
+      "title": "Neural symbolic representation learning for image captioning",
+      "codebase": "https://github.com/xiaomeiyy/NSR_Captioning",
+      "other_links": "https://github.com/xiaomeiyy/NSR_Captioning"
+    },
+    {
+      "paper_id": "rayyan-242086106",
+      "title": "3D-Aware Visual Question Answering about Parts, Poses and Occlusions",
+      "codebase": "https://github.com/XingruiWang/3D-Aware-VQA",
+      "other_links": "https://github.com/XingruiWang/3D-Aware-VQA"
+    },
+    {
+      "paper_id": "rayyan-242086107",
+      "title": "Compositional 4D Dynamic Scenes Understanding with Physics Priors for Video Question Answering",
+      "codebase": "https://xingruiwang.github.io/projects/DynSuperCLEVR/"
+    },
+    {
+      "paper_id": "rayyan-242086164",
+      "title": "Integrating Neural-Symbolic Reasoning With Variational Causal Inference Network for Explanatory Visual Question Answering",
+      "codebase": "https://github.com/LivXue/VCIN",
+      "other_links": "https://github.com/LivXue/VCIN"
+    },
+    {
+      "paper_id": "rayyan-242086187",
+      "title": "Structural generalization is hard for sequence-to-sequence models",
+      "codebase": "https://github.com/coli-saar/Seq2seq-on-COGS",
+      "other_links": "https://github.com/coli-saar/Seq2seq-on-COGS"
+    },
+    {
+      "paper_id": "rayyan-242086213",
+      "title": "Re-Aligning Language to Visual Objects with an Agentic Workflow",
+      "codebase": "https://github.com/FishAndWasabi/RealLOD",
+      "other_links": "https://github.com/FishAndWasabi/RealLOD"
+    },
+    {
+      "paper_id": "rayyan-242086234",
+      "title": "Chameleon: Fast-slow Neuro-symbolic Lane Topology Extraction",
+      "codebase": "https://github.com/XR-Lee/neural-symbolic",
+      "other_links": "https://github.com/XR-Lee/neural-symbolic"
+    },
+    {
+      "paper_id": "rayyan-242086254",
+      "title": "Super-CLEVR: A Virtual Benchmark to Diagnose Domain Robustness in Visual Reasoning",
+      "codebase": "https://github.com/Lizw14/Super-CLEVR",
+      "other_links": "https://github.com/Lizw14/Super-CLEVR"
+    },
+    {
+      "paper_id": "rayyan-242083810",
+      "title": "Neuro-symbolic visual dialog",
+      "codebase": "https://github.com/adnenabdessaied/NSVD"
+    },
+    {
+      "paper_id": "rayyan-242084095",
+      "title": "Jointly Learning Truth-Conditional Denotations and Groundings using Parallel Attention",
+      "codebase": "https://github.com/bergen/learning-groundings"
+    },
+    {
+      "paper_id": "rayyan-242084310",
+      "title": "Image Translation as Diffusion Visual Programmers",
+      "codebase": "https://github.com/DVPmain/DVP/blob/main/image_editing.ipynb; https://github.com/DVPmain/DVP"
+    },
+    {
+      "paper_id": "rayyan-242084669",
+      "title": "Integrating Textual Queries with AI-Based Object Detection: A Compositional Prompt-Guided Approach",
+      "codebase": "https://github.com/silvaan/prompt-guided-detection"
+    }
+  ],
+  "Cluster_5_Constraint_Driven_Neu": [
+    {
+      "paper_id": "rayyan-242083850",
+      "title": "Pylon: A PyTorch Framework for Learning with Constraints",
+      "codebase": "https://github.com/pylon-lib/pylon; https://pylon-lib.github.io/",
+      "other_links": "https://proceedings.mlr.press/v176/ahmed22a.html"
+    },
+    {
+      "paper_id": "rayyan-242083852",
+      "title": "A Pseudo-Semantic Loss for Autoregressive Models with Logical Constraints",
+      "codebase": "https://github.com/UCLA-StarAI/PseudoSL",
+      "other_links": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/3accfe8332366a6f740d8740cd4cd653-Abstract-Conference.html"
+    },
+    {
+      "paper_id": "rayyan-242083891",
+      "title": "L-TReiD: Logic Tensor Transformer for Re-identification",
+      "codebase": "https://github.com/damo-cv/TransReID",
+      "other_links": "https://github.com/damo-cv/TransReID"
+    },
+    {
+      "paper_id": "rayyan-242083907",
+      "title": "Semantic referee: A neural-symbolic framework for enhancing geospatial semantic segmentation",
+      "codebase": "https://github.com/rezacsedu/SemanticRobot",
+      "other_links": "https://github.com/rezacsedu/SemanticRobot"
+    },
+    {
+      "paper_id": "rayyan-242083977",
+      "title": "Answer Set Networks: Casting Answer Set Programming into Deep Learning",
+      "codebase": "https://github.com/ml-research/answersetnetworks"
+    },
+    {
+      "paper_id": "rayyan-242083978",
+      "title": "SLASH: Embracing Probabilistic Circuits into Neural Answer Set Programming",
+      "codebase": "https://github.com/askrix/SLASH?tab=readme-ov-file"
+    },
+    {
+      "paper_id": "rayyan-242084010",
+      "title": "-NeSy: A Possibilistic Neuro-Symbolic Approach",
+      "codebase": "https://github.com/ibaaj/pi-nesy"
+    },
+    {
+      "paper_id": "rayyan-242084020",
+      "title": "Logic Tensor Networks",
+      "codebase": "https://github.com/logictensornetworks/logictensornetworks",
+      "other_links": "https://github.com/logictensornetworks/logictensornetworks"
+    },
+    {
+      "paper_id": "rayyan-242084021",
+      "title": "Interval Logic Tensor Networks",
+      "codebase": "https://github.com/sbadredd/interval-ltn",
+      "other_links": "https://github.com/sbadredd/interval-ltn"
+    },
+    {
+      "paper_id": "rayyan-242084041",
+      "title": "Interpretable neural-symbolic concept reasoning",
+      "codebase": "https://github.com/pietrobarbiero/pytorch_explain"
+    },
+    {
+      "paper_id": "rayyan-242084182",
+      "title": "Neural Symbolic Logical Rule Learner for Interpretable Learning",
+      "codebase": "https://github.com/tdurieux/anonymous_github",
+      "other_links": "https://anonymous.4open.science/r/NFRL-9DE5/README.md"
+    },
+    {
+      "paper_id": "rayyan-242084275",
+      "title": "A Mathematical Framework, a Taxonomy of Modeling Paradigms, and a Suite of Learning Techniques for Neural-Symbolic Systems",
+      "codebase": "https://github.com/linqs/dickens-arxiv24"
+    },
+    {
+      "paper_id": "rayyan-242084344",
+      "title": "Neuro-Symbolic Hierarchical Rule Induction",
+      "codebase": "https://github.com/claireaoi/hierarchical-rule-induction"
+    },
+    {
+      "paper_id": "rayyan-242084351",
+      "title": "Leveraging Neurosymbolic AI for Slice Discovery",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://gitlab.tuwien.ac.at/kbs/nesy-ai/ilp4sd"
+    },
+    {
+      "paper_id": "rayyan-242084360",
+      "title": "NeuPSL: Neural Probabilistic Soft Logic",
+      "codebase": "https://github.com/linqs/neupsl-ijcai23"
+    },
+    {
+      "paper_id": "rayyan-242084414",
+      "title": "FF-NSL: Feed-Forward Neural-Symbolic Learner",
+      "codebase": "https://github.com/DanCunnington/FFNSL",
+      "other_links": "https://github.com/DanCunnington/FFNSL"
+    },
+    {
+      "paper_id": "rayyan-242084437",
+      "title": "Zero-Shot Conditioning of Score-Based Diffusion Models by Neuro-Symbolic Constraints",
+      "codebase": "https://github.com/davidescassola/score-based-constrained-generation",
+      "other_links": "https://github.com/davidescassola/score-based-constrained-generation"
+    },
+    {
+      "paper_id": "rayyan-242084519",
+      "title": "Neurosymbolic Visual Transform Based on Logic Tensor Network for Defect Detection",
+      "codebase": "https://github.com/YousIA/NSViT-LTN"
+    },
+    {
+      "paper_id": "rayyan-242084533",
+      "title": "Neural Logic Machines",
+      "codebase": "https://github.com/google/neural-logic-machines"
+    },
+    {
+      "paper_id": "rayyan-242084541",
+      "title": "A Novel Neural-symbolic System under Statistical Relational Learning",
+      "codebase": "https://github.com/Dongranyu/NSF-SRL"
+    },
+    {
+      "paper_id": "rayyan-242084587",
+      "title": "VAEL: Bridging Variational Autoencoders and Probabilistic Logic Programming",
+      "codebase": "https://github.com/EleMisi/VAEL"
+    },
+    {
+      "paper_id": "rayyan-242084594",
+      "title": "BEARS Make Neuro-Symbolic Models Aware of their Reasoning Shortcuts",
+      "codebase": "https://github.com/samuelebortolotti/bears"
+    },
+    {
+      "paper_id": "rayyan-242084596",
+      "title": "Not All Neuro-Symbolic Concepts Are Created Equal: Analysis and Mitigation of Reasoning Shortcuts",
+      "codebase": "https://github.com/ema-marconato/reasoning-shortcuts"
+    },
+    {
+      "paper_id": "rayyan-242084600",
+      "title": "Neurosymbolic Diffusion Models",
+      "codebase": "https://github.com/HEmile/neurosymbolic-diffusion"
+    },
+    {
+      "paper_id": "rayyan-242084603",
+      "title": "A-NeSI: A Scalable Approximate Method for Probabilistic Neurosymbolic Inference",
+      "codebase": "https://github.com/HEmile/a-nesi"
+    },
+    {
+      "paper_id": "rayyan-242084604",
+      "title": "Optimisation in Neurosymbolic Learning Systems",
+      "codebase": "https://github.com/HEmile/differentiable-fuzzy-logics"
+    },
+    {
+      "paper_id": "rayyan-242084612",
+      "title": "Unsupervised Learning of Neurosymbolic Encoders",
+      "codebase": "https://github.com/ezhan94/neurosymbolic-encoders"
+    },
+    {
+      "paper_id": "rayyan-242084618",
+      "title": "Making sense of raw input",
+      "codebase": "https://github.com/RichardEvans/apperception"
+    },
+    {
+      "paper_id": "rayyan-242084620",
+      "title": "Bridging Logic and Learning: A Neural-Symbolic Approach for Enhanced Reasoning in Neural Models (ASPER)",
+      "codebase": "https://github.com/Fadi2200/ASPEN"
+    },
+    {
+      "paper_id": "rayyan-242084652",
+      "title": "Learning task-general representations with generative neuro-symbolic modeling",
+      "codebase": "https://github.com/rfeinman/GNS-Modeling"
+    },
+    {
+      "paper_id": "rayyan-242084657",
+      "title": "Efficiently Learning Probabilistic Logical Models by Cheaply Ranking Mined Rules",
+      "codebase": "https://github.com/jonathanfeldstein/SPECTRUM"
+    },
+    {
+      "paper_id": "rayyan-242084659",
+      "title": "Transformer-based Machine Learning for Fast SAT Solvers and Logic Synthesis",
+      "codebase": "Codebase information not available in notes"
+    },
+    {
+      "paper_id": "rayyan-242084684",
+      "title": "Fuzzy Logic Visual Network (FLVN): A neuro-symbolic approach for visual features matching",
+      "codebase": "https://gitlab.com/grains2/flvn"
+    },
+    {
+      "paper_id": "rayyan-242084734",
+      "title": "dPASP: a comprehensive differentiable probabilistic answer set programming environment for neurosymbolic learning and reasoning",
+      "codebase": "https://github.com/kamel-usp/dpasp",
+      "other_links": "https://github.com/kamel-usp/dpasp"
+    },
+    {
+      "paper_id": "rayyan-242084739",
+      "title": "Learning Better Representations From Less Data For Propositional Satisfiability",
+      "codebase": "https://github.com/oschart/neures",
+      "other_links": "https://github.com/oschart/neures"
+    },
+    {
+      "paper_id": "rayyan-242084755",
+      "title": "CCN plus : A neuro-symbolic framework for deep learning with requirements",
+      "codebase": "https://github.com/atatomir/CCN"
+    },
+    {
+      "paper_id": "rayyan-242084833",
+      "title": "COOL: A Constraint Object-Oriented Logic Programming Language and its Neural-Symbolic Compilation System",
+      "codebase": "https://github.com/coolang2022/COOLang?search=1",
+      "other_links": "https://arxiv.org/pdf/2311.03753"
+    },
+    {
+      "paper_id": "rayyan-242084853",
+      "title": "Reduced Implication-bias Logic Loss for Neuro-Symbolic Learning",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://git.nju.edu.cn/Alkane/clion.git"
+    },
+    {
+      "paper_id": "rayyan-242084898",
+      "title": "Towards Learning to Reason: Comparing LLMs with Neuro-Symbolic on Arithmetic Relations in Abstract Reasoning",
+      "codebase": "https://github.com/IBM/raven-large-language-models; https://github.com/IBM/abductive-rule-learner-with-context-awareness",
+      "other_links": "https://arxiv.org/pdf/2412.05586"
+    },
+    {
+      "paper_id": "rayyan-242084902",
+      "title": "Neuro-Symbolic Forward Reasoning",
+      "codebase": "https://github.com/ml-research/nsfr",
+      "other_links": "https://github.com/ml-research/nsfr; https://arxiv.org/pdf/2110.09383"
+    },
+    {
+      "paper_id": "rayyan-242084952",
+      "title": "A multi-grained self-interpretable symbolic-neural model for single/multi-labeled text classification",
+      "codebase": "https://github.com/ant-research/StructuredLM_RTDT",
+      "other_links": "https://github.com/ant-research/StructuredLM_RTDT"
+    },
+    {
+      "paper_id": "rayyan-242084966",
+      "title": "Fast Abductive Learning by Similarity-based Consistency Optimization",
+      "codebase": "https://github.com/AbductiveLearning/ABLSim",
+      "other_links": "https://github.com/AbductiveLearning/ABLSim"
+    },
+    {
+      "paper_id": "rayyan-242084967",
+      "title": "Enabling Knowledge Refinement upon New Concepts in Abductive Learning",
+      "codebase": "https://github.com/AbductiveLearning/ABL",
+      "other_links": "https://github.com/AbductiveLearning/ABL"
+    },
+    {
+      "paper_id": "rayyan-242084998",
+      "title": "Contrastive Learning in Neural Tensor Networks using Asymmetric Examples",
+      "codebase": "https://github.com/tushancse04/MNTN",
+      "other_links": "https://github.com/tushancse04/MNTN"
+    },
+    {
+      "paper_id": "rayyan-242085027",
+      "title": "The Gradient of Algebraic Model Counting",
+      "codebase": "https://github.com/ML-KULeuven/amc-grad",
+      "other_links": "https://github.com/ML-KULeuven/amc-grad"
+    },
+    {
+      "paper_id": "rayyan-242085028",
+      "title": "On the Hardness of Probabilistic Neurosymbolic Learning",
+      "codebase": "https://github.com/jjcmoon/hardness-nesy",
+      "other_links": "https://github.com/jjcmoon/hardness-nesy"
+    },
+    {
+      "paper_id": "rayyan-242085081",
+      "title": "Error Detection and Constraint Recovery in Hierarchical Multi-Label Classification without Prior Knowledge",
+      "codebase": "https://github.com/lab-v2/PyEDCR",
+      "other_links": "https://github.com/lab-v2/PyEDCR"
+    },
+    {
+      "paper_id": "rayyan-242085153",
+      "title": "Out-of-Distribution Detection with Logical Reasoning (Extended Abstract)",
+      "codebase": "https://github.com/kkirchheim/logic-ood",
+      "other_links": "https://github.com/kkirchheim/logic-ood; https://openaccess.thecvf.com/content/WACV2024/papers/Kirchheim_Out-of-Distribution_Detection_With_Logical_Reasoning_WACV_2024_paper.pdf; https://ieeexplore.ieee.org/document/10483945; https://dl.acm.org/doi/10.1007/978-3-031-70893-0_29"
+    },
+    {
+      "paper_id": "rayyan-242085155",
+      "title": "What Do Hebbian Learners Learn? Reduction Axioms for Iterated Hebbian Learning",
+      "codebase": "https://github.com/ais-climber/AAAI2024",
+      "other_links": "https://github.com/ais-climber/AAAI2024"
+    },
+    {
+      "paper_id": "rayyan-242085197",
+      "title": "AutoSNAP: Automatically Learning Neural Architectures for Instrument Pose Estimation",
+      "codebase": "https://github.com/MECLabTUDA/AutoSNAP",
+      "other_links": "https://github.com/MECLabTUDA/AutoSNAP"
+    },
+    {
+      "paper_id": "rayyan-242085255",
+      "title": "A Fast Convoluted Story: Scaling Probabilistic Inference for Integer Arithmetic",
+      "codebase": "https://github.com/ML-KULeuven/probabilistic-arithmetic",
+      "other_links": "https://github.com/ML-KULeuven/probabilistic-arithmetic"
+    },
+    {
+      "paper_id": "rayyan-242085266",
+      "title": "Closed loop neural-symbolic learning via integrating neural perception, grammar parsing, and symbolic reasoning",
+      "codebase": "https://liqing-ustc.github.io/NGS"
+    },
+    {
+      "paper_id": "rayyan-242085291",
+      "title": "Learning with Logical Constraints but without Shortcut Satisfaction",
+      "codebase": "https://github.com/SoftWiser-group/NeSy-without-Shortcuts",
+      "other_links": "https://arxiv.org/pdf/2403.00329; https://github.com/SoftWiser-group/NeSy-without-Shortcuts"
+    },
+    {
+      "paper_id": "rayyan-242085359",
+      "title": "Deciphering Raw Data in Neuro-Symbolic Learning with Provable Guarantees",
+      "codebase": "https://github.com/AbductiveLearning/ABL-TL",
+      "other_links": "https://github.com/AbductiveLearning/ABL-TL"
+    },
+    {
+      "paper_id": "rayyan-242085377",
+      "title": "Soft-Unification in Deep Probabilistic Logic",
+      "codebase": "https://github.com/jjcmoon/DeepSoftLog",
+      "other_links": "https://github.com/jjcmoon/DeepSoftLog"
+    },
+    {
+      "paper_id": "rayyan-242085414",
+      "title": "PROTOtypical Logic Tensor Networks (PROTO-LTN) for Zero Shot Learning",
+      "codebase": "https://github.com/FrancescoManigrass/PROTO-LTN.git",
+      "other_links": "https://github.com/FrancescoManigrass/PROTO-LTN.git"
+    },
+    {
+      "paper_id": "rayyan-242085482",
+      "title": "Designing Logic Tensor Networks for Visual Sudoku puzzle classification",
+      "codebase": "https://github.com/MalumaDev/SymbolicSudoku",
+      "other_links": "https://github.com/MalumaDev/SymbolicSudoku"
+    },
+    {
+      "paper_id": "rayyan-242085566",
+      "title": "NeSyFOLD: Neurosymbolic Framework for Interpretable Image Classification",
+      "codebase": "https://github.com/petrichor1998/nesyfold_codebase"
+    },
+    {
+      "paper_id": "rayyan-242085654",
+      "title": "Differentiable Inductive Logic Programming in High-Dimensional Space",
+      "codebase": "https://github.com/Ermine516/DILP2",
+      "other_links": "https://arxiv.org/pdf/2208.06652v4; https://github.com/Ermine516/DILP2"
+    },
+    {
+      "paper_id": "rayyan-242085665",
+      "title": "Constraint Guided Gradient Descent: Guided Training with Inequality Constraints",
+      "codebase": "https://github.com/KULeuvenADVISE/CGGD",
+      "other_links": "https://github.com/KULeuvenADVISE/CGGD"
+    },
+    {
+      "paper_id": "rayyan-242085814",
+      "title": "Conditioning score-based generative models by neuro-symbolic constraints",
+      "codebase": "https://github.com/DavideScassola/score-based-constrained-generation",
+      "other_links": "https://github.com/DavideScassola/score-based-constrained-generation"
+    },
+    {
+      "paper_id": "rayyan-242085826",
+      "title": "Techniques for Symbol Grounding with SATNet",
+      "codebase": "https://github.com/locuslab/SATNet"
+    },
+    {
+      "paper_id": "rayyan-242085834",
+      "title": "Neural Feature-Adaptation for Symbolic Predictions Using Pre-Training and Semantic Loss",
+      "codebase": "https://bitbucket.org/tsamoura/neurolog/src/master/",
+      "other_links": "https://arxiv.org/pdf/2211.16047; https://bitbucket.org/tsamoura/neurolog/src/master/"
+    },
+    {
+      "paper_id": "rayyan-242085843",
+      "title": "Student Strategy Prediction Using a Neuro-Symbolic Approach",
+      "codebase": "https://github.com/anupshakya07/SSPM",
+      "other_links": "https://github.com/anupshakya07/SSPM; https://files.eric.ed.gov/fulltext/ED615630.pdf"
+    },
+    {
+      "paper_id": "rayyan-242085867",
+      "title": "HEPHA: A Mixed-Initiative Image Labeling Tool for Specialized Domains",
+      "codebase": "https://github.com/Neural-Symbolic-ImageLabeling/NSILWeb",
+      "other_links": "https://github.com/Neural-Symbolic-ImageLabeling/NSILWeb"
+    },
+    {
+      "paper_id": "rayyan-242085876",
+      "title": "Leveraging Variation Theory in Counterfactual Data Augmentation for Optimized Active Learning",
+      "codebase": "https://github.com/SimretA/Variation-Theory-in-Counterfactual-Data-Augmentation",
+      "data": "https://github.com/SimretA/Variation-Theory-in-Counterfactual-Data-Augmentation"
+    },
+    {
+      "paper_id": "rayyan-242085892",
+      "title": "Scalable Neural-Probabilistic Answer Set Programming",
+      "codebase": "Codebase information not available in notes"
+    },
+    {
+      "paper_id": "rayyan-242085896",
+      "title": "Ontology-Based Neuro-Symbolic AI: Effects on Prediction Quality and Explainability",
+      "codebase": "https://github.com/cais-lab/revelionn",
+      "other_links": "https://github.com/cais-lab/revelionn"
+    },
+    {
+      "paper_id": "rayyan-242085929",
+      "title": "DeepPSL: End-to-end perception and reasoning",
+      "codebase": "https://github.com/linqs/psl-examples/tree/master",
+      "other_links": "https://github.com/linqs/psl-examples/tree/master"
+    },
+    {
+      "paper_id": "rayyan-242085945",
+      "title": "Formalizing Consistency and Coherence of Representation Learning",
+      "codebase": "https://github.com/HStromfelt/neurips22-FCA",
+      "other_links": "https://github.com/HStromfelt/neurips22-FCA"
+    },
+    {
+      "paper_id": "rayyan-242086000",
+      "title": "DeepStochLog: Neural Stochastic Logic Programming",
+      "codebase": "https://github.com/ML-KULeuven/deepstochlog",
+      "other_links": "https://github.com/ML-KULeuven/deepstochlog"
+    },
+    {
+      "paper_id": "rayyan-242086048",
+      "title": "Constraint guided gradient descent: Training with inequality constraints with applications in regression and semantic segmentation",
+      "codebase": "https://github.com/KULeuvenADVISE/CGGD",
+      "other_links": "https://github.com/KULeuvenADVISE/CGGD"
+    },
+    {
+      "paper_id": "rayyan-242086081",
+      "title": "Neural-symbolic integration for fairness in AI",
+      "codebase": "https://github.com/benediktwagner/LTN_fairness",
+      "other_links": "http://github.com/benediktwagner/LTN_fairness"
+    },
+    {
+      "paper_id": "rayyan-242086113",
+      "title": "LogicMP: A Neuro-symbolic Approach for Encoding First-order Logic Constraints",
+      "codebase": "https://github.com/wead-hsu/logicmp",
+      "other_links": "https://github.com/wead-hsu/logicmp"
+    },
+    {
+      "paper_id": "rayyan-242086161",
+      "title": "Spatial Knowledge-Infused Hierarchical Learning: An Application in Flood Mapping on Earth Imagery",
+      "codebase": "https://github.com/ZelinXu2000/SKI-HL",
+      "other_links": "https://github.com/ZelinXu2000/SKI-HL"
+    },
+    {
+      "paper_id": "rayyan-242086162",
+      "title": "Spatial-Logic-Aware Weakly Supervised Learning for Flood Mapping on Earth Imagery",
+      "codebase": "Code requested/not yet available",
+      "other_links": "https://github.com"
+    },
+    {
+      "paper_id": "rayyan-242086183",
+      "title": "Learning to Solve Constraint Satisfaction Problems with Recurrent Transformer",
+      "codebase": "https://github.com/azreasoners/recurrent_transformer",
+      "other_links": "https://github.com/azreasoners/recurrent_transformer"
+    },
+    {
+      "paper_id": "rayyan-242086184",
+      "title": "Injecting Logical Constraints into Neural Networks via Straight-Through Estimators",
+      "codebase": "https://github.com/azreasoners/cl-ste",
+      "other_links": "https://github.com/azreasoners/cl-ste"
+    },
+    {
+      "paper_id": "rayyan-242086229",
+      "title": "Learning to Binarize Continuous Features for Neuro-Rule Networks",
+      "codebase": "https://github.com/yxliu99/AutoInt",
+      "other_links": "https://github.com/yxliu99/AutoInt"
+    },
+    {
+      "paper_id": "rayyan-242083805",
+      "title": "NESTER: An Adaptive Neurosymbolic Method for Causal Effect Estimation",
+      "codebase": "https://github.com/gautam0707/NESTER"
+    },
+    {
+      "paper_id": "rayyan-242083883",
+      "title": "Noise to the Rescue: Escaping Local Minima in Neurosymbolic Local Search",
+      "codebase": "https://github.com/DanieleAlessandro/Godel-Trick.git"
+    },
+    {
+      "paper_id": "rayyan-242084386",
+      "title": "Neuro-symbolic interpretable AI for automatic COVID-19 patient-stratification based on standardised lung ultrasound data",
+      "codebase": "https://gitlab.com/leocus/neurosymbolic-covid19-scoring"
+    },
+    {
+      "paper_id": "rayyan-242084928",
+      "title": "LogicLSTM: Logically-driven long short-term memory model for fault diagnosis in gearboxes",
+      "codebase": "https://github.com/eduardhogea/DDS_Paper",
+      "other_links": "https://github.com/eduardhogea/DDS_Paper"
+    }
+  ]
+}

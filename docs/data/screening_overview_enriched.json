@@ -1,10 +1,10 @@
 {
   "search_and_deduplication": {
-    "total_results_retrieved": 5387,
+    "total_results_retrieved": 5497,
     "after_dedup_covidence": 2844,
     "after_dedup_zotero": 2538,
     "after_dedup_sr_accelerator": 2506,
-    "after_dedup_rayyan": 2369
+    "after_dedup_rayyan": 2479
   },
   "rayyan_import": {
     "imported_references": 2506,
@@ -12769,7 +12769,7 @@
         }
       }
     },
-    "included_within_scope": 518
+    "included_within_scope": 516
   },
   "overall_flow_summary": {
     "final_included_percentage_of_initial_hits": 505,
