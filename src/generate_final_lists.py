@@ -944,6 +944,170 @@ def sanity_check_categories(final_excluded: List[Dict[str, Any]], expected_count
     return True
 
 
+def export_category_to_excel(
+    category: str,
+    final_exclude_json: Path = FINAL_EXCLUDE_JSON,
+    excel_file: Path = EXCEL_FILE,
+    output_file: Optional[Path] = None
+) -> Path:
+    """
+    Export all papers with a specific reproduction_category to an Excel file.
+    
+    This function:
+    1. Loads final_exclude.json to get papers with the specified category
+    2. Matches them back to the original Excel file using article_id
+    3. Exports all columns from the original Excel file for those papers
+    
+    Args:
+        category: The reproduction_category to filter by (e.g., "Missing some artifacts (not code, e.g. data, model, etc.)")
+        final_exclude_json: Path to final_exclude.json
+        excel_file: Path to the original Excel file
+        output_file: Optional output path. If None, generates a filename based on category.
+    
+    Returns:
+        Path to the created Excel file
+    """
+    print("="*80)
+    print(f"Exporting papers with category: {category}")
+    print("="*80)
+    
+    # Load final_exclude.json
+    if not final_exclude_json.exists():
+        raise FileNotFoundError(f"final_exclude.json not found: {final_exclude_json}")
+    
+    print(f"Loading {final_exclude_json}")
+    with open(final_exclude_json, 'r', encoding='utf-8') as f:
+        final_excluded = json.load(f)
+    
+    # Filter papers with the specified category
+    filtered_papers = [
+        paper for paper in final_excluded
+        if paper.get('reproduction_category', '') == category
+    ]
+    
+    print(f"Found {len(filtered_papers)} papers with category '{category}'")
+    
+    if len(filtered_papers) == 0:
+        print("No papers found with this category. Nothing to export.")
+        return None
+    
+    # Extract article_ids and normalize them
+    target_ids = set()
+    # Also create a mapping of titles to papers for fallback matching
+    target_titles = {}
+    for paper in filtered_papers:
+        article_id = paper.get('article_id', '')
+        if article_id:
+            norm_id = normalize_paper_id(article_id)
+            if norm_id:
+                target_ids.add(norm_id)
+        # Store normalized title for fallback matching
+        title = paper.get('title', '')
+        if title:
+            norm_title = normalize_title(title)
+            if norm_title:
+                target_titles[norm_title] = paper
+    
+    print(f"Extracted {len(target_ids)} unique normalized IDs")
+    print(f"Extracted {len(target_titles)} unique titles for fallback matching")
+    
+    # Load original Excel file
+    if not excel_file.exists():
+        raise FileNotFoundError(f"Excel file not found: {excel_file}")
+    
+    print(f"Loading Excel file: {excel_file}")
+    df = pd.read_excel(excel_file)
+    
+    # Find paper ID column
+    paper_id_col = find_column(df, ['paper id', 'rayyan', 'article_id', 'id'])
+    if not paper_id_col:
+        raise ValueError("Could not find paper ID column in Excel file")
+    
+    print(f"Using paper ID column: {paper_id_col}")
+    
+    # Normalize IDs in Excel DataFrame
+    # Handle cases where Paper ID might contain multiple IDs (comma-separated) or URLs
+    def normalize_excel_id(paper_id_val):
+        if pd.isna(paper_id_val):
+            return set()
+        paper_id_str = str(paper_id_val).strip()
+        # Handle comma-separated IDs (e.g., "rayyan-242085061, rayyan-242085844")
+        if ',' in paper_id_str:
+            ids = [normalize_paper_id(id_part.strip()) for id_part in paper_id_str.split(',')]
+            return set(id for id in ids if id)
+        # Normalize single ID
+        norm_id = normalize_paper_id(paper_id_str)
+        return {norm_id} if norm_id else set()
+    
+    # Create a column with sets of normalized IDs for each row
+    df['normalized_ids_set'] = df[paper_id_col].apply(normalize_excel_id)
+    
+    # Filter rows where any normalized_id in the set matches our target IDs
+    # Also create a single normalized_id column for deduplication
+    df['normalized_id'] = df['normalized_ids_set'].apply(lambda s: next(iter(s)) if s else None)
+    
+    # Filter: check if any ID in the set matches our target IDs
+    id_matches = df[df['normalized_ids_set'].apply(lambda s: bool(s & target_ids))].copy()
+    
+    # Find title column for fallback matching
+    title_col = find_column(df, ['title', 'paper title'])
+    
+    # For papers not matched by ID, try matching by title
+    if title_col and target_titles:
+        unmatched_df = df[~df.index.isin(id_matches.index)].copy()
+        title_matches = []
+        for idx, row in unmatched_df.iterrows():
+            if pd.notna(row.get(title_col)):
+                excel_title = normalize_title(str(row[title_col]))
+                if excel_title in target_titles:
+                    title_matches.append(idx)
+        
+        if title_matches:
+            title_matched_df = df.loc[title_matches].copy()
+            print(f"Matched {len(title_matched_df)} additional papers by title (not found by ID)")
+            filtered_df = pd.concat([id_matches, title_matched_df], ignore_index=True)
+        else:
+            filtered_df = id_matches
+    else:
+        filtered_df = id_matches
+    
+    print(f"Matched {len(filtered_df)} rows from Excel file")
+    
+    if len(filtered_df) == 0:
+        print("WARNING: No matching rows found in Excel file!")
+        print("This might indicate a mismatch between article_ids in final_exclude.json and the Excel file.")
+        return None
+    
+    # Deduplicate by normalized_id (keep first occurrence)
+    # This handles cases where the same paper appears multiple times in the Excel file
+    before_dedup = len(filtered_df)
+    filtered_df = filtered_df.drop_duplicates(subset=['normalized_id'], keep='first')
+    after_dedup = len(filtered_df)
+    
+    if before_dedup != after_dedup:
+        print(f"Removed {before_dedup - after_dedup} duplicate rows (same paper ID)")
+        print(f"Final count: {after_dedup} unique papers")
+    
+    # Remove the temporary columns
+    filtered_df = filtered_df.drop(columns=['normalized_id', 'normalized_ids_set'], errors='ignore')
+    
+    # Generate output filename if not provided
+    if output_file is None:
+        # Create a safe filename from the category
+        safe_category = category.replace('(', '').replace(')', '').replace(',', '').replace(' ', '_').lower()
+        safe_category = re.sub(r'[^\w_-]', '', safe_category)
+        output_file = OUTPUT_DIR / f"excluded_{safe_category}.xlsx"
+    
+    # Write to Excel
+    print(f"Writing to: {output_file}")
+    filtered_df.to_excel(output_file, index=False, engine='openpyxl')
+    
+    print(f"\n✓ Successfully exported {len(filtered_df)} papers to {output_file}")
+    print("="*80)
+    
+    return output_file
+
+
 def main():
     """Main function."""
     print("="*80)
@@ -1015,5 +1179,177 @@ def main():
     print("="*80)
 
 
+def export_excluding_categories(
+    exclude_categories: List[str],
+    final_exclude_json: Path = FINAL_EXCLUDE_JSON,
+    excel_file: Path = EXCEL_FILE,
+    output_file: Optional[Path] = None
+) -> Path:
+    """
+    Export all papers EXCEPT those with specified categories to an Excel file.
+    
+    Args:
+        exclude_categories: List of category names to exclude
+        final_exclude_json: Path to final_exclude.json
+        excel_file: Path to the original Excel file
+        output_file: Optional output path. If None, generates a filename.
+    
+    Returns:
+        Path to the created Excel file
+    """
+    print("="*80)
+    print(f"Exporting papers EXCLUDING categories: {', '.join(exclude_categories)}")
+    print("="*80)
+    
+    # Load final_exclude.json
+    if not final_exclude_json.exists():
+        raise FileNotFoundError(f"final_exclude.json not found: {final_exclude_json}")
+    
+    print(f"Loading {final_exclude_json}")
+    with open(final_exclude_json, 'r', encoding='utf-8') as f:
+        final_excluded = json.load(f)
+    
+    # Normalize category names for matching
+    exclude_categories_normalized = [cat.strip() for cat in exclude_categories]
+    
+    # Filter papers to EXCLUDE those with specified categories
+    filtered_papers = [
+        paper for paper in final_excluded
+        if paper.get('reproduction_category', '') not in exclude_categories_normalized
+    ]
+    
+    print(f"Found {len(filtered_papers)} papers after excluding specified categories")
+    print(f"Excluded {len(final_excluded) - len(filtered_papers)} papers with those categories")
+    
+    if len(filtered_papers) == 0:
+        print("No papers found. Nothing to export.")
+        return None
+    
+    # Extract article_ids and normalize them
+    target_ids = set()
+    target_titles = {}
+    for paper in filtered_papers:
+        article_id = paper.get('article_id', '')
+        if article_id:
+            norm_id = normalize_paper_id(article_id)
+            if norm_id:
+                target_ids.add(norm_id)
+        title = paper.get('title', '')
+        if title:
+            norm_title = normalize_title(title)
+            if norm_title:
+                target_titles[norm_title] = paper
+    
+    print(f"Extracted {len(target_ids)} unique normalized IDs")
+    print(f"Extracted {len(target_titles)} unique titles for fallback matching")
+    
+    # Load original Excel file
+    if not excel_file.exists():
+        raise FileNotFoundError(f"Excel file not found: {excel_file}")
+    
+    print(f"Loading Excel file: {excel_file}")
+    df = pd.read_excel(excel_file)
+    
+    # Find paper ID column
+    paper_id_col = find_column(df, ['paper id', 'rayyan', 'article_id', 'id'])
+    if not paper_id_col:
+        raise ValueError("Could not find paper ID column in Excel file")
+    
+    print(f"Using paper ID column: {paper_id_col}")
+    
+    # Normalize IDs in Excel DataFrame
+    def normalize_excel_id(paper_id_val):
+        if pd.isna(paper_id_val):
+            return set()
+        paper_id_str = str(paper_id_val).strip()
+        if ',' in paper_id_str:
+            ids = [normalize_paper_id(id_part.strip()) for id_part in paper_id_str.split(',')]
+            return set(id for id in ids if id)
+        norm_id = normalize_paper_id(paper_id_str)
+        return {norm_id} if norm_id else set()
+    
+    df['normalized_ids_set'] = df[paper_id_col].apply(normalize_excel_id)
+    df['normalized_id'] = df['normalized_ids_set'].apply(lambda s: next(iter(s)) if s else None)
+    
+    # Filter: check if any ID in the set matches our target IDs
+    id_matches = df[df['normalized_ids_set'].apply(lambda s: bool(s & target_ids))].copy()
+    
+    # Find title column for fallback matching
+    title_col = find_column(df, ['title', 'paper title'])
+    
+    # For papers not matched by ID, try matching by title
+    if title_col and target_titles:
+        unmatched_df = df[~df.index.isin(id_matches.index)].copy()
+        title_matches = []
+        for idx, row in unmatched_df.iterrows():
+            if pd.notna(row.get(title_col)):
+                excel_title = normalize_title(str(row[title_col]))
+                if excel_title in target_titles:
+                    title_matches.append(idx)
+        
+        if title_matches:
+            title_matched_df = df.loc[title_matches].copy()
+            print(f"Matched {len(title_matched_df)} additional papers by title (not found by ID)")
+            filtered_df = pd.concat([id_matches, title_matched_df], ignore_index=True)
+        else:
+            filtered_df = id_matches
+    else:
+        filtered_df = id_matches
+    
+    print(f"Matched {len(filtered_df)} rows from Excel file")
+    
+    if len(filtered_df) == 0:
+        print("WARNING: No matching rows found in Excel file!")
+        return None
+    
+    # Deduplicate by normalized_id (keep first occurrence)
+    before_dedup = len(filtered_df)
+    filtered_df = filtered_df.drop_duplicates(subset=['normalized_id'], keep='first')
+    after_dedup = len(filtered_df)
+    
+    if before_dedup != after_dedup:
+        print(f"Removed {before_dedup - after_dedup} duplicate rows (same paper ID)")
+        print(f"Final count: {after_dedup} unique papers")
+    
+    # Remove the temporary columns
+    filtered_df = filtered_df.drop(columns=['normalized_id', 'normalized_ids_set'], errors='ignore')
+    
+    # Generate output filename if not provided
+    if output_file is None:
+        output_file = OUTPUT_DIR / "excluded_filtered.xlsx"
+    
+    # Write to Excel
+    print(f"Writing to: {output_file}")
+    filtered_df.to_excel(output_file, index=False, engine='openpyxl')
+    
+    print(f"\n✓ Successfully exported {len(filtered_df)} papers to {output_file}")
+    print("="*80)
+    
+    return output_file
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    
+    # Check if user wants to export excluding categories
+    if len(sys.argv) > 1 and sys.argv[1] == "--export-excluding":
+        # Parse categories from command line (comma-separated or space-separated)
+        if len(sys.argv) < 3:
+            print("Usage: python generate_final_lists.py --export-excluding 'Category1,Category2,...'")
+            sys.exit(1)
+        
+        categories_str = sys.argv[2]
+        categories = [cat.strip() for cat in categories_str.split(',')]
+        export_excluding_categories(categories)
+    # Check if user wants to export a specific category
+    elif len(sys.argv) > 1 and sys.argv[1] == "--export-category":
+        if len(sys.argv) < 3:
+            print("Usage: python generate_final_lists.py --export-category 'Category Name'")
+            print("\nExample:")
+            print("  python generate_final_lists.py --export-category 'Missing some artifacts (not code, e.g. data, model, etc.)'")
+            sys.exit(1)
+        
+        category = sys.argv[2]
+        export_category_to_excel(category)
+    else:
+        main()
